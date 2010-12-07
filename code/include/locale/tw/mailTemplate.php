@@ -1,0 +1,37 @@
+<?php
+class mailTemplate
+{
+    public $message = '';
+
+    public function makeRegistSubject(){
+        return '[日游酷棒]感謝您的購買';
+    }
+
+    //ユーザー登録
+    public function makeRegistUserMail($mail,$given_name,$customer_no,$time,$account,$password){
+        $this->message .= $given_name."\n\n";
+        $this->message .= '非常感謝您本次購買“日遊酷棒”無限量優惠券.    '."\n\n";
+        
+        $this->message .= '■客戶編號:'.$customer_no."\n";
+        $this->message .= '■購買日期:'.date("Y/n/d G:i",$time)."\n";
+        $this->message .= '■登錄賬戶:'.$account."\n";
+        $this->message .= '■登錄密碼:'.$password."\n\n";
+        
+        $this->message .= '［＊注意事項＊］'."\n";
+        $this->message .= '本郵件中的客戶編號以及登錄信息使用來證明您已經購買了優惠券，'."\n";
+        $this->message .= '所以請小心保管好這些信息。'."\n\n";
+        
+        $this->message .= '希望您今後能繼續使用日遊酷棒。'."\n\n";
+        
+        $this->message .= '請不要直接回複本郵件，'."\n";
+        $this->message .= '有任何問題請咨詢“日游酷棒客服中心”。'."\n";
+        
+        $this->message .= "\n\n*****************************************************************\n\n";
+        $this->message .= '日游酷棒:'.KUJAPANURL.'/'."\n";
+        $this->message .= '日游酷棒客服中心:info@iluna.co.jp'."\n";
+        $this->message .= '公司名稱:北京九五太维资讯有限公司';
+        $this->message .= "\n\n*****************************************************************\n\n";
+    }
+
+}
+?>

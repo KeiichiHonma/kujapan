@@ -1,0 +1,279 @@
+@charset "UTF-8";
+/* HEADER */
+#header #header_inner ul li#shopping_bt a{
+    background:url(../img/button/shopping_bt.jpg) no-repeat 0 0;
+}
+#header #global_navi ul li#g_navi01{
+    background:url(../img/button/g_navi_bt01.jpg) no-repeat 0 -40px;
+}
+#header #global_navi ul li#g_navi02{
+    background:url(../img/button/g_navi_bt02.jpg) no-repeat 0 -40px;
+}
+
+#header #global_navi ul li#g_navi03{
+    background:url(../img/button/g_navi_bt03.jpg) no-repeat 0 -40px;
+}
+
+#header #global_navi ul li#g_navi04{
+    background:url(../img/button/g_navi_bt04.jpg) no-repeat 0 -40px;
+}
+
+#header #global_navi ul li#g_navi05{
+    background:url(../img/button/g_navi_bt05.jpg) no-repeat 0 -40px;
+}
+
+#header #global_navi ul li#g_navi06{
+    background:url(../img/button/g_navi_bt05.jpg) no-repeat 0 -40px;
+}
+
+#header #global_navi ul li a#g_navi01{
+    background:url(../img/button/g_navi_bt01.jpg) no-repeat 0 0;
+}
+
+#header #global_navi ul li a#g_navi02{
+    background:url(../img/button/g_navi_bt02.jpg) no-repeat 0 0;
+}
+
+#header #global_navi ul li a#g_navi03{
+    background:url(../img/button/g_navi_bt03.jpg) no-repeat 0 0;
+}
+
+#header #global_navi ul li a#g_navi04{
+    background:url(../img/button/g_navi_bt04.jpg) no-repeat 0 0;
+}
+
+#header #global_navi ul li p#g_navi05{
+    background:url(../img/button/g_navi_bt05.jpg) no-repeat 0 0;
+}
+
+#header #global_navi ul li p#g_navi06{
+    background:url(../img/button/g_navi_bt06.jpg) no-repeat 0 0;
+}
+
+/* SUB */
+#sub #login_box_set{
+background:url(../img/part/top_login_use_coupon.gif) no-repeat left top;
+}
+
+#sub #login_box_inner #title{
+    background:url(../img/part/top_login_title.gif) no-repeat left top;
+}
+
+#s_sub #login_box_set{
+background:url(../img/part/login_use_coupon.gif) no-repeat left top;
+}
+
+#genre_pnl_01 a{
+    background:url(../img/button/genre_pnl_01.jpg) no-repeat;
+}
+
+#genre_pnl_01 a:hover{
+    background:url(../img/button/genre_pnl_01h.jpg) no-repeat;
+}
+
+#genre_pnl_02 a{
+    background:url(../img/button/genre_pnl_02.jpg) no-repeat;
+}
+
+#genre_pnl_02 a:hover{
+    background:url(../img/button/genre_pnl_02h.jpg) no-repeat;
+}
+
+#genre_pnl_03 a{
+    background:url(../img/button/genre_pnl_03.jpg) no-repeat;
+}
+
+#genre_pnl_03 a:hover{
+    background:url(../img/button/genre_pnl_03h.jpg) no-repeat;
+}
+
+#genre_pnl_04 a{
+    background:url(../img/button/genre_pnl_04.jpg) no-repeat;
+}
+
+#genre_pnl_04 a:hover{
+    background:url(../img/button/genre_pnl_04h.jpg) no-repeat;
+}
+
+#genre_pnl_05 a{
+    background:url(../img/button/genre_pnl_05.jpg) no-repeat;
+}
+
+#genre_pnl_05 a:hover{
+    background:url(../img/button/genre_pnl_05h.jpg) no-repeat;
+}
+
+#s_sub #login_box_inner #title{
+    background:url(../img/part/login_title.gif) no-repeat left top;
+}
+
+#s_sub #login_box_inner form #login a{
+    background:url(../img/button/login_bt.jpg) no-repeat 0 0;
+}
+
+#genre_pnl_01s a{
+    background:url(../img/button/genre_pnl_01s.jpg) no-repeat;
+}
+
+#genre_pnl_01s a:hover{
+    background:url(../img/button/genre_pnl_01sh.jpg) no-repeat;
+}
+
+#genre_pnl_02s a{
+    background:url(../img/button/genre_pnl_02s.jpg) no-repeat;
+}
+
+#genre_pnl_02s a:hover{
+    background:url(../img/button/genre_pnl_02sh.jpg) no-repeat;
+}
+
+#genre_pnl_03s a{
+    background:url(../img/button/genre_pnl_03s.jpg) no-repeat;
+}
+
+#genre_pnl_03s a:hover{
+    background:url(../img/button/genre_pnl_03sh.jpg) no-repeat;
+}
+
+#genre_pnl_04s a{
+    background:url(../img/button/genre_pnl_04s.jpg) no-repeat;
+}
+
+#genre_pnl_04s a:hover{
+    background:url(../img/button/genre_pnl_04sh.jpg) no-repeat;
+}
+
+#genre_pnl_05s a{
+    background:url(../img/button/genre_pnl_05s.jpg) no-repeat;
+}
+
+#genre_pnl_05s a:hover{
+    background:url(../img/button/genre_pnl_05sh.jpg) no-repeat;
+}
+
+/* index coupon */
+
+#coupon_box #coupon_box_inner .coupon_max_g1_1{
+    background-image:url(../img/index/coupon_max_g1_1.gif);
+    background-repeat:no-repeat;
+    width:315px;
+    height:230px;
+    float:left;
+    margin-right:5px;
+    margin-top:5px;
+}
+
+#coupon_box #coupon_box_inner .coupon_max_g1_2{
+    background-image:url(../img/index/coupon_max_g1_2.gif);
+    background-repeat:no-repeat;
+    width:315px;
+    height:230px;
+    float:left;
+    margin-right:5px;
+    margin-top:5px;
+}
+
+#coupon_box #coupon_box_inner .coupon_max_g2_1{
+    background-image:url(../img/index/coupon_max_g2_1.gif);
+    background-repeat:no-repeat;
+    width:315px;
+    height:230px;
+    float:left;
+    margin-right:5px;
+    margin-top:5px;
+}
+
+#coupon_box #coupon_box_inner .coupon_max_g2_2{
+    background-image:url(../img/index/coupon_max_g2_2.gif);
+    background-repeat:no-repeat;
+    width:315px;
+    height:230px;
+    float:left;
+    margin-right:5px;
+    margin-top:5px;
+}
+
+#coupon_box #coupon_box_inner .coupon_max_g3_1{
+    background-image:url(../img/index/coupon_max_g3_1.gif);
+    background-repeat:no-repeat;
+    width:315px;
+    height:230px;
+    float:left;
+    margin-right:5px;
+    margin-top:5px;
+}
+
+#coupon_box #coupon_box_inner .coupon_max_g3_2{
+    background-image:url(../img/index/coupon_max_g3_2.gif);
+    background-repeat:no-repeat;
+    width:315px;
+    height:230px;
+    float:left;
+    margin-right:5px;
+    margin-top:5px;
+}
+
+/* MAIN */
+#coupon .list_box_g .img_area a.bt_buy{
+    background:url(../img/button/buy_bt.jpg) no-repeat 0 0;
+}
+
+#coupon .list_box_g_footer a.more_btn{
+    background:url(../img/button/more_bt.jpg) no-repeat 0 0;
+}
+
+#coupon .text_area_footer a.more_btn{
+    background:url(../img/button/more_bt.jpg) no-repeat 0 0;
+}
+
+#coupon .detail_box9_inner{
+    background:url(../img/coupon/detail_box1_head.gif) no-repeat left top;
+}
+
+#coupon .detail_box10_inner ul li a.detail_buy{
+    background:url(../img/button/detail_buy_bt.gif) no-repeat 0 0;
+}
+
+#coupon .detail_box10_inner ul li a.detail_print{
+    background:url(../img/button/detail_print_bt.gif) no-repeat 0 0;
+}
+
+#coupon .detail_box .img_area a.bt_buy{
+    background:url(../img/button/buy_bt.jpg) no-repeat 0 0;
+}
+
+#coupon .detail_box6_inner ul li a.detail_buy{
+    background:url(../img/button/detail_buy_bt.gif) no-repeat 0 0;
+}
+
+#coupon .detail_box6_inner ul li a.detail_print{
+    background:url(../img/button/detail_print_bt.gif) no-repeat 0 0;
+}
+
+#detail_main .detail_box1_inner{
+    background:url(../img/part/detail_box1_head.gif) no-repeat left top;
+}
+
+#detail_main .detail_box6_inner ul li a.detail_buy{
+    background:url(../img/button/detail_buy_bt.gif) no-repeat 0 0;
+}
+
+#detail_main .detail_box6_inner ul li a.detail_more{
+    background:url(../img/button/detail_more_bt.jpg) no-repeat 0 0;
+}
+
+/*extend*/
+
+.list_coupon_inner{
+    background:url(../img/coupon/list_coupon_head.gif) no-repeat left top;
+}
+
+#coupon .list_coupon_g .img_area a.bt_buy{
+    background:url(../img/button/buy_bt.jpg) no-repeat 0 0;
+}
+
+/*print*/
+
+#coupon a.print,img.print{
+background:url(../img/button/print_bt.jpg) no-repeat 0 0;
+}

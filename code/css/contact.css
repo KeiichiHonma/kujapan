@@ -1,0 +1,35 @@
+table.contact {
+    width:760px;
+    margin:10px 0px 20px 0px;
+    text-align:left;
+    background-color:#FFFFFF;
+    }
+    
+table.contact th {
+    text-align:left;
+    background-color:#FFF4D1;
+    border:1px solid #FFCC66;
+    padding:5px;
+    font-weight:normal;
+    }
+
+table.contact th.title {
+    width:150px;
+}
+
+table.contact th.item {
+    width:100px;
+}
+
+table.contact th.text {
+    width:255px;
+}
+
+table.contact td {
+    border:1px solid #FFCC66;
+    padding:5px;
+    }
+
+table.contact td.title {
+    width:150px;
+}

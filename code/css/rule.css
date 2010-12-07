@@ -1,0 +1,25 @@
+@charset "UTF-8";
+#rule_list{margin-left:0px;}
+
+#rule_list div.block{padding:10px 0px;}
+
+#rule_list div.title{
+    padding:0px 0px 5px 0px;
+}
+
+#rule_list h3.rule{
+    font-size: 120%;
+    color: #ff3b00;
+}
+
+#rule_list div.detail{
+    padding:0px 15px 0px 15px;
+    line-height:120%;
+}
+
+#rule_list li{
+    list-style:none;
+    background: url(/img/common/arrow_p.gif) no-repeat 3px 3px;
+    padding-left:12px;
+    margin:0px 0px 5px 0px;
+}

@@ -1,0 +1,106 @@
+#e_main{
+width:764px;
+margin:0 auto;
+}
+
+.h_title {
+    background-image:url(/img/error/h_title.gif);
+    background-repeat:no-repeat;
+    color:#F55000;
+    font-size:14px;
+    font-weight:bold;
+    margin:10px 0px 10px 0px;
+    height:34px;
+    text-align:left;
+    padding:9px 0 0 20px;
+    clear:both;
+    }
+
+#error_box{
+    font-size:14px;
+    border-top:solid;
+    border-bottom:solid;
+    border-left-style:none;
+    border-right-style:none;
+    border-width:1px 1px;
+    border-color:#E0E0E0;
+    background-color:#FFFFFF;
+    width:762px;
+    margin:0px 0px 10px 0px;
+    padding:10px 0px 10px 0px;
+    background-image: url(/img/error/error_bg.gif);
+    background-repeat:repeat-y;
+    text-align:center;
+    color:#555555;
+}
+
+div#point{
+    margin:10px auto 0px auto;
+    width:342px;
+}
+
+
+div.plus_point{
+    float:left;
+    font-size:25px;
+    height:77;
+}
+div.point_box{
+    float:left;
+    width:157px;
+    height:77;
+    margin:0px 0px 0px 0px;
+    position:relative;
+    }
+
+div.point_box .number1{
+    position:absolute;
+    top:44px;
+    left:55px;
+    color:#EE55AA;
+    font-size:25px;
+    padding:2px;
+    font-family:"ＭＳ Ｐゴシック",Osaka, Arial, Helvetica;
+    }
+
+div.point_box .number2{
+    position:absolute;
+    top:44px;
+    left:42px;
+    color:#EE55AA;
+    font-size:25px;
+    /*padding:2px;*/
+    font-family:"ＭＳ Ｐゴシック",Osaka, Arial, Helvetica;
+    }
+
+div#action{
+    clear:both;
+    padding:10px 0px 0px 0px;
+    line-height:20px;
+}
+
+table#item_box{
+    clear:both;
+    margin:20px auto 20px auto;
+    width:300px;
+    text-align:left;
+    font-size:12px;
+}
+
+table#item_box th{
+    font-weight:normal;
+    color:#EE55AA;
+    background-image:url(/img/common/icon.gif);
+    background-repeat:no-repeat;
+    background-position:0 2px;
+    padding:0px 2px 2px 18px;
+}
+
+table#item_box td.use_point{
+    width:100%;
+}
+
+table#item_box span.point{
+    font-size:14px;
+    color:#EE55AA;
+}

@@ -1,0 +1,48 @@
+/*サイトマップ
+**************************************/
+#sitemap{width:760px;margin:0px auto;padding:0px 0px 0px 0px;}
+#sitemap .menu{
+    float:left;
+    width:246px;
+    margin-right:7px;
+}
+#sitemap .space{
+    width: 15px;
+    float:left;
+}
+#sitemap .group{
+    width: 760px;
+    float:left;
+    margin-top:10px;
+}
+#sitemap p.ttl{
+    width:246px; height:32px;
+    background: url(/img/sitemap/site_map_title.gif) no-repeat 0% 0%;
+    font-size:16px; line-height:30px; color:#F57900; font-weight:bold; text-indent:22px;
+}
+
+#sitemap p.ttl_little{
+    width:246px; height:32px;
+    background: url(/img/sitemap/site_map_title.gif) no-repeat 0% 0%;
+    font-size:15px; line-height:30px; color:#EE55AA; font-weight:bold; text-indent:22px;
+}
+
+#sitemap ul.linkbox {
+    margin-left:10px;
+    }
+#sitemap ul.linkbox li{
+    list-style:none;
+    height:26px;
+    line-height:26px;
+    background: url(/img/common/arrow_p.gif) no-repeat 3px 50%;
+    padding-left:12px;
+    }
+
+#sitemap ul.linkbox li.sub{
+    list-style:none;
+    height:26px;
+    line-height:26px;
+    background: url(/img/common/arrow_p.gif) no-repeat 3px 50%;
+    padding-left:12px;
+    margin-left:10px;
+    }

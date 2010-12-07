@@ -1,0 +1,131 @@
+@charset "UTF-8";
+
+#venusfort h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+    color: #222222;
+}
+
+/* POINT
+----------------------------------*/
+
+#venusfort #point-wrap {
+    padding-bottom: 20px;
+}
+
+#venusfort #point-wrap h3 {
+    padding:0px 0 0 0;
+    /*background: transparent url(../images/index/h2_point_cn.gif) no-repeat left top;*/
+    border-color: #999;
+    color: #F8A926;
+    font-weight: bold;
+    line-height: 3em;
+    overflow: hidden;
+}
+#venusfort #point-wrap h4 {
+    color: #333333;
+}
+
+
+#venusfort .point-wrap-container {
+    float:left;
+    display: block;
+    overflow-x: visible;
+    overflow-y: visible;
+    padding-bottom: 0px;
+    width:320px;
+}
+
+#venusfort img.left { float: left; margin: 0.2em 1em 1em 0; padding: 0; }
+
+#venusfort #point-wrap .text_content {
+    float: left;
+    display: block;
+    width: 190px;
+    margin: 0px;
+    padding: 0px;
+}
+
+#venusfort .lcontents {
+    float: left;
+    width: 640px;
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+#venusfort .container {
+    display: block;
+    overflow-x: visible;
+    overflow-y: visible;
+    padding-bottom: 0px;
+}
+
+#venusfort dl.content {
+    margin: 0;
+    padding: 0;
+    display: block;
+    overflow-x: visible;
+    overflow-y: visible;
+}
+
+#venusfort dl.content dt {
+    float: left;
+    margin: 0;
+    padding:15px 20px 0px 0;
+}
+#venusfort dl.content dd {
+    float: left;
+    margin: 0;
+    padding: 0 0 0 20px;
+    border-left: dotted 1px #000;
+}
+
+
+#venusfort h3 {
+    margin: 0;
+    margin-bottom: 0.8em;
+    padding: 0.3em 0;
+    border-bottom: solid 2px #999;
+    font-size: 1.2em;
+}
+
+#venusfort h3.h3_title {
+    padding: 0.1em 0.4em;
+    background-color: #F7A824;
+    color: #fff;
+    font-size: 14px;
+    line-height: 23px;
+    border-bottom: solid 1px #999;
+}
+
+#venusfort h4 {
+    margin: 0;
+    margin-bottom: 0.5em;
+    padding: 0.3em 0;
+    font-size: 1.2em;
+    font-weight: bold;
+    line-height: 1;
+}
+
+#venusfort h5 {
+    font-size: 1.2em;
+    line-height: 1.25;
+}
+
+#venusfort .orange { color: #F89B00; }
+
+#venusfort .blue { color: #00afed; }
+
+#venusfort .pink { color: #EB6EA5; }
+#venusfort .yellow { color: #D0DC00; }
+
+#coupon h3.h3_title {
+    font-weight:bold;
+    padding: 0.1em 0.4em;
+    background-color: #F7A824;
+    color: #fff;
+    font-size: 14px;
+    line-height: 23px;
+    border-bottom: solid 1px #999;
+}

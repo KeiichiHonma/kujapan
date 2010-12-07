@@ -1,0 +1,81 @@
+<?php
+require_once('fw/checkManager.php');
+
+//entryは存在しない
+
+class checkCoupon extends checkManager
+{
+    static private $check_list = array
+    (
+        'discount_value'=>array
+        (
+            array('message'=>'！割引数値（円）は必須です。','func'=>'checkMust','arg'=>null),
+            array('message'=>'！割引数値（円）が不正です。','func'=>'checkInt','arg'=>null)
+        ),
+        'discount_ja'=>array
+        (
+            array('message'=>'！割引額（日本語）は必須です。','func'=>'checkMust','arg'=>null),
+            array('message'=>'！割引額（日本語）は全角で40字(半角80字)以内で入力してください。','func'=>'checkLength','arg'=>array('start'=>1,'end'=>80)),
+            array('message'=>null,'func'=>'replaceInput','arg'=>'title_ja')
+        ),
+        'discount_cn'=>array
+        (
+            array('message'=>'！割引額（簡体字）は必須です。','func'=>'checkMust','arg'=>null),
+            array('message'=>'！割引額（簡体字）は全角で40字(半角80字)以内で入力してください。','func'=>'checkLength','arg'=>array('start'=>1,'end'=>80)),
+            array('message'=>null,'func'=>'replaceInput','arg'=>'title_cn')
+        ),
+        'discount_tw'=>array
+        (
+            array('message'=>'！割引額（繁体字）は必須です。','func'=>'checkMust','arg'=>null),
+            array('message'=>'！割引額（繁体字）は全角で40字(半角80字)以内で入力してください。','func'=>'checkLength','arg'=>array('start'=>1,'end'=>80)),
+            array('message'=>null,'func'=>'replaceInput','arg'=>'title_tw')
+        ),
+        'title_ja'=>array
+        (
+            array('message'=>'！タイトル（日本語）は必須です。','func'=>'checkMust','arg'=>null),
+            array('message'=>'！タイトル（日本語）は全角で50字(半角100字)以内で入力してください。','func'=>'checkLength','arg'=>array('start'=>1,'end'=>100)),
+            array('message'=>null,'func'=>'replaceInput','arg'=>'title_ja')
+        ),
+        'title_cn'=>array
+        (
+            array('message'=>'！タイトル（簡体字）は必須です。','func'=>'checkMust','arg'=>null),
+            array('message'=>'！タイトル（簡体字）は全角で50字(半角100字)以内で入力してください。','func'=>'checkLength','arg'=>array('start'=>1,'end'=>100)),
+            array('message'=>null,'func'=>'replaceInput','arg'=>'title_cn')
+        ),
+        'title_tw'=>array
+        (
+            array('message'=>'！タイトル（繁体字）は必須です。','func'=>'checkMust','arg'=>null),
+            array('message'=>'！タイトル（繁体字）は全角で50字(半角100字)以内で入力してください。','func'=>'checkLength','arg'=>array('start'=>1,'end'=>100)),
+            array('message'=>null,'func'=>'replaceInput','arg'=>'title_tw')
+        ),
+        'condition_ja'=>array
+        (
+            array('message'=>'！使用条件（日本語）は必須です。','func'=>'checkMust','arg'=>null),
+            array('message'=>'！使用条件（日本語）は全角で100字(半角200字)以内で入力してください。','func'=>'checkLength','arg'=>array('start'=>1,'end'=>200)),
+            array('message'=>null,'func'=>'replaceInput','arg'=>'condition_ja')
+        ),
+        'condition_cn'=>array
+        (
+            array('message'=>'！使用条件（簡体字）は必須です。','func'=>'checkMust','arg'=>null),
+            array('message'=>'！使用条件（簡体字）は全角で100字(半角200字)以内で入力してください。','func'=>'checkLength','arg'=>array('start'=>1,'end'=>200)),
+            array('message'=>null,'func'=>'replaceInput','arg'=>'condition_cn')
+        ),
+        'condition_tw'=>array
+        (
+            array('message'=>'！使用条件（繁体字）は必須です。','func'=>'checkMust','arg'=>null),
+            array('message'=>'！使用条件（繁体字）店舗は全角で100字(半角200字)以内で入力してください。','func'=>'checkLength','arg'=>array('start'=>1,'end'=>200)),
+            array('message'=>null,'func'=>'replaceInput','arg'=>'condition_tw')
+        ),
+        'validate_time'=>array
+        (
+            array('message'=>'！有効期限は必須です。','func'=>'checkMust','arg'=>null),
+            array('message'=>'！有効期限が不正です。','func'=>'checkInt','arg'=>null),
+            array('message'=>'！有効期限は[現在の日時]より後である必要があります。','func'=>'checkReportDate','arg'=>null)
+        ),
+    );
+
+    static public function checkError(){
+        parent::checkSystemError(self::$check_list);
+    }
+}
+?>

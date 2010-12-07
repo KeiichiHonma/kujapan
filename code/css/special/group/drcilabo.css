@@ -1,0 +1,207 @@
+@charset "UTF-8";
+
+#drcilabo h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+    color: #222222;
+}
+
+/* POINT
+----------------------------------*/
+
+#drcilabo #point-wrap {
+    padding-bottom: 20px;
+}
+
+#drcilabo #point-wrap h3 {
+    padding:0px 0 0 0;
+    /*background: transparent url(../images/index/h2_point_cn.gif) no-repeat left top;*/
+    border-color: #999;
+    color: #F8A926;
+    font-weight: bold;
+    line-height: 3em;
+    overflow: hidden;
+}
+
+#drcilabo .point-wrap-container {
+    float:left;
+    display: block;
+    overflow-x: visible;
+    overflow-y: visible;
+    padding-bottom: 0px;
+    width:320px;
+}
+
+#drcilabo img.left { float: left; margin: 0.2em 1em 1em 0; padding: 0; }
+
+#drcilabo #point-wrap .text_content {
+    float: left;
+    display: block;
+    width: 190px;
+    margin: 0px;
+    padding: 0px;
+}
+
+#drcilabo .lcontents {
+    width: 725px;
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    clear:both;
+}
+
+#drcilabo .logo_text {
+    float:left;
+    font-size:150%;
+    padding-left:20px;
+}
+
+#drcilabo .container {
+    display: block;
+    overflow-x: visible;
+    overflow-y: visible;
+    padding-bottom: 0px;
+}
+
+#drcilabo .container .concept_title{
+    color:#B50606;
+    font-size:120%;
+    /*font-weight:bold;*/
+}
+
+#drcilabo .container .concept{
+    text-align:center;
+    width:725px;
+}
+
+#drcilabo .container div.subt{
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #dcdcdc;
+    padding-bottom: 4px;
+    background-color: transparent;
+    background-image: url("/img/special/group/drcilabo/icon_rectangle_gray.gif");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: left center;
+}
+
+#drcilabo .container div.subt h4{
+    padding-left: 12px;
+    color: #444444;
+    font-size: 16px;
+    line-height: 140%;
+    font-family: Georgia;
+}
+
+#drcilabo .container div.subt h4 span{
+    color: #ff0000;
+}
+
+#drcilabo .container ul.listbox li{
+    background-color: transparent;
+    background-image: url("/img/special/group/drcilabo/arrow_dot.gif");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: 12px 9px;
+    padding-left: 20px;
+    font-size: 12px;
+    line-height: 150%;
+}
+
+#drcilabo .container div.common_text {
+    margin-bottom:10px;
+    padding-bottom:10px;
+    border-bottom:#f4f4f4 3px solid;
+    /*background: url("/img/special/group/drcilabo/new_I01-05_world_line01.gif") no-repeat left bottom;*/
+}
+
+#drcilabo .container div.common_text_last {
+    margin-bottom:10px;
+}
+
+#drcilabo .container .fr {
+    float:right;
+}
+
+#drcilabo .container .photo_text {
+    float:left;
+    width:534px;
+}
+
+#drcilabo .container .productlistwrap{
+    border-bottom:#f4f4f4 3px solid;
+    padding:10px 0px;
+}
+
+#drcilabo .container .productlistwrap_last{
+    padding:10px 0px;
+}
+
+#drcilabo .container .icon{
+    text-align:right;
+}
+
+#drcilabo .container .product_photo{
+    float:left;
+    text-align:center;
+    width:260px;
+}
+
+#drcilabo .container .product_text{
+    float:left;
+    width:400px;
+}
+
+#drcilabo .container .product_text h5{
+
+    color: #ff0000;
+    font-size: 18px;
+}
+
+#drcilabo .container .product_text ul.list li{
+    background:url("/img/special/group/drcilabo/icon_square_red_s.gif") 0px 8px no-repeat;
+    padding:3px 0px 0px 10px;
+    font-size:10px;
+    line-height:140%;
+}
+
+
+#drcilabo dl.content {
+    margin: 0;
+    padding: 0;
+    display: block;
+    overflow-x: visible;
+    overflow-y: visible;
+}
+
+#drcilabo dl.content dt {
+    float: left;
+    margin: 0;
+    padding:15px 20px 0px 0;
+}
+#drcilabo dl.content dd {
+    float: left;
+    margin: 0;
+    padding: 0 0 0 20px;
+    border-left: dotted 1px #000;
+}
+
+
+#drcilabo h3 {
+    margin: 0;
+    margin-bottom: 0.8em;
+    padding: 0.3em 0;
+    border-bottom: solid 2px #999;
+    font-size: 1.2em;
+}
+
+#coupon h3.h3_title {
+    font-weight:bold;
+    padding: 0.1em 0.4em;
+    background-color: #F7A824;
+    color: #fff;
+    font-size: 14px;
+    line-height: 23px;
+    border-bottom: solid 1px #999;
+}

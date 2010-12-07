@@ -1,0 +1,104 @@
+@charset "UTF-8";
+/* COMMON */
+
+/* RESET */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,input,textarea,p,th,td{
+    margin:0;
+    padding:0;
+    /*font-family:"宋体",Arial;*/
+    /*font-family:Arial,"宋体";*/
+    font-family:Arial,'sans-serif',Verdana;
+}
+
+table{
+border-collapse:collapse;
+border-spacing:0;
+}
+
+ol,ul{
+list-style:none;
+}
+
+h1,h2,h3,h4,h5,h6{
+font-size:100%;
+font-weight:normal;
+}
+
+a{
+overflow:hidden;
+color: #3566cf;
+text-decoration:none;
+}
+
+a:hover{
+text-decoration:underline;
+/*color:#FF3301;*/
+color: #ff6600;
+}
+
+a img,img{
+border:0;
+}
+
+.clear{
+clear:both;
+}
+
+/* MODULE */
+.mb_1{
+margin-bottom:1px;
+}
+
+.mb_4{
+margin-bottom:4px;
+}
+
+.mb_5{
+margin-bottom:5px;
+}
+
+.mb_10{
+margin-bottom:10px;
+}
+
+.mb_20{
+margin-bottom:20px;
+}
+
+.ml_6{
+margin-left:6px;
+}
+
+.ml_10{
+margin-left:10px;
+}
+
+.mt_5{
+margin-top:5px;
+}
+
+.mt_10{
+margin-top:10px;
+}
+
+.mt_15{
+margin-top:15px;
+}
+
+.clearfix{
+    zoom:1;/*for IE 5.5-7*/
+}
+
+.clearfix:after{/*for modern browser*/
+    content:".";
+    display: block;
+    height:0px;
+    clear:both;
+    line-height:0;
+    visibility:hidden;
+}
+
+.error_message{
+    font-weight:bold;
+    color:#FF0000;
+}

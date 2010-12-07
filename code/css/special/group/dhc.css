@@ -1,0 +1,237 @@
+@charset "UTF-8";
+
+#dhc h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+    color: #222222;
+}
+
+/*DHC SHOP*/
+#dhc div#dhc_mainVisual{
+    margin-bottom:10px;
+}
+
+#dhc div#dhc_mainVisual #mainVisualImg{
+    border:#013f98 1px solid;
+}
+#dhc div#dhc_mainVisual #mainVisualImg div.bottom{
+    border-top:#013f98 1px solid;
+    /*height:279px;*/
+    height:206px;
+}
+
+#dhc div#dhc_mainVisual #mainVisualImg div p{
+    /*width:365px;*/
+    float:left;
+}
+
+#dhc div#dhc_mainVisual #mainVisualImg div p.text{
+    padding-top:29px;
+    line-height:25px;
+    width:380px;
+    font-size:110%;
+}
+
+#dhc #dhc_mainVisual #mainVisualImg div{
+    background:url("/img/special/group/dhc/shop_main_bg.gif") left bottom repeat-x;
+}
+
+
+
+#dhc #point-wrap {
+    padding-bottom: 20px;
+}
+
+#dhc #point-wrap h3 {
+    padding:0px 0 0 0;
+    /*background: transparent url(../images/index/h2_point_cn.gif) no-repeat left top;*/
+    border-color: #999;
+    color: #F8A926;
+    font-weight: bold;
+    line-height: 3em;
+    overflow: hidden;
+}
+
+#dhc .point-wrap-container {
+    float:left;
+    display: block;
+    overflow-x: visible;
+    overflow-y: visible;
+    padding-bottom: 0px;
+    width:320px;
+}
+
+#dhc img.left { float: left; margin: 0.2em 1em 1em 0; padding: 0; }
+
+#dhc #point-wrap .text_content {
+    float: left;
+    display: block;
+    width: 190px;
+    margin: 0px;
+    padding: 0px;
+}
+
+#dhc .lcontents {
+    width: 725px;
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    clear:both;
+}
+
+#dhc .logo_text {
+    float:left;
+    font-size:150%;
+    padding-left:20px;
+}
+
+#dhc .container {
+    display: block;
+    overflow-x: visible;
+    overflow-y: visible;
+    padding-bottom: 0px;
+}
+
+#dhc .container div.subt{
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #dcdcdc;
+    padding-bottom: 4px;
+    background-color: transparent;
+    background-image: url("/img/special/group/drcilabo/icon_rectangle_gray.gif");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: left center;
+}
+
+#dhc .container div.subt h4{
+    padding-left: 12px;
+    color: #444444;
+    font-size: 16px;
+    line-height: 140%;
+    font-family: Georgia;
+}
+
+#dhc .container div.subt h4 span{
+    color: #ff0000;
+}
+
+#dhc .container div.common_text {
+    margin-top:10px;
+    margin-bottom:10px;
+    padding-bottom:10px;
+    border-bottom:#f4f4f4 3px solid;
+}
+
+#dhc .container div.common_text .concept{
+    float:left;
+    width:235px;
+    margin-right:10px;
+    line-height:20px;
+}
+
+#dhc .container div.common_text .concept_last{
+    float:left;
+    width:235px;
+    line-height:20px;
+}
+
+#dhc .container div.common_text_last {
+    margin-bottom:10px;
+}
+
+#dhc .container .fl {
+    float:left;
+    padding-right:25px;
+}
+
+#dhc .container .fr {
+    float:right;
+}
+
+#dhc .container .photo_text {
+    float:left;
+    width:400px;
+    line-height:20px;
+}
+
+#dhc .container .productlistwrap{
+    border-bottom:#f4f4f4 3px solid;
+    padding:10px 0px;
+}
+
+#dhc .container .productlistwrap_last{
+    padding:10px 0px;
+}
+
+#dhc .container .product_photo{
+    float:left;
+    text-align:center;
+    width:230px;
+}
+
+#dhc .container .product_text{
+    float:left;
+    width:495px;
+}
+
+#dhc .container .product_text h5{
+
+    color: #052360;
+    font-size: 18px;
+    margin-bottom:10px;
+}
+
+#dhc .container .product_text ul.list li{
+    background:url("/img/special/group/drcilabo/icon_square_red_s.gif") 0px 8px no-repeat;
+    padding:3px 0px 0px 10px;
+    font-size:10px;
+    line-height:140%;
+}
+
+
+#dhc dl.content {
+    margin: 0;
+    padding: 0;
+    display: block;
+    overflow-x: visible;
+    overflow-y: visible;
+}
+
+#dhc dl.content dt {
+    float: left;
+    margin: 0;
+    padding:15px 20px 0px 0;
+}
+#dhc dl.content dd {
+    float: left;
+    margin: 0;
+    padding: 0 0 0 20px;
+    border-left: dotted 1px #000;
+}
+
+
+#dhc h3 {
+    margin: 0;
+    margin-bottom: 0.8em;
+    padding: 0.3em 0;
+    border-bottom: solid 2px #999;
+    font-size: 1.2em;
+}
+
+#coupon h3.h3_title {
+    font-weight:bold;
+    padding: 0.1em 0.4em;
+    background-color: #01388E;
+    color: #fff;
+    font-size: 14px;
+    line-height: 23px;
+    border-bottom: solid 1px #999;
+}
+
+#coupon ul.listbox li{
+    background:url("/img/special/group/dhc/icon_square_dhc_s.gif") 0px 8px no-repeat;
+    padding:3px 0px 0px 10px;
+    /*font-size:10px;*/
+    line-height:140%;
+}

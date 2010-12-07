@@ -1,0 +1,385 @@
+@charset "UTF-8";
+/* SUB */
+/* SUB FOR TOP PAGE */
+#sub{
+width:300px;
+float:left;
+padding-left:20px;
+margin-bottom:50px;
+padding-right:10px;
+}
+
+#sub img{
+/*IE6-7 Not CSS Hac*/
+display:block;
+}
+
+#sub #login_box{
+background:url(/img/part/top_login_box_bg.gif) no-repeat left top;
+display:inline-block;
+width:300px;
+}
+
+#sub #login_box_set{
+/*background:url(/locale/cn/img/part/top_login_use_coupon.gif) no-repeat left top;*/
+display:inline-block;
+width:300px;
+height:450px
+}
+
+#sub #login_box_inner{
+width:250px;
+margin-left:25px;
+margin-bottom:5px;
+display:inline-block;
+text-align:center;
+}
+
+#sub #login_box_inner #title{
+/*background:url(../img/part/top_login_title.gif) no-repeat left top;*/
+    text-indent:-9999px;
+    overflow:hidden;
+    height:30px;
+    width:250px;
+    margin-top:10px;
+}
+
+#sub #login_box_inner #text_area{
+    margin:10px 0 10px 0px;
+    width:250px;
+    text-align:center;
+}
+
+#sub #login_box_inner .text_input{
+    width:180px;
+}
+
+#sub #genre_box{
+width:300px;
+margin:10px 0;
+}
+
+#sub #genre_box #genre_box_inner{
+background:url(/img/part/top_genre_box3_bg.gif) repeat-y left top;
+width:300px;
+display:inline-block;
+padding:5px 0;
+}
+
+#sub #genre_box2{
+background:url(/img/part/top_genre_box2_bg.gif) repeat-y left top;
+width:280px;
+display:inline-block;
+margin-left:10px;
+padding:5px 0;
+}
+
+#sub #bannar{
+    margin-top:10px;
+    padding:0;
+}
+
+/* Top Page css */
+/* genre_pnl css */
+
+#genre_pnl_01 a{
+display:block;
+width:225px;
+height:23px;
+color:#000000;
+/*background:url(../img/button/genre_pnl_01.jpg) no-repeat;*/
+text-decoration:none;
+padding:43px 20px 0 15px;
+}
+
+#genre_pnl_01 a:hover{
+color:#FFFFFF; 
+text-decoration:underline;
+/*background:url(../img/button/genre_pnl_01h.jpg) no-repeat;*/
+}
+
+#genre_pnl_02 a{
+display:block;
+width:225px;
+height:23px;
+color:#000000;
+/*background:url(../img/button/genre_pnl_02.jpg) no-repeat;*/
+text-decoration:none;
+padding:43px 20px 0 15px;
+}
+
+#genre_pnl_02 a:hover{
+color:#FFFFFF; 
+text-decoration:underline;
+/*background:url(../img/button/genre_pnl_02h.jpg) no-repeat;*/
+}
+
+#genre_pnl_03 a{
+display:block;
+width:225px;
+height:23px;
+color:#000000;
+/*background:url(../img/button/genre_pnl_03.jpg) no-repeat;*/
+text-decoration:none;
+padding:43px 20px 0 15px;
+}
+
+#genre_pnl_03 a:hover{
+color:#FFFFFF; 
+text-decoration:underline;
+/*background:url(../img/button/genre_pnl_03h.jpg) no-repeat;*/
+}
+
+#genre_pnl_04 a{
+display:block;
+width:225px;
+height:23px;
+color:#000000;
+/*background:url(../img/button/genre_pnl_04.jpg) no-repeat;*/
+text-decoration:none;
+padding:43px 20px 0 15px;
+}
+
+#genre_pnl_04 a:hover{
+color:#FFFFFF; 
+text-decoration:underline;
+/*background:url(../img/button/genre_pnl_04h.jpg) no-repeat;*/
+}
+
+
+#genre_pnl_05 a{
+display:block;
+width:225px;
+height:23px;
+color:#000000;
+/*background:url(../img/button/genre_pnl_05.jpg) no-repeat;*/
+text-decoration:none;
+padding:43px 20px 0 15px;
+}
+
+#genre_pnl_05 a:hover{
+color:#FFFFFF; 
+text-decoration:underline;
+/*background:url(../img/button/genre_pnl_05h.jpg) no-repeat;*/
+}
+
+/* SUB FOR 2ND PAGE */
+#s_sub{
+width:225px;
+float:left;
+padding-left:20px;
+margin-bottom:50px;
+}
+
+#s_sub img{
+/*IE6-7 Not CSS Hac*/
+display:block;
+}
+
+#s_sub #login_box{
+background:url(/img/part/login_box_bg.gif) no-repeat left top;
+display:inline-block;
+width:225px;
+}
+
+#s_sub #login_box_set{
+/*background:url(/img/part/login_box_bg.gif) no-repeat left top;*/
+display:inline-block;
+width:225px;
+height:400px
+}
+
+#s_sub #login_box_inner{
+width:202px;
+margin-left:12px;
+margin-bottom:5px;
+display:inline-block;
+text-align:center;
+}
+
+#s_sub #login_box_inner #title{
+/*background:url(../img/part/login_title.gif) no-repeat left top;*/
+text-indent:-9999px;
+overflow:hidden;
+height:30px;
+width:200px;
+margin-top:10px;
+}
+
+#s_sub #login_box_inner #text_area{
+    margin:10px 0 10px 0px;
+    width:200px;
+    text-align:center;
+}
+
+#s_sub #login_box_inner form .text_input{
+    width:140px;
+}
+
+#s_sub #login_box_inner form #login a{
+/*background:url(../img/button/login_bt.jpg) no-repeat 0 0;*/
+width:202px;
+height:55px;
+display:block;
+overflow:hidden;
+text-indent:-9999px;
+}
+
+#s_sub #login_box_inner form #login a:hover{
+background-position:0 -55px;
+}
+
+#s_sub .genre_box{
+width:225px;
+margin:10px 0;
+}
+
+#s_sub .genre_box .genre_box_inner{
+background:url(/img/part/genre_box3_bg.gif) repeat-y left top;
+width:225px;
+display:inline-block;
+padding:0 0 5px 0;
+}
+
+#s_sub .genre_box2{
+background:url(/img/part/genre_box2_bg.gif) repeat-y left top;
+width:205px;
+display:inline-block;
+margin-left:10px;
+padding:0;
+}
+
+#s_sub .genre_box2 ul{
+width:193px;
+display:inline-block;
+margin-left:6px;
+}
+
+#s_sub .genre_box2 ul li{
+margin-bottom:4px;
+height:36px;
+}
+
+#s_sub .genre_box2 ul li.last{
+margin-bottom:0;
+}
+
+#s_sub #bannar{
+    margin-top:10px;
+    padding:0;
+}
+
+/* 2nd Page css */
+/* genre_pnl css */
+
+#genre_pnl_01s a{
+display:block;
+width:165px;
+height:23px;
+color:#000000;
+/*background:url(../img/button/genre_pnl_01s.jpg) no-repeat;*/
+text-decoration:none;
+font-size:11px;
+padding:40px 20px 0 10px;
+}
+
+#genre_pnl_01s a:hover{
+color:#FFFFFF; 
+text-decoration:underline;
+/*background:url(../img/button/genre_pnl_01sh.jpg) no-repeat;*/
+}
+
+#genre_pnl_02s a{
+display:block;
+width:165px;
+height:23px;
+color:#000000;
+/*background:url(../img/button/genre_pnl_02s.jpg) no-repeat;*/
+text-decoration:none;
+font-size:11px;
+padding:40px 20px 0 10px;
+}
+
+#genre_pnl_02s a:hover{
+color:#FFFFFF; 
+text-decoration:underline;
+/*background:url(../img/button/genre_pnl_02sh.jpg) no-repeat;*/
+}
+
+#genre_pnl_03s a{
+display:block;
+width:165px;
+height:23px;
+color:#000000;
+/*background:url(../img/button/genre_pnl_03s.jpg) no-repeat;*/
+text-decoration:none;
+font-size:11px;
+padding:40px 20px 0 10px;
+}
+
+#genre_pnl_03s a:hover{
+color:#FFFFFF; 
+text-decoration:underline;
+/*background:url(../img/button/genre_pnl_03sh.jpg) no-repeat;*/
+}
+
+#genre_pnl_04s a{
+display:block;
+width:165px;
+height:23px;
+color:#000000;
+/*background:url(../img/button/genre_pnl_04s.jpg) no-repeat;*/
+text-decoration:none;
+font-size:11px;
+padding:40px 20px 0 10px;
+}
+
+#genre_pnl_04s a:hover{
+color:#FFFFFF; 
+text-decoration:underline;
+/*background:url(../img/button/genre_pnl_04sh.jpg) no-repeat;*/
+}
+
+
+#genre_pnl_05s a{
+display:block;
+width:165px;
+height:23px;
+color:#000000;
+/*background:url(../img/button/genre_pnl_05s.jpg) no-repeat;*/
+text-decoration:none;
+font-size:11px;
+padding:40px 20px 0 10px;
+}
+
+#genre_pnl_05s a:hover{
+color:#FFFFFF; 
+text-decoration:underline;
+/*background:url(../img/button/genre_pnl_05sh.jpg) no-repeat;*/
+}
+
+/* for sub panel */
+#subpnl{
+margin-top:10px;
+margin-bottom:10px;}
+#subpnl img{
+display:block;
+}
+
+
+
+/* for scrollfollow */
+#sideBar {
+width: 237px;
+height: 301px;
+position: absolute;
+right:20px;
+top:113px;
+float: right;
+color: #fff;
+z-index:2;
+}
+
+#sideBar p {
+padding: 5px;
+}

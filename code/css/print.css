@@ -1,0 +1,168 @@
+@charset "UTF-8";
+/* GLOVAL */
+body{
+background-color:#FFF;
+color:#000;
+font-size:12px;
+}
+
+#wrapper{
+    width: 100%;
+    height: auto;
+    /*text-align: center;*/
+}
+
+div#container {
+    clear: both;
+    width: 725px;
+    margin: 0 auto;
+}
+
+table#header{
+    width:725px;
+}
+
+table#header td{
+    text-align:left;
+    font-size:140%;
+}
+
+table#header td.control{
+    text-align:left;
+    font-size:100%;
+}
+
+table#header td.contact{
+    text-align:right;
+    font-size:100%;
+}
+
+table#top{
+    width:725px;
+}
+
+table#top td{
+    text-align:left;
+    font-size:140%;
+}
+
+table#top td.logo1{
+    width:150px;
+}
+
+table#top td.logo2{
+    width:165px;
+}
+
+table#top td.btn{
+    width:211px;
+}
+
+#coupon a.print,img.print{
+/*background:url(../img/button/detail_print_bt.jpg) no-repeat 0 0;*/
+width:211px;
+height:65px;
+overflow:hidden;
+text-indent:-999999px;
+display:block;
+margin:0px auto;
+}
+
+#coupon img.print,
+#coupon a:hover.print,img.print{
+background-position:0 -65px;
+}
+
+table.coupon {
+    width:725px;
+    text-align:left;
+    border-top:1px solid #d6d5d1;
+    border-left:1px solid #d6d5d1;
+    border-right:1px solid #d6d5d1;
+    border-bottom:1px solid #d6d5d1;
+    margin-bottom:5px;
+    }
+    
+table.coupon th {
+    width:332px;
+    text-align:center;
+    background-color: #f3f2ee;
+    font-weight: normal;
+    padding:5px;
+    }
+
+table.coupon th.icon {
+    width:31px;
+    text-align:left;
+    background-color: #f3f2ee;
+    font-weight: normal;
+    padding:0px;
+    }
+
+table.coupon td {
+    padding:5px;
+    }
+table.coupon .coupon{
+    font-weight:bold;
+}
+
+table.coupon .japan{
+    border-top:dotted 1px #999999;
+    margin-top:5px;
+    padding-top:5px;
+    font-size:90%;
+}
+table#shop{
+    width:725px;
+    border-top:1px solid #d6d5d1;
+    border-left:1px solid #d6d5d1;
+}
+
+table#shop td{
+    text-align:left;
+    border-right:1px solid #d6d5d1;
+    border-bottom:1px solid #d6d5d1;
+}
+
+table#shop td.map{
+    text-align:center;
+}
+
+table#shop td.title{
+    width:70px;
+    background-color: #f3f2ee;
+    padding:5px;
+}
+
+table#shop td.data{
+    width:642px;
+    padding:5px;
+}
+
+table#shop td.data2{
+    width:321px;
+    padding:5px;
+}
+
+table#etc{
+    margin-top:2px;
+    width:725px;
+    border-top:1px solid #d6d5d1;
+    border-left:1px solid #d6d5d1;
+    border-right:1px solid #d6d5d1;
+}
+
+table#etc td{
+    text-align:left;
+    
+    border-bottom:1px solid #d6d5d1;
+    padding:5px;
+}
+
+table#etc td.attention{
+    width:500px;
+}
+
+table#etc td.barcode{
+    border-left:1px solid #d6d5d1;
+}

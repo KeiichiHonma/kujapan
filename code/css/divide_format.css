@@ -1,0 +1,87 @@
+table{
+    border-spacing:2px;
+}
+
+/*bridge*/
+#divide_format_span{
+    margin:0px;
+    padding:0px;
+    color: #ff3300;
+    font-size:14px;line-height:25px;
+    }
+#divide_format_message{
+    background: url(/img/common/line750.gif) no-repeat left top;
+    margin:10px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
+    color:#333333;font-size:12px;line-height:25px;
+}
+
+#divide_format ul.indentbox {
+    margin-left:10px;
+    }
+#divide_format ul.indentbox li{
+    list-style:none;
+    background: url(/img/common/indent.gif) no-repeat left 5px;
+    padding-left:20px;
+    }
+
+textarea.rule_regulation{
+    width: 705px;
+    margin-top: 5px;
+    margin-right: 0pt;
+    margin-bottom: 0px;
+    margin-left: 0pt;
+}
+
+/*corp*/
+.float-l {float: left;}
+.float-r {float: right;}
+
+
+table.teleweb {
+    width:360px;
+    padding:0px:
+    table-layout: fixed;
+    empty-cells: show;
+    border-collapse: separate;
+    margin-bottom: 20px;
+    line-height:20px;
+}
+table.teleweb th{
+    font-size:12px;
+    width:90px;
+    font-weight: normal;
+    background-color:#C72900;
+    color:#ffffff;
+    padding:5px;
+    text-align:center;
+    vertical-align:middle;
+}
+table.teleweb td{
+    background-color:#f2f2f2;
+    padding:5px;
+}
+
+table.iluna {
+    width:360px;
+    padding:0px:
+    table-layout: fixed;
+    empty-cells: show;
+    border-collapse: separate;
+    margin-bottom: 20px;
+    line-height:20px;
+}
+table.iluna th{
+    font-size:12px;
+    width:90px;
+    font-weight: normal;
+    background-color:#A572D3;
+    color:#ffffff;
+    padding:5px;
+    text-align:center;
+    vertical-align:middle;
+}
+table.iluna td{
+    background-color:#f2f2f2;
+    padding:5px;
+}
