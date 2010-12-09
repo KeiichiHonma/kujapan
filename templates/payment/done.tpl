@@ -31,7 +31,7 @@
         </div>
         <div id="s_main">
           <h2 class="list">{$locale.login_box_text_area_login_1}</h2>
-            <span id="divide_format_span">{$locale.bridge_confirm}</span>
+            <p id="divide_format_title">{$locale.bridge_confirm}</p>
             <div id="divide_format_message">
             <ul class="indentbox">
                 <li>{$locale.bridge_alert1}</li>

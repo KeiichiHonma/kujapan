@@ -4,23 +4,30 @@ require_once('user/table.php');
 define('VALIDATE_TIME',  7776000);//90days
 class userParameter extends parameterManager
 {
+    public $customer_no;
     public $account;
     public $password;
+    public $buy_time;
     public $auth;
     
-    public function setAdd($trade_status,$trade_no){
-        parent::readyAddParameter();
+    public function setAdd($alipay_param){
+        $this->buy_time = time();
+        parent::readyAddParameter(TRUE,$this->buy_time);
+        $this->parameter['customer_no'] = '';
         $this->parameter['account'] = '';
+
         $this->password = $this->getRandomPassword();
         $hash = $this->static_hashPassword($this->password);
         $this->parameter['password'] = $hash['hash'];
         $this->parameter['salt'] = $hash['salt'];
         $this->parameter['given_name'] = '';//後で更新
-        $this->parameter['trade_status'] = $trade_status;
-        $this->parameter['trade_no'] = $trade_no;
+
         $this->parameter['coupon'] = null;
         $this->parameter['status'] = STATUS_USER_TMP;//仮登録
-        $this->parameter['mail'] = '';//後で更新
+        
+        foreach ($alipay_param as $name => $value){
+            $this->parameter[$name] = $value['param'];
+        }
         $this->parameter['last_login'] = 0;//後で更新
         $this->parameter['validate_time'] = 0;//開始はまだ
         $this->parameter['validate'] = VALIDATE_ALLOW;
@@ -50,9 +57,10 @@ class userParameter extends parameterManager
         parent::readyUpdateParameter($uid);
         $this->parameter['status'] = $_POST['status'];
         $this->parameter['given_name'] = $_POST['given_name'];
-        $this->parameter['mail'] = $_POST['mail'];
+        $this->parameter['buyer_email'] = $_POST['buyer_email'];
         $this->parameter['customer_no'] = $_POST['customer_no'];
         $this->parameter['account'] = $_POST['account'];
+        $this->parameter['buyer_id'] = $_POST['buyer_id'];
         $this->parameter['trade_no'] = $_POST['trade_no'];
         $this->parameter['validate'] = $_POST['validate'];
         $this->parameter['validate_time'] = $_POST['validate_time'];
@@ -63,13 +71,13 @@ class userParameter extends parameterManager
         parent::readyUpdateParameter($uid);
         $this->parameter['status'] = STATUS_USER_TMP;
         $this->parameter['given_name'] = '';
-        $this->parameter['mail'] = '';
         $this->parameter['customer_no'] = $_POST['customer_no'];
         $this->parameter['account'] = $_POST['account'];
         $this->password = $this->getRandomPassword();
         $hash = $this->static_hashPassword($this->password);
         $this->parameter['password'] = $hash['hash'];
         $this->parameter['salt'] = $hash['salt'];
+        $this->parameter['buyer_id'] = $_POST['buyer_id'];
         $this->parameter['trade_no'] = $_POST['trade_no'];
         $this->parameter['validate'] = $_POST['validate'];
         $this->parameter['validate_time'] = 0;
@@ -84,7 +92,8 @@ class userParameter extends parameterManager
         }else{
             $string = 'c';//.com
         }
-        $this->parameter['customer_no'] = $string.$int;
+        $this->customer_no = $string.$int;
+        $this->parameter['customer_no'] = $this->customer_no;
         $this->account = 'k'.$this->parameter['customer_no'];
         $this->parameter['account'] = $this->account;
     }
@@ -182,7 +191,6 @@ class userParameter extends parameterManager
         $this->parameter['password'] = $hash['hash'];
         $this->parameter['salt'] = $hash['salt'];
         $this->parameter['given_name'] = '';
-        $this->parameter['mail'] = '';
         $this->parameter['status'] = STATUS_USER_TMP;//仮登録
         $this->parameter['validate_time'] = 0;//0に戻す
     }
@@ -235,18 +243,12 @@ class tmpRegistParameter extends parameterManager
 {
     public $rand;
     
-    public function setAdd($uid,$account,$password){
+    public function setAdd($uid,$customer_no,$account,$password){
         parent::readyAddParameter();
         $this->setParameter($uid);
+        $this->parameter['customer_no'] = $customer_no;
         $this->parameter['account'] = $account;
         $this->parameter['password'] = $password;
-        $int = CUSTOMER_NO_BASE + $uid;
-        if(LOCALE == 'tw'){
-            $string = 'n';//.net
-        }else{
-            $string = 'c';//.com
-        }
-        $this->parameter['customer_no'] = $string.$int;
     }
     
     public function setUpdate($trid,$uid){

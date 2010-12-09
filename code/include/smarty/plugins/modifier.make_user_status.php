@@ -50,7 +50,7 @@ function smarty_modifier_make_user_status($user)
     //危険なものからチェックする
     if(strcasecmp($user['col_validate'],VALIDATE_DENY) == 0){
         return $con->locale[$key_head_name.'deny'];
-    }elseif(strlen($user['col_customer_no']) == 0 || strlen($user['col_account']) == 0 || strlen($user['col_trade_no']) == 0){
+    }elseif(strlen($user['col_customer_no']) == 0 || strlen($user['col_account']) == 0 || strlen($user['col_buyer_id']) == 0 || strlen($user['col_trade_no']) == 0){
         return $con->locale[$key_head_name.'error1'];
     }elseif(strlen($user['col_given_name']) == 0){
         if(strcasecmp($user['col_status'],STATUS_USER_TMP) == 0){

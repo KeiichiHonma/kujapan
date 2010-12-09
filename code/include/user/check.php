@@ -39,11 +39,11 @@ class checkEntry extends checkManager
             array('type'=>'eigo','func'=>'checkEigo','arg'=>null),
             array('type'=>null,'func'=>'replaceInput','arg'=>'given_name')
         ),
-        'mail'=>array
+/*        'mail'=>array
         (
             array('type'=>'must','func'=>'checkMust','arg'=>null),
             array('type'=>'validate','func'=>'checkMail','arg'=>null)
-        )
+        )*/
     );
             
     static public function checkError(){
@@ -74,9 +74,14 @@ class checkEdit extends checkManager
             array('message'=>'！ログインアカウントは必須です。','func'=>'checkMust','arg'=>null),
             array('type'=>null,'func'=>'replaceInput','arg'=>'account')
         ),
+        'buyer_id'=>array
+        (
+            array('message'=>'！アリペイIDは必須です。','func'=>'checkMust','arg'=>null),
+            array('type'=>null,'func'=>'replaceInput','arg'=>'buyer_id')
+        ),
         'trade_no'=>array
         (
-            array('message'=>'！アリペイ番号は必須です。','func'=>'checkMust','arg'=>null),
+            array('message'=>'！取引番号は必須です。','func'=>'checkMust','arg'=>null),
             array('type'=>null,'func'=>'replaceInput','arg'=>'trade_no')
         ),
         'mail'=>array

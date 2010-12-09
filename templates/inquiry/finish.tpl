@@ -29,7 +29,7 @@
         </div>
         <div id="s_main">
           <h2 class="list">掲載をご検討の企業様</h2>
-            <span id="divide_format_span">「日遊酷棒」への店舗掲載のお問い合わせ</span>
+            <p id="divide_format_title">「日遊酷棒」への店舗掲載のお問い合わせ</p>
             <div id="divide_format_message">
     お問い合わせありがとうございました。<br />
     後日、担当者よりご連絡させていただきます。

@@ -8,9 +8,8 @@ class mailTemplate
     }
 
     //ユーザー登録
-    public function makeRegistUserMail($mail,$given_name,$customer_no,$time,$account,$password){
-        $this->message .= $given_name."\n\n";
-        $this->message .= '非常感谢您本次购买“日游酷棒”无限量优惠券。'."\n\n";
+    public function makeRegistUserMail($mail,$time,$customer_no,$account,$password){
+        $this->message .= '非常感谢您本次购买“日游酷棒”优惠券任拿。'."\n\n";
         
         $this->message .= '■客户编号:'.$customer_no."\n";
         $this->message .= '■购买日期:'.date("Y/n/d G:i",$time)."\n";
@@ -18,13 +17,13 @@ class mailTemplate
         $this->message .= '■登录密码:'.$password."\n\n";
         
         $this->message .= '［＊注意事项＊］'."\n";
-        $this->message .= '本邮件中的客户编号以及登录信息使用来证明您已经购买了优惠券，'."\n";
-        $this->message .= '所以请小心保管好这些信息。'."\n\n";
+        $this->message .= '通过本邮件中的客户编号以及登录信息来证明您已经购买了优惠券，'."\n";
+        $this->message .= '请注意保管好这些信息。'."\n\n";
         
         $this->message .= '希望您今后能继续使用日游酷棒。 '."\n\n";
         
         $this->message .= '请不要直接回复本邮件，'."\n";
-        $this->message .= '有任何问题请咨询“日游酷棒热线中心”。'."\n";
+        $this->message .= '如有任何问题请咨询“日游酷棒热线中心”。'."\n";
         
         $this->message .= "\n\n*****************************************************************\n\n";
         $this->message .= '日游酷棒:'.KUJAPANURL.'/'."\n";

@@ -146,6 +146,13 @@ class commonPosition extends positionManager
                 'name_tw'=>'alipay',
                 'func'=>null,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>null
             ),
+            'alipayto'=>array
+            (
+                'name_ja'=>'alipayto',
+                'name_cn'=>'alipayto',
+                'name_tw'=>'alipayto',
+                'func'=>null,'ssl'=>FALSE,'gnavi'=>null,'snavi'=>null
+            ),
             'finish'=>array
             (
                 'name_ja'=>'購入明細',
@@ -158,6 +165,13 @@ class commonPosition extends positionManager
                 'name_ja'=>'購入明細',
                 'name_cn'=>'购买明细',
                 'name_tw'=>'購買明細',
+                'func'=>null,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>null
+            ),
+            'error'=>array
+            (
+                'name_ja'=>'決済処理中にエラーが発生しました',
+                'name_cn'=>'決済処理中にエラーが発生しました',
+                'name_tw'=>'決済処理中にエラーが発生しました',
                 'func'=>null,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>null
             ),
         ),

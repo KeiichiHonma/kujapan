@@ -30,7 +30,7 @@
         </div>
         <div id="s_main">
           <h2 class="list">{$locale.footer_rule}</h2>
-            <span id="divide_format_span">{$locale.rule_title}</span>
+            <p id="divide_format_title">{$locale.rule_title}</p>
             <div id="divide_format_message">{$locale.rule_text}</div>
             <div id="rule_list">
                 {foreach from=$locale.rule_sub key="key" item="value" name="rule_sub"}

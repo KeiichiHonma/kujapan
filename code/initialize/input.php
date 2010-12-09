@@ -42,13 +42,6 @@ if($regist === FALSE){
                 checkEntry::checkError();
                 $bl = checkEntry::safeExit();
                 if($bl){
-                    //先にメール送信
-                    if(strlen($_POST['mail']) > 0){
-                        require_once('fw/mailManager.php');
-                        $mailManager = new mailManager();
-                        $mailManager->sendRegistUser($_POST['mail'],$_POST['given_name'],$regist[0]['col_customer_no'],$regist[0]['col_ctime'],$regist[0]['col_account'],$regist[0]['col_password']);
-                    }
-
                     //ユーザー有効化///////////////////////////
                     require_once('user/handle.php');
                     $user_handle = new userHandle();

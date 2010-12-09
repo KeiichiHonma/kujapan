@@ -114,8 +114,8 @@ if(strcasecmp($ref,'area') == 0){
     $oid = $shop[0]['col_aid'];
     commonPosition::makeFirstPosition
     (
-        KUJAPANURL.'/area/aid/'.$coupon[0]['col_aid'],
-        $con->area->area_info[$coupon[0]['col_aid']]['col_name']
+        KUJAPANURL.'/area/aid/'.$shop[0]['col_aid'],
+        $con->area->area_info[$shop[0]['col_aid']]['col_name']
     );
 }
 

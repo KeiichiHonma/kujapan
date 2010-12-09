@@ -30,6 +30,15 @@
         </tr>
 
         <tr>
+        <td width="150" valign="top">{$locale.user_validate_title|error_bold:$error.validate}<span class="attention">＊</span></td>
+        <td valign="top">
+        {$error.validate|error_message}
+        <input type="radio" name="validate"{if strcasecmp($smarty.post.validate,$smarty.const.VALIDATE_ALLOW) == 0} checked{/if} value="{$smarty.const.VALIDATE_ALLOW}">有効
+        <input type="radio" name="validate"{if strcasecmp($smarty.post.validate,$smarty.const.VALIDATE_DENY) == 0} checked{/if} value="{$smarty.const.VALIDATE_DENY}">停止
+        </td>
+        </tr>
+
+        <tr>
         <td width="150" valign="top">{$locale.user_status_title|error_bold:$error.status}<span class="attention">＊</span></td>
         <td valign="top">
         {$error.status|error_message}
@@ -45,49 +54,47 @@
         </tr>
 
         <tr>
-        <td width="150" valign="top">{$locale.user_mail_title|error_bold:$error.mail}</td>
+        <td width="150" valign="top">{$locale.user_mail_title|error_bold:$error.buyer_email}</td>
         <td valign="top">
-        {$error.mail|error_message}<input type="text" name="mail" value="{$smarty.post.mail}" class="form_text_common" /></td>
+        {$error.buyer_email|error_message}<input type="text" name="buyer_email" value="{$smarty.post.buyer_email}" class="form_text_common" /></td>
         </tr>
 
         <tr>
-        <td width="150" valign="top">{$locale.user_customer_no_title|error_bold:$error.customer_no}<span class="attention">＊</span></td>
+        <td width="150" valign="top">{$locale.customer_no|error_bold:$error.customer_no}<span class="attention">＊</span></td>
         <td valign="top">
         {$error.customer_no|error_message}<input type="text" name="customer_no" value="{$smarty.post.customer_no}" class="form_text_common" /></td>
         </tr>
 
         <tr>
-        <td width="150" valign="top">{$locale.user_account_title|error_bold:$error.account}<span class="attention">＊</span></td>
+        <td width="150" valign="top">{$locale.login_account|error_bold:$error.account}<span class="attention">＊</span></td>
         <td valign="top">
         {$error.account|error_message}<input type="text" name="account" value="{$smarty.post.account}" class="form_text_common" /></td>
         </tr>
 
         <tr>
-        <td width="150" valign="top">{$locale.user_trade_no_title|error_bold:$error.trade_no}<span class="attention">＊</span></td>
+        <td width="150" valign="top">{$locale.account_validate_time|error_bold:$error.validate_time}<span class="attention">※</span></td>
+        <td>
+        {$error.validate_time|error_message}
+        {if $smarty.post.validate_time}
+            {html_select_date field_order="YMD" year_format="%04d年" month_format="%-m月" day_format="%d日" end_year="+1" field_separator=" " year_extra='id="y"' month_extra='id="m"' day_extra='id="d"' prefix="date_" time=$smarty.post.validate_time}<img src="/img/system/icon_calendar.gif" id="select_date_calendar_icon"/>
+        {else}
+            {html_select_date field_order="YMD" year_format="%04d年" month_format="%-m月" day_format="%d日" end_year="+1" field_separator=" " year_extra='id="y"' month_extra='id="m"' day_extra='id="d"' prefix="date_"}<img src="/img/system/icon_calendar.gif" id="select_date_calendar_icon"/>
+        {/if}
+        </td>
+        </tr>
+
+        <tr>
+        <td width="150" valign="top">{$locale.alipay_id|error_bold:$error.buyer_id}<span class="attention">＊</span></td>
+        <td valign="top">
+        {$error.buyer_id|error_message}<input type="text" name="buyer_id" value="{$smarty.post.buyer_id}" class="form_text_common" /></td>
+        </tr>
+
+        <tr>
+        <td width="150" valign="top">{$locale.trade_no|error_bold:$error.trade_no}<span class="attention">＊</span></td>
         <td valign="top">
         {$error.trade_no|error_message}<input type="text" name="trade_no" value="{$smarty.post.trade_no}" class="form_text_common" /></td>
         </tr>
 
-        <tr>
-        <td width="150" valign="top">{$locale.user_validate_title|error_bold:$error.validate}<span class="attention">＊</span></td>
-        <td valign="top">
-        {$error.validate|error_message}
-        <input type="radio" name="validate"{if strcasecmp($smarty.post.validate,$smarty.const.VALIDATE_ALLOW) == 0} checked{/if} value="{$smarty.const.VALIDATE_ALLOW}">有効
-        <input type="radio" name="validate"{if strcasecmp($smarty.post.validate,$smarty.const.VALIDATE_DENY) == 0} checked{/if} value="{$smarty.const.VALIDATE_DENY}">停止
-        </td>
-        </tr>
-
-        <tr>
-        <td width="150" valign="top">{$locale.user_validate_time_title|error_bold:$error.validate_time}<span class="attention">※</span></td>
-        <td>
-        {$error.validate_time|error_message}
-    {if $smarty.post.validate_time}
-        {html_select_date field_order="YMD" year_format="%04d年" month_format="%-m月" day_format="%d日" end_year="+1" field_separator=" " year_extra='id="y"' month_extra='id="m"' day_extra='id="d"' prefix="date_" time=$smarty.post.validate_time}<img src="/img/system/icon_calendar.gif" id="select_date_calendar_icon"/>
-    {else}
-        {html_select_date field_order="YMD" year_format="%04d年" month_format="%-m月" day_format="%d日" end_year="+1" field_separator=" " year_extra='id="y"' month_extra='id="m"' day_extra='id="d"' prefix="date_"}<img src="/img/system/icon_calendar.gif" id="select_date_calendar_icon"/>
-    {/if}
-        </td>
-        </tr>
         </table>
 
 {literal}

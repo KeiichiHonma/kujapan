@@ -26,7 +26,7 @@
                         {$locale.coupon_search_keyword}
                         </dt>
                         <dd class="theme_data">
-                        {if $error}<span class="error_alert">{$locale.coupon_error1}</span>{/if}
+                        {if $error}<span class="error_alert">{$locale.coupon_error_1}</span>{/if}
             <form name="form_search" action="{$smarty.const.KUJAPANURLSSL}/system/coupon/search" method="get" onSubmit="return checkLogForm(this.sid,this.customer_no,this.last_no)">
             <input type="text" name="sid" value="{$smarty.get.sid}" class="keyword" />-<input type="text" name="customer_no" value="{$smarty.get.customer_no}" class="keyword" />-<input type="text" name="last_no" value="{$smarty.get.last_no}" class="keyword" />
             <input type="submit" value="  {$locale.coupon_search_btn}  " class="go" />
@@ -47,7 +47,7 @@
                 </dd>
                 
             </dl>
-            <p class="init"><img src="/img/system/reset.gif" alt="" width="12" height="12" border="0" />&nbsp;<a href="{$smarty.const.KUJAPANURLSSL}/system/user/">{$locale.coupon_search_reset}</a></p>
+            <p class="init"><img src="/img/system/reset.gif" alt="" width="12" height="12" border="0" />&nbsp;<a href="{$smarty.const.KUJAPANURLSSL}/system/coupon/">{$locale.coupon_search_reset}</a></p>
         </div>
         <h2 class="h_title">{$print_time|make_date}{$locale.coupon_display_title}</h2>
         {if $display_coupon}
@@ -126,7 +126,7 @@
             </table>
             {/foreach}
         {else}
-        最新のクーポン券と同一です。
+        {$locale.coupon_search_none}
         {/if}
     </div>
 </div>

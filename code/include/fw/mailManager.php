@@ -146,13 +146,13 @@ class mailManager
 
     //基本処理///////////////////////////////////////////////////////////////////////////////////////
     //登録
-    public function sendRegistUser($mail,$given_name,$customer_no,$time,$account,$password){
+    public function sendRegistUser($mail,$time,$customer_no,$account,$password){
         $this->callTemplate();//言語チェック
         $this->setRegistTo($mail);
         
         $this->mail->subject($this->mail_template->makeRegistSubject());
         
-        $this->mail_template->makeRegistUserMail($mail,$given_name,$customer_no,$time,$account,$password);
+        $this->mail_template->makeRegistUserMail($mail,$time,$customer_no,$account,$password);
         
         $this->mail->text($this->mail_template->message);
         

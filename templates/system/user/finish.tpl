@@ -29,27 +29,25 @@
         </div>
         <table id="suggest">
             <tr>
-            <th colspan="2">{$locale.user_app_name}</th>
+            <th colspan="2">{$locale.user_republish_done_title} - {$user.0.col_customer_no}</th>
             </tr>
             <tr>
-            <td width="150" valign="top">{$locale.user_customer_no_title}</td>
-            <td valign="top">{$user.0.col_customer_no}</td>
+            <td width="150" valign="top">{$locale.user_given_name_title}</td>
+            <td valign="top">{$user.0.col_given_name|default:$locale.user_given_name_value_default}</td>
             </tr>
             <tr>
-            <td width="150" valign="top">{$locale.user_account_title}</td>
+            <td width="150" valign="top">{$locale.login_account}</td>
             <td valign="top">{$user.0.col_account}</td>
             </tr>
             <tr>
             <td width="150" valign="top">{$locale.user_new_password_title}</td>
-            <td valign="top">{$password}</td>
+            <td valign="top">
+            <b>{if $password}{$password}{else}{$locale.user_republish_alert1}{/if}</b>
+            </td>
             </tr>
             <tr>
-            <td width="150" valign="top">{$locale.user_given_name_title}</td>
-            <td valign="top">{$user.0.col_given_name|default:"-"}</td>
-            </tr>
-            <tr>
-            <td width="150" valign="top">{$locale.user_validate_time_title}</td>
-            <td valign="top">{$user.0.col_validate_time|make_date|default:"-"}</td>
+            <td width="150" valign="top">{$locale.account_validate_time}</td>
+            <td valign="top">{$user.0.col_validate_time|make_date:"Y/n/d G:i"|default:$locale.user_given_name_value_default}</td>
             </tr>
         </table>
         {else}

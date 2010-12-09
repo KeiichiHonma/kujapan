@@ -32,8 +32,8 @@ $con->t->assign('user',$user);
 $page = 'view';
 if ( $con->isPost ){
     $check_result = FALSE;
-    //お客様番号、アカウント、アリペイ番号この3つが必ずあること
-    if(strlen($user[0]['col_customer_no']) > 0 && strlen($user[0]['col_account']) > 0 && strlen($user[0]['col_trade_no']) > 0){
+    //お客様番号、アカウント、アリペイID、取引番号この3つが必ずあること
+    if(strlen($user[0]['col_customer_no']) > 0 && strlen($user[0]['col_account']) > 0 && strlen($user[0]['col_buyer_id']) > 0 && strlen($user[0]['col_trade_no']) > 0){
         $check_result = TRUE;
     }
     

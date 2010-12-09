@@ -39,7 +39,7 @@
                         {$locale.user_search_item}
                         </dt>
                         <dd class="theme_data">
-                        {$locale.user_search_item_value}
+                        {$locale.customer_no},{$locale.login_account},{$locale.alipay_id}
                         </dd>
                     </dl>
                 </dd>
@@ -55,11 +55,11 @@
                     <dl>
                         <dd class="given_name_title">{$locale.user_given_name_title}</dd>
                         <dd class="status_title">{$locale.user_status_title}</dd>
-                        <dd class="cutomer_no_title">{$locale.user_customer_no_title}</dd>
-                        <dd class="account_title">{$locale.user_account_title}</dd>
-                        <dd class="alipay_title">{$locale.user_alipay_title}</dd>
-                        <dd class="date_title">{$locale.user_validate_time_title}</dd>
-                        
+                        <dd class="cutomer_no_title">{$locale.customer_no}</dd>
+                        <dd class="account_title">{$locale.login_account}</dd>
+                        <dd class="date_title">{$locale.account_validate_time}</dd>
+                        <dd class="alipay_title">{$locale.alipay_id}</dd>
+                        <dd class="trade_no_title">{$locale.trade_no}</dd>
                     </dl>
                 </dd>
         {foreach from=$user key="key" item="value" name="user"}
@@ -69,8 +69,9 @@
                         <dd class="common">{$value|@make_user_status}</dd>
                         <dd class="common{if $keyword == $value.col_customer_no} hit{/if}">{$value.col_customer_no|default:"-"}</dd>
                         <dd class="common{if $keyword == $value.col_account} hit{/if}">{$value.col_account|default:"-"}</dd>
-                        <dd class="common{if $keyword == $value.col_trade_no} hit{/if}">{$value.col_trade_no|default:"-"}</dd>
-                        <dd class="date">{$value.col_validate_time|make_date}</dd>
+                        <dd class="date">{$value.col_validate_time|make_date:"Y/n/d G:i"|default:$locale.user_given_name_value_default}</dd>
+                        <dd class="alipay{if $keyword == $value.col_buyer_id} hit{/if}">{$value.col_buyer_id|default:"-"}</dd>
+                        <dd class="alipay{if $keyword == $value.col_trade_no} hit{/if}">{$value.col_trade_no|default:"-"}</dd>
                     </dl>
                 </dd>
         {/foreach}

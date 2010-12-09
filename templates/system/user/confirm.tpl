@@ -37,36 +37,41 @@
             </tr>
             <tr>
             <td width="150" valign="top">{$locale.user_last_login_title}</td>
-            <td valign="top">{$user.0.col_validate_time|make_date}</td>
+            <td valign="top">{$user.0.col_last_login|make_date:"Y/n/d G:i"|default:"-"}</td>
             </tr>
             <tr>
             <td width="150" valign="top">{$locale.user_given_name_title}</td>
-            <td valign="top">{$user.0.col_given_name}</td>
+            <td valign="top">{$user.0.col_given_name|default:$locale.user_given_name_value_default}</td>
             </tr>
             <tr>
             <td width="150" valign="top">{$locale.user_mail_title}</td>
-            <td valign="top">{$user.0.col_mail}</td>
+            <td valign="top">{$user.0.col_buyer_email}</td>
             </tr>
             <tr>
             <td width="150" valign="top">{$locale.user_status_title}</td>
             <td valign="top">{$user.0|@make_user_status}</td>
             </tr>
             <tr>
-            <td width="150" valign="top">{$locale.user_customer_no_title}</td>
+            <td width="150" valign="top">{$locale.customer_no}</td>
             <td valign="top">{$user.0.col_customer_no}</td>
             </tr>
             <tr>
-            <td width="150" valign="top">{$locale.user_account_title}</td>
+            <td width="150" valign="top">{$locale.login_account}</td>
             <td valign="top">{$user.0.col_account}</td>
             </tr>
             <tr>
-            <td width="150" valign="top">{$locale.user_trade_no_title}</td>
-            <td valign="top">{$user.0.col_trade_no}</td>
+            <td width="150" valign="top">{$locale.account_validate_time}</td>
+            <td valign="top">{$user.0.col_validate_time|make_date:"Y/n/d G:i"|default:$locale.user_given_name_value_default}</td>
             </tr>
             <tr>
-            <td width="150" valign="top">{$locale.user_validate_time_title}</td>
-            <td valign="top">{$user.0.col_validate_time|make_date}</td>
+            <td width="150" valign="top">{$locale.alipay_id}</td>
+            <td valign="top">{$user.0.col_buyer_id}</td>
             </tr>
+            <tr>
+            <td width="150" valign="top">{$locale.trade_no}</td>
+            <td valign="top">{$user.0.col_trade_no}</td>
+            </tr>
+
             <tr>
             <td colspan="2" class="btn">
                 <form id="couponForm" name="couponForm" action= "{$smarty.const.KUJAPANURLSSL}/system/user/republish/uid/{$user.0._id}" method="post">

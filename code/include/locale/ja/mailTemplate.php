@@ -8,8 +8,7 @@ class mailTemplate
     }
 
     //ユーザー登録
-    public function makeRegistUserMail($mail,$given_name,$customer_no,$time,$account,$password){
-        $this->message .= $given_name."様\n\n";
+    public function makeRegistUserMail($mail,$time,$customer_no,$account,$password){
         $this->message .= 'このたびは「日游酷棒」クーポン取り放題をご購入いただきまして、誠にありがとうございます。'."\n\n";
         
         $this->message .= '■お客様番号:'.$customer_no."\n";

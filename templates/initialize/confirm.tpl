@@ -38,7 +38,7 @@
         </tr>
     </table>
 
-    <table class="initialize">
+{*    <table class="initialize">
         <tr>
             <td class="title">{$locale.input_mail}</td>
             <td class="form">{if $smarty.post.mail}{$smarty.post.mail|escape}{/if}</td>
@@ -48,8 +48,8 @@
                 {$locale.input_mail_message1}
             </td>
         </tr>
-    </table>
-
+    </table>*}
+    <br />
     <table class="btn">
     <tbody>
     <tr>
@@ -67,7 +67,7 @@
     </form>
 
     </div>
-    <img src="/img/initialize/frame.gif" height="400" width="705">
+    <img src="/img/initialize/frame.gif" height="300" width="705">
 </div>
 
 

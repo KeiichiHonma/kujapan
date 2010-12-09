@@ -26,6 +26,18 @@
         </tr>
 
         <tr>
+        <td width="150" valign="top">{$locale.user_validate_title}</td>
+        <td valign="top">
+        <input type="hidden" name="validate" value="{$smarty.post.validate}" />
+        {if strcasecmp($smarty.post.validate,$smarty.const.VALIDATE_ALLOW) == 0}
+        有効
+        {else}
+        停止
+        {/if}
+        </td>
+        </tr>
+
+        <tr>
         <td width="150" valign="top">{$locale.user_status_title}</td>
         <td valign="top">
         <input type="hidden" name="status" value="{$smarty.post.status}" />
@@ -43,6 +55,8 @@
         {if strcasecmp($smarty.post.status,$smarty.const.STATUS_USER_REGIST) == 0}
         <input type="hidden" name="given_name" value="{$smarty.post.given_name}" />
         {$smarty.post.given_name}
+        {else}
+        ステータスを未登録にしているため送信されません。
         {/if}
         </td>
         </tr>
@@ -50,15 +64,13 @@
         <tr>
         <td width="150" valign="top">{$locale.user_mail_title}</td>
         <td valign="top">
-        {if strcasecmp($smarty.post.status,$smarty.const.STATUS_USER_REGIST) == 0}
-        <input type="hidden" name="mail" value="{$smarty.post.mail}" />
-        {$smarty.post.mail}
-        {/if}
+        <input type="hidden" name="buyer_email" value="{$smarty.post.buyer_email}" />
+        {$smarty.post.buyer_email}
         </td>
         </tr>
 
         <tr>
-        <td width="150" valign="top">{$locale.user_customer_no_title}</td>
+        <td width="150" valign="top">{$locale.customer_no}</td>
         <td valign="top">
         <input type="hidden" name="customer_no" value="{$smarty.post.customer_no}" />
         {$smarty.post.customer_no}
@@ -66,7 +78,7 @@
         </tr>
 
         <tr>
-        <td width="150" valign="top">{$locale.user_account_title}</td>
+        <td width="150" valign="top">{$locale.login_account}</td>
         <td valign="top">
         <input type="hidden" name="account" value="{$smarty.post.account}" />
         {$smarty.post.account}
@@ -74,34 +86,33 @@
         </tr>
 
         <tr>
-        <td width="150" valign="top">{$locale.user_trade_no_title}</td>
+        <td width="150" valign="top">{$locale.account_validate_time}</td>
+        <td>
+        {if strcasecmp($smarty.post.status,$smarty.const.STATUS_USER_REGIST) == 0}
+        {$smarty.post.validate_time|make_date}
+        <input type="hidden" name="validate_time" value="{$smarty.post.validate_time}" />
+        {else}
+        ステータスを未登録にしているため送信されません。
+        {/if}
+        </td>
+        </tr>
+
+        <tr>
+        <td width="150" valign="top">{$locale.alipay_id}</td>
+        <td valign="top">
+        <input type="hidden" name="buyer_id" value="{$smarty.post.buyer_id}" />
+        {$smarty.post.buyer_id}
+        </td>
+        </tr>
+
+        <tr>
+        <td width="150" valign="top">{$locale.trade_no}</td>
         <td valign="top">
         <input type="hidden" name="trade_no" value="{$smarty.post.trade_no}" />
         {$smarty.post.trade_no}
         </td>
         </tr>
 
-        <tr>
-        <td width="150" valign="top">{$locale.user_validate_title}</td>
-        <td valign="top">
-        <input type="hidden" name="validate" value="{$smarty.post.validate}" />
-        {if strcasecmp($smarty.post.validate,$smarty.const.VALIDATE_ALLOW) == 0}
-        有効
-        {else}
-        停止
-        {/if}
-        </td>
-        </tr>
-
-        <tr>
-        <td width="150" valign="top">{$locale.user_validate_time_title}</td>
-        <td>
-        {if strcasecmp($smarty.post.status,$smarty.const.STATUS_USER_REGIST) == 0}
-        {$smarty.post.validate_time|make_date}
-        <input type="hidden" name="validate_time" value="{$smarty.post.validate_time}" />
-        {/if}
-        </td>
-        </tr>
         </table>
 
         <div id="form_btn">

@@ -10,6 +10,9 @@ $common_locale = array(
     'coupon' => '优惠',//クーポン
     'contact' => '客服服务',//お問い合わせ
     'customer_no' => '客户编号',//お客様番号 您的编号 or 客户编号
+    'alipay_id' => '支付宝账号ID',//アリペイID
+    'trade_no' => '支付宝交易号',//取引番号
+    
     'buy_time' => '购买日期',//ご購入日時
     'coupon_validate_time' => '使用期限',//クーポンの有効期限
     'account_validate_time' => '账户有效期',//アカウントの有効期限
@@ -89,6 +92,10 @@ $common_locale = array(
     'error_title' => '请按返回键',//戻るボタンを押してください。
     'coupon_none_error' => '没有可显示的优惠券',//表示するクーポン券がありません。
     
-    'unknown_error' => "不明なエラーが発生しました。\n時間を置いて再度実行いただきますようお願いいたします。",
+    'unknown_error' => "不明原因的错误。请联系日游酷棒客服中心",
+    
+    //商品名、商品説明
+    'alipay_product_title' => '「日游酷棒」优惠券任拿',//日游酷棒クーポン取り放題
+    'alipay_product_detail' => '在「日游酷棒」页内刊载的店铺优惠劵90天以内可自由拿取。',//「日遊酷棒」サイト内に掲載されている店舗のクーポンが90日間取り放題です。
 );
 ?>

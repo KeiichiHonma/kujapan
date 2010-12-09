@@ -104,7 +104,13 @@ class QdmailBase extends QdmailBranch{
     //----------------------------
     // Line Feed Character & kana
     //----------------------------
-    var    $LFC                =  "\r\n";// Notice: CRLF ,If you failed, change to "\n"
+    
+    /*
+    すげー重要。qmailは勝手にCRLFをが二重の改行と解釈して本文とする。ていうかbeckyが正常に受信してるのがおかしいんじゃね？まったくガラパゴスダ
+    http://ameblo.jp/archive-redo-blog/entry-10695529884.html
+    */
+    //var    $LFC                =  "\r\n";// Notice: CRLF ,If you failed, change to "\n"
+    var    $LFC                =  "\n";// Notice: CRLF ,If you failed, change to "\n"
     var $LFC_Qmail            =  null;
     var $is_qmail            =  null;
     var $language            = 'ja';

@@ -45,7 +45,7 @@
                 </dd>
                 
             </dl>
-            <p class="init"><img src="/img/system/reset.gif" alt="" width="12" height="12" border="0" />&nbsp;<a href="{$smarty.const.KUJAPANURLSSL}/system/user/">{$locale.coupon_search_reset}</a></p>
+            <p class="init"><img src="/img/system/reset.gif" alt="" width="12" height="12" border="0" />&nbsp;<a href="{$smarty.const.KUJAPANURLSSL}/system/coupon/">{$locale.coupon_search_reset}</a></p>
         </div>
     </div>
 </div>

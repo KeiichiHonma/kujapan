@@ -3,15 +3,15 @@ table{
 }
 
 /*bridge*/
-#divide_format_span{
-    margin:0px;
-    padding:0px;
+#divide_format_title{
+    margin:5px 0px 5px 0px;
+    padding:0px 0px 0px 0px;
     color: #ff3300;
-    font-size:14px;line-height:25px;
+    font-size:14px;
     }
 #divide_format_message{
     background: url(/img/common/line750.gif) no-repeat left top;
-    margin:10px 0px 0px 0px;
+    margin:0px 0px 5px 0px;
     padding:0px 0px 0px 0px;
     color:#333333;font-size:12px;line-height:25px;
 }

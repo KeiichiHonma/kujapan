@@ -9,8 +9,9 @@ class userHandle extends handleManager
         $this->parameter = new userParameter();
     }
     
-    public function addRow($trade_status,$trade_no){
-        $this->parameter->setAdd($trade_status,$trade_no);
+    public function addRow($alipay_param){
+        $this->parameter->setAdd($alipay_param);
+        //return parent::addDebug(T_USER,$this->parameter);
         return parent::addRow(T_USER,$this->parameter);
     }
 
@@ -120,8 +121,8 @@ class tmpRegistHandle extends handleManager
         $this->parameter = new tmpRegistParameter();
     }
     
-    public function addRow($uid,$account,$password){
-        $this->parameter->setAdd($uid,$account,$password);
+    public function addRow($uid,$customer_no,$account,$password){
+        $this->parameter->setAdd($uid,$customer_no,$account,$password);
         return parent::addRow(T_REGIST,$this->parameter);
     }
 

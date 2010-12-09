@@ -57,6 +57,10 @@
             <td valign="top">{$user.0.col_account}</td>
             </tr>
             <tr>
+            <td width="150" valign="top">{$locale.alipay_id}</td>
+            <td valign="top">{$user.0.col_buyer_id}</td>
+            </tr>
+            <tr>
             <td width="150" valign="top">{$locale.user_trade_no_title}</td>
             <td valign="top">{$user.0.col_trade_no}</td>
             </tr>

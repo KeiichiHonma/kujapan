@@ -21,6 +21,8 @@ class container
     public $isPost = FALSE;
     public $ini;
     public $isDebug = FALSE;
+    public $isStage = FALSE;
+    public $isAlipay = TRUE;
     public $isSystem = FALSE;
     public $lastJudge = TRUE;//ロールバックかコミットの判断
     public $session;
@@ -131,24 +133,39 @@ class container
 
     private function checkIni(){
         $this->ini = parse_ini_file(SETTING_INI, true);
+        //alipay画面に飛ぶか
+        if($this->ini['common']['isAlipay'] == 1){
+            $this->isAlipay = TRUE;
+            $this->t->assign('is_alipay',$this->isAlipay);
+        }else{
+            $this->isAlipay = FALSE;//画面を表示しない
+        }
+        
         if($this->ini['common']['isDebug'] == 0){//本番
             $this->isDebug = FALSE;
+            
             define('SERVER_NAME_JA',      'www.kujapan.net');
             define('SERVER_NAME_CN',      'www.kujapan.com');
             define('SERVER_NAME_TW',      'www.kujapan.net');
         }elseif($this->ini['common']['isDebug'] == 1){//デバッグモード
-            if($this->ini['common']['country'] == "tw"){
-                $this->isDebug = TRUE;
-                define('SERVER_NAME_JA',      'ja.kujapan.artemis.corp.iluna.co.jp');
-                define('SERVER_NAME_CN',      'cn.kujapan.artemis.corp.iluna.co.jp');
-                define('SERVER_NAME_TW',      'tw.kujapan.artemis.corp.iluna.co.jp');
+            $this->isDebug = TRUE;
+            if($this->ini['common']['isStage'] == 1){//ステージングサーバモード
+                    $this->isStage = TRUE;
+                    define('SERVER_NAME_JA',      'ja.kujapan.iluna.co.jp');
+                    define('SERVER_NAME_CN',      'cn.kujapan.iluna.co.jp');
+                    define('SERVER_NAME_TW',      'tw.kujapan.iluna.co.jp');
+                    $this->t->assign('stage',$this->isStage);
             }else{
-                $this->isDebug = TRUE;
-                define('SERVER_NAME_JA',      'ja.kujapan.apollon.corp.iluna.co.jp');
-                define('SERVER_NAME_CN',      'cn.kujapan.apollon.corp.iluna.co.jp');
-                define('SERVER_NAME_TW',      'tw.kujapan.apollon.corp.iluna.co.jp');
+                if($this->ini['common']['country'] == "tw"){
+                    define('SERVER_NAME_JA',      'ja.kujapan.artemis.corp.iluna.co.jp');
+                    define('SERVER_NAME_CN',      'cn.kujapan.artemis.corp.iluna.co.jp');
+                    define('SERVER_NAME_TW',      'tw.kujapan.artemis.corp.iluna.co.jp');
+                }else{
+                    define('SERVER_NAME_JA',      'ja.kujapan.apollon.corp.iluna.co.jp');
+                    define('SERVER_NAME_CN',      'cn.kujapan.apollon.corp.iluna.co.jp');
+                    define('SERVER_NAME_TW',      'tw.kujapan.apollon.corp.iluna.co.jp');
+                }
             }
-
         }
         define('KUJAPANURL',            'http://'.$_SERVER['SERVER_NAME']);
         define('KUJAPANURLSSL',         'https://'.$_SERVER['SERVER_NAME']);

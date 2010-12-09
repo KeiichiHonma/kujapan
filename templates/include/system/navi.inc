@@ -19,8 +19,8 @@
 {if $login_type >= $smarty.const.TYPE_M_SUPPORT}
 <div id="subnavi">
 <ul>
-    <li class="{if $snavi == "user"}on{else}off{/if}"><a href="{$smarty.const.KUJAPANURLSSL}/system/user/">{if $locale.user_app_name}{$locale.user_app_name}{else}ユーザー検索{/if}</a></li>
-    <li class="{if $snavi == "coupon"}on{else}off{/if}"><a href="{$smarty.const.KUJAPANURLSSL}/system/coupon/">{if $locale.coupon_app_name}{$locale.coupon_app_name}{else}クーポン確認{/if}</a></li>
+    <li class="{if $snavi == "user"}on{else}off{/if}"><a href="{$smarty.const.KUJAPANURLSSL}/system/user/">{if $locale.user_app_name}{$locale.user_app_name}{else}会员{/if}</a></li>
+    <li class="{if $snavi == "coupon"}on{else}off{/if}"><a href="{$smarty.const.KUJAPANURLSSL}/system/coupon/">{if $locale.coupon_app_name}{$locale.coupon_app_name}{else}优惠券{/if}</a></li>
 </ul>
 </div>
     <br class="clear"/>

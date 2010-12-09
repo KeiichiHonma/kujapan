@@ -25,13 +25,11 @@
             </tr>
             <tr>
             <td class="title">{$locale.contact_column_name}</td><td>
-    {if $smarty.const.LOCALE == "tw"}
-    {mailto address="info@iluna.co.jp" encode="hex" text="info@iluna.co.jp"}
-    {else}
-    {$locale.telephone}
-    {/if}
-            
-            
+            {if $smarty.const.LOCALE == "tw"}
+            {mailto address="info@iluna.co.jp" encode="hex" text="info@iluna.co.jp"}
+            {else}
+            {$locale.telephone}
+            {/if}
             </td><td>{$locale.contact_opening_time}</td><td>{$locale.contact_detail}</td>
             </tr>
         </table>

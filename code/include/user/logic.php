@@ -115,6 +115,7 @@ class userSystemLogic extends logicManager
         //完全一致
         $this->setOrCond('col_customer_no',$this->keyword);
         $this->setOrCond('col_account',$this->keyword);
+        $this->setOrCond('col_buyer_id',$this->keyword);
         $this->setOrCond('col_trade_no',$this->keyword);
         return $this->getCoreUser($from,$to,$order);
     }

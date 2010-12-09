@@ -44,18 +44,14 @@ if ( $con->isPost ){
         if($bl){
             require_once('user/handle.php');
             $user_handle = new userHandle();
-            
-            //statusが未登録だったら、tmpRegistまでさかのぼって未登録、パスワード記録状態にもどさないとNG。正常に使用者登録できないと思う
-            if(strcasecmp($_POST['status'],STATUS_USER_TMP) == 0){
-                //未登録状態だった強制で書き換える
-/*                $_POST['given_name'] = '';
-                $_POST['mail'] = '';
-                $_POST['validate_time'] = 0;*/
-            }
 
             if(strcasecmp($_POST['status'],STATUS_USER_TMP) == 0){
+                //未登録状態のため強制で書き換える
+                $_POST['given_name'] = '';
+                $_POST['validate_time'] = 0;
                 $uid = $user_handle->updateResetRow($uid);
                 
+                //statusが未登録だったら、tmpRegistまでさかのぼって未登録、パスワード記録状態にもどさないとNG。正常に使用者登録できないと思う
                 //tmp regist rollback
                 $regist_handle = new tmpRegistHandle();
                 $regist_handle->rollbackRow($tmp_regist[0]['_id'],$user[0]['col_account'],$user_handle->parameter->password);
@@ -75,9 +71,10 @@ if ( $con->isPost ){
 }else{
     $_POST['status'] = $user[0]['col_status'];
     $_POST['given_name'] = $user[0]['col_given_name'];
-    $_POST['mail'] = $user[0]['col_mail'];
+    $_POST['buyer_email'] = $user[0]['col_buyer_email'];
     $_POST['customer_no'] = $user[0]['col_customer_no'];
     $_POST['account'] = $user[0]['col_account'];
+    $_POST['buyer_id'] = $user[0]['col_buyer_id'];
     $_POST['trade_no'] = $user[0]['col_trade_no'];
     $_POST['validate'] = $user[0]['col_validate'];
     $_POST['validate_time'] = $user[0]['col_validate_time'];

@@ -1,5 +1,5 @@
 <?php
-require_once('locale/cn/common.php');//共通翻訳ファイル
+require_once('locale/ja/common.php');//共通翻訳ファイル
 $page_locale = array(
     'user_app_name'=>'ユーザー検索',
     'user_search_btn'=>'検索',
@@ -7,7 +7,7 @@ $page_locale = array(
     'user_search_title'=>'ユーザー検索',
     'user_search_keyword'=>'キーワード ',
     'user_search_item'=>'検索項目',
-    'user_search_item_value'=>'客户编号,登录账户,アリペイ番号',
+    //'user_search_item_value'=>'客户编号,登录账户,アリペイ番号',
     'user_search_reset'=>'全条件解除',
     'user_search_none'=>'ユーザーが存在しません',
     
@@ -16,10 +16,10 @@ $page_locale = array(
     
     'user_given_name_title'=>'姓名',
     'user_status_title'=>'ステータス',
-    'user_customer_no_title'=>'客户编号',
-    'user_account_title'=>'登录账户',
-    'user_trade_no_title'=>'アリペイ番号',
-    'user_validate_time_title'=>'账户有效期',
+    //'user_customer_no_title'=>'客户编号',
+    //'user_account_title'=>'登录账户',
+    //'user_trade_no_title'=>'アリペイ番号',
+    //'user_validate_time_title'=>'账户有效期',
     'user_validate_title'=>'有効/停止',
     'user_create_date_title'=>'作成日時',
     'user_last_login_title'=>'最終ログイン日',

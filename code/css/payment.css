@@ -1,6 +1,6 @@
 @charset "UTF-8";
 div#form_btn{
-    margin:10px 0px;
+    margin:0px 0px;
     text-align:center;
 }
 .error_alert{
@@ -155,3 +155,47 @@ table.initialize td.title {
 table.initialize td.form {
     width:510px;
     }
+
+
+table.contact {
+    width:725px;
+    margin:10px 0px 20px 0px;
+    text-align:left;
+    background-color:#FFFFFF;
+    }
+
+table.contact th {
+    text-align:left;
+    background-color:#FFF4D1;
+    border:1px solid #FFCC66;
+    padding:5px;
+    font-weight:normal;
+    }
+
+table.contact th.title {
+    width:150px;
+}
+
+table.contact th.item {
+    width:100px;
+}
+
+table.contact th.text {
+    width:255px;
+}
+
+table.contact td {
+    border:1px solid #FFCC66;
+    padding:5px;
+    }
+
+table.contact td.title {
+    width:150px;
+}
+
+table.paymethod{
+    width:725px;
+}
+table.paymethod td {
+    padding:5px;
+}

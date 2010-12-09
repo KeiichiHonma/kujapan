@@ -29,7 +29,7 @@
         </div>
         <div id="s_main">
           <h2 class="list">{$locale.footer_corp}</h2>
-            <span id="divide_format_span">{$locale.corp_title}</span>
+            <p id="divide_format_title">{$locale.corp_title}</p>
             <div id="divide_format_message">&nbsp;</div>
 
 

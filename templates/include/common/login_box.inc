@@ -53,7 +53,7 @@
           </div>
           <div id="subpnl">
             <img alt="" height="35" src="/locale/{$smarty.const.LOCALE}/img/part/subpnl_head.gif" width="225" />
-            <img alt="" height="191" src="/locale/{$smarty.const.LOCALE}/img/part/subpnl_body.gif" width="225" />
+            <img alt="" src="/locale/{$smarty.const.LOCALE}/img/part/subpnl_body.gif" width="225" height="210" />
             <a href="{$smarty.const.KUJAPANURL}/payment/bridge"{if !$debug} target="_blank"{/if}>
               <img alt="{$locale.btn_subpnl}" height="73" src="/locale/{$smarty.const.LOCALE}/img/button/btn_subpnl_off.jpg" width="225" />
             </a>

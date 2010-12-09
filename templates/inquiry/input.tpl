@@ -31,7 +31,7 @@
         </div>
         <div id="s_main">
           <h2 lang="ja" class="list">掲載をご検討の企業様</h2>
-            <span lang="ja" id="divide_format_span">「日遊酷棒」への店舗掲載のお問い合わせ</span>
+            <p lang="ja" id="divide_format_title">「日遊酷棒」への店舗掲載のお問い合わせ</p>
             <div lang="ja" id="divide_format_message">
             「日遊酷棒」はインバウンド事業を行う日本企業の株式会社イルナが、<br />
             店舗情報の掲載を希望する企業様からのお問い合わせを以下より承ります。<br />
