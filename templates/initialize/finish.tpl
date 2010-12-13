@@ -8,6 +8,8 @@
     <link href="/locale/{$smarty.const.LOCALE}/css/background.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" type="text/css" href="/css/payment.css" media="all">
     <link href="/locale/{$smarty.const.LOCALE}/css/background.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/css/payment_print.css" type="text/css" media="print" />
+    
     <meta content="text/javascript" http-equiv="Content-Script-Type" />
     <script src="/js/smartRollover.js" type="text/javascript"></script>
     <script src="/js/form.js" type="text/javascript"></script>
@@ -20,9 +22,9 @@
 {include file="include/header/header.inc"}
 <div id="payment">
     <div id="payment2">
-    <img src="/locale/{$smarty.const.LOCALE}/img/initialize/ready_title.gif" alt="" height="26" width="665">
+    <img src="/locale/{$smarty.const.LOCALE}/img/initialize/ready_title.gif" alt="" height="26" width="620">
     <br />{$locale.finish_message}
-<table class="attetion">
+<table class="attention">
 <tbody>
 <tr>
     <td colspan="3" bgcolor="#e60101"><img src="/img/payment/shim.gif" height="1" width="2"></td>
@@ -47,6 +49,14 @@
 </tbody>
 </table>
 
+<table class="btn">
+<tbody>
+<tr>
+    <td align="center"><a href="{$smarty.const.KUJAPANURL}/">首页</a></td>
+</tr>
+</tbody>
+</table>
+
 <div id="payment_confirm">
     <div id="payment_confirm2">
         <div id="payment_confirm3">
@@ -60,16 +70,8 @@
             </tbody>
             </table>
         </div>
-        <img src="/locale/{$smarty.const.LOCALE}/img/payment/confirm.jpg" height="200" width="615">
+        <img src="/locale/{$smarty.const.LOCALE}/img/payment/confirm.jpg" height="170" width="620">
     </div>
-
-<table class="btn">
-<tbody>
-<tr>
-    <td align="center"><a href="{$smarty.const.KUJAPANURL}/">首页</a></td>
-</tr>
-</tbody>
-</table>
 
 </div>
 
@@ -78,7 +80,7 @@
 
 
     </div>
-    <img src="/img/payment/frame.gif" height="500" width="705">
+    <img src="/img/payment/frame.gif" height="500" width="640">
 </div>
 
 

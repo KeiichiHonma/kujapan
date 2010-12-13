@@ -14,11 +14,11 @@ if($ini['common']['isDebug'] == 0){//本番
 }
 
 //メンテナンスモード解除
-/*if($ini['common']['isMaintenance'] == 0){
+if($ini['common']['isMaintenance'] == 0){
     header( "HTTP/1.1 301 Moved Permanently" );
     header("Location: ".KUJAPANURL.'/');
     die();
-}*/
+}
 
 switch ($_SERVER['SERVER_NAME']){
     case SERVER_NAME_TW:
@@ -76,17 +76,11 @@ if(file_exists($_SERVER['DOCUMENT_ROOT'].'/include/locale/'.LOCALE.'/maintenance
       <!-- /header -->
 
         <div id="e_main">
-            <h2 class="h_title">メンテナンスのお知らせ-2010年4月1日</h2>
+            <h2 class="h_title"><?php print $locale['maintenance_title'] ?></h2>
 
             <div id="error_box">
-【メンテナンス予定時刻】2010年4月1日 09:00 ～ 2010年4月1日 10:00<br />
-<br />
-日ごろより『教えてCA!』をご利用頂き、誠にありがとうございます。<br />
-現在、『教えてCA!』メンテンスを実施しております。<br />
-皆様にはご迷惑をおかけしますことを深くお詫び申し上げます。<br /><br />
-メンテナンスが終了次第、サービスを復旧いたしますので、今しばらくお待ち下さいますようお願い申し上げます。<br />
-<br />
-『教えてCA!』運営事務局<br />
+<?php print $locale['maintenance_time'] ?><br /><br />
+<?php print $locale['maintenance_message'] ?>
             </div>
         </div>
 

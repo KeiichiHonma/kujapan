@@ -1,7 +1,5 @@
 <?php
 require_once('user/prepend.php');
-$con->session->set(SESSION_POSITION,$_SERVER['REQUEST_URI']);
-$user_auth->validateLogin();//認証は必須ではありません
 
 //form情報アサイン
 require_once('inquiry/form.php');

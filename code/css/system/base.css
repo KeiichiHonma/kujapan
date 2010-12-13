@@ -7,11 +7,13 @@ body {
     margin:0;
     padding:0;
     /*font-family:"メイリオ","ヒラギノ","ＭＳ Ｐゴシック","Osaka",Arial,sans-serif;*/
-    font-family:"ＭＳ Ｐゴシック",Osaka, Arial, Helvetica;
+    /*font-family:"ＭＳ Ｐゴシック",Osaka, Arial, Helvetica;*/
     /*font-family:"ＭＳ Ｐゴシック",Arial,sans-serif;*/
+    font-family:Arial,'sans-serif',Verdana;
     }
 * html body {
-  font-family: 'ＭＳ Ｐゴシック', "ヒラギノ","Osaka",Arial,sans-serif;
+  /*font-family: 'ＭＳ Ｐゴシック', "ヒラギノ","Osaka",Arial,sans-serif;*/
+  font-family:Arial,'sans-serif',Verdana;
 }
 
 form {
@@ -21,7 +23,6 @@ form {
 input,textarea {
     margin:0;
     padding:2;
-    font-family: 'ＭＳ Ｐゴシック', "ヒラギノ","Osaka",Arial,sans-serif;
     }
 
 img {

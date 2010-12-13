@@ -1,6 +1,10 @@
 <?php
 //--[ 前処理 ]--------------------------------------------------------------
 require_once('user/prepend.php');
+if(!$bl){
+    $con->base->redirectPage('payment/bridge');
+}
+
 $sid = $con->base->getPath('sid',TRUE);
 //認証は必須
 if(!$user_auth->validateLogin()){
@@ -60,6 +64,9 @@ if($shop_item_tmp){
     break;
     }
     
+    //地図幅調整
+    $shop_item[$map_select]['col_width'] = 638;
+    $shop_item[$map_select]['col_height'] = 638*$shop_item[$map_select]['col_height']/$shop_item[$map_select]['col_width'];
     $con->t->assign('shop_item_map',$shop_item[$map_select]);
     
     //バーコード

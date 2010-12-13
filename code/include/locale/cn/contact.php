@@ -10,7 +10,7 @@ $page_locale = array(
     'contact_column_name'=>'日游酷棒热线中心',//お客様ホットライン
     'contact_column_telephone'=>'热线电话',//電話番号
     'contact_column_opening'=>'热线服务时间带',//営業時間
-    'contact_opening_time'=>'周一至周五09:00-17:30/周六、周日09:00-12:00, 13:00-17:30',//平日午前9時から17時30分、土日午前9時から12時、13時から17時30分まで
+    'contact_opening_time'=>'周一至周五09:00-17:30',//平日午前9時から17時30分
     'contact_column_detail'=>'说明',//営業時間
     'contact_detail'=>'仅支付市话费且支持手机拨打，香港、澳门及台湾地区除外',//営業時間
 );

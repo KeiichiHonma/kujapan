@@ -14,22 +14,23 @@ font-size:12px;
 
 div#container {
     clear: both;
-    width: 725px;
+    width: 640px;
     margin: 0 auto;
 }
 
 table#header{
-    width:725px;
+    width:640px;
 }
 
 table#header td{
     text-align:left;
-    font-size:140%;
+    font-size:120%;
 }
 
 table#header td.control{
     text-align:left;
     font-size:100%;
+    width:150px;
 }
 
 table#header td.contact{
@@ -38,7 +39,7 @@ table#header td.contact{
 }
 
 table#top{
-    width:725px;
+    width:640px;
 }
 
 table#top td{
@@ -59,13 +60,12 @@ table#top td.btn{
 }
 
 #coupon a.print,img.print{
-/*background:url(../img/button/detail_print_bt.jpg) no-repeat 0 0;*/
-width:211px;
-height:65px;
-overflow:hidden;
-text-indent:-999999px;
-display:block;
-margin:0px auto;
+    width:211px;
+    height:65px;
+    overflow:hidden;
+    text-indent:-999999px;
+    display:block;
+    margin:0px auto;
 }
 
 #coupon img.print,
@@ -74,7 +74,7 @@ background-position:0 -65px;
 }
 
 table.coupon {
-    width:725px;
+    width:640px;
     text-align:left;
     border-top:1px solid #d6d5d1;
     border-left:1px solid #d6d5d1;
@@ -84,7 +84,7 @@ table.coupon {
     }
     
 table.coupon th {
-    width:332px;
+    width:302px;
     text-align:center;
     background-color: #f3f2ee;
     font-weight: normal;
@@ -113,7 +113,7 @@ table.coupon .japan{
     font-size:90%;
 }
 table#shop{
-    width:725px;
+    width:640px;
     border-top:1px solid #d6d5d1;
     border-left:1px solid #d6d5d1;
 }
@@ -146,7 +146,7 @@ table#shop td.data2{
 
 table#etc{
     margin-top:2px;
-    width:725px;
+    width:640px;
     border-top:1px solid #d6d5d1;
     border-left:1px solid #d6d5d1;
     border-right:1px solid #d6d5d1;

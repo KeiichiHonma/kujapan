@@ -10,7 +10,7 @@ $page_locale = array(
     'contact_column_name'=>'日游酷棒客服中心',//コンタクトセンター
     'contact_column_telephone'=>'邮箱地址',//メールアドレス
     'contact_column_opening'=>'服務時間',//営業時間
-    'contact_opening_time'=>'周一至周五09:00-17:30/周六，周日09:00-12:00，13:00-17:30',//平日午前9時から17時30分,土日午前9時から12時,13時から17時30分まで
+    'contact_opening_time'=>'周一至周五09:00-17:30',//平日午前9時から17時30分
     'contact_column_detail'=>'說明',//営業時間
     'contact_detail'=>'',
 );

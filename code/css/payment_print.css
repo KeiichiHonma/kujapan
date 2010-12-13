@@ -1,0 +1,40 @@
+#header{
+display:none;
+}
+
+* html #header{
+display:none;
+}
+
+#header #header_line{
+    display:none;
+}
+
+#header #header_line p.fr{
+    float:right;
+    padding-right:20px;
+}
+
+#header #header_line h1{
+    color:#FFFFFF;
+    font-size:10px;
+    margin-top:0px;
+    float:left;
+    padding-left:20px;
+}
+
+#header #header_inner{
+display:none;
+}
+
+#footer{
+    display:none;
+}
+
+div#payment{
+    margin:0;
+}
+
+div#payment2{
+    margin:0;
+}

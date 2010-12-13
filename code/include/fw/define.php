@@ -62,4 +62,9 @@ define('SHOP_TYPE_BARCODE' ,  8);//クーポン印刷画面用のバーコード
 //coupon log method
 define('COUPON_LOG_EDIT',     0);
 define('COUPON_LOG_DROP',     1);
+
+//お知らせターゲット
+define('TARGET_ALL',        0);
+define('TARGET_USER',       1);
+define('TARGET_BUY_BEFORE', 2);
 ?>

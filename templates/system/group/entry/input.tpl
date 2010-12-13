@@ -5,10 +5,6 @@
 {include file="include/system/seo.inc"}
 {include file="include/system/css.inc"}
 {include file="include/system/js.inc"}
-<script src="/js/prototype.js" type="text/javascript"></script>
-<script src="/js/effects.js" type="text/javascript"></script>
-<script src="/js/protocalendar.js" type="text/javascript"></script>
-<script src="/js/lang_ja.js" type="text/javascript"></script>
 </head>
 <body>
 <div id="wrapper">

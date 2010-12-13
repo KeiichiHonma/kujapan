@@ -33,7 +33,8 @@ body {
 .shop{
     clear:both;
     text-align:left;
-    font:bold 150% 'ＭＳ ゴシック','ＭＳ Ｐゴシック','中ゴシック体',sans-serif;
+    font-weight:bold;
+    font-size:150%;
     border-bottom-style:double;
 }
 .system_login {
@@ -48,7 +49,6 @@ body {
 
 .system_login INPUT {
     margin:0px;
-    font-family:'ＭＳ Ｐゴシック','中ゴシック体',serif;
     font-size:10pt;
 }
 
@@ -72,7 +72,7 @@ body {
 }
 
 .s_link p{
-    background-image:url(/img/common/bullet_b.gif);
+    background-image:url(/img/system/bullet_b.gif);
     background-repeat:no-repeat;
     background-position:left center;
     padding-left:15px;

@@ -1,7 +1,7 @@
 <?php
 require_once('user/prepend.php');
 //認証は必須
-if(!$user_auth->validateLogin()){
+if(!$bl){
     die();
 }
 //画像出力プログラム/////////////////////////////////////////////////////////////
@@ -78,8 +78,8 @@ ImageTTFText ($image, 20, 0, 10, 60, $messageColor, $font_path, $con->locale['cu
 ImageTTFText ($image, 22, 0, 140, 60, $messageColor, $font_path2, $customer_no);
 
 //印刷日時
-ImageTTFText ($image, 20, 0, 420, 90, $messageColor, $font_path, $con->locale['print_out_time']);
-ImageTTFText ($image, 22, 0, 540, 90, $messageColor, $font_path2, date("Y/n/d",time()));
+ImageTTFText ($image, 20, 0, 335, 90, $messageColor, $font_path, $con->locale['print_out_time']);
+ImageTTFText ($image, 22, 0, 455, 90, $messageColor, $font_path2, date("Y/n/d",time()));
 
 //  画像を出力
   header("Content-type: image/jpeg");

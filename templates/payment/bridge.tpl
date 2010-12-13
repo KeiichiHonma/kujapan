@@ -123,7 +123,7 @@
                     <a href="{$smarty.const.KUJAPANURLSSL}/payment/alipay" title="{$locale.buy_bt}">テスト決済へ</a>
                 {/if}
                 </div>
-        </div>
+            </div>
         </div>
 
 

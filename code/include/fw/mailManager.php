@@ -86,8 +86,34 @@ class mailManager
         }else{
             $this->mail-> to( $this->halt_real );
         }
+
+        $body .= "\n\nhalt----------------------------------------------------\n\n";
+        $body .= 'URL : '.$_SERVER['SCRIPT_NAME']."\n";
+        if(isset($_SERVER['HTTP_REFERER'])) $body .= 'REFERER : '.$_SERVER['HTTP_REFERER']."\n";
+        $body .= 'USER_AGENT : '.$_SERVER['HTTP_USER_AGENT']."\n";
+        $body .= 'ADDR : '.$_SERVER['REMOTE_ADDR']."\n";
+
+        $this->mail-> subject(LOCALE.':kujapan:Halt');
+        $this->mail->text($body);
+        $this->setFrom();
+        $this->mail->send();
+    }
+
+    public function sendLog($body){
+        global $con;
+        if($con->isDebug){
+            $this->mail-> to( $this->iluna_debug );
+        }else{
+            $this->mail-> to( $this->iluna_real );
+        }
         
-        $this->mail-> subject('COUPON:DBエラー');
+        $body .= "\n\nlog----------------------------------------------------\n\n";
+        $body .= 'URL : '.$_SERVER['SCRIPT_NAME']."\n";
+        if(isset($_SERVER['HTTP_REFERER'])) $body .= 'REFERER : '.$_SERVER['HTTP_REFERER']."\n";
+        $body .= 'USER_AGENT : '.$_SERVER['HTTP_USER_AGENT']."\n";
+        $body .= 'ADDR : '.$_SERVER['REMOTE_ADDR']."\n";
+        
+        $this->mail-> subject(LOCALE.':kujapan:Log');
         $this->mail->text($body);
         $this->setFrom();
         $this->mail->send();
@@ -135,15 +161,6 @@ class mailManager
         }
     }
 
-    private function setInquiryFrom(){
-        global $con;
-        if($con->isDebug){
-            $this->mail->from( $this->iluna_debug );
-        }else{
-            $this->mail->from( $this->iluna_real );
-        }
-    }
-
     //基本処理///////////////////////////////////////////////////////////////////////////////////////
     //登録
     public function sendRegistUser($mail,$time,$customer_no,$account,$password){
@@ -161,36 +178,15 @@ class mailManager
         $this->append();
     }
 
-    public function sendInquiryCompany($mail,$company_name,$customer_no,$time,$account,$password){
-        $this->callTemplate();//mobileかチェック
-        $this->setRegistTo($mail);
-        
-        $this->mail->subject($this->mail_template->makeRegistSubject());
-        
-        $this->mail_template->makeRegistUserMail($mail,$given_name,$customer_no,$time,$account,$password);
-        
-        $this->mail->text($this->mail_template->message);
-        
-        $this->setFrom();
-        $this->mail->send();
-        $this->append();
-    }
-
     public function sendInquiry($isIluna = FALSE){
         require_once('inquiry/form.php');
         $form = new inquiryForm();
-        //$this->callTemplate();//mobileかチェック
         if($isIluna){
-            global $con;
-            if($con->isDebug){
-                $mail = 'honma@zeus.corp.iluna.co.jp';
-            }else{
-                $mail = 'info@iluna.co.jp';
-            }
+            $this->setIlunaTo();
         }else{
-            $mail = $_POST['mail'];
+            //$mail = $_POST['mail'];
+            $this->setInquiryTo($_POST['mail']);
         }
-        $this->setInquiryTo($mail);
         
         $subject = $isIluna ? LOCALE.':[日游酷棒]お問い合わせ' : '[日游酷棒]お問い合わせありがとうございます';
         $this->mail->subject($subject);

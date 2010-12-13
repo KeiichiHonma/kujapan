@@ -1,17 +1,12 @@
 <?php
 //--[ 前処理 ]--------------------------------------------------------------
 require_once('user/prepend.php');
-$con->session->set(SESSION_POSITION,$_SERVER['REQUEST_URI']);
 
 $aid = $con->base->getPath('aid',TRUE);//リダイレクトあり
 if(!array_key_exists($aid,$con->area->area_info)){
     require_once('fw/errorManager.php');
     errorManager::throwError(E_CMMN_URL_WRONG);
 }
-
-$user_auth->validateLogin();//認証は必須ではありません
-
-
 
 //area店舗
 require_once('coupon/logic.php');

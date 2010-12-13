@@ -22,13 +22,9 @@ define('KUJAPAN_CMMN_00006',            'クーポン発行可能な期間が過
 define('KUJAPAN_CMMN_00007',            'ユーザーが削除されたか存在しません。');
 
 //システム管理画面特有のエラー
-define('E_SYSTEM_MANAGER_EXISTS',            'KUJAPAN_SYSTEM_00001');
-define('E_SYSTEM_GROUP_EXISTS',              'KUJAPAN_SYSTEM_00002');
-define('E_SYSTEM_COUPON_EXISTS',             'KUJAPAN_SYSTEM_00003');
 
-define('KUJAPAN_SYSTEM_00001',            'マネージャが削除されたか存在しません。');
-define('KUJAPAN_SYSTEM_00002',            'グループが削除されたか存在しません。');
-define('KUJAPAN_SYSTEM_00003',            'クーポンが削除されたか存在しません。');
+
+
 
 // --------------------------
 // USERエラー
@@ -63,6 +59,10 @@ define('E_MAIL_NOT_SEND',                  'KUJAPAN_SYSTEM_00012');
 define('E_SYSTEM_CSV_WRONG',               'KUJAPAN_SYSTEM_00014');
 define('E_SYSTEM_PARAM_WRONG',             'KUJAPAN_SYSTEM_00015');
 
+define('E_SYSTEM_MANAGER_EXISTS',            'KUJAPAN_SYSTEM_00016');
+define('E_SYSTEM_GROUP_EXISTS',              'KUJAPAN_SYSTEM_00017');
+define('E_SYSTEM_COUPON_EXISTS',             'KUJAPAN_SYSTEM_00018');
+
 define('KUJAPAN_SYSTEM_00001',              'ディレクトリが存在しません');
 define('KUJAPAN_SYSTEM_00002',              'ディレクトリへの書き込み権限がありません');
 define('KUJAPAN_SYSTEM_00003',              'ファイルへの書き込み権限がありません');
@@ -77,5 +77,7 @@ define('KUJAPAN_SYSTEM_00011',              'コードが重複しています')
 define('KUJAPAN_SYSTEM_00012',              'メールの送信に失敗しました．');
 define('KUJAPAN_SYSTEM_00014',              'CSVファイルが不正です');
 define('KUJAPAN_SYSTEM_00015',              'パラメータが不正です');
-
+define('KUJAPAN_SYSTEM_00016',            'マネージャが削除されたか存在しません。');
+define('KUJAPAN_SYSTEM_00017',            'グループが削除されたか存在しません。');
+define('KUJAPAN_SYSTEM_00018',            'クーポンが削除されたか存在しません。');
 ?>

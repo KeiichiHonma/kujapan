@@ -1,0 +1,67 @@
+<?php
+require_once('fw/checkManager.php');
+class checkNews extends checkManager
+{
+    static private $check_list = array
+    (
+        'from'=>array
+        (
+            array('message'=>'！表示開始日時は必須です。','func'=>'checkMust','arg'=>null),
+            array('message'=>'！表示開始日時が不正です。','func'=>'checkInt','arg'=>null),
+            //array('message'=>'！表示開始日時は[現在の日時]より後である必要があります。。','func'=>'checkDate')
+        ),
+        'to'=>array
+        (
+            array('message'=>'！表示終了日時は必須です。','func'=>'checkMust','arg'=>null),
+            array('message'=>'！表示終了日時が不正です。','func'=>'checkInt','arg'=>null),
+            array('message'=>'！表示終了日時は[現在の日時]より後である必要があります。','func'=>'checkDate','arg'=>null),
+            array('message'=>'！表示終了日時は[表示開始日時]より後である必要があります。','func'=>'checkDateEnd','arg'=>null)
+        ),
+        'target'=>array
+        (
+            array('message'=>'！対象は必須です。','func'=>'checkMust','arg'=>null)
+        ),
+        'title_ja'=>array
+            (
+            array('message'=>'！お知らせタイトル（日本語）は必須です。','func'=>'checkMust','arg'=>null),
+            array('message'=>'！お知らせタイトル（日本語）は全角で40字(半角80字)以内で入力してください。','func'=>'checkLength','arg'=>array('start'=>1,'end'=>80)),
+            array('message'=>null,'func'=>'replaceInput','arg'=>'title')
+            ),
+        'title_cn'=>array
+            (
+            array('message'=>'！お知らせタイトル（簡体字）は必須です。','func'=>'checkMust','arg'=>null),
+            array('message'=>'！お知らせタイトル（簡体字）は全角で40字(半角80字)以内で入力してください。','func'=>'checkLength','arg'=>array('start'=>1,'end'=>80)),
+            array('message'=>null,'func'=>'replaceInput','arg'=>'title')
+            ),
+        'title_tw'=>array
+            (
+            array('message'=>'！お知らせタイトル（繁体字）は必須です。','func'=>'checkMust','arg'=>null),
+            array('message'=>'！お知らせタイトル（繁体字）は全角で40字(半角80字)以内で入力してください。','func'=>'checkLength','arg'=>array('start'=>1,'end'=>80)),
+            array('message'=>null,'func'=>'replaceInput','arg'=>'title')
+            ),
+        'detail_ja'=>array
+            (
+            array('message'=>'！お知らせ内容（日本語）は必須です。','func'=>'checkMust','arg'=>null),
+            array('message'=>'！お知らせ内容（日本語）は全角で2000字(半角4000字)以内で入力してください。','func'=>'checkLength','arg'=>array('start'=>1,'end'=>4000)),
+            array('message'=>null,'func'=>'replaceInput','arg'=>'message')
+            ),
+        'detail_cn'=>array
+            (
+            array('message'=>'！お知らせ内容（簡体字）は必須です。','func'=>'checkMust','arg'=>null),
+            array('message'=>'！お知らせ内容（簡体字）は全角で2000字(半角4000字)以内で入力してください。','func'=>'checkLength','arg'=>array('start'=>1,'end'=>4000)),
+            array('message'=>null,'func'=>'replaceInput','arg'=>'message')
+            ),
+        'detail_tw'=>array
+            (
+            array('message'=>'！お知らせ内容（繁体字）は必須です。','func'=>'checkMust','arg'=>null),
+            array('message'=>'！お知らせ内容（繁体字）は全角で2000字(半角4000字)以内で入力してください。','func'=>'checkLength','arg'=>array('start'=>1,'end'=>4000)),
+            array('message'=>null,'func'=>'replaceInput','arg'=>'message')
+            )
+    );
+    
+    static public function checkError(){
+        parent::checkSystemError(self::$check_list);
+    }
+
+}
+?>

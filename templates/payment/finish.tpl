@@ -7,6 +7,8 @@
     <link href="/css/0-import.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" type="text/css" href="/css/payment.css" media="all">
     <link href="/locale/{$smarty.const.LOCALE}/css/background.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/css/payment_print.css" type="text/css" media="print" />
+
     <meta content="text/javascript" http-equiv="Content-Script-Type" />
     <script src="/js/smartRollover.js" type="text/javascript"></script>
     <script src="/js/form.js" type="text/javascript"></script>
@@ -19,9 +21,9 @@
 {include file="include/header/header.inc"}
 <div id="payment">
     <div id="payment2">
-        <img src="/locale/{$smarty.const.LOCALE}/img/payment/thanks_title.gif" alt="" height="26" width="665">
+        <img src="/locale/{$smarty.const.LOCALE}/img/payment/thanks_title.gif" alt="" height="26" width="620">
         <br />{$locale.finish_message}
-        <table class="attetion">
+        <table class="attention">
         <tbody>
         <tr>
             <td colspan="3" bgcolor="#e60101"><img src="/img/payment/shim.gif" height="1" width="2"></td>
@@ -70,9 +72,9 @@
                     </tbody>
                     </table>
                 </div>
-                <img src="/locale/{$smarty.const.LOCALE}/img/payment/confirm.jpg" height="200" width="615">
+                <img src="/locale/{$smarty.const.LOCALE}/img/payment/confirm.jpg" height="170" width="620">
             </div>
-
+{if !$maintenance}
         <table class="btn">
         <tbody>
         <tr>
@@ -90,10 +92,35 @@
         </tr>
         </tbody>
         </table>
+{else}
+        <table class="maintenance">
+        <tbody>
+        <tr>
+            <td colspan="3" bgcolor="#e60101"><img src="/img/payment/shim.gif" height="1" width="2"></td>
+        </tr>
+        <tr>
+            <td bgcolor="#e60101" width="1"><img src="/img/payment/shim.gif" height="2" width="1"></td>
+            <td align="left" bgcolor="#ffe6e6" height="58" width="508">
+                <table border="0" cellpadding="0" cellspacing="0" id="attention">
+                <tbody>
+                <tr>
+                    <td class="last">{$locale.maintenance_title}<br />{$locale.payment_maintenance_time}<br />{$locale.payment_maintenance_message}</td>
+                </tr>
+                </tbody>
+                </table>
+            </td>
+            <td bgcolor="#e60101" width="1"><img src="/img/payment/shim.gif" height="2" width="1"></td>
+        </tr>
+        <tr>
+            <td colspan="3" bgcolor="#e60101"><img src="/img/payment/shim.gif" height="1" width="2"></td>
+        </tr>
+        </tbody>
+        </table>
 
+{/if}
         </div>
     </div>
-    <img src="/img/payment/frame.gif" width="705" height="500">
+    <img src="/img/payment/frame.gif" width="640" height="500">
 </div>
 
 

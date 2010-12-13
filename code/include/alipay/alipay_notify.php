@@ -72,8 +72,13 @@ class alipay_notify {
             $this->mysign  = build_mysign($sort_post,$this->_key,$this->sign_type);   //生成签名结果
     
             //写日志记录
-            log_result("veryfy_result=".$veryfy_result."\n notify_url_log:sign=".$_POST["sign"]."&mysign=".$this->mysign.",".create_linkstring($sort_post));
-    
+            //log_result("veryfy_result=".$veryfy_result."\n notify_url_log:sign=".$_POST["sign"]."&mysign=".$this->mysign.",".create_linkstring($sort_post));
+            
+            //ログ送信///////////////////////////
+            require_once('fw/mailManager.php');
+            $mailManager = new mailManager();
+            $mailManager->sendLog(LOCALE.":LOG: notify\n".$veryfy_result."\n notify_url_log:sign=".$_POST["sign"]."&mysign=".$this->mysign.",".create_linkstring($sort_post));
+            
             //判断veryfy_result是否为ture，生成的签名结果mysign与获得的签名结果sign是否一致
             //$veryfy_result的结果不是true，与服务器设置问题、合作身份者ID、notify_id一分钟失效有关
             //mysign与sign不等，与安全校验码、请求时的参数格式（如：带自定义参数等）、编码格式有关
@@ -107,14 +112,18 @@ class alipay_notify {
             $get          = para_filter($_GET);        //对所有GET反馈回来的数据去空
             $sort_get     = arg_sort($get);            //对所有GET反馈回来的数据排序
             $this->mysign  = build_mysign($sort_get,$this->_key,$this->sign_type);    //生成签名结果
-    
+
             //写日志记录
             //log_result("veryfy_result=".$veryfy_result."\n return_url_log:sign=".$_GET["sign"]."&mysign=".$this->mysign."&".create_linkstring($sort_get));
     
             //判断veryfy_result是否为ture，生成的签名结果mysign与获得的签名结果sign是否一致
             //$veryfy_result的结果不是true，与服务器设置问题、合作身份者ID、notify_id一分钟失效有关
             //mysign与sign不等，与安全校验码、请求时的参数格式（如：带自定义参数等）、编码格式有关
-            if (preg_match("/true$/i",$veryfy_result) && $this->mysign == $_GET["sign"]) {            
+            if (preg_match("/true$/i",$veryfy_result) && $this->mysign == $_GET["sign"]) {
+                //ログ送信///////////////////////////
+                require_once('fw/mailManager.php');
+                $mailManager = new mailManager();
+                $mailManager->sendLog(LOCALE.":LOG: return\n".$veryfy_result."\n notify_url_log:sign=".$_GET["sign"]."&mysign=".$this->mysign.",".create_linkstring($sort_get));
                 return true;
             }else {
                 return false;
@@ -142,7 +151,14 @@ class alipay_notify {
         }
         $fp=@fsockopen($transports . $urlarr['host'],$urlarr['port'],$errno,$errstr,$time_out);
         if(!$fp) {
-            die("ERROR: $errno - $errstr<br />\n");
+            //緊急エラー送信///////////////////////////
+            require_once('fw/mailManager.php');
+            $mailManager = new mailManager();
+            $mailManager->sendHalt(LOCALE.":ERROR: $errno - $errstr\n"."get_verify fsockopen error");
+            
+            header("Location: ".'https://'.$_SERVER['SERVER_NAME'].'/payment/error');
+            die();
+            //die("ERROR: $errno - $errstr<br />\n");
         } else {
             fputs($fp, "POST ".$urlarr["path"]." HTTP/1.1\r\n");
             fputs($fp, "Host: ".$urlarr["host"]."\r\n");

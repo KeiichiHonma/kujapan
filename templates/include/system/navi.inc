@@ -8,7 +8,7 @@
     <li class="{if $snavi == "coupon_all"}on{else}off{/if}"><a href="{$smarty.const.KUJAPANURLSSL}/system/all/coupon">クーポン一覧</a></li>
     <li class="{if $snavi == "gallery_all"}on{else}off{/if}"><a href="{$smarty.const.KUJAPANURLSSL}/system/all/gallery">紹介一覧</a></li>
     <li class="{if $snavi == "product_all"}on{else}off{/if}"><a href="{$smarty.const.KUJAPANURLSSL}/system/all/product">商品一覧</a></li>
-    <li class="{if $snavi == "message"}on{else}off{/if}"><a href="{$smarty.const.KUJAPANURLSSL}/system/message/">お知らせ</a></li>
+    <li class="{if $snavi == "news"}on{else}off{/if}"><a href="{$smarty.const.KUJAPANURLSSL}/system/news/">お知らせ</a></li>
     <li class="{if $snavi == "analyze"}on{else}off{/if}"><a href="{$smarty.const.KUJAPANURLSSL}/system/analyze/">分析</a></li>
 </ul>
 </div>

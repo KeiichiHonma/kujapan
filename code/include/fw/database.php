@@ -144,12 +144,7 @@ class database
         $mailManager = new mailManager();
 
         $body = '';
-        $body .= "title----------------------------------------------------\n\n";
-        $body .= 'URL : '.$_SERVER['SCRIPT_NAME']."\n";
-        if(isset($_SERVER['HTTP_REFERER'])) $body .= 'REFERER : '.$_SERVER['HTTP_REFERER']."\n";
-        $body .= 'USER_AGENT : '.$_SERVER['HTTP_USER_AGENT']."\n";
-        $body .= 'ADDR : '.$_SERVER['REMOTE_ADDR']."\n";
-        
+
         $body .= "\n\nquery----------------------------------------------------\n\n";
         $body .= $this->err['query'];
         $body .= "\n\nmessage----------------------------------------------------\n\n";

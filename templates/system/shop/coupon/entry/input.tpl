@@ -5,6 +5,7 @@
 {include file="include/system/seo.inc"}
 {include file="include/system/css.inc"}
 {include file="include/system/js.inc"}
+<link id="calendar_style" href="/css/system/simple.css" media="screen" rel="Stylesheet" type="text/css" />
 <script src="/js/prototype.js" type="text/javascript"></script>
 <script src="/js/effects.js" type="text/javascript"></script>
 <script src="/js/protocalendar.js" type="text/javascript"></script>

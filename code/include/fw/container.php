@@ -23,6 +23,7 @@ class container
     public $isDebug = FALSE;
     public $isStage = FALSE;
     public $isAlipay = TRUE;
+    public $isMaintenance = FALSE;
     public $isSystem = FALSE;
     public $lastJudge = TRUE;//ロールバックかコミットの判断
     public $session;
@@ -40,49 +41,52 @@ class container
     public $m_url;
     public $absolute_path;//相対パスだとm.を見てしまうため、絶対パスとして持っている必要があるため
     
-    function __construct(){
+    function __construct($isSimple = FALSE){
+        //page set メンテナンスモード除去ページ判定で先に必要
+        preg_match('/\/([\D]+)\./i', $_SERVER['SCRIPT_NAME'], $matches);
+        $this->pagepath = $matches[1];
+        $this->pagename = basename($_SERVER['SCRIPT_NAME'],'.php');
+
+        $cache = $this->pagename == 'input' || $this->pagename == 'login' ? TRUE : FALSE;
+        
         $this->t = new template();
         $this->checkIni();
         $this->t->readyTemplate($this->isDebug);
-        $this->init();
         
-        //page set
-        preg_match('/\/([\D]+)\./i', $_SERVER['SCRIPT_NAME'], $matches);
-
-        $this->pagepath = $matches[1];
-        $this->pagename = basename($_SERVER['SCRIPT_NAME'],'.php');
-        $cache = $this->pagename == 'input' || $this->pagename == 'login' ? TRUE : FALSE;
-
         //is system ?
         $this->isSystem = ereg("^system", $matches[1]);
-
-        //is payment initialize ?
-        if(!strstr($this->pagepath,'payment') && !strstr($this->pagepath,'initialize')){
-            $this->t->assign('buy_btn_display',TRUE);
-        }
+        
         //locale
         if(!$this->isSystem){
             $this->checkLocale();
         }else{
             define('LOCALE',LOCALE_JA);
         }
+        
+        //is payment initialize ?
+        if(!strstr($this->pagepath,'payment') && !strstr($this->pagepath,'initialize')){
+            $this->t->assign('buy_btn_display',TRUE);
+        }
 
         //position include.ロケール変数が必要
         $this->isSystem ? require_once('fw/systemPosition.php') : require_once('fw/commonPosition.php');
 
-        $this->session = new sessionManager($cache);//セッション開始
-        
-        $this->db = new database();
+        //以下はシンプルモードでは呼ばない
+        if(!$isSimple){
+            $this->session = new sessionManager($cache);//セッション開始
+            
+            $this->db = new database();
 
-        $this->base = new base();
-        $this->area = new areaLogic();
-        $this->genre = new genreLogic();
+            $this->base = new base();
+            $this->area = new areaLogic();
+            $this->genre = new genreLogic();
 
-        $this->t->assign('area',$this->area->area_info);
-        $this->t->assign('genre',$this->genre->genre_info);
-        
-        $this->tail_number = time();
-        $this->t->assign('tail_number',$this->tail_number);//末尾の数字
+            $this->t->assign('area',$this->area->area_info);
+            $this->t->assign('genre',$this->genre->genre_info);
+            
+            $this->tail_number = time();
+            $this->t->assign('tail_number',$this->tail_number);//末尾の数字
+        }
     }
 
     //ドメイン版
@@ -103,7 +107,7 @@ class container
         if(file_exists($_SERVER['DOCUMENT_ROOT'].'/include/locale/'.LOCALE.$_SERVER['SCRIPT_NAME'])){
             require_once('locale/'.LOCALE.$_SERVER['SCRIPT_NAME']);//ファイル別翻訳ファイル
         }
-        
+
         $this->locale = $locale;//翻訳内容
     }
 
@@ -182,9 +186,15 @@ class container
             }
             
             if(!isset($_SERVER['REMOTE_ADDR']) || !isset($ip) || strcasecmp($_SERVER['REMOTE_ADDR'],$ip) != 0){
-                header( "HTTP/1.1 302 Moved Temporarily" );
-                header("Location: ".KUJAPANURL.'/maintenance');
-                die();
+                if(strstr($this->pagepath,'payment') !== FALSE && ($this->pagename == 'return_url' || $this->pagename == 'return_url_test' || $this->pagename == 'notify_url' || $this->pagename == 'finish' || $this->pagename == 'error' || $this->pagename == 'alipay')){
+                    //このページは処理を続ける
+                    $this->isMaintenance = TRUE;
+                    $this->t->assign('maintenance',$this->isMaintenance);
+                }else{
+                    header( "HTTP/1.1 302 Moved Temporarily" );
+                    header("Location: ".KUJAPANURL.'/maintenance');
+                    die();
+                }
             }
         }
         $this->t->assign('debug',$this->isDebug);
@@ -218,28 +228,6 @@ class container
         $this->t->assign('locale',$this->locale);
         // display it
         is_null($page) ? $this->t->display($this->pagepath.'.tpl') : $this->t->display($page.'.tpl');
-    }
-    
-    
-    private function init(){
-        //アクセス端末によって、ＰＣ用かモバイル用にリダイレクト
-        if($this->ini['common']['isDebug'] == 0){//本番
-            $this->url = 'www.coupon.com';
-            $this->absolute_path = '/home/httpd/vhosts/coupon.com/httpdocs';
-
-        }elseif($this->ini['common']['isDebug'] == 1){//デバッグモード
-            if($this->ini['common']['isStage'] == 1){//ステージングサーバモード
-                $this->url = 'coupon.iluna.co.jp';
-                define('MAPKEY',            'ABQIAAAAkfZHX0mVewCCbI2JJSApjBRUMSngWG9tZSltYiStqiCLUOPfoRTeLtPil2Wu84SPQJJBAr7fMRFyvQ');//テスト環境は１つでいけます
-            }else{
-                define('MAPKEY',            'ABQIAAAAkfZHX0mVewCCbI2JJSApjBRZsb_5q8hAjE2LUKFLr2EBYBV29RQ1Ez6w28Oa-Yn2COazCHQ4L7HrAA');//テスト環境は１つでいけます
-            }
-            $this->absolute_path = '/usr/local/apache2/htdocs/coupon';
-        }
-        //本番とステージングのみリダイレクトイルナ除外
-        if(!$this->isIluna){
-            if($this->ini['common']['isDebug'] == 0) define('MAPKEY','ABQIAAAAkfZHX0mVewCCbI2JJSApjBR2cj_7e9zdIEYEoQSiol4Ispkj3BQkj1lkWl9x1vnFymPFE4bvYHymiQ');//本番環境は2ついります
-        }
     }
 
     //リダイレクト用

@@ -1,10 +1,18 @@
 @charset "UTF-8";
 /* FOOTER */
 #footer{
-
+    width:1000px;
+    height:220px;
+    margin:0 auto 0px;
+    background:url(/img/part/footer_img.gif) no-repeat left top;
+    overflow:hidden;
 }
-
 #footer p{
+    text-align:center;
+    line-height:140%;
+}
+#footer p.footer_link{
+    margin-top:137px;
     line-height:140%;
     text-align:center;
     padding:0px 0 10px 0px;

@@ -46,7 +46,7 @@ define('A_COUPON_LOG',                'cl');
 //goodscore
 define('T_COUPONSCORE',           'kujapan.tab_kujapan_score');
 define('A_COUPONSCORE',           'cs');
-//message
+//news
 define('T_NEWS',                  'kujapan.tab_kujapan_news');
 define('A_NEWS',                  'n');
 //file

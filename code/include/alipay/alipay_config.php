@@ -56,7 +56,7 @@ $sign_type        = "MD5";
 $_input_charset    = "utf-8";
 
 //访问模式,根据自己的服务器是否支持ssl访问，若支持请选择https；若不支持请选择http
-$transport        = "http";
+$transport        = "https";
 
 //防钓鱼功能开关，'0'表示该功能关闭，'1'表示该功能开启。默认为关闭
 $antiphishing    = "0";

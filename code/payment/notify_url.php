@@ -17,6 +17,8 @@
 //该服务器异步通知页面面主要功能是：对于返回页面（return_url.php）做补单处理。如果没有收到该页面返回的 success 信息，支付宝会在24小时内按一定的时间策略重发通知
 /////////////////////////////////////
 
+require_once('fw/container.php');
+$con = new container(TRUE);
 require_once("alipay/alipay_notify.php");
 require_once("alipay/alipay_config.php");
 
@@ -53,6 +55,11 @@ if($verify_result) {//验证成功
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 }
 else {
+    //緊急エラー送信///////////////////////////
+    require_once('fw/mailManager.php');
+    $mailManager = new mailManager();
+    $mailManager->sendHalt(LOCALE.":ERROR: notify_verify_result FALSE\n".'fail');
+
     //验证失败
     echo "fail";
 

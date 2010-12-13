@@ -10,7 +10,7 @@ $page_locale = array(
     'contact_column_name'=>'お客様ホットライン',//お客様ホットライン
     'contact_column_telephone'=>'電話番号',//電話番号
     'contact_column_opening'=>'営業時間',//営業時間
-    'contact_opening_time'=>'平日午前9時から17時30分、土日午前9時から12時、13時から17時30分まで',//平日午前9時から17時30分、土日午前9時から12時、13時から17時30分まで
+    'contact_opening_time'=>'平日午前9時から17時30分',//平日午前9時から17時30分
     'contact_column_detail'=>'説明',//説明
     'contact_detail'=>'「市话费」つまり「市内通話費用」はかけた側の負担になります。もし市外からの電話だった場合、市外通話費用はこちらの負担になります。',//営業時間
 );

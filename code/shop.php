@@ -1,14 +1,8 @@
 <?php
-//--[ 前処理 ]--------------------------------------------------------------
 require_once('user/prepend.php');
-$con->session->set(SESSION_POSITION,$_SERVER['REQUEST_URI']);
+
 $sid = $con->base->getPath('sid',TRUE);
 $ref = $con->base->getPath('ref',FALSE);
-
-//$aid = $con->base->getPath('aid',FALSE);
-//$gid = $con->base->getPath('gid',FALSE);
-
-$user_auth->validateLogin();//認証は必須ではありません
 
 //店舗情報
 require_once('shop/logic.php');

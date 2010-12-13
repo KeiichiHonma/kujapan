@@ -233,22 +233,21 @@ class systemPosition extends positionManager
                     )
                 ),
             ),
-        'message'=>array
+        'news'=>array
             (
-            'index'=>array('name'=>'お知らせ管理','func'=>null,'access'=>TYPE_M_ADMIN,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'message'),
-            'view'=>array('name'=>'お知らせ閲覧','func'=>null,'access'=>TYPE_M_MANAGER,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>null),
-            'detail'=>array('name'=>'お知らせ閲覧(管理)','func'=>null,'access'=>TYPE_M_ADMIN,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'message'),
+            'index'=>array('name'=>'お知らせ管理','func'=>null,'access'=>TYPE_M_ADMIN,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'news'),
+            'view'=>array('name'=>'お知らせ詳細','func'=>null,'access'=>TYPE_M_ADMIN,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'news'),
             'entry'=>array
                 (
-                'input'=>array('name'=>'お知らせ追加','func'=>null,'access'=>TYPE_M_ADMIN,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'message'),
+                'input'=>array('name'=>'お知らせ追加','func'=>null,'access'=>TYPE_M_ADMIN,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'news'),
                 ),
             'edit'=>array
                 (
-                'input'=>array('name'=>'お知らせ変更','func'=>null,'access'=>TYPE_M_ADMIN,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'message'),
+                'input'=>array('name'=>'お知らせ変更','func'=>null,'access'=>TYPE_M_ADMIN,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'news'),
                 ),
             'drop'=>array
                 (
-                'input'=>array('name'=>'お知らせ削除','func'=>null,'access'=>TYPE_M_ADMIN,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'message'),
+                'input'=>array('name'=>'お知らせ削除','func'=>null,'access'=>TYPE_M_ADMIN,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'news'),
                 )
             ),
         'analyze'=>array

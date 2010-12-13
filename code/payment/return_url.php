@@ -17,6 +17,8 @@
 //TRADE_SUCCESS(表示交易已经成功结束，为高级即时到帐的交易状态成功标识);
 ///////////////////////////////////
 
+require_once('fw/container.php');
+$con = new container();//dbアクセスします
 require_once("alipay/alipay_notify.php");
 require_once("alipay/alipay_config.php");
 
@@ -38,10 +40,18 @@ if($verify_result) {//验证成功
         //判断该笔订单是否在商户网站中已经做过处理（可参考“集成教程”中“3.4返回数据处理”）
             //如果没有做过处理，根据订单号（out_trade_no）在商户网站的订单系统中查到该笔订单的详细，并执行商户的业务程序
             //如果有做过处理，不执行商户的业务程序
+        require_once('./make.php');
+        //header("Location: ".'https://'.$_SERVER['SERVER_NAME'].'/payment/make?'.$_SERVER["QUERY_STRING"]);
+        //die();
     }
     else {
         //echo "trade_status=".$_GET['trade_status'];
-        header("Location: ".'https://'.$_SERVER['SERVER_NAME'].'/payment/make?'.$_SERVER["QUERY_STRING"]);
+        //緊急エラー送信///////////////////////////
+        require_once('fw/mailManager.php');
+        $mailManager = new mailManager();
+        $mailManager->sendHalt(LOCALE.":ERROR: verify_result TRUE\n".'trade_status='.$_GET['trade_status']);
+        
+        header("Location: ".'http://'.$_SERVER['SERVER_NAME'].'/payment/error');
         die();
     }
     //——请根据您的业务逻辑来编写程序（以上代码仅作参考）——
@@ -52,7 +62,12 @@ else {
     //验证失败
     //如要调试，请看alipay_notify.php页面的return_verify函数，比对sign和mysign的值是否相等，或者检查$veryfy_result有没有返回true
     //echo "fail";
-    header("Location: ".'https://'.$_SERVER['SERVER_NAME'].'/payment/error');
+    //緊急エラー送信///////////////////////////
+    require_once('fw/mailManager.php');
+    $mailManager = new mailManager();
+    $mailManager->sendHalt(LOCALE.":ERROR: return_verify_result FALSE\n");
+    
+    header("Location: ".'http://'.$_SERVER['SERVER_NAME'].'/payment/error');
     die();
 }
 ?>

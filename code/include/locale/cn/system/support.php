@@ -2,7 +2,7 @@
 require_once('locale/cn/common.php');//共通翻訳ファイル
 $page_locale = array(
     'user_app_name'=>'会员',//ユーザー
-    'user_search_btn'=>'查看',//検索
+    'user_search_btn'=>'搜索',//検索
     'user_search_help'=>'',//※nから始まるお客様番号は中国向けサービスではありません。イルナまでご連絡ください。
     'user_search_title'=>'会员查看',//ユーザー検索
     'user_search_keyword'=>'关键词语',//キーワード
@@ -12,10 +12,10 @@ $page_locale = array(
     'user_search_none'=>'会员不存在',//ユーザーが存在しません
     
     'user_search_result_title'=>'查看结果',//検索結果
-    'user_recent_title'=>'最新用户一览表',//最新ユーザー一覧
+    'user_recent_title'=>'最新会员一览表',//最新ユーザー一覧
     
     'user_given_name_title'=>'姓名',//姓名
-    'user_status_title'=>'用户状态 ',//ステータス
+    'user_status_title'=>'会员状态 ',//ステータス
     //'user_customer_no_title'=>'客户编号',//
     //'user_account_title'=>'登录账户',//
     //'user_trade_no_title'=>'アリペイ番号',//

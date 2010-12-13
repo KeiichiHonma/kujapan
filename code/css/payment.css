@@ -7,9 +7,9 @@ div#form_btn{
     font-weight:bold;
     color:#FF0000;
 }
-.attention{
+/*.attention{
     font-weight:bold;
-}
+}*/
 
 .form_text_common{
     width:280px;
@@ -66,32 +66,37 @@ table .help {
 
 
 table#attention td{
-    padding-top:5px;
+    padding:5px 5px 0px 5px;
     }
 table#attention td.last{
-
     padding-bottom:5px;
     }
 
-
 div#payment{
     margin:0 auto;
-    width:705px;
+    width:640px;
     position: relative;
     font-size:120%;
 }
 
 div#payment2{
     position: absolute;
-    left:20px;
+    left:10px;
     top:20px;
-    width:685px;
+    width:620px;
 }
 
-div#payment2 table.attetion{
+div#payment2 table.attention{
     width:410px;
     margin:10px auto 0px auto;
 }
+
+div#payment2 table.maintenance{
+    width:600px;
+    margin:10px auto 0px auto;
+    padding
+}
+
 
 div#payment2 table.text_confirm{
     width:595px;
@@ -103,15 +108,15 @@ div#payment2 table.text_confirm td{
 }
 
 div#payment2 table.btn{
-    width:615px;
-    margin:0px auto 0px auto;
+    width:620px;
+    margin:10px auto 0px auto;
 }
 
 div#payment_confirm{
     position: absolute;
-    left:25px;/*705-615/2*/
+    left:0px;/*705-615/2*/
     top:160px;
-    width:615px;
+    width:620px;
 }
 
 div#payment_confirm2{
@@ -122,6 +127,34 @@ div#payment_confirm3{
     position: absolute;
     left:0px;
     top:46px;
+}
+
+div#initialize{
+    margin:0 auto;
+    width:705px;
+    position: relative;
+    font-size:120%;
+}
+
+div#initialize2{
+    position: absolute;
+    left:20px;
+    top:20px;
+    width:685px;
+}
+
+div#initialize2 table.attetion{
+    width:410px;
+    margin:10px auto 0px auto;
+}
+
+div#initialize2 table.btn{
+    width:615px;
+    margin:0px auto 0px auto;
+}
+
+div#initialize .attention{
+    font-weight:bold;
 }
 
 table.initialize {

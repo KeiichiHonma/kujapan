@@ -32,7 +32,9 @@ array(6) {
 
 */
 
-require_once('user/prepend.php');
+//require_once('user/prepend.php');
+require_once('fw/container.php');
+$con = new container(TRUE);
 $_POST['aliorder'] = $con->locale['alipay_product_title'];
 //$_POST['aliorder'] = 'test';
 $_POST['alibody'] = $con->locale['alipay_product_detail'];

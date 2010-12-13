@@ -12,13 +12,13 @@
     <div id="wrapper">
       <div id="container">
         <table id="header">
-        <tr><td class="control">{$control_no}</td><td class="contact">{$locale.contact}{$locale.telephone}</td></tr>
+        <tr><td class="control">{$control_no}</td><td>{$shop.0.shop_name}</td><td class="contact">{$locale.contact}{$locale.telephone}</td></tr>
         </table>
         <table id="top">
         <tr>
             <td class="logo1"><img alt="{$locale.site_name}" src="/img/visual/logo_s.gif" width="150" height="31" /></td>
             <td class="logo2"><img alt="" src="/img/logo/{$shop.0.shop_id}m.gif" width="165" height="65" /></td>
-            <td>{$shop.0.shop_name}</td>
+            <td>&nbsp;</td>
             <td class="btn"><a class="print" href="#" onclick="window.print(); return false;">{$locale.print_bt}</a></td>
         </tr>
         </table>

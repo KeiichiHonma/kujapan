@@ -1,4 +1,7 @@
 <?php
+//require専用ページ
+
+
 /*//使用しない アリペイのIP範囲がわからない
 //ipアドレス制限
 $access_ip = $_SERVER['REMOTE_ADDR'];
@@ -57,6 +60,12 @@ $_GET['total_fee'] 金額
 $_GET['buyer_id'] 売り手のアリペイアカウントに対応する唯一のID番号。2088から始まる16桁の数字。
 
 */
+
+//直接来た場合は$conがないはず
+if(!isset($con)){
+    header("Location: ".'http://'.$_SERVER['SERVER_NAME'].'/payment/error');
+    die();
+}
 $alipay_param = array
 (
     'trade_no'=>array('must'=>TRUE,'check'=>'int','param'=>0),
@@ -77,7 +86,7 @@ $alipay_param = array
 );
 
 
-require_once('user/prepend.php');
+//require_once('user/prepend.php');
 
 /*このページに関してはシンプルにユーザーを作成する
 
@@ -85,10 +94,11 @@ require_once('user/prepend.php');
 リファラー、IP制限、できることはすべて*/
 //debug//
 if($con->isDebug){
-    $alipay_url = KUJAPANURLSSL.'/payment/alipay';
+    //$alipay_url = KUJAPANURLSSL.'/payment/return_url';
     $ok_total_fee = 0.1;
 }else{
-    $alipay_url = 'https://www.alipay.com';
+    //$alipay_url = 'https://www.alipay.com';
+    //$alipay_url = KUJAPANURLSSL.'/payment/return_url';
     $ok_total_fee = 99;
 }
 
@@ -123,10 +133,15 @@ foreach ($alipay_param as $name => $value){
 }
 
 //リファラチェック
-if (strstr($_SERVER['HTTP_REFERER'],$alipay_url) == FALSE) $isCheck = FALSE;
+//if (strstr($_SERVER['HTTP_REFERER'],$alipay_url) == FALSE) $isCheck = FALSE;
 
 //チェック判断
 if(!$isCheck){
+    //緊急エラー送信///////////////////////////
+    require_once('fw/mailManager.php');
+    $mailManager = new mailManager();
+    $mailManager->sendHalt(LOCALE.":ERROR: make page get_param FALSE\n");
+    
     $con->safeExitRedirect('/payment/error');//エラー画面
 }
 
@@ -140,6 +155,11 @@ $uid = $user_handle->addRow($alipay_param);
 
 //チェック判断
 if(!$uid){
+    //緊急エラー送信///////////////////////////
+    require_once('fw/mailManager.php');
+    $mailManager = new mailManager();
+    $mailManager->sendHalt(LOCALE.":ERROR: make page user_id FALSE\n");
+    
     $con->safeExitRedirect('/payment/error');//エラー画面
 }
 
@@ -166,6 +186,11 @@ $reid = $regist_handle->addRow($uid,$customer_no,$account,$password);
 
 //チェック判断
 if(!$reid){
+    //緊急エラー送信///////////////////////////
+    require_once('fw/mailManager.php');
+    $mailManager = new mailManager();
+    $mailManager->sendHalt(LOCALE.":ERROR: make page tmp_regist FALSE\n");
+
     $con->safeExitRedirect('/payment/error');//エラー画面
 }
 

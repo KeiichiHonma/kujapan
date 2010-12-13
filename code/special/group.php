@@ -1,15 +1,12 @@
 <?php
-//--[ 前処理 ]--------------------------------------------------------------
 require_once('user/prepend.php');
-$con->session->set(SESSION_POSITION,$_SERVER['REQUEST_URI']);
+
 $grid = $con->base->getPath('grid',TRUE);//リダイレクトあり
 
 if(!$grid){
     require_once('fw/errorManager.php');
     errorManager::throwError(E_CMMN_URL_WRONG);
 }
-
-$user_auth->validateLogin();//認証は必須ではありません
 
 //group
 require_once('group/logic.php');

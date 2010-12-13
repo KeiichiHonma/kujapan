@@ -11,6 +11,13 @@ class commonPosition extends positionManager
         'name_tw'=>'日游酷棒',
         'func'=>null,'ssl'=>FALSE,'gnavi'=>'index','snavi'=>null
     ),
+    'news'=>array
+    (
+        'name_ja'=>'お知らせ',
+        'name_cn'=>'通知',
+        'name_tw'=>'通知',
+        'func'=>null,'ssl'=>FALSE,'gnavi'=>null,'snavi'=>null
+    ),
     'about'=>array
     (
         'name_ja'=>'使い方',
@@ -132,11 +139,18 @@ class commonPosition extends positionManager
     ),
     'payment'=>array
         (
+            'buystop'=>array
+            (
+                'name_ja'=>'新規ご購入一時停止のお知らせ',
+                'name_cn'=>'新規ご購入一時停止のお知らせ',
+                'name_tw'=>'新規ご購入一時停止のお知らせ',
+                'func'=>null,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>null
+            ),
             'bridge'=>array
             (
                 'name_ja'=>'決済前にご確認ください',
-                'name_cn'=>'決済前にご確認ください',
-                'name_tw'=>'決済前にご確認ください',
+                'name_cn'=>'支付前的注意事项',
+                'name_tw'=>'支付前的注意事項',
                 'func'=>null,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>null
             ),
             'alipay'=>array
@@ -160,18 +174,18 @@ class commonPosition extends positionManager
                 'name_tw'=>'購買明細',
                 'func'=>null,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>null
             ),
-            'make'=>array
+/*            'make'=>array
             (
                 'name_ja'=>'購入明細',
                 'name_cn'=>'购买明细',
                 'name_tw'=>'購買明細',
                 'func'=>null,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>null
-            ),
+            ),*/
             'error'=>array
             (
                 'name_ja'=>'決済処理中にエラーが発生しました',
-                'name_cn'=>'決済処理中にエラーが発生しました',
-                'name_tw'=>'決済処理中にエラーが発生しました',
+                'name_cn'=>'结算处理中发生了错误',
+                'name_tw'=>'結算處理中發生了錯誤',
                 'func'=>null,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>null
             ),
         ),

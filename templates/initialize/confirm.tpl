@@ -18,8 +18,8 @@
       <div id="container">
 {*ロゴ、グローバルナビ*}
 {include file="include/header/header.inc"}
-<div id="payment">
-    <div id="payment2">
+<div id="initialize">
+    <div id="initialize2">
     <img src="/locale/{$smarty.const.LOCALE}/img/initialize/initialize_title.gif" alt="" height="26" width="665">
     <br />{$locale.initialize_message}
 
