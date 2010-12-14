@@ -57,11 +57,12 @@ class container
         $this->isSystem = ereg("^system", $matches[1]);
         
         //locale
-        if(!$this->isSystem){
+        $this->checkLocale();
+/*        if(!$this->isSystem){
             $this->checkLocale();
         }else{
             define('LOCALE',LOCALE_JA);
-        }
+        }*/
         
         //is payment initialize ?
         if(!strstr($this->pagepath,'payment') && !strstr($this->pagepath,'initialize')){
@@ -104,7 +105,10 @@ class container
                 define('LOCALE',LOCALE_CN);//簡体字
             break;
         }
-        if(file_exists($_SERVER['DOCUMENT_ROOT'].'/include/locale/'.LOCALE.$_SERVER['SCRIPT_NAME'])){
+        if($this->isSystem){
+            require_once('locale/'.LOCALE.'/system/support.php');
+            //$locale = $common_locale;
+        }elseif(file_exists($_SERVER['DOCUMENT_ROOT'].'/include/locale/'.LOCALE.$_SERVER['SCRIPT_NAME'])){
             require_once('locale/'.LOCALE.$_SERVER['SCRIPT_NAME']);//ファイル別翻訳ファイル
         }
 

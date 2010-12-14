@@ -1,7 +1,7 @@
 <?php
 //--[ 前処理 ]--------------------------------------------------------------
 require_once('manager/prepend.php');
-require_once('./locale.php');
+//require_once('./locale.php');
 
 require_once('user/logic.php');//manager
 $u_logic = new userSystemLogic();

@@ -23,7 +23,7 @@
 <div id="payment">
     <div id="payment2">
     <img src="/locale/{$smarty.const.LOCALE}/img/initialize/ready_title.gif" alt="" height="26" width="620">
-    <br />{$locale.finish_message}
+    <br />{$locale.initialize_finish_message}
 <table class="attention">
 <tbody>
 <tr>
@@ -52,7 +52,7 @@
 <table class="btn">
 <tbody>
 <tr>
-    <td align="center"><a href="{$smarty.const.KUJAPANURL}/">首页</a></td>
+    <td align="center"><a href="{$smarty.const.KUJAPANURL}/">{$locale.initialize_finish_action}</a></td>
 </tr>
 </tbody>
 </table>

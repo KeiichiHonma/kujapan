@@ -3,15 +3,34 @@ header("Content-type: text/html; charset=utf-8");
 
 require_once('fw/define.php');
 
+define('KUJAPANURL',            'http://'.$_SERVER['SERVER_NAME']);
+define('KUJAPANURLSSL',         'https://'.$_SERVER['SERVER_NAME']);
+
 $ini = parse_ini_file(SETTING_INI, true);
 if($ini['common']['isDebug'] == 0){//本番
-    define('KUJAPANURL',            'http://'.$_SERVER['SERVER_NAME']);
-    define('KUJAPANURLSSL',         'https://'.$_SERVER['SERVER_NAME']);
-    
+    define('SERVER_NAME_JA',      'www.kujapan.net');
+    define('SERVER_NAME_CN',      'www.kujapan.com');
+    define('SERVER_NAME_TW',      'www.kujapan.net');
 }elseif($ini['common']['isDebug'] == 1){//デバッグモード
-    define('KUJAPANURL',            'http://'.$_SERVER['SERVER_NAME']);
-    define('KUJAPANURLSSL',         'https://'.$_SERVER['SERVER_NAME']);
+    if($ini['common']['isStage'] == 1){//ステージングサーバモード
+            define('SERVER_NAME_JA',      'ja.kujapan.iluna.co.jp');
+            define('SERVER_NAME_CN',      'cn.kujapan.iluna.co.jp');
+            define('SERVER_NAME_TW',      'tw.kujapan.iluna.co.jp');
+    }else{
+        if($ini['common']['country'] == "tw"){
+            define('SERVER_NAME_JA',      'ja.kujapan.artemis.corp.iluna.co.jp');
+            define('SERVER_NAME_CN',      'cn.kujapan.artemis.corp.iluna.co.jp');
+            define('SERVER_NAME_TW',      'tw.kujapan.artemis.corp.iluna.co.jp');
+        }else{
+            define('SERVER_NAME_JA',      'ja.kujapan.apollon.corp.iluna.co.jp');
+            define('SERVER_NAME_CN',      'cn.kujapan.apollon.corp.iluna.co.jp');
+            define('SERVER_NAME_TW',      'tw.kujapan.apollon.corp.iluna.co.jp');
+        }
+    }
 }
+
+
+
 
 //メンテナンスモード解除
 if($ini['common']['isMaintenance'] == 0){
@@ -48,7 +67,7 @@ if(file_exists($_SERVER['DOCUMENT_ROOT'].'/include/locale/'.LOCALE.'/maintenance
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta content="" name="Keywords"/>
     <meta content="" name="Description"/>
-    <title>サイトメンテナンスのお知らせ | </title>
+    <title><?php print $locale['maintenance_title'] ?></title>
     <link href="/css/0-import.css" rel="stylesheet" type="text/css" />
     <link href="/locale/<?php print LOCALE ?>/css/background.css" rel="stylesheet" type="text/css" />
     <link href="/css/sitemap.css" rel="stylesheet" type="text/css" />
@@ -60,7 +79,7 @@ if(file_exists($_SERVER['DOCUMENT_ROOT'].'/include/locale/'.LOCALE.'/maintenance
       <div id="container">
       <div id="header">
         <div id="header_line">
-            <h1>サイトメンテナンスのお知らせ</h1>
+            <h1><?php print $locale['maintenance_title'] ?></h1>
         </div>
         <div id="header_inner">
           <ul>

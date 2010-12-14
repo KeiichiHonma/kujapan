@@ -1,7 +1,7 @@
 <?php
 //--[ 前処理 ]--------------------------------------------------------------
 require_once('manager/prepend.php');
-require_once('./locale.php');
+//require_once('./locale.php');
 
 if(strlen(trim($_GET['sid'])) > 0 && strlen(trim($_GET['customer_no'])) > 0 && strlen(trim($_GET['last_no'])) > 0){
     //国チェック

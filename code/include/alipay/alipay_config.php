@@ -28,7 +28,7 @@ $partner        = "2088501340570641";
 $key               = "lrz1wg441dnv6krtbezbwp5qgy9vrsmv";
 
 //签约支付宝账号或卖家支付宝帐户
-$seller_email    = "he.tt@95teleweb.com";
+$seller_email    = "kujapan-alipay@95teleweb.com";
 
 //交易过程中服务器通知的页面 要用 http://格式的完整路径，不允许加?id=123这类自定义参数
 //$notify_url        = "http://cn.kujapan.apollon.corp.iluna.co.jp/js_php_utf8/notify_url.php";

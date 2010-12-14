@@ -111,6 +111,54 @@ class utilManager
         return TRUE;
     }
     
-    
+    //アリペイパラメーター生成
+    static public $isCheck = TRUE;
+    static public $alipay_param = array
+    (
+        'trade_no'=>array('must'=>TRUE,'check'=>'int','param'=>0),
+        'out_trade_no'=>array('must'=>FALSE,'check'=>'int','param'=>0),
+        'total_fee'=>array('must'=>TRUE,'check'=>'int','param'=>0),
+        'subject'=>array('must'=>FALSE,'check'=>null,'param'=>''),
+        'seller_email'=>array('must'=>FALSE,'check'=>null,'param'=>''),
+        'seller_id'=>array('must'=>FALSE,'check'=>'int','param'=>0),
+        'buyer_email'=>array('must'=>FALSE,'check'=>null,'param'=>''),
+        'buyer_id'=>array('must'=>TRUE,'check'=>'int','param'=>0),
+        'trade_status'=>array('must'=>FALSE,'check'=>null,'param'=>''),
+        'notify_id'=>array('must'=>FALSE,'check'=>null,'param'=>0),
+        'notify_time'=>array('must'=>FALSE,'check'=>null,'param'=>0),
+        'notify_type'=>array('must'=>FALSE,'check'=>null,'param'=>''),
+        'is_success'=>array('must'=>FALSE,'check'=>null,'param'=>''),
+        'body'=>array('must'=>FALSE,'check'=>null,'param'=>''),
+        'extra_common'=>array('must'=>FALSE,'check'=>null,'param'=>'')
+    );
+    static public function makeAlipayParam(){
+        foreach (self::$alipay_param as $name => $value){
+            if($value['must']){
+                if(isset($_GET[$name])){
+                    if($value['check'] == 'int'){
+                        if(is_numeric($_GET[$name])){
+                            self::$alipay_param[$name]['param'] = $_GET[$name];
+                        }else{
+                            self::$isCheck = FALSE;
+                        }
+                    }else{
+                        self::$alipay_param[$name]['param'] = $_GET[$name];
+                    }
+                }else{
+                    self::$isCheck = FALSE;
+                }
+            }else{
+                if(isset($_GET[$name])){
+                    if($value['check'] == 'int'){
+                        if(is_numeric($_GET[$name])){
+                            self::$alipay_param[$name]['param'] = $_GET[$name];
+                        }
+                    }else{
+                        self::$alipay_param[$name]['param'] = $_GET[$name];
+                    }
+                }
+            }
+        }
+    }
 }
 ?>

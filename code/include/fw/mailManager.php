@@ -39,7 +39,7 @@ class mailManager
     //comで使用するアドレス
     private $com_real = array
     (
-        array( 'info@iluna.co.jp' , '[日游酷棒]' )
+        array( 'kujapan@95teleweb.com' , '[日游酷棒]' )
     );
 
     private $com_debug = array
@@ -50,7 +50,7 @@ class mailManager
     //netで使用するアドレス
     private $net_real = array
     (
-        array( 'info@iluna.co.jp' , '[日游酷棒]' )
+        array( 'kujapan-n@95teleweb.com' , '[日游酷棒]' )
     );
 
     private $net_debug = array

@@ -1,7 +1,6 @@
 <?php
 //--[ 前処理 ]--------------------------------------------------------------
 require_once('manager/prepend.php');
-require_once('./locale.php');
 
 if(strlen(trim($_GET['keyword'])) > 0){
     require_once('user/logic.php');//manager

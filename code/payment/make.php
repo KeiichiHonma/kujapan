@@ -66,77 +66,12 @@ if(!isset($con)){
     header("Location: ".'http://'.$_SERVER['SERVER_NAME'].'/payment/error');
     die();
 }
-$alipay_param = array
-(
-    'trade_no'=>array('must'=>TRUE,'check'=>'int','param'=>0),
-    'out_trade_no'=>array('must'=>FALSE,'check'=>'int','param'=>0),
-    'total_fee'=>array('must'=>TRUE,'check'=>'int','param'=>0),
-    'subject'=>array('must'=>FALSE,'check'=>null,'param'=>''),
-    'seller_email'=>array('must'=>FALSE,'check'=>null,'param'=>''),
-    'seller_id'=>array('must'=>FALSE,'check'=>'int','param'=>0),
-    'buyer_email'=>array('must'=>FALSE,'check'=>null,'param'=>''),
-    'buyer_id'=>array('must'=>TRUE,'check'=>'int','param'=>0),
-    'trade_status'=>array('must'=>FALSE,'check'=>null,'param'=>''),
-    'notify_id'=>array('must'=>FALSE,'check'=>null,'param'=>0),
-    'notify_time'=>array('must'=>FALSE,'check'=>null,'param'=>0),
-    'notify_type'=>array('must'=>FALSE,'check'=>null,'param'=>''),
-    'is_success'=>array('must'=>FALSE,'check'=>null,'param'=>''),
-    'body'=>array('must'=>FALSE,'check'=>null,'param'=>''),
-    'extra_common'=>array('must'=>FALSE,'check'=>null,'param'=>'')
-);
 
-
-//require_once('user/prepend.php');
-
-/*このページに関してはシンプルにユーザーを作成する
-
-但しセキュリティは最高に設定
-リファラー、IP制限、できることはすべて*/
-//debug//
-if($con->isDebug){
-    //$alipay_url = KUJAPANURLSSL.'/payment/return_url';
-    $ok_total_fee = 0.1;
-}else{
-    //$alipay_url = 'https://www.alipay.com';
-    //$alipay_url = KUJAPANURLSSL.'/payment/return_url';
-    $ok_total_fee = 99;
-}
-
-//チェック
-$isCheck = TRUE;
-foreach ($alipay_param as $name => $value){
-    if($value['must']){
-        if(isset($_GET[$name])){
-            if($value['check'] == 'int'){
-                if(is_numeric($_GET[$name])){
-                    $alipay_param[$name]['param'] = $_GET[$name];
-                }else{
-                    $isCheck = FALSE;
-                }
-            }else{
-                $alipay_param[$name]['param'] = $_GET[$name];
-            }
-        }else{
-            $isCheck = FALSE;
-        }
-    }else{
-        if(isset($_GET[$name])){
-            if($value['check'] == 'int'){
-                if(is_numeric($_GET[$name])){
-                    $alipay_param[$name]['param'] = $_GET[$name];
-                }
-            }else{
-                $alipay_param[$name]['param'] = $_GET[$name];
-            }
-        }
-    }
-}
-
-//リファラチェック
-//if (strstr($_SERVER['HTTP_REFERER'],$alipay_url) == FALSE) $isCheck = FALSE;
+require_once('fw/utilManager.php');
+utilManager::makeAlipayParam();
 
 //チェック判断
-if(!$isCheck){
+if(!utilManager::$isCheck){
     //緊急エラー送信///////////////////////////
     require_once('fw/mailManager.php');
     $mailManager = new mailManager();
@@ -151,7 +86,7 @@ if(!$isCheck){
 //ユーザー仮登録///////////////////////////
 require_once('user/handle.php');
 $user_handle = new userHandle();
-$uid = $user_handle->addRow($alipay_param);
+$uid = $user_handle->addRow(utilManager::$alipay_param);
 
 //チェック判断
 if(!$uid){
@@ -164,8 +99,6 @@ if(!$uid){
 }
 
 $buy_time = $user_handle->parameter->buy_time;
-//$customer_no = $user_handle->parameter->customer_no;
-//$account = $user_handle->parameter->account;
 $password = $user_handle->parameter->password;
 
 
@@ -195,10 +128,10 @@ if(!$reid){
 }
 
 //メール送信
-if(strlen($alipay_param['buyer_email']['param']) > 0){
+if(strlen(utilManager::$alipay_param['buyer_email']['param']) > 0){
     require_once('fw/mailManager.php');
     $mailManager = new mailManager();
-    $mailManager->sendRegistUser($alipay_param['buyer_email']['param'],$buy_time,$customer_no,$account,$password);
+    $mailManager->sendRegistUser(utilManager::$alipay_param['buyer_email']['param'],$buy_time,$customer_no,$account,$password);
 }
 
 $con->safeExitRedirect('/payment/finish/code/'.$regist_handle->parameter->rand,TRUE);//SSL

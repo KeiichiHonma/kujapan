@@ -48,6 +48,7 @@
             <p class="init"><img src="/img/system/reset.gif" alt="" width="12" height="12" border="0" />&nbsp;<a href="{$smarty.const.KUJAPANURLSSL}/system/user/">{$locale.user_search_reset}</a></p>
         </div>
         <h2 class="h_title">{$locale.user_recent_title}</h2>
+        {*管理者のみ*}{if $login_type == $smarty.const.TYPE_M_ADMIN}<a href="{$smarty.const.KUJAPANURLSSL}/system/user/entry/input">登録する</a>{/if}
         {if $user}
             {include file="include/system/sp.inc"}
             <dl class="user_list">

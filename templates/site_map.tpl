@@ -23,7 +23,7 @@
             <ul class="linkbox">
                 <li><a href="{$smarty.const.KUJAPANURL}/">{$locale.g_navi01}</a></li>
                 <li><a href="{$smarty.const.KUJAPANURL}/about">{$locale.g_navi02}</a></li>
-                <li><a href="sample.html">{$locale.footer_buy_coupon}</a></li>
+                {if !$login_uid}<li><a href="{$smarty.const.KUJAPANURL}/payment/bridge" target="_blank">{$locale.footer_buy_coupon}</a></li>{/if}
                 <li><a href="{$smarty.const.KUJAPANURL}/rule">{$locale.footer_rule}</a></li>
                 <li><a href="{$smarty.const.KUJAPANURL}/corp">{$locale.footer_corp}</a></li>
             </ul>

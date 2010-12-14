@@ -212,7 +212,7 @@
             </li>
           </ul>
         </div>
-        <!-- div><img src="/img/sample/main_img01.jpg" alt="" width="650" height="245" /></div -->
+
         <div id="spot_box">
           <h2>
             <img alt="{$locale.top_spot_title}" height="40" src="/locale/{$smarty.const.LOCALE}/img/button/top_spot_title.jpg" width="650" />

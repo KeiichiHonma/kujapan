@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* HEADER */
 #header #header_inner ul li#shopping_bt a{
-    background:url(../img/button/shopping_bt.jpg) no-repeat 0 0;
+    background:url(../img/button/shopping_bt.gif) no-repeat 0 0;
 }
 #header #global_navi ul li#g_navi01{
     background:url(../img/button/g_navi_bt01.jpg) no-repeat 0 -40px;
@@ -215,7 +215,7 @@ background:url(../img/part/login_use_coupon.gif) no-repeat left top;
 
 /* MAIN */
 #coupon .list_box_g .img_area a.bt_buy{
-    background:url(../img/button/buy_bt.jpg) no-repeat 0 0;
+    background:url(../img/button/buy_bt.gif) no-repeat 0 0;
 }
 
 #coupon .list_box_g_footer a.more_btn{
@@ -239,7 +239,7 @@ background:url(../img/part/login_use_coupon.gif) no-repeat left top;
 }
 
 #coupon .detail_box .img_area a.bt_buy{
-    background:url(../img/button/buy_bt.jpg) no-repeat 0 0;
+    background:url(../img/button/buy_bt.gif) no-repeat 0 0;
 }
 
 #coupon .detail_box6_inner ul li a.detail_buy{
@@ -269,7 +269,7 @@ background:url(../img/part/login_use_coupon.gif) no-repeat left top;
 }
 
 #coupon .list_coupon_g .img_area a.bt_buy{
-    background:url(../img/button/buy_bt.jpg) no-repeat 0 0;
+    background:url(../img/button/buy_bt.gif) no-repeat 0 0;
 }
 
 /*print*/

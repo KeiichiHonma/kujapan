@@ -146,7 +146,7 @@ h3.search_bulletin_help {
 
 .user_list dd.given_name_title{
     float:left;
-    width:202px;
+    width:182px;
 }
 
 .user_list dd.status_title{
@@ -183,7 +183,7 @@ h3.search_bulletin_help {
     background-repeat:no-repeat;
     background-position:left 4px;
     float:left;
-    width:90px;
+    width:100px;
     padding-left:20px;
     /*border:1px red solid;*/
 }
@@ -193,7 +193,7 @@ h3.search_bulletin_help {
     background-repeat:no-repeat;
     background-position:left 4px;
     float:left;
-    width:90px;
+    width:100px;
     padding-left:20px;
     /*border:1px red solid;*/
 }
@@ -213,7 +213,7 @@ h3.search_bulletin_help {
     background-position:left 4px;
     padding-left:20px;
     float:left;
-    width:182px;
+    width:162px;
 }
 
 .user_list dd.common{
@@ -223,7 +223,7 @@ h3.search_bulletin_help {
 
 .user_list dd.alipay{
     float:left;
-    width:110px;
+    width:120px;
 }
 
 .user_list dd.date{

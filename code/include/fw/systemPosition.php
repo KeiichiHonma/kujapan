@@ -39,6 +39,12 @@ class systemPosition extends positionManager
             'search'=>array('name'=>'ユーザー検索','func'=>null,'access'=>TYPE_M_SUPPORT,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'user'),
             'republish'=>array('name'=>'ユーザー再発行','func'=>null,'access'=>TYPE_M_SUPPORT,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'user'),
             'finish'=>array('name'=>'ユーザー再発行完了','func'=>null,'access'=>TYPE_M_SUPPORT,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'user'),
+            'entry'=>array
+                (
+                'input'=>array('name'=>'ユーザー追加','func'=>null,'access'=>TYPE_M_ADMIN,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'user'),
+                'finish'=>array('name'=>'ユーザー追加完了','func'=>null,'access'=>TYPE_M_ADMIN,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'user'),
+                'mail'=>array('name'=>'メール送信','func'=>null,'access'=>TYPE_M_ADMIN,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'user'),
+                ),
             'edit'=>array
                 (
                 'input'=>array('name'=>'ユーザー変更','func'=>null,'access'=>TYPE_M_ADMIN,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'user'),

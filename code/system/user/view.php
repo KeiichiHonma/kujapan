@@ -2,7 +2,6 @@
 //--[ 前処理 ]--------------------------------------------------------------
 require_once('manager/prepend.php');
 $uid = $con->base->getPath('uid',TRUE);//リダイレクトあり
-require_once('./locale.php');
 
 require_once('user/logic.php');
 $u_logic = new userSystemLogic();

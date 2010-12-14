@@ -170,8 +170,8 @@ class commonPosition extends positionManager
             'finish'=>array
             (
                 'name_ja'=>'購入明細',
-                'name_cn'=>'购买明细',
-                'name_tw'=>'購買明細',
+                'name_cn'=>'购买记录',
+                'name_tw'=>'購買記錄',
                 'func'=>null,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>null
             ),
 /*            'make'=>array

@@ -50,6 +50,38 @@ class checkEntry extends checkManager
         parent::checkError(self::$check_list,'initialize','entry');
     }
 }
+//以下はシステムなので、エラー内容を記載する
+//entry check
+class checkSystemEntry extends checkManager
+{
+    static private $check_list = array
+    (
+        'trade_no'=>array
+        (
+            array('message'=>'！trade_noは必須です。','func'=>'checkMust','arg'=>null),
+            array('message'=>'！trade_noが不正です。','func'=>'checkInt','arg'=>null)
+        ),
+        'out_trade_no'=>array
+        (
+            array('message'=>'！out_trade_noは必須です。','func'=>'checkMust','arg'=>null),
+            array('message'=>'！out_trade_noが不正です。','func'=>'checkInt','arg'=>null)
+        ),
+        'buyer_email'=>array
+        (
+            array('message'=>'！buyer_emailは必須です。','func'=>'checkMust','arg'=>null),
+            array('message'=>'！buyer_emailが不正です。','func'=>'checkMail','arg'=>null)
+        ),
+        'buyer_id'=>array
+        (
+            array('message'=>'！buyer_idは必須です。','func'=>'checkMust','arg'=>null),
+            array('message'=>'！buyer_idが不正です。','func'=>'checkInt','arg'=>null)
+        ),
+    );
+            
+    static public function checkError(){
+        parent::checkSystemError(self::$check_list,'initialize','entry');
+    }
+}
 
 //edit check
 class checkEdit extends checkManager

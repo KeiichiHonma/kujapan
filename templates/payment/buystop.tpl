@@ -30,18 +30,15 @@
 {include file="include/common/genre_box.inc"}
         </div>
         <div id="s_main">
-          <h2 class="list">新規ご購入一時停止のお知らせ</h2>
-            <p id="divide_format_title">新規ご購入一時停止予定時間</p>
+          <h2 class="list">{$locale.buystop_title}</h2>
+            <p id="divide_format_title">{$locale.buystop_title2}</p>
             <div id="divide_format_message">
-日ごろより『日游酷棒』をご利用頂き、誠にありがとうございます。<br />
-『日游酷棒』サイトのメンテンスを下記時間帯で予定しており、メンテナンス予定時間の1時間前から新規ご購入を一時的に停止させていただいております。<br />
-新規ご購入一時停止予定時間<br />
+            {$locale.buystop_message}
+            {$locale.buystop_title2}
             <ul class="indentbox">
                 <li>2010/12/13 2:00 - 2010/12/13 3:00</li>
             </ul>
-皆様にはご迷惑をおかけしますことを深くお詫び申し上げます。<br />
-メンテナンスが終了次第、サービスを復旧いたしますので、今しばらくお待ち下さいますようお願い申し上げます。<br />
-『日游酷棒』運営事務局
+            {$locale.buystop_message2}
             </div>
         </div>
 
