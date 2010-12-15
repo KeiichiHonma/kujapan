@@ -70,6 +70,7 @@
             {/if}
             </tr>
         </table>
+{include file="include/google/analytics.inc"}
     </div>
   </div>
   </body>
