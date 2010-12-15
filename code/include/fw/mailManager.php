@@ -199,8 +199,8 @@ class mailManager
         
         //$this->mail_template->makeRegistUserMail($mail,$given_name,$customer_no,$time,$account,$password);
         $message = '';
-        $message .= '────────────────────────────────────────'."\n";
-        $message .= '                 '.$subject."\n";
+        $message .= '──────────────────────────────────────'."\n";
+        $message .= '                              '.$subject."\n";
         $message .= '─────────────────────────── '.date("Y/n/j",time()).' ─────'."\n\n";
 
 
@@ -257,7 +257,7 @@ class mailManager
 
 
             $message .= "\n".'────────────────────────────────────┐'."\n";
-            $message .= 'URL：http://www.oshiete-ca.com/'."\n";
+            $message .= 'URL：http://www.iluna.co.jp/'."\n";
             $message .= 'E-Mail：info@iluna.co.jp'."\n";
             $message .= '運営会社：株式会社イルナ'."\n";
             $message .= '────────────────────────────────────┘'."\n";

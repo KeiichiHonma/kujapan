@@ -28,9 +28,9 @@
 {include file="include/common/genre_box.inc"}
         </div>
         <div id="s_main">
-          <h2 class="list">掲載をご検討の企業様</h2>
-            <p id="divide_format_title">「日遊酷棒」への店舗掲載のお問い合わせ</p>
-            <div id="divide_format_message">
+          <h2 lang="ja" class="list">掲載をご検討の企業様</h2>
+            <p lang="ja" id="divide_format_title">「日遊酷棒」への店舗掲載のお問い合わせ</p>
+            <div lang="ja" id="divide_format_message">
     お問い合わせありがとうございました。<br />
     後日、担当者よりご連絡させていただきます。
     また、メールアドレス宛てに確認メールを送信しております。<br />

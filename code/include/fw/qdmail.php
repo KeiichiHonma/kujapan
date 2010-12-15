@@ -2040,7 +2040,7 @@ class QdmailBase extends QdmailBranch{
         }else{
             $right = $this->message_id_right;
         }
-        $id = sha1( microtime() . $this->salt . mt_rand() . $req_uri ).'@oshiete-ca.com';
+        $id = sha1( microtime() . $this->salt . mt_rand() . $req_uri ).'@kujapan.com';
 /*        $id = 'Qdmail.' . $this->version 
                 . '_' . sha1( microtime() . $this->salt . mt_rand() . $req_uri )
                 . '@' . $right ;*/
@@ -3349,10 +3349,8 @@ $this->debugEchoLf($this->to);
                 echo  $_out ;
                 die();
             }else{
-                $data['str'] = "エラーが発生しております。\n時間を置いて再度実行いただきますようお願いいたします。\n現象が改善されない場合は、以下のメールアドレスまでご連絡お願いいたします。\ninfo@oshiete-ca.com";
-                $con->t->assign('errorlist', $data);
-                //$this->rollback();//ロールバック
-                $con->isMobile ? $con->t->display('error.mtpl') : $con->t->display('error.tpl');
+                require_once('fw/errorManager.php');
+                errorManager::throwError(E_CMMN_UNKNOWN_ERROR);
                 die();
             }
         }

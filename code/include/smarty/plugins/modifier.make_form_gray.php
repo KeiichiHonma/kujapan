@@ -229,7 +229,7 @@ function smarty_modifier_make_form_gray($form_name,$form_setting,$error,$colspan
                         $data .= '<option value="'.$key.'" class="'.$setting[$i]['class'].'" '.$selected.'>'.$value.'</option>'."\n";
                     }
                     $data .= '</select>'."\n";
-                    $data .= '<br class="clear" />※ドメイン指定受信を設定されている方は「oshiete-ca.com」を受信できるように指定してください。';
+                    //$data .= '<br class="clear" />※ドメイン指定受信を設定されている方は「oshiete-ca.com」を受信できるように指定してください。';
                 }else{
                     $data .= '<select lang="ja" name="'.$setting[$i]['name'].'">'."\n";
                     $data .= $setting[$i]['must'] ? '<option value="">選択してください</option>'."\n" : '<option value="">指定しない</option>'."\n";
