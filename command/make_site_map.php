@@ -23,12 +23,12 @@ if($ini['common']['isDebug'] == 0){//本番
     }
 }
 
-switch ($_SERVER['SERVER_NAME']){
-    case SERVER_NAME_TW:
+switch ($ini['common']['country']){
+    case 'tw':
         define('SERVER_NAME',SERVER_NAME_TW);
     break;
 
-    case SERVER_NAME_JA:
+    case 'ja':
         define('SERVER_NAME',SERVER_NAME_JA);
     break;
 
