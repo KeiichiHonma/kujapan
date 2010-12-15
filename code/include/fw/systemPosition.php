@@ -10,6 +10,11 @@ class systemPosition extends positionManager
         'index'=>array('name'=>'管理画面トップ','func'=>null,'access'=>TYPE_M_ADMIN,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'index'),
         'login'=>array('name'=>'管理画面トップ','func'=>null,'access'=>TYPE_M_ADMIN,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'index'),
         'logout'=>array('name'=>'管理画面トップ','func'=>null,'access'=>TYPE_M_SUPPORT,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'index'),
+        'alipay_debug'=>array
+            (
+            'index'=>array('name'=>'アリペイデバッグ','func'=>null,'access'=>TYPE_M_ADMIN,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'index'),
+            'alipayto'=>array('name'=>'アリペイデバッグ','func'=>null,'access'=>TYPE_M_ADMIN,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'index')
+            ),
         'manager'=>array
             (
             'index'=>array('name'=>'マネージャー管理','func'=>null,'access'=>TYPE_M_ADMIN,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'manager'),

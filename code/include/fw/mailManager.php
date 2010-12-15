@@ -79,7 +79,7 @@ class mailManager
     }
 
     //宛先/////////////////////////////////////////////////////////////////////////////////////////////////
-    public function sendHalt($body){
+    public function sendHalt($body,$shutdown_error = null){
         global $con;
         if($con->isDebug){
             $this->mail-> to( $this->halt_debug );
@@ -92,7 +92,13 @@ class mailManager
         if(isset($_SERVER['HTTP_REFERER'])) $body .= 'REFERER : '.$_SERVER['HTTP_REFERER']."\n";
         $body .= 'USER_AGENT : '.$_SERVER['HTTP_USER_AGENT']."\n";
         $body .= 'ADDR : '.$_SERVER['REMOTE_ADDR']."\n";
-
+        
+        if(!is_null($shutdown_error)){
+            foreach ($shutdown_error as $key => $value){
+                $body .= $key.$value."\n";
+            }
+        }
+        
         $this->mail-> subject(LOCALE.':kujapan:Halt');
         $this->mail->text($body);
         $this->setFrom();

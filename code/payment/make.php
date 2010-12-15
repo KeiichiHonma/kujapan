@@ -67,6 +67,21 @@ if(!isset($con)){
     die();
 }
 
+if($con->isDebug){
+
+}else{
+    //本番サイトで99元以外を認めるのはテストアカウントのみ
+    if($_GET['total_fee'] != 99 && $_GET['buyer_id'] != '2088502583884942'){
+        //緊急エラー送信///////////////////////////
+        require_once('fw/mailManager.php');
+        $mailManager = new mailManager();
+        $mailManager->sendHalt(LOCALE.":ERROR: make page total_fee deny FALSE\n");
+        
+        $con->safeExitRedirect('/payment/error');//エラー画面
+    }
+
+}
+
 require_once('fw/utilManager.php');
 utilManager::makeAlipayParam();
 
