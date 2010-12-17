@@ -3,7 +3,7 @@ require_once('user/prepend.php');
 //logo
 $logos = array
 (
-43,//セシルマクビー
+//43,//セシルマクビー
 1,//ドクターシーラボ
 8,//DHC
 22,//Ed Hardy
