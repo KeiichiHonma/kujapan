@@ -38,7 +38,7 @@ if ( $con->isPost ){
             $news_handle = new newsHandle();
             $nid = $news_handle->addRow();
 
-            $con->safeExitRedirect('/system/news/detail/nid/'.$nid,TRUE);
+            $con->safeExitRedirect('/system/news/view/nid/'.$nid,TRUE);
         }else{
             $con->safeExitRedirect('/system/',TRUE);
         }

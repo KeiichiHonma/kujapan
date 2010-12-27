@@ -31,7 +31,7 @@
           <h2 class="list">{$locale.news_title}</h2>
             <p id="divide_format_title">{$news.0.col_title}</p>
             <div id="divide_format_message">
-            {$news.0.col_detail}
+            {$news.0.col_detail|nl2br}
             </div>
 
         </div>

@@ -35,7 +35,7 @@
                         <td width="110" class="title">{$target_list.$target}</td>
                         
                         <td width="80">{$value.col_from|make_news_judge:$value.col_to}</td>
-                        <td><a href="{$smarty.const.KUJAPANURLSSL}/system/news/detail/nid/{$value._id}">{$value.col_title|escape}</a></td>
+                        <td><a href="{$smarty.const.KUJAPANURLSSL}/system/news/view/nid/{$value._id}">{$value.col_title_ja|escape}</a></td>
                         </tr>
                     {/foreach}
                         </table>

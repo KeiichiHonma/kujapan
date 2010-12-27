@@ -40,7 +40,7 @@ if ( $con->isPost ){
             $news_handle = new newsHandle();
             $news_handle->updateRow($_POST['nid']);
             
-            $con->safeExitRedirect('/system/news/detail/nid/'.$_POST['nid'],TRUE);
+            $con->safeExitRedirect('/system/news/view/nid/'.$_POST['nid'],TRUE);
         }else{
             $con->safeExitRedirect('/system/',TRUE);
         }

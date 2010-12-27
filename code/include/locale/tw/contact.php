@@ -12,7 +12,8 @@ $page_locale = array(
     'contact_column_opening'=>'服務時間',//営業時間
     'contact_opening_time'=>'周一至周五09:00-17:30',//平日午前9時から17時30分
     'contact_column_detail'=>'說明',//営業時間
-    'contact_detail'=>'',
+    'contact_detail'=>'『日遊酷棒』客服時間調整公告<br />我們會在以下時間暫停客服電子郵件的服務。<br />元旦：2010年12月29日～1月4日<br />春節：2011年2月2日～2月8日
+',
 );
 $locale = array_merge($common_locale,$page_locale);
 ?>
