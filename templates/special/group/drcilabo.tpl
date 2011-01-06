@@ -52,12 +52,12 @@
                         <li>{$locale.drcilabo_concept_text_1}</li>
                         </ul>
                         
-                        <div class="subt"><h4><span>Simple</span>【{$locale.drcilabo_concept_subtitle_2}】</h4></div>
+                        <div class="subt"><h4><span>Result</span>【{$locale.drcilabo_concept_subtitle_2}】</h4></div>
                         <ul class="listbox">
                         <li>{$locale.drcilabo_concept_text_2}</li>
                         </ul>
                         
-                        <div class="subt"><h4><span>Simple</span>【{$locale.drcilabo_concept_subtitle_3}】</h4></div>
+                        <div class="subt"><h4><span>Science</span>【{$locale.drcilabo_concept_subtitle_3}】</h4></div>
                         <ul class="listbox">
                         <li>{$locale.drcilabo_concept_text_3}</li>
                         </ul>
