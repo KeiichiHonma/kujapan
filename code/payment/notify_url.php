@@ -56,9 +56,9 @@ if($verify_result) {//验证成功
 }
 else {
     //緊急エラー送信///////////////////////////
-    require_once('fw/mailManager.php');
-    $mailManager = new mailManager();
-    $mailManager->sendHalt(LOCALE.":ERROR: notify_verify_result FALSE\n".'fail');
+    //require_once('fw/mailManager.php');
+    //$mailManager = new mailManager();
+    //$mailManager->sendHalt(LOCALE.":ERROR: notify_verify_result FALSE\n".'fail');
 
     //验证失败
     echo "fail";
