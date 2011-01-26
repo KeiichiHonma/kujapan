@@ -70,9 +70,18 @@
         </tr>
 
         <tr>
-        <th width="100" valign="top">URL</th>
-        <td>{$news.0.col_url|escape}</td>
+        <th width="100" valign="top">URL（日本）</th>
+        <td>{$news.0.col_url_ja|escape}</td>
         </tr>
+        <tr>
+        <th width="100" valign="top">URL（中国）</th>
+        <td>{$news.0.col_url_cn|escape}</td>
+        </tr>
+        <tr>
+        <th width="100" valign="top">URL（台湾・香港）</th>
+        <td>{$news.0.col_url_tw|escape}</td>
+        </tr>
+        
         <tr>
         <th width="100" valign="top">リンク？</th>
         <td>{if strcasecmp($news.0.col_link,1) == 0}リンクしない{else}リンクする{/if}</td>

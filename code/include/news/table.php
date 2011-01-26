@@ -17,7 +17,9 @@ class newsTable extends tableManager
             array('column'=>'detail_ja',    'as'=>'col_detail', 'locale'=>LOCALE_JA,    'type'=>COMMON, 'input'=>TRUE),
             array('column'=>'detail_cn',    'as'=>'col_detail', 'locale'=>LOCALE_CN,    'type'=>COMMON, 'input'=>TRUE),
             array('column'=>'detail_tw',    'as'=>'col_detail', 'locale'=>LOCALE_TW,    'type'=>COMMON, 'input'=>TRUE),
-            array('column'=>'url',          'as'=>null,         'locale'=>null,    'type'=>COMMON, 'input'=>TRUE),
+            array('column'=>'url_ja',       'as'=>'col_url',    'locale'=>LOCALE_JA,    'type'=>COMMON, 'input'=>TRUE),
+            array('column'=>'url_cn',       'as'=>'col_url',    'locale'=>LOCALE_CN,    'type'=>COMMON, 'input'=>TRUE),
+            array('column'=>'url_tw',       'as'=>'col_url',    'locale'=>LOCALE_TW,    'type'=>COMMON, 'input'=>TRUE),
             array('column'=>'link',         'as'=>null,         'locale'=>null,    'type'=>COMMON, 'input'=>TRUE)
         );
     

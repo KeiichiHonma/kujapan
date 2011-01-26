@@ -13,7 +13,9 @@ class newsForm extends formManager
             '内容（日本語）'=>array(         'name'=>'detail_ja', 'type'=>'textarea','func'=>null,          'class'=>'form_textarea_common','maxlength'=>null,'must'=>TRUE, 'front'=>'','back'=>'','remarks'=>null),
             '内容（簡体字）'=>array(         'name'=>'detail_cn', 'type'=>'textarea','func'=>null,          'class'=>'form_textarea_common','maxlength'=>null,'must'=>TRUE, 'front'=>'','back'=>'','remarks'=>null),
             '内容（繁体字）'=>array(         'name'=>'detail_tw', 'type'=>'textarea','func'=>null,          'class'=>'form_textarea_common','maxlength'=>null,'must'=>TRUE, 'front'=>'','back'=>'','remarks'=>null),
-            'URL'=>array( 'name'=>'url',       'type'=>'text',    'func'=>null,          'class'=>'form_text_common',    'maxlength'=>null,'must'=>FALSE, 'front'=>'','back'=>'','remarks'=>null),
+            'URL（日本）'=>array( 'name'=>'url_ja',       'type'=>'text',    'func'=>null,          'class'=>'form_text_common',    'maxlength'=>null,'must'=>FALSE, 'front'=>'','back'=>'','remarks'=>null),
+            'URL（中国）'=>array( 'name'=>'url_cn',       'type'=>'text',    'func'=>null,          'class'=>'form_text_common',    'maxlength'=>null,'must'=>FALSE, 'front'=>'','back'=>'','remarks'=>null),
+            'URL（台湾・香港）'=>array( 'name'=>'url_tw',       'type'=>'text',    'func'=>null,          'class'=>'form_text_common',    'maxlength'=>null,'must'=>FALSE, 'front'=>'','back'=>'','remarks'=>null),
             'リンクする？'=>array(    'name'=>'link','type'=>'radio',   'func'=>'getLink','class'=>'',                   'maxlength'=>null,'must'=>TRUE, 'front'=>'','back'=>'','m_text_style'=>null, 'remarks'=>'リンクする必要がないもの'),
         )
     );

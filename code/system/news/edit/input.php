@@ -57,7 +57,9 @@ if ( $con->isPost ){
     $_POST['detail_ja'] = $news[0]['col_detail_ja'];
     $_POST['detail_cn'] = $news[0]['col_detail_cn'];
     $_POST['detail_tw'] = $news[0]['col_detail_tw'];
-    $_POST['url'] = $news[0]['col_url'];
+    $_POST['url_ja'] = $news[0]['col_url_ja'];
+    $_POST['url_cn'] = $news[0]['col_url_cn'];
+    $_POST['url_tw'] = $news[0]['col_url_tw'];
     $_POST['link'] = $news[0]['col_link'];
 }
 
