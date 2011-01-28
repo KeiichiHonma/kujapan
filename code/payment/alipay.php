@@ -6,7 +6,7 @@ $query = array
 (
 'body'=>$con->locale['alipay_product_detail'],
 'return_url'=>'http://cn.kujapan.apollon.corp.iluna.co.jp/make.php',
-'buyer_email'=>'keiichi-honma@iluna.co.jp',
+'buyer_email'=>'honma@zeus.corp.iluna.co.jp',
 'buyer_id'=>'2088502583884942',
 'exterface'=>'create_direct_pay_by_user',
 'is_success'=>'T',
@@ -15,7 +15,7 @@ $query = array
 'notify_type'=>'trade_status_sync',
 'out_trade_no'=>'20101208031252',
 'payment_type'=>'1',
-'seller_email'=>'kujapan-alipay@95teleweb.com',
+'seller_email'=>'alipay@kujapan.com',
 'seller_id'=>'2088501340570641',
 'subject'=>$con->locale['alipay_product_title'],
 'total_fee'=>'99',

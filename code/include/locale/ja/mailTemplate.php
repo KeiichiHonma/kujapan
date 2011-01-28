@@ -7,6 +7,10 @@ class mailTemplate
         return '[日游酷棒]ご購入ありがとうございます';
     }
 
+    public function makeRegistAdminSubject(){
+        return 'kujapan.com:決済連絡';
+    }
+
     //ユーザー登録
     public function makeRegistUserMail($mail,$time,$customer_no,$account,$password){
         $this->message .= 'このたびは「日游酷棒」クーポン取り放題をご購入いただきまして、誠にありがとうございます。'."\n\n";

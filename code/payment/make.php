@@ -147,6 +147,7 @@ if(strlen(utilManager::$alipay_param['buyer_email']['param']) > 0){
     require_once('fw/mailManager.php');
     $mailManager = new mailManager();
     $mailManager->sendRegistUser(utilManager::$alipay_param['buyer_email']['param'],$buy_time,$customer_no,$account,$password);
+    $mailManager->sendRegistAdmin(utilManager::$alipay_param,$buy_time,$customer_no,$account);
 }
 
 $con->safeExitRedirect('/payment/finish/code/'.$regist_handle->parameter->rand,TRUE);//SSL

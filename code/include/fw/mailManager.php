@@ -47,6 +47,17 @@ class mailManager
         array( 'honma@zeus.corp.iluna.co.jp' , '[日游酷棒]' )
     );
 
+    //申込関連で使用するアドレス
+    private $alipay_real = array
+    (
+        array( 'alipay@kujapan.com' , '[日游酷棒]' )
+    );
+
+    private $alipay_debug = array
+    (
+        array( 'honma@zeus.corp.iluna.co.jp' , '[日游酷棒]' )
+    );
+
     //netで使用するアドレス
     private $net_real = array
     (
@@ -149,6 +160,15 @@ class mailManager
         }
     }
 
+    private function setAdminTo(){
+        global $con;
+        if($con->isDebug){
+            $this->mail -> to( $this->alipay_debug );
+        }else{
+            $this->mail -> to( $this->alipay_real );
+        }
+    }
+
     private function setFrom(){
         //twとcnではfromのアドレスがことなる
         global $con;
@@ -178,6 +198,38 @@ class mailManager
         $this->mail_template->makeRegistUserMail($mail,$time,$customer_no,$account,$password);
         
         $this->mail->text($this->mail_template->message);
+        
+        $this->setFrom();
+        $this->mail->send();
+        $this->append();
+    }
+
+    public function sendRegistAdmin($alipay_param,$time,$customer_no,$account){
+        $this->callTemplate();//言語チェック
+        $this->setAdminTo();
+        
+        $this->mail->subject($this->mail_template->makeRegistAdminSubject());
+
+        $message .= "関係者各位\n\n";
+        $message .= '決済がありました。'."\n\n";
+
+        $message .= "決済情報----------------------------------------------------\n";
+        $message .= '●決済日時'."\n";
+        $message .= date("Y/n/d G:i",$time)."\n\n";
+        
+        $message .= '●アリペイ取引番号'."\n";
+        $message .= $alipay_param['trade_no']['param']."\n\n";
+
+        $message .= '●お客様メールアドレス'."\n";
+        $message .= $alipay_param['buyer_email']['param']."\n\n";
+
+        $message .= '●お客様番号'."\n\n";
+        $message .= $customer_no."\n";
+
+        $message .= '●ログインアカウント'."\n\n";
+        $message .= $account;
+
+        $this->mail->text($message);
         
         $this->setFrom();
         $this->mail->send();

@@ -7,6 +7,10 @@ class mailTemplate
         return '[日游酷棒]感谢您的购买';
     }
 
+    public function makeRegistAdminSubject(){
+        return 'kujapan.com:決済連絡';
+    }
+
     //ユーザー登録
     public function makeRegistUserMail($mail,$time,$customer_no,$account,$password){
         $this->message .= '非常感谢您本次购买“日游酷棒”优惠券任您选。'."\n\n";
