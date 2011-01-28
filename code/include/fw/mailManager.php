@@ -78,6 +78,7 @@ class mailManager
     }
 
     private function callTemplate(){
+        $this->mail->resetHeader();
         require_once('locale/'.LOCALE.'/mailTemplate.php');//翻訳ファイル
         //require_once('fw/mailTemplate.php');
         $this->mail_template = new mailTemplate();
