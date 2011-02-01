@@ -13,6 +13,7 @@
     <script src="/js/smartRollover.js" type="text/javascript"></script>
     <script src="/js/form.js" type="text/javascript"></script>
     <script src="/js/alphafilter.js" type="text/javascript"></script>
+    {include file="include/conversion/yahoo.inc"}
   </head>
   <body>
     <div id="wrapper">
