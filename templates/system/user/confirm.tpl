@@ -78,8 +78,8 @@
                 <input type="hidden" name="csrf_ticket" value="{$csrf_ticket}" />
                 {if $siid}<input type="hidden" name="uid" value="{$user.0._id}" />{/if}
                 <input type="hidden" name="operation" value="" />
-                <input type="image" src="/img/system/b_modoru_{$lang}.gif" value="submit" class="btn" onClick="return form_back()" />
-                <input type="image" src="/img/system/b_republish_{$lang}.gif" value="submit" class="btn" onClick="return form_regist()" />
+                <input type="image" src="/img/system/b_modoru_cn.gif" value="submit" class="btn" onClick="return form_back()" />
+                <input type="image" src="/img/system/b_republish_cn.gif" value="submit" class="btn" onClick="return form_regist()" />
                 </form>
             </td>
             </tr>
