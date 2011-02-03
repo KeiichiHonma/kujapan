@@ -748,15 +748,19 @@ class database
 
 
     protected function escapeForLike($str){
+        //mysql_real_escape_string実行する前に特殊エスケープが必要
         mb_regex_encoding('UTF-8');
-        // 値をMySQL用のものでエスケープ処理
-        $str = mysql_real_escape_string($str);
         // LIKEで使われるワイルドカード(%)をエスケープ処理
         $str = mb_ereg_replace('%','\%',$str);
+
         // LIKEで使われるワイルドカード(_)をエスケープ処理
         $str = mb_ereg_replace('_','\_',$str);
+
         // 円マーク(バックスラッシュ)をLIKE用に2重化
         $str = mb_ereg_replace('\\\\','\\\\',$str);
+        
+        // 値をMySQL用のものでエスケープ処理
+        $str = mysql_real_escape_string($str);
         return $str;
     }
 
