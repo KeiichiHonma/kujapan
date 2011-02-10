@@ -87,7 +87,7 @@ $common_locale = array(
     'footer_buy_coupon' => '购买优惠券',//クーポン購入
     'footer_rule' => '会员服务条款',//会員サービス規約
     'footer_sitemap' => '网站地图',//サイトマップ
-    'footer_corp' => '运营',//運営
+    'footer_corp' => '公司简介',//運営
     
     //エラー
     'error_title' => '请按返回键',//戻るボタンを押してください。
