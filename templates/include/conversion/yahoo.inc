@@ -2,16 +2,6 @@
 
 {if $smarty.const.LOCALE == "tw"}
 <SCRIPT language="JavaScript" type="text/javascript">
-<!-- Yahoo! Hong Kong Limited
-window.ysm_customData = new Object();
-window.ysm_customData.conversion = "transId=,currency=,amount=";
-var ysm_accountid  = "1D56AC51VP4NVLI9MM8PI735EGS";
-document.write("<SCR" + "IPT language='JavaScript' type='text/javascript' " 
-+ "SRC=//" + "srv3.wa.marketingsolutions.yahoo.com" + "/script/ScriptServlet" + "?aid=" + ysm_accountid 
-+ "></SCR" + "IPT>");
-// -->
-</SCRIPT>
-<SCRIPT language="JavaScript" type="text/javascript">
 <!-- Yahoo! Taiwan Inc.
 window.ysm_customData = new Object();
 window.ysm_customData.conversion = "transId=,currency=,amount=";
