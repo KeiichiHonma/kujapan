@@ -45,12 +45,12 @@ if ( $con->isPost ){
         $_POST['discount_tw'] = '95折';
 /*        $_POST['aid'] = '2';
         $_POST['gid'] = '1';*/
-        $_POST['title_ja'] = '5%OFF（セール品は併用不可です）';
-        $_POST['title_cn'] = '95折（特价品不享受此优惠）';
-        $_POST['title_tw'] = '95折（特價品不享受此優惠）';
-        $_POST['condition_ja'] = 'クーポンとパスポートと旅行券を提示';
-        $_POST['condition_cn'] = '出示优惠券和护照';
-        $_POST['condition_tw'] = '出示優惠券和護照';
+        $_POST['title_ja'] = '';
+        $_POST['title_cn'] = '';
+        $_POST['title_tw'] = '';
+        $_POST['condition_ja'] = '';
+        $_POST['condition_cn'] = '';
+        $_POST['condition_tw'] = '';
     }
 }
 
