@@ -144,10 +144,13 @@ if(!$reid){
 
 //メール送信
 if(strlen(utilManager::$alipay_param['buyer_email']['param']) > 0){
-    require_once('fw/mailManager.php');
-    $mailManager = new mailManager();
-    $mailManager->sendRegistUser(utilManager::$alipay_param['buyer_email']['param'],$buy_time,$customer_no,$account,$password);
-    $mailManager->sendRegistAdmin(utilManager::$alipay_param,$buy_time,$customer_no,$account);
+    $email_pattern = '([a-zA-Z0-9!#$%&\'*+\\-/=^_`{|}~]+([a-zA-Z0-9!#$%&\'*+\\-/=^_`{|}~\\.]+)*@[a-zA-Z0-9!#$%&\'*+\\-/=^_`{|}~]+(\\.[a-zA-Z0-9!#$%&\'*+\\-/=^_`{|}~]+)*)';
+    if (preg_match($email_pattern,utilManager::$alipay_param['buyer_email']['param'])) {
+        require_once('fw/mailManager.php');
+        $mailManager = new mailManager();
+        $mailManager->sendRegistUser(utilManager::$alipay_param['buyer_email']['param'],$buy_time,$customer_no,$account,$password);
+        $mailManager->sendRegistAdmin(utilManager::$alipay_param,$buy_time,$customer_no,$account);
+    }
 }
 
 $con->safeExitRedirect('/payment/finish/code/'.$regist_handle->parameter->rand,TRUE);//SSL
