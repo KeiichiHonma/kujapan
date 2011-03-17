@@ -153,21 +153,15 @@ class container
             $this->isDebug = FALSE;
 
             if($this->ini['common']['isStage'] == 1){//ステージングサーバモード
-                    $this->isStage = TRUE;
-                    define('SERVER_NAME_JA',      'ja.kujapan.iluna.co.jp');
-                    define('SERVER_NAME_CN',      'cn.kujapan.iluna.co.jp');
-                    define('SERVER_NAME_TW',      'tw.kujapan.iluna.co.jp');
-                    $this->t->assign('stage',$this->isStage);
+                $this->isStage = TRUE;
+                define('SERVER_NAME_JA',      'ja.kujapan.iluna.co.jp');
+                define('SERVER_NAME_CN',      'cn.kujapan.iluna.co.jp');
+                define('SERVER_NAME_TW',      'tw.kujapan.iluna.co.jp');
+                $this->t->assign('stage',$this->isStage);
             }else{
-                if($this->ini['common']['country'] == "tw"){
-                    define('SERVER_NAME_JA',      'ja.kujapan.artemis.corp.iluna.co.jp');
-                    define('SERVER_NAME_CN',      'cn.kujapan.artemis.corp.iluna.co.jp');
-                    define('SERVER_NAME_TW',      'tw.kujapan.artemis.corp.iluna.co.jp');
-                }else{
-                    define('SERVER_NAME_JA',      'www.kujapan.net');
-                    define('SERVER_NAME_CN',      'www.kujapan.com');
-                    define('SERVER_NAME_TW',      'www.kujapan.net');
-                }
+                define('SERVER_NAME_JA',      'www.kujapan.net');
+                define('SERVER_NAME_CN',      'www.kujapan.com');
+                define('SERVER_NAME_TW',      'www.kujapan.net');
             }
         }elseif($this->ini['common']['isDebug'] == 1){//デバッグモード
             $this->isDebug = TRUE;
