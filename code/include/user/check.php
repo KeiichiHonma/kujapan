@@ -66,11 +66,11 @@ class checkSystemEntry extends checkManager
             array('message'=>'！out_trade_noは必須です。','func'=>'checkMust','arg'=>null),
             array('message'=>'！out_trade_noが不正です。','func'=>'checkInt','arg'=>null)
         ),
-        'buyer_email'=>array
+/*        'buyer_email'=>array
         (
             array('message'=>'！buyer_emailは必須です。','func'=>'checkMust','arg'=>null),
             array('message'=>'！buyer_emailが不正です。','func'=>'checkMail','arg'=>null)
-        ),
+        ),*/
         'buyer_id'=>array
         (
             array('message'=>'！buyer_idは必須です。','func'=>'checkMust','arg'=>null),

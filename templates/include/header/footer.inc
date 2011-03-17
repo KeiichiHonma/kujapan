@@ -13,3 +13,4 @@
       </div>
 {include file="include/google/analytics.inc"}
 
+{include file="include/conversion/baidu.inc"}

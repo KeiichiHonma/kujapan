@@ -33,19 +33,19 @@ class checkCoupon extends checkManager
         'title_ja'=>array
         (
             array('message'=>'！タイトル（日本語）は必須です。','func'=>'checkMust','arg'=>null),
-            array('message'=>'！タイトル（日本語）は全角で50字(半角100字)以内で入力してください。','func'=>'checkLength','arg'=>array('start'=>1,'end'=>100)),
+            array('message'=>'！タイトル（日本語）は全角で60字(半角120字)以内で入力してください。','func'=>'checkLength','arg'=>array('start'=>1,'end'=>120)),
             array('message'=>null,'func'=>'replaceInput','arg'=>'title_ja')
         ),
         'title_cn'=>array
         (
             array('message'=>'！タイトル（簡体字）は必須です。','func'=>'checkMust','arg'=>null),
-            array('message'=>'！タイトル（簡体字）は全角で50字(半角100字)以内で入力してください。','func'=>'checkLength','arg'=>array('start'=>1,'end'=>100)),
+            array('message'=>'！タイトル（簡体字）は全角で60字(半角120字)以内で入力してください。','func'=>'checkLength','arg'=>array('start'=>1,'end'=>120)),
             array('message'=>null,'func'=>'replaceInput','arg'=>'title_cn')
         ),
         'title_tw'=>array
         (
             array('message'=>'！タイトル（繁体字）は必須です。','func'=>'checkMust','arg'=>null),
-            array('message'=>'！タイトル（繁体字）は全角で50字(半角100字)以内で入力してください。','func'=>'checkLength','arg'=>array('start'=>1,'end'=>100)),
+            array('message'=>'！タイトル（繁体字）は全角で60字(半角120字)以内で入力してください。','func'=>'checkLength','arg'=>array('start'=>1,'end'=>120)),
             array('message'=>null,'func'=>'replaceInput','arg'=>'title_tw')
         ),
         'condition_ja'=>array

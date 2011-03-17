@@ -38,7 +38,7 @@
         </tr>
 
         <tr>
-        <td width="150" valign="top">{"buyer_email"|error_bold:$error.buyer_email}<span class="attention">＊</span></td>
+        <td width="150" valign="top">{"buyer_email"|error_bold:$error.buyer_email}</td>
         <td valign="top">
         {$error.buyer_email|error_message}<input type="text" name="buyer_email" value="{$smarty.post.buyer_email}" class="form_text_common" /></td>
         </tr>

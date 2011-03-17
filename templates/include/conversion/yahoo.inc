@@ -1,4 +1,4 @@
-{if $debug == FALSE}
+{if $debug == FALSE && $stage == FALSE}
 
 {if $smarty.const.LOCALE == "tw"}
 <SCRIPT language="JavaScript" type="text/javascript">

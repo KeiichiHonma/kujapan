@@ -13,7 +13,10 @@ $logos = array
 14,//坂善
 21,//Folli Follie
 'venus_fort_logo',
-31//Folli Follie
+'matsuzakaya_logo',
+'109_logo',
+31,//Folli Follie
+64,//XgirlstoreCATSTREET
 );
 $con->t->assign('logos',$logos);
 $con->append();
