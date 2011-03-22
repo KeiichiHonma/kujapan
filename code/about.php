@@ -16,7 +16,7 @@ $logos = array
 'matsuzakaya_logo',
 '109_logo',
 31,//Folli Follie
-64,//XgirlstoreCATSTREET
+/*64,//XgirlstoreCATSTREET*/
 );
 $con->t->assign('logos',$logos);
 $con->append();
