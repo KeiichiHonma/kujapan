@@ -185,7 +185,7 @@ class filesHandle extends handleManager
     //削除と追加を同時に準備＝更新
     public function readyRemove($fid,$ext){
         //保存パス生成
-        $this->formatPath($fid,TRUE,$ext);//$ext必要
+        $this->formatPath($fid,FALSE,$ext);//$ext必要
         //ファイル削除用
         $this->_toRemove[] = $this->dir_file;
     }
@@ -194,7 +194,7 @@ class filesHandle extends handleManager
     //既存ファイルの拡張子チェックロジックを入れた
     public function readyUploadToRemove($fid){
         //削除パス生成
-        $this->formatPath( $fid,TRUE);
+        $this->formatPath( $fid,FALSE);
         
         //ファイル削除用
         $this->_toRemove[] = $this->dir_file;
