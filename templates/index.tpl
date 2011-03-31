@@ -213,25 +213,36 @@
           </ul>
         </div>
 
-        <div id="spot_box">
-          <h2>
-            <img alt="{$locale.top_spot_title}" height="40" src="/locale/{$smarty.const.LOCALE}/img/button/top_spot_title.jpg" width="650" />
-          </h2>
-          <div id="spot_box_inner">
-            <ul>
-                {foreach from=$area key="aid" item="value" name="area"}
-                <li>
-                    <a href="{$smarty.const.KUJAPANURL}/area/aid/{$aid}" title="{$value.col_name}"{if !$debug} target="_blank"{/if}>
-                      <img alt="{$value.col_name}" border="0" height="75" src="/locale/{$smarty.const.LOCALE}/img/button/spot0{$aid}_off.jpg" width="205" />
-                    </a>
-                </li>
-                {/foreach}
-            </ul>
-          </div>
-          <div class="clear">
-            <img alt="" height="5" src="/img/part/top_spot_box_foot.gif" width="650" />
-          </div>
+        <div id="spot_box_body" class="clearfix">
+            <div id="spot_box_01">
+                <ul>
+                    <li><a href="{$smarty.const.KUJAPANURL}/area/aid/1"{if !$debug} target="_blank"{/if}><img src="locale/{$smarty.const.LOCALE}/img/button/spot01_01_off.jpg" alt="{$area.1.col_name}" width="198" height="112" /></a></li>
+                    <li><a href="{$smarty.const.KUJAPANURL}/area/aid/2"{if !$debug} target="_blank"{/if}><img src="locale/{$smarty.const.LOCALE}/img/button/spot01_02_off.jpg" alt="{$area.2.col_name}" width="198" height="112" /></a></li>
+                    <li><a href="{$smarty.const.KUJAPANURL}/area/aid/3"{if !$debug} target="_blank"{/if}><img src="locale/{$smarty.const.LOCALE}/img/button/spot01_03_off.jpg" alt="{$area.3.col_name}" width="198" height="112" /></a></li>
+                    <li><a href="{$smarty.const.KUJAPANURL}/area/aid/4"{if !$debug} target="_blank"{/if}><img src="locale/{$smarty.const.LOCALE}/img/button/spot01_04_off.jpg" alt="{$area.4.col_name}" width="198" height="112" /></a></li>
+                    <li><a href="{$smarty.const.KUJAPANURL}/area/aid/5"{if !$debug} target="_blank"{/if}><img src="locale/{$smarty.const.LOCALE}/img/button/spot01_05_off.jpg" alt="{$area.5.col_name}" width="198" height="112" /></a></li>
+                    <li><a href="{$smarty.const.KUJAPANURL}/area/aid/6"{if !$debug} target="_blank"{/if}><img src="locale/{$smarty.const.LOCALE}/img/button/spot01_06_off.jpg" alt="{$area.6.col_name}" width="198" height="112" /></a></li>
+                </ul>
+            </div>
+            <div id="spot_box_wrapper">
+                {if array_key_exists(7,$area) && array_key_exists(8,$area)}
+                <div id="spot_box_02">
+                    <ul>
+                        <li><a href="{$smarty.const.KUJAPANURL}/area/aid/7"{if !$debug} target="_blank"{/if}><img src="locale/{$smarty.const.LOCALE}/img/button/spot02_01_off.jpg" alt="{$area.7.col_name}" width="198" height="99" /></a></li>
+                        <li><a href="{$smarty.const.KUJAPANURL}/area/aid/8"{if !$debug} target="_blank"{/if}><img src="locale/{$smarty.const.LOCALE}/img/button/spot02_02_off.jpg" alt="{$area.8.col_name}" width="198" height="99" /></a></li>
+                    </ul>
+                </div>
+                {/if}
+                {if array_key_exists(9,$area)}
+                <div id="spot_box_03">
+                    <ul>
+                        <li><a href="{$smarty.const.KUJAPANURL}/area/aid/9"{if !$debug} target="_blank"{/if}><img src="locale/{$smarty.const.LOCALE}/img/button/spot03_01_off.jpg" alt="{$area.9.col_name}" width="198" height="99" /></a></li>
+                    </ul>
+                </div>
+                {/if}
+            </div>
         </div>
+        
         <ul class="jcarousel-skin-tango" id="mycarousel">
             {foreach from=$logos key="key" item="value" name="logos"}
             <li>
@@ -243,76 +254,17 @@
             </li>
             {/foreach}
         </ul>
-        <div id="coupon_box">
-          <h2>
-            <img alt="{$local.top_coupon_title}" src="/locale/{$smarty.const.LOCALE}/img/part/top_coupon_title.gif" width="650" height="40" />
-          </h2>
-          {*割引率最大*}
-          <div id="coupon_box_inner">
-            <img src="/locale/{$smarty.const.LOCALE}/img/index/g1_line.gif" width="634" height="30" alt=""  />
-              <div class="coupon_max_g1_1">
-                    <div class="index_coupon_title">
-                        <div class="first">
-                            <a href="{$smarty.const.KUJAPANURL}/shop/sid/{$index_coupon.20.col_sid}">{$index_coupon.20.coupon_title}</a>
-                        </div>
-                    </div>
-                    <p class="price1">{$locale.coupon}</p>
-                    <p class="price2">{$index_coupon.20.coupon_discount}</p>
-              </div>
-              <div class="coupon_max_g1_2">
-                    <div class="index_coupon_title">
-                        <div class="first">
-                            <a href="{$smarty.const.KUJAPANURL}/shop/sid/{$index_coupon.4.col_sid}">{$index_coupon.4.coupon_title}</a>
-                        </div>
-                    </div>
-                    <p class="price1">{$locale.coupon}</p>
-                    <p class="price2">{$index_coupon.4.coupon_discount}</p>
-              </div>
-              <img src="/locale/{$smarty.const.LOCALE}/img/index/g2_line.gif" width="634" height="30" alt=""  />
-              <div class="coupon_max_g2_1">
-                    <div class="index_coupon_title">
-                        <div class="first">
-                            <a href="{$smarty.const.KUJAPANURL}/shop/sid/{$index_coupon.19.col_sid}">{$index_coupon.19.coupon_title}</a>
-                        </div>
-                    </div>
-                    <p class="price1">{$locale.coupon}</p>
-                    <p class="price2">{$index_coupon.19.coupon_discount}</p>
-              </div>
-              <div class="coupon_max_g2_2">
-                    <div class="index_coupon_title">
-                        <div class="first">
-                            <a href="{$smarty.const.KUJAPANURL}/shop/sid/{$index_coupon.3.col_sid}">{$index_coupon.3.coupon_title}</a>
-                        </div>
-                    </div>
-                    <p class="price1">{$locale.coupon}</p>
-                    <p class="price2">{$index_coupon.3.coupon_discount}</p>
-              </div>
-              <img src="/locale/{$smarty.const.LOCALE}/img/index/g3_line.gif" width="634" height="30" alt=""  />
-              <div class="coupon_max_g3_1">
-                    <div class="index_coupon_title">
-                        <div class="first">
-                            <a href="{$smarty.const.KUJAPANURL}/shop/sid/{$index_coupon.1.col_sid}">{$index_coupon.1.coupon_title}</a>
-                        </div>
-                    </div>
-                    <p class="price1">{$locale.coupon}</p>
-                    <p class="price2">{$index_coupon.1.coupon_discount}</p>
-              </div>
-              <div class="coupon_max_g3_2">
-                    <div class="index_coupon_title">
-                        <div class="first">
-                            <a href="{$smarty.const.KUJAPANURL}/shop/sid/{$index_coupon.15.col_sid}">{$index_coupon.15.coupon_title}</a>
-                        </div>
-                    </div>
-                    <p class="price1">{$locale.coupon}</p>
-                    <p class="price2">{$index_coupon.15.coupon_discount}</p>
-              </div>
-          </div>
-
-
-          <div class="clear">
-            <img alt="" height="10" src="/img/part/top_box_g_foot.gif" width="650" />
-          </div>
+        
+        <div id="top_recommend_box">
+            <div id="top_recommend_box_inner">
+                <ul>
+                    <li><a href="{$smarty.const.KUJAPANURL}/shop/sid/68"{if !$debug} target="_blank"{/if}><img src="locale/{$smarty.const.LOCALE}/img/button/top_center_contents_sofmap_off.jpg" alt="{$index_shop.68.shop_name}" width="630" height="220" /></a></li>
+                    <li><a href="{$smarty.const.KUJAPANURL}/shop/sid/71"{if !$debug} target="_blank"{/if}><img src="locale/{$smarty.const.LOCALE}/img/button/top_center_contents_ones_off.jpg" alt="{$index_shop.71.shop_name}" width="630" height="220" /></a></li>
+                    <li><a href="{$smarty.const.KUJAPANURL}/shop/sid/5"{if !$debug} target="_blank"{/if}><img src="locale/{$smarty.const.LOCALE}/img/button/top_center_contents_brandoff_off.jpg" alt="{$index_shop.5.shop_name}" width="630" height="220" /></a></li>
+                </ul>
+            </div>
         </div>
+        
         <div id="text_box">
           <div>
             <img alt="{$locale.top_title}" height="29" src="/locale/{$smarty.const.LOCALE}/img/part/top_title.gif" width="650" />

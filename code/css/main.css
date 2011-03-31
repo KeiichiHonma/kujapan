@@ -30,29 +30,76 @@ h2.ttl{
 
 #common_main{width:760px;margin:0px auto;padding:0px 0px 0px 0px;}
 
-#spot_box{
-width:650px;
-margin-top:10px;
-}
 
-#spot_box img{
-/*IE6-7 Not CSS Hac*/
-display:block;
-}
 
-#spot_box #spot_box_inner{
-background: url(/img/part/top_spot_box_bg.gif) repeat-y left top;
-display:inline-block;
-padding:0 0 5px 8px;
-}
+/*確認用*/
+/*body {background:#FFFFFF; padding:60px 0;}*/
+div#spot_box_body{margin:5px auto;}
+div#top_recommend_box{margin:5px auto;}
+/*確認用*/
 
-#spot_box #spot_box_inner ul li{
-height:75px;
-width:205px;
-float:left;
-margin-right:9px;
-margin-top:5px;
-}
+div#spot_box_body {
+    width:650px;
+    }
+    div#spot_box_body div#spot_box_01 {
+        width:422px;
+        background:url(/img/part/top_spot_box_t_bg.jpg) no-repeat;
+        float:left;
+        height:386px;
+        }
+        div#spot_box_body div#spot_box_01 ul {
+            margin:27px auto 8px auto;
+            width:408px;
+        }
+        div#spot_box_body div#spot_box_01 ul li {
+            float:left;
+            margin:0 3px 3px 3px;
+            _margin:0 2px 3px 2px;
+            }
+    div#spot_box_body div#spot_box_wrapper {
+        float:right;
+        }
+        div#spot_box_body div#spot_box_wrapper div#spot_box_02 {
+            width:218px;
+            margin-bottom:2px;
+            }
+            div#spot_box_body div#spot_box_wrapper div#spot_box_02 ul {
+                margin:0 auto;
+                background:url(/img/part/top_spot_box_o_bg.jpg) no-repeat;
+                padding:27px 0px 0px 0px;
+                height:219px;
+                }
+                div#spot_box_body div#spot_box_wrapper div#spot_box_02 ul li {
+                    margin:0 10px 4px 10px;
+                }
+        div#spot_box_body div#spot_box_wrapper div#spot_box_03 {
+            width:218px;
+            }
+            div#spot_box_body div#spot_box_wrapper div#spot_box_03 ul {
+                margin:0 auto;
+                background:url(/img/part/top_spot_box_f_bg.jpg) no-repeat;
+                padding:27px 0px 0px 0px;
+                height:110px;
+                }
+                div#spot_box_body div#spot_box_wrapper div#spot_box_03 ul li {
+                    margin:0 10px 4px 10px;
+                }
+div#top_recommend_box {
+    width:650px;
+    background:url(/img/part/top_recommend_box_bg_main.jpg) repeat-y;
+    }
+    div#top_recommend_box_inner {
+        width:650px;
+        background: url(/img/part/top_recommend_box_bg_top.jpg) no-repeat;
+        }
+        div#top_recommend_box ul {
+            padding:23px 10px 15px 10px;
+            width:610x;
+            background:url(/img/part/top_recommend_box_bg_bottom.jpg) 0 bottom no-repeat;
+            }
+            div#top_recommend_box ul li {
+                margin:0 0 8px 0;
+                }    
 
 #coupon_box{
 width:650px;

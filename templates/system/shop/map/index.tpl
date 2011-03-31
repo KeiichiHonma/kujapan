@@ -16,7 +16,7 @@
     <div class="inside_l">
     {include file="include/system/shop_navi.inc"}
         <h2 class="h_title">店舗情報</h2>
-
+<a href="{$smarty.const.KUJAPANURLSSL}/system/shop/map/ja/input">日本語地図の変更</a>&nbsp;/&nbsp;<a href="{$smarty.const.KUJAPANURLSSL}/system/shop/map/cn/input">簡体字地図の変更</a>&nbsp;/&nbsp;<a href="{$smarty.const.KUJAPANURLSSL}/system/shop/map/tw/input">繁体字地図の変更</a>
         <table id="suggest">
         {*日本語*}
         <tr>

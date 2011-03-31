@@ -27,6 +27,7 @@
         <tr>
         <th width="250" class="p_l10">操作</th>
         <th width="80">有効/無効</th>
+        <th>id</th>
         <th>店舗名</th>
         </tr>
 {include file="include/system/sp.inc"}
@@ -42,6 +43,7 @@
         <b>無効</b>
 {/if}
         </td>
+        <td>{$value.shop_id}</td>
         <td>{$value.col_name_ja}</td>
         </tr>
 {/foreach}

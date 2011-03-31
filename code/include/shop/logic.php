@@ -85,9 +85,13 @@ class shopLogic extends logicManager
         return parent::getResult(T_SHOP,A_SHOP);
     }
 
-    //
-
-
+    //indexのバナー
+    public function getIndexShop($sid_array,$from = 0,$to = FIRSTSP,$order = null){
+        foreach ($sid_array as $key => $sid){
+            $this->setOrCondAlias('_id',$sid,A_SHOP);
+        }
+        return $this->getCoreShop($from,$to,$order);
+    }
 }
 
 class shopItemLogic extends logicManager
@@ -153,7 +157,7 @@ class shopItemLogic extends logicManager
         if(!$this->isSystem) $this->validateCondition(A_SHOP);
 
         //return parent::getDebug(T_SHOP_ITEM);
-        return self::getCoreShopItem($from,$to);
+        return self::getCoreShopItem($from,$to,array('column'=>A_SHOP_ITEM.'.col_mtime','desc_asc'=>DATABASE_DESC));
     }
 
     public function getShopItem($sid,$types){
