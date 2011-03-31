@@ -85,7 +85,8 @@ function smarty_function_html_select_time($params, &$smarty)
         }
     }
 
-    $time_master = smarty_make_timestamp(time());
+    //$time_master = smarty_make_timestamp(time());
+    $time_master = smarty_make_timestamp($time);
 
     $html_result = '';
 
