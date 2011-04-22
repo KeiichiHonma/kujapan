@@ -53,9 +53,10 @@ if ( $con->isPost ){
 
     }
 }else{
+    $_POST['mail'] = 'test1@zeus.corp.iluna.co.jp';
     //debug//
     if($con->isDebug){
-        $_POST['mail'] = 'test1@zeus.corp.iluna.co.jp';
+        //$_POST['mail'] = 'test1@zeus.corp.iluna.co.jp';
         //$_POST['given_name'] = 'ビックカメラ';
     }
 }
