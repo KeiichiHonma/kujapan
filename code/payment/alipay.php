@@ -5,8 +5,8 @@ require_once('user/prepend.php');
 $query = array
 (
 'body'=>$con->locale['alipay_product_detail'],
-'return_url'=>'http://cn.kujapan.apollon.corp.iluna.co.jp/make.php',
-'buyer_email'=>'honma@zeus.corp.iluna.co.jp',
+'return_url'=>'http://cn.kujapan.apollon.corp.813.co.jp/make.php',
+'buyer_email'=>'honma@zeus.corp.813.co.jp',
 //'buyer_email'=>'15210306686',
 'buyer_id'=>'2088502583884942',
 'exterface'=>'create_direct_pay_by_user',

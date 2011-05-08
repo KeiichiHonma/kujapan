@@ -57,7 +57,7 @@ die();*/
             );
         global $con;
         if($con->isDebug){
-            $list['19'] = 'zeus.corp.iluna.co.jp';
+            $list['19'] = 'zeus.corp.813.co.jp';
         }
         if(!is_null($key)){
             if(is_numeric($key)){

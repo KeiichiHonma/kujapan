@@ -173,13 +173,13 @@ class container
                     $this->t->assign('stage',$this->isStage);
             }else{
                 if($this->ini['common']['country'] == "tw"){
-                    define('SERVER_NAME_JA',      'ja.kujapan.artemis.corp.iluna.co.jp');
-                    define('SERVER_NAME_CN',      'cn.kujapan.artemis.corp.iluna.co.jp');
-                    define('SERVER_NAME_TW',      'tw.kujapan.artemis.corp.iluna.co.jp');
+                    define('SERVER_NAME_JA',      'ja.kujapan.artemis.corp.813.co.jp');
+                    define('SERVER_NAME_CN',      'cn.kujapan.artemis.corp.813.co.jp');
+                    define('SERVER_NAME_TW',      'tw.kujapan.artemis.corp.813.co.jp');
                 }else{
-                    define('SERVER_NAME_JA',      'ja.kujapan.apollon.corp.iluna.co.jp');
-                    define('SERVER_NAME_CN',      'cn.kujapan.apollon.corp.iluna.co.jp');
-                    define('SERVER_NAME_TW',      'tw.kujapan.apollon.corp.iluna.co.jp');
+                    define('SERVER_NAME_JA',      'ja.kujapan.apollon.corp.813.co.jp');
+                    define('SERVER_NAME_CN',      'cn.kujapan.apollon.corp.813.co.jp');
+                    define('SERVER_NAME_TW',      'tw.kujapan.apollon.corp.813.co.jp');
                 }
             }
         }

@@ -47,7 +47,7 @@ if ( $con->isPost ){
         $_POST['division'] = '開発部';
         $_POST['name'] = '本間圭一';
         $_POST['kana'] = 'ホンマケイイチ';
-        $_POST['url'] = 'http://god.corp.iluna.co.jp/cgi-bin/cbgrn/grn.cgi/bulletin/view?cid=1&aid=37&__dummy=1#follow';
+        $_POST['url'] = 'http://god.corp.813.co.jp/cgi-bin/cbgrn/grn.cgi/bulletin/view?cid=1&aid=37&__dummy=1#follow';
         $_POST['telephone1'] = '03';
         $_POST['telephone2'] = '1234';
         $_POST['telephone3'] = '5678';
@@ -57,7 +57,7 @@ if ( $con->isPost ){
         $_POST['postcode1'] = '111';
         $_POST['postcode2'] = '0053';
         $_POST['address'] = 'ああああああ';
-        $_POST['mail'] = 'honma@zeus.corp.iluna.co.jp';
+        $_POST['mail'] = 'honma@zeus.corp.813.co.jp';
         $_POST['detail'] = 'ｓｄｆ';
     }
 }

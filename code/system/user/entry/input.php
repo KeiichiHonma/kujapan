@@ -81,7 +81,7 @@ if ( $con->isPost ){
     if($con->isDebug){
         $_POST['trade_no']     = 2010121454711094;//alipay画面で調査可能
         $_POST['out_trade_no'] = 20101214101250;//alipay画面で調査可能
-        $_POST['buyer_email']  = 'honma@zeus.corp.iluna.co.jp';//alipay画面で調査可能
+        $_POST['buyer_email']  = 'honma@zeus.corp.813.co.jp';//alipay画面で調査可能
         $_POST['buyer_id']     = 2088502583884942;//alipay画面で調査可能
     }
 }

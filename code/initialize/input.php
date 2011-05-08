@@ -67,7 +67,7 @@ if($regist === FALSE){
             //debug//
             if($con->isDebug){
                 $_POST['given_name'] = 'you';
-                $_POST['mail'] = 'honma@zeus.corp.iluna.co.jp';
+                $_POST['mail'] = 'honma@zeus.corp.813.co.jp';
             }
         }
 

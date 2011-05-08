@@ -12,7 +12,7 @@ class mailManager
 
     private $halt_debug = array
     (
-        array( 'honma@zeus.corp.iluna.co.jp' , 'halt' )
+        array( 'honma@zeus.corp.813.co.jp' , 'halt' )
     );
 
     private $dev_real = array
@@ -22,7 +22,7 @@ class mailManager
 
     private $dev_debug = array
     (
-        array( 'honma@zeus.corp.iluna.co.jp' , 'halt' )
+        array( 'honma@zeus.corp.813.co.jp' , 'halt' )
     );
 
     //イルナに送る
@@ -33,7 +33,7 @@ class mailManager
 
     private $iluna_debug = array
     (
-        array( 'honma@zeus.corp.iluna.co.jp' , '[日游酷棒]' )
+        array( 'honma@zeus.corp.813.co.jp' , '[日游酷棒]' )
     );
     
     //comで使用するアドレス
@@ -44,7 +44,7 @@ class mailManager
 
     private $com_debug = array
     (
-        array( 'honma@zeus.corp.iluna.co.jp' , '[日游酷棒]' )
+        array( 'honma@zeus.corp.813.co.jp' , '[日游酷棒]' )
     );
 
     //申込関連で使用するアドレス
@@ -55,7 +55,7 @@ class mailManager
 
     private $alipay_debug = array
     (
-        array( 'honma@zeus.corp.iluna.co.jp' , '[日游酷棒]' )
+        array( 'honma@zeus.corp.813.co.jp' , '[日游酷棒]' )
     );
 
     //netで使用するアドレス
@@ -66,7 +66,7 @@ class mailManager
 
     private $net_debug = array
     (
-        array( 'honma@zeus.corp.iluna.co.jp' , '[日游酷棒]' )
+        array( 'honma@zeus.corp.813.co.jp' , '[日游酷棒]' )
     );
 
     function __construct(){
