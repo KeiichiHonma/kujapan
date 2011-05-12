@@ -7,10 +7,10 @@ $page_locale = array(
     'title' => '運営 | 日遊酷棒',
     'h1' => '運営',
     
-    'corp_title'=>'「日遊酷棒」は中国でBPO事業などを行う北京九五太维资讯有限公司と日本でWebメディア企画・開発を行う株式会社イルナが提携して運営するWebサイトです。',
+    'corp_title'=>'「日遊酷棒」は中国でBPO事業などを行う北京九五太维资讯有限公司と日本でWebメディア企画・開発を行う株式会社ハチワンが提携して運営するWebサイトです。',
     'corp_th_company'=>'企業名',
     'corp_td_company_teleweb'=>'北京九五太维资讯有限公司',
-    'corp_td_company_iluna'=>'株式会社iLUNA',
+    'corp_td_company_iluna'=>'株式会社81',
     'corp_th_address'=>'住所',
     'corp_td_address_teleweb'=>'北京市朝阳区酒仙桥路10号<br />京东方恒通商务园B28楼3层',
     'corp_td_address_iluna'=>'東京都渋谷区代々木4-31-4<br />キャッスル新宿802号',

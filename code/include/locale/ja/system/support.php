@@ -3,7 +3,7 @@ require_once('locale/ja/common.php');//共通翻訳ファイル
 $page_locale = array(
     'user_app_name'=>'ユーザー検索',
     'user_search_btn'=>'検索',
-    'user_search_help'=>'※nから始まるお客様番号は中国向けサービスではありません。イルナまでご連絡ください。',
+    'user_search_help'=>'※nから始まるお客様番号は中国向けサービスではありません。ハチワンまでご連絡ください。',
     'user_search_title'=>'ユーザー検索',
     'user_search_keyword'=>'キーワード ',
     'user_search_item'=>'検索項目',

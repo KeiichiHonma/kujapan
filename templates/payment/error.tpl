@@ -40,7 +40,7 @@
             <tr>
             <td class="title">{$locale.contact_column_name}</td><td>
             {if $smarty.const.LOCALE == "tw"}
-            {mailto address="info@iluna.co.jp" encode="hex" text="info@iluna.co.jp"}
+            {mailto address="info@813.co.jp" encode="hex" text="info@813.co.jp"}
             {else}
             {$locale.telephone}
             {/if}

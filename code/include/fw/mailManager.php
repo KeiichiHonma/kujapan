@@ -7,7 +7,7 @@ class mailManager
     
     private $halt_real = array
     (
-        array( 'halt@iluna.co.jp' , 'halt' )
+        array( 'halt@813.co.jp' , 'halt' )
     );
 
     private $halt_debug = array
@@ -17,7 +17,7 @@ class mailManager
 
     private $dev_real = array
     (
-        array( 'keiichi-honma@iluna.co.jp' , 'dev' )
+        array( 'keiichi-honma@813.co.jp' , 'dev' )
     );
 
     private $dev_debug = array
@@ -25,10 +25,10 @@ class mailManager
         array( 'honma@zeus.corp.813.co.jp' , 'halt' )
     );
 
-    //イルナに送る
+    //ハチワンに送る
     private $iluna_real = array
     (
-        array( 'info@iluna.co.jp' , '[日游酷棒]' )
+        array( 'info@813.co.jp' , '[日游酷棒]' )
     );
 
     private $iluna_debug = array
@@ -310,9 +310,9 @@ class mailManager
 
 
             $message .= "\n".'────────────────────────────────────┐'."\n";
-            $message .= 'URL：http://www.iluna.co.jp/'."\n";
-            $message .= 'E-Mail：info@iluna.co.jp'."\n";
-            $message .= '運営会社：株式会社イルナ'."\n";
+            $message .= 'URL：http://www.813.co.jp/'."\n";
+            $message .= 'E-Mail：info@813.co.jp'."\n";
+            $message .= '運営会社：株式会社ハチワン'."\n";
             $message .= '────────────────────────────────────┘'."\n";
         }
 
@@ -320,7 +320,7 @@ class mailManager
         
         $from = array
         (
-            array( 'info@iluna.co.jp' , '株式会社イルナ' )
+            array( 'info@813.co.jp' , '株式会社ハチワン' )
         );
         $this->mail->from( $from );
         $this->mail->send();

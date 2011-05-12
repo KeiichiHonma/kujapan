@@ -7,9 +7,9 @@ if($ini['common']['isDebug'] == 0){//本番
     define('SERVER_NAME_TW',      'www.kujapan.net');
 }elseif($ini['common']['isDebug'] == 1){//デバッグモード
     if($ini['common']['isStage'] == 1){//ステージングサーバモード
-            define('SERVER_NAME_JA',      'ja.kujapan.iluna.co.jp');
-            define('SERVER_NAME_CN',      'cn.kujapan.iluna.co.jp');
-            define('SERVER_NAME_TW',      'tw.kujapan.iluna.co.jp');
+            define('SERVER_NAME_JA',      'ja.kujapan.813.co.jp');
+            define('SERVER_NAME_CN',      'cn.kujapan.813.co.jp');
+            define('SERVER_NAME_TW',      'tw.kujapan.813.co.jp');
     }else{
         if($ini['common']['country'] == "tw"){
             define('SERVER_NAME_JA',      'ja.kujapan.artemis.corp.813.co.jp');

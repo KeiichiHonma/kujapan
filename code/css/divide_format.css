@@ -62,7 +62,7 @@ table.teleweb td{
     padding:5px;
 }
 
-table.iluna {
+table.hachione {
     width:360px;
     padding:0px:
     table-layout: fixed;
@@ -71,17 +71,17 @@ table.iluna {
     margin-bottom: 20px;
     line-height:20px;
 }
-table.iluna th{
+table.hachione th{
     font-size:12px;
     width:90px;
     font-weight: normal;
-    background-color:#A572D3;
+    background-color:#93D900;
     color:#ffffff;
     padding:5px;
     text-align:center;
     vertical-align:middle;
 }
-table.iluna td{
+table.hachione td{
     background-color:#f2f2f2;
     padding:5px;
 }

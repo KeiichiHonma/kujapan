@@ -65,14 +65,14 @@ class utilManager
     static public function encodePrintCouponTime(){
         /*
         管理番号
-        format sid + お客様番号 + (印刷日時 - イルナ起業日時)
+        format sid + お客様番号 + (印刷日時 - ハチワン起業日時)
         sid =1
         客様番号 = 101325
         印刷日時
         2010/11/5
         1288882800
 
-        ・イルナ起業日時
+        ・ハチワン起業日時
         2008/7/14
         1215961200
         

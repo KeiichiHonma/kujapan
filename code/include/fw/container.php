@@ -154,9 +154,9 @@ class container
 
             if($this->ini['common']['isStage'] == 1){//ステージングサーバモード
                 $this->isStage = TRUE;
-                define('SERVER_NAME_JA',      'ja.kujapan.iluna.co.jp');
-                define('SERVER_NAME_CN',      'cn.kujapan.iluna.co.jp');
-                define('SERVER_NAME_TW',      'tw.kujapan.iluna.co.jp');
+                define('SERVER_NAME_JA',      'ja.kujapan.813.co.jp');
+                define('SERVER_NAME_CN',      'cn.kujapan.813.co.jp');
+                define('SERVER_NAME_TW',      'tw.kujapan.813.co.jp');
                 $this->t->assign('stage',$this->isStage);
             }else{
                 define('SERVER_NAME_JA',      'www.kujapan.net');
@@ -167,9 +167,9 @@ class container
             $this->isDebug = TRUE;
             if($this->ini['common']['isStage'] == 1){//ステージングサーバモード
                     $this->isStage = TRUE;
-                    define('SERVER_NAME_JA',      'ja.kujapan.iluna.co.jp');
-                    define('SERVER_NAME_CN',      'cn.kujapan.iluna.co.jp');
-                    define('SERVER_NAME_TW',      'tw.kujapan.iluna.co.jp');
+                    define('SERVER_NAME_JA',      'ja.kujapan.813.co.jp');
+                    define('SERVER_NAME_CN',      'cn.kujapan.813.co.jp');
+                    define('SERVER_NAME_TW',      'tw.kujapan.813.co.jp');
                     $this->t->assign('stage',$this->isStage);
             }else{
                 if($this->ini['common']['country'] == "tw"){

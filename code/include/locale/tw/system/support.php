@@ -3,7 +3,7 @@ require_once('locale/tw/common.php');//共通翻訳ファイル
 $page_locale = array(
     'user_app_name'=>'会员',//ユーザー
     'user_search_btn'=>'搜索',//検索
-    'user_search_help'=>'',//※nから始まるお客様番号は中国向けサービスではありません。イルナまでご連絡ください。
+    'user_search_help'=>'',//※nから始まるお客様番号は中国向けサービスではありません。ハチワンまでご連絡ください。
     'user_search_title'=>'会员查看',//ユーザー検索
     'user_search_keyword'=>'关键词语',//キーワード
     'user_search_item'=>'项目查看',//検索項目

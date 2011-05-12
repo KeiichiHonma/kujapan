@@ -62,8 +62,8 @@
                     </table>
                 </div>
                 <div class="float-r">
-                    <img src="/img/corp/iluna.gif" width="247" height="55" alt="イルナロゴ" />
-                    <table class="iluna">
+                    <img src="/img/corp/logo_81.gif" width="250" height="55" alt="ハチワンロゴ" />
+                    <table class="hachione">
                     <tbody>
                     <tr>
                     <th>{$locale.corp_th_company}</th>
@@ -73,7 +73,7 @@
                     <th>{$locale.corp_th_address}</th>
                     <td>
                     <p>{$locale.corp_td_address_iluna}</p>
-                    <p>URL:&nbsp;<a href="http://www.iluna.co.jp/" target="_blank">http://www.iluna.co.jp/</a></p></td>
+                    <p>URL:&nbsp;<a href="http://www.813.co.jp/" target="_blank">http://www.813.co.jp/</a></p></td>
                     </tr>
                     <tr>
                     <th>{$locale.corp_th_publish}</th>

@@ -31,7 +31,7 @@ class mailTemplate
         
         $this->message .= "\n\n*****************************************************************\n\n";
         $this->message .= '日游酷棒:'.KUJAPANURL.'/'."\n";
-        $this->message .= '日游酷棒客服中心:info@iluna.co.jp'."\n";
+        $this->message .= '日游酷棒客服中心:info@813.co.jp'."\n";
         $this->message .= '公司名稱:北京九五太维资讯有限公司';
         $this->message .= "\n\n*****************************************************************\n\n";
     }

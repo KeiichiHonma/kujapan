@@ -43,7 +43,7 @@ if ( $con->isPost ){
 }else{
     //debug//
     if($con->isDebug){
-        $_POST['company'] = 'イルナ';
+        $_POST['company'] = 'ハチワン';
         $_POST['division'] = '開発部';
         $_POST['name'] = '本間圭一';
         $_POST['kana'] = 'ホンマケイイチ';

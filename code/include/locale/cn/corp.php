@@ -7,10 +7,10 @@ $page_locale = array(
     'title' => '运营｜日游酷棒',
     'h1' => '运营',
     
-    'corp_title'=>'『日游酷棒』是在中国开展BPO等事业的『北京九五太维资讯有限公司』与在日本开展媒体Web的企画和开发的『株式会社iLUNA』协作运营 的网站。',
+    'corp_title'=>'『日游酷棒』是在中国开展BPO等事业的『北京九五太维资讯有限公司』与在日本开展媒体Web的企画和开发的『株式会社81』协作运营 的网站。',
     'corp_th_company'=>'公司名',
     'corp_td_company_teleweb'=>'北京九五太维资讯有限公司',
-    'corp_td_company_iluna'=>'株式会社iLUNA',
+    'corp_td_company_iluna'=>'株式会社81',
     'corp_th_address'=>'地址',
     'corp_td_address_teleweb'=>'北京市朝阳区酒仙桥路10号<br />京东方恒通商务园B28楼3层',
     'corp_td_address_iluna'=>'东京都涩谷区代代木4－31－4<br />城堡新宿802号',
