@@ -30,7 +30,8 @@ $coupon = $c_logic->getShopCoupon($sid);
 if($coupon){
     $con->t->assign('coupon',$coupon);
 }else{
-    
+    require_once('fw/errorManager.php');
+    errorManager::throwError(E_CMMN_SHOP_EXISTS);
 }
 
 //店舗アイテム
