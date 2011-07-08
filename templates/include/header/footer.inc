@@ -9,7 +9,7 @@
           <a href="{$smarty.const.KUJAPANURL}/genre/gid/{$gid}">{$value.col_name}</a>{if !$smarty.foreach.genre.last}&nbsp;|{else}{/if}
 {/foreach}
         </p>
-        <p>Copyright (C) 2011 北京九五太维资讯有限公司 All Rights Reserved.<br />京ICP证040867号-2</p>
+        <p>Copyright (C) 2011 北京九五太维资讯有限公司 All Rights Reserved.<br />京ICP证040867号-2<br />京公网安备110105008660号</p>
       </div>
 {include file="include/google/analytics.inc"}
 
