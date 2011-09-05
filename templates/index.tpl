@@ -171,13 +171,17 @@
             <img alt="" height="5" src="/img/part/top_genre_box3_foot.gif" width="300" />
           </div>
         </div>
+{*全ページバナー*}
+{include file="include/common/all_banner.inc"}
 {if !$login_uid}
         <div>
           <img alt="{$locale.top_use_coupon}" src="/locale/{$smarty.const.LOCALE}/img/part/top_use_coupon.gif" width="300" height="394" />
         </div>
 {/if}
+
 {*特集ページバナー*}
 {include file="include/common/top_special_bannar_box.inc"}
+
       </div>
       <div id="main">
         <div id="slideshow">

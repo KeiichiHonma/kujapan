@@ -24,6 +24,8 @@
 {include file="include/common/area_box.inc"}
 {*ジャンルボックス*}
 {include file="include/common/genre_box.inc"}
+{*全ページバナー*}
+{include file="include/common/all_banner.inc"}
         </div>
         
         <div id="s_main">
