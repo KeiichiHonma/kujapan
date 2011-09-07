@@ -5,12 +5,10 @@
             {if $debug}<a href="http://{$smarty.const.SERVER_NAME_JA}/">日本語</a> | <a href="http://{$smarty.const.SERVER_NAME_CN}/">簡体字</a> | <a href="http://{$smarty.const.SERVER_NAME_TW}/">繁体字</a>{/if}
             
             {if $smarty.const.LOCALE == "tw"}
-            <img alt="" src="/img/common/email.gif" width="16" height="16" />
+            <img alt="" src="/img/common/email.gif" width="16" height="16" /><a href="{$smarty.const.KUJAPANURL}/contact">{$locale.contact}</a>
             {else}
-            <img alt="" src="/img/common/telephone.gif" width="16" height="16" />
+            <img alt="" src="/img/common/telephone.gif" width="16" height="16" /><a href="{$smarty.const.KUJAPANURL}/contact">热线电话：400-161716(周一至周五09:00-17:30 )</a>
             {/if}
-            
-            <a href="{$smarty.const.KUJAPANURL}/contact">{$locale.contact}</a>
             </p>
         </div>
         <div id="header_inner">
