@@ -179,8 +179,14 @@
         </div>
 {/if}
 
+
 {*特集ページバナー*}
 {include file="include/common/top_special_bannar_box.inc"}
+
+<!-- Live800アイコンコード名:test[浮動] 開始-->
+<div style='display:none;'><a href='http://www.live800.com'>在线客服</a></div><script language="javascript" src="http://chat56.live800.com/live800/chatClient/floatButton.js?jid=7369452553&companyID=163005&configID=42071&codeType=custom"></script><div style='display:none;'><a href='http://www.live800.com'>在线客服系统</a></div>
+<!-- Live800アイコンコード名:test[浮動] 終わり-->
+
 
       </div>
       <div id="main">
@@ -293,5 +299,8 @@
 {include file="include/header/footer.inc"}
     </div>
   </div>
+<!-- Live800トラッキングコード: 開始-->
+<script language="javascript" src="http://chat56.live800.com/live800/chatClient/monitor.js?jid=9537298190&companyID=160887&configID=40982&codeType=custom"></script>
+<!-- Live800トラッキングコード: 終わり-->
 </body>
 </html>

@@ -49,6 +49,13 @@ class commonPosition extends positionManager
             'func'=>null,'ssl'=>FALSE,'gnavi'=>'index','snavi'=>null
         )
     ),
+    'campaign'=>array
+    (
+        'name_ja'=>'キャンペーン',
+        'name_cn'=>'关注日游酷棒微博',
+        'name_tw'=>'关注日游酷棒微博',
+        'func'=>null,'ssl'=>FALSE,'gnavi'=>'about','snavi'=>null
+    ),
     'shop'=>array
     (
         'name_ja'=>'店舗',

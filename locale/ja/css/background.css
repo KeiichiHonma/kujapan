@@ -277,3 +277,17 @@ background:url(../img/part/login_use_coupon.gif) no-repeat left top;
 #coupon a.print,img.print{
 background:url(../img/button/print_bt.jpg) no-repeat 0 0;
 }
+
+/*campaign*/
+
+.Lp_explain{
+	background:url(../img/campaign/lp_06.jpg) no-repeat;
+}
+
+.Lp_introduction{
+	background:#b0edff url(../img/campaign/bg.jpg) center repeat-y;
+}
+
+.Lp_prize{
+	background:url(../img/campaign/lp_20.jpg) no-repeat;
+}
