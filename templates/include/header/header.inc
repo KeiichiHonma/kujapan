@@ -7,7 +7,7 @@
             {if $smarty.const.LOCALE == "tw"}
             <img alt="" src="/img/common/email.gif" width="16" height="16" /><a href="{$smarty.const.KUJAPANURL}/contact">{$locale.contact}</a>
             {else}
-            <img alt="" src="/img/common/telephone.gif" width="16" height="16" /><a href="{$smarty.const.KUJAPANURL}/contact">热线电话：400-161716(周一至周五09:00-17:30 )</a>
+            <img alt="" src="/img/common/telephone.gif" width="16" height="16" /><a href="{$smarty.const.KUJAPANURL}/contact">热线电话：400-016-1716(周一至周五09:00-17:30 )</a>
             {/if}
             </p>
         </div>
