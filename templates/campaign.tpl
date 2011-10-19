@@ -32,44 +32,37 @@
         </div>
         <div id="s_main">
 
-		<div id="main">
-			<div class="Lp_leader"><a href="http://weibo.com/kujapan"><img src="/locale/{$smarty.const.LOCALE}/img/campaign/lp_03.jpg" /></a></div>
-		    <div class="Lp_explain"></div>
-		    <div class="Lp_introduction">
-		    	<div class="Lp_name"><img src="/locale/{$smarty.const.LOCALE}/img/campaign/lp_10.jpg" /></div>
-		        <div class="Lp_text"><a href="http://weibo.com/kujapan">关注日游酷棒微博&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;指赢澳尔滨礼包(点击关注日游酷棒)</a></div>
-		    	<div class="Lp_name"><img src="/locale/{$smarty.const.LOCALE}/img/campaign/lp_13.jpg" /></div>
-		        <div class="Lp_text">2011年9月13日—2011年9月22日</div>
-		    	<div class="Lp_name"><img src="/locale/{$smarty.const.LOCALE}/img/campaign/lp_15.jpg" /></div>
-		        <div class="Lp_text">为了让中国消费者更好的掌握日本商品咨询，日游酷棒将定期举行系列活动让大家认识日本各类优质商品。本次活动，我们将送出日本人气品牌澳尔滨精美护肤礼包一套。享受高品质的护肤体验，请千万不要错过哦！※礼品套装包括卸妆乳，洗面奶，护肤乳液，护肤水，面霜。</div>
-		    	<div class="Lp_name"><img src="/locale/{$smarty.const.LOCALE}/img/campaign/lp_17.jpg" /></div>
-		        <div class="Lp_text">
-		        	<p>1、关注@日游酷棒，成为粉丝</p>
-					<p>2、转发活动微博+说出一款日游酷棒“棒网有名”中提到的产品</p>
-					<p>3、@3位好友，我们将从中抽取1名幸运网友，送出精美澳尔滨护肤礼包</p>
-					<p>4、我们会在活动截止后2日内将获奖名单公布于本微博，随后邮寄礼品</p>
-		        </div>
-		        <div class="Lp_name"><img src="/locale/{$smarty.const.LOCALE}/img/campaign/lp_19.jpg" /></div>
-		    </div>
-			<div class="Lp_prize">
-		    	<p>精美澳尔滨护肤礼包 价值5500日元（约合人民币440元）</p>
-				<p>【中国未上市商品，绝好体验机会千万不要错过】</p>
-		    </div>
-		    <div class="Lp_introduction" style="text-align:center;">
-		    	<div class="Lp_text1">
-		        	<p>1、我们会在活动结束后2日内在官方微博公布中奖人名单，并且私信中奖人；</p>
-					<p>2、请中奖人接到我们的私信后，务必在2日内告知邮寄地址；</p>
-					<p>3、禁止任何不正当手段（以获奖为目的，恶意注册多个账号）及舞弊行为参与本活动，一经发现，活动发起人有权取消该用户的获奖资格；</p>
-					<p>4、如中奖用户删除了参与本活动的转发微博，活动发起人有权取消其获奖资格；</p>
-					<p>5、本次活动解释权归活动发起人@日游酷棒所有；</p>
-					<p>6、我们会在公布获奖名单后的一周内将奖品寄出；</p>
-					<p>7、欢迎中奖者晒出我们的精美礼品，并且继续支持我们的活动。</p>
-					<p>8、关于奖品：澳尔滨（ALBION），日本高级化妆品的象征，是日本连续10年销量第一的产品。</p>
-					<p>（本产品为第三方商品，日游酷棒在保证其为正品质量的前提下，不承担任何使用造成的后果）</p>
-		</div>
-		    </div>
-		    <div class="Lp_foot"><a href="http://weibo.com/kujapan"><img src="/locale/{$smarty.const.LOCALE}/img/campaign/lp_22.jpg" /></a></div>
-		</div>
+<div class="white">
+	<div class="white_top"><img src="/locale/{$smarty.const.LOCALE}/img/campaign/mei_03.png" /></div>
+    <div class="daohang"><img src="/locale/{$smarty.const.LOCALE}/img/campaign/mei_06.png" /></div>
+    <div class="text">"秋季美白大作战"日游酷棒献礼相助</div>
+    <div class="daohang"><img src="/locale/{$smarty.const.LOCALE}/img/campaign/mei_09.png" /></div>
+    <div class="text">2011年10月17日--2011年10月21日</div>
+    <div class="daohang"><img src="/locale/{$smarty.const.LOCALE}/img/campaign/mei_16.png" /></div>
+    <div class="text">秋季往往是MM们美白和改善皮肤的最好时机，为了让喜欢日系护肤品的MM能够在秋季美白战中取得胜利，日游酷棒将在本次活动中送出尚未进入中国市场的精美化妆品---资生堂碧丽妃（BENEFIQUE）化妆品一套。※礼品套装包括让肌肤透明细嫩的美白化妆水和美白乳液。</div>
+    <div class="daohang"><img src="/locale/{$smarty.const.LOCALE}/img/campaign/mei_19.png" /></div>
+    <div class="dabeij">
+    	<div class="text">1.关注@日游酷棒，成为粉丝<br/>
+        2.@3位好友，我们将从中抽取1名幸运网友，送出资生堂碧丽妃（BENEFIQUE）<br/>NT美白系列透明嫩肌套装一套<br/>
+        3.我们会在活动截止后2日内将获奖名单公布于微博，随后邮寄礼品
+        </div>
+    	<div class="text" style="padding-top:42px;">精美资生堂（BENEFIQUE）化妆品一套/价值50000日元<br/>(约合人民币400元)<br/>【绝好体验机会千万不要错过】
+        </div>
+        <div class="bejddd">
+            	<div class="text" style="padding-top:10px;">1、我们会在活动结束后2日内在官方微博公布中奖人名单，并且私信中奖人；<br/>
+			2、请中奖人接到我们的私信后，务必在2日内告知邮寄地址；<br/>
+			3、禁止任何不正当手段（以获奖为目的，恶意注册多个账号）及舞弊行为参与本活动，一经发现，活动发起人有权取消该用户的获奖资格；<br/>
+			4、如中奖用户删除了参与本活动的转发微博，活动发起人有权取消其获奖资格；<br/>
+			5、本次活动解释权归活动发起人@日游酷棒所有；<br/>
+			6、我们会在公布获奖名单后的一周内将奖品寄出；<br/>
+			7、欢迎中奖者晒出我们的精美礼品，并且继续支持我们的活动。<br/>
+			8、关于奖品：碧丽妃（BENEFIQUE）是资生堂旗下的高端产品，在日本很流行。<br/>
+			（本产品为第三方商品，日游酷棒在保证其为正品质量的前提下，不承担任何使用造成的后果）
+        </div>
+        <div style="width:580px; line-height:30px; font-weight:bold; border-top:1px dashed #756f71; text-align:right;">活动发起：<font style=" color:#fa5454; text-decoration:underline;">@日游酷棒</font></div>
+        </div>
+    </div>
+</div>
 
         </div>
 

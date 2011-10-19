@@ -291,3 +291,8 @@ background:url(../img/button/print_bt.jpg) no-repeat 0 0;
 .Lp_prize{
 	background:url(../img/campaign/lp_20.jpg) no-repeat;
 }
+
+/*内容样式*/
+.white{background:url(../img/campaign/mei_12.jpg) repeat-y;}
+.dabeij{background:url(../img/campaign/mei_20.png);}
+.bejddd{background:url(../img/campaign/mei_22.png);}
