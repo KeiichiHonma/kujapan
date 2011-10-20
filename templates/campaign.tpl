@@ -33,7 +33,7 @@
         <div id="s_main">
 
 <div class="white">
-	<div class="white_top"><img src="/locale/{$smarty.const.LOCALE}/img/campaign/mei_03.png" /></div>
+	<div class="white_top"><a href="http://event.weibo.com/240183"><img src="/locale/{$smarty.const.LOCALE}/img/campaign/mei_03.png" /></a></div>
     <div class="daohang"><img src="/locale/{$smarty.const.LOCALE}/img/campaign/mei_06.png" /></div>
     <div class="text">"秋季美白大作战"日游酷棒献礼相助</div>
     <div class="daohang"><img src="/locale/{$smarty.const.LOCALE}/img/campaign/mei_09.png" /></div>

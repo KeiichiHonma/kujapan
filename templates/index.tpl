@@ -171,7 +171,7 @@
             <img alt="" height="5" src="/img/part/top_genre_box3_foot.gif" width="300" />
           </div>
         </div>
-<a href="/campaign"><img src="/locale/{$smarty.const.LOCALE}/img/campaign/banner.jpg" /></a><br />
+<a href="http://event.weibo.com/240183" target="_blank"><img src="/locale/{$smarty.const.LOCALE}/img/campaign/banner.jpg" /></a><br />
 {*全ページバナー*}
 {include file="include/common/all_banner.inc"}
 {if !$login_uid}
