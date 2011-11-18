@@ -14,3 +14,18 @@
 {include file="include/google/analytics.inc"}
 
 {include file="include/conversion/baidu.inc"}
+
+{if $debug == FALSE && $stage == FALSE}
+
+{if $smarty.const.LOCALE == "tw"}
+
+{else}
+<!-- Live800アイコンコード名:kujapan.com[浮動] 開始-->
+<div style='display:none;'><a href='http://www.live800.com'>在线客服</a></div><script language="javascript" src="http://chat56.live800.com/live800/chatClient/floatButton.js?jid=7369452553&companyID=163005&configID=48577&codeType=custom"></script><div style='display:none;'><a href='http://www.live800.com'>在线客服系统</a></div>
+<!-- Live800アイコンコード名:kujapan.com[浮動] 終わり-->
+<!-- Live800トラッキングコード: 開始-->
+<script language="javascript" src="http://chat56.live800.com/live800/chatClient/monitor.js?jid=7369452553&companyID=163005&configID=42070&codeType=custom"></script>
+<!-- Live800トラッキングコード: 終わり-->
+{/if}
+
+{/if}
