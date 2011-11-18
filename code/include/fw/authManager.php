@@ -8,6 +8,7 @@ define('SESSION_U_UID',              'COUPONUUID');
 define('SESSION_U_GIVEN_NAME',       'COUPONUNAME');
 define('SESSION_U_CUSTOMER_NO',      'COUPONUCUSTOMERNO');
 define('SESSION_U_VALIDATE_TIME',    'COUPONUVALIDATETIME');
+define('SESSION_U_PID',              'COUPONUPID');
 
 //manager
 define('SESSION_M_LOGIN',            'COUPONMLOGIN');
@@ -27,6 +28,7 @@ class authManager
     public $session_key_given_name;
     public $session_key_customer_no;
     public $session_key_validate_time;
+    public $session_key_pid;
     
     //以下認証後のみセットされる
     //user
@@ -50,6 +52,7 @@ class authManager
             $this->session_key_given_name       = SESSION_U_GIVEN_NAME;//given_name
             $this->session_key_customer_no      = SESSION_U_CUSTOMER_NO;
             $this->session_key_validate_time    = SESSION_U_VALIDATE_TIME;
+            $this->session_key_pid              = SESSION_U_PID;//partner
         }else{
             $this->session_key_login_name       = SESSION_M_LOGIN;//mail
             $this->session_key_login_hash       = SESSION_M_HASH;
@@ -118,6 +121,7 @@ die();*/
             $con->session->set($this->session_key_login_hash,self::makeHash($login_object[0]['col_account']));
             $con->session->set($this->session_key_customer_no,$login_object[0]['col_customer_no']);
             $con->session->set($this->session_key_validate_time,$login_object[0]['col_validate_time']);
+            $con->session->set($this->session_key_pid,$login_object[0]['col_pid']);//partner
         }
         
     }
@@ -141,12 +145,14 @@ die();*/
         $this->given_name = $con->session->get(SESSION_U_GIVEN_NAME);
         $this->customer_no = $con->session->get(SESSION_U_CUSTOMER_NO);
         $this->validate_time = $con->session->get(SESSION_U_VALIDATE_TIME);
+        $this->pid = $con->session->get(SESSION_U_PID);
 
         $con->t->assign('login_uid',$this->uid);
         $con->t->assign('login_account',$this->account);
         $con->t->assign('login_given_name',$this->given_name);
         $con->t->assign('login_customer_no',$this->customer_no);
         $con->t->assign('login_validate_time',$this->validate_time);
+        $con->t->assign('login_pid',$this->pid);
         
         //変数を取得できなかったログインを認めない=セッション、クッキー必須
         return !$this->uid || !$this->account || !$this->given_name || !$this->customer_no || !$this->validate_time ? FALSE : TRUE;

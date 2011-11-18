@@ -55,6 +55,14 @@ class systemPosition extends positionManager
                 'input'=>array('name'=>'ユーザー変更','func'=>null,'access'=>TYPE_M_ADMIN,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'user'),
                 'finish'=>array('name'=>'ユーザー再発行完了','func'=>null,'access'=>TYPE_M_ADMIN,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'user'),
                 ),
+            'partner'=>array(
+                'entry'=>array
+                    (
+                    'input'=>array('name'=>'パートナー用ユーザー追加','func'=>null,'access'=>TYPE_M_ADMIN,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'user'),
+                    'finish'=>array('name'=>'パートナー用ユーザー追加完了','func'=>null,'access'=>TYPE_M_ADMIN,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'user'),
+                    'export'=>array('name'=>'パートナー用書き出し','func'=>null,'access'=>TYPE_M_ADMIN,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'user'),
+                    ),
+                )
             ),
         'coupon'=>array
             (

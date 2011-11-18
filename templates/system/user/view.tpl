@@ -68,6 +68,12 @@
             <td width="150" valign="top">{$locale.trade_no}</td>
             <td valign="top">{$user.0.col_trade_no}</td>
             </tr>
+
+            <tr>
+            <td width="150" valign="top">partner</td>
+            <td valign="top">{$partner.$pid.col_name}</td>
+            </tr>
+
             <tr>
             <td colspan="2" class="btn">
                 <form id="couponForm" name="couponForm" action= "{$smarty.const.KUJAPANURLSSL}/system/user/republish/uid/{$user.0._id}" method="post">

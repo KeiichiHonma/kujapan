@@ -22,7 +22,7 @@ if ( $con->isPost ){
             $_GET['out_trade_no'] = $_POST['out_trade_no'];//alipay画面で調査可能
             $_GET['total_fee'] = 99;
             $_GET['subject'] = $con->locale['alipay_product_title'];
-            $_GET['seller_email'] = 'kujapan-alipay@95teleweb.com';
+            $_GET['seller_email'] = 'alipay@kujapan.com';
             $_GET['seller_id'] = 2088501340570641;
             $_GET['buyer_email'] = $_POST['buyer_email'];//alipay画面で調査可能
             $_GET['buyer_id'] = $_POST['buyer_id'];//alipay画面で調査可能

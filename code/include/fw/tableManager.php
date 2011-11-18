@@ -3,6 +3,9 @@
 //user
 define('T_USER',                  'kujapan.tab_kujapan_user');
 define('A_USER',                  'u');
+//partner
+define('T_PARTNER',                  'kujapan.tab_kujapan_partner');
+define('A_PARTNER',                  'p');
 //member
 define('T_MANAGER',               'kujapan.tab_kujapan_manager');
 define('A_MANAGER',               'm');

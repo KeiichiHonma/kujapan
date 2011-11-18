@@ -83,19 +83,20 @@ class userParameter extends parameterManager
         $this->parameter['validate_time'] = 0;
     }
 
-    public function setAccountUpdate($uid){
+    public function setAccountUpdate($uid,$pid = 0,$isFree = FALSE){
         parent::readyUpdateParameter($uid);//認証してない
         //$this->account = 'k'.$uid.$this->getAuth();
         $int = CUSTOMER_NO_BASE + $uid;
         if(LOCALE == 'tw'){
-            $string = 'n';//.net
+            $string = $isFree ? 'fn' : 'n';//.net
         }else{
-            $string = 'c';//.com
+            $string = $isFree ? 'fc' : 'c';//.com
         }
         $this->customer_no = $string.$int;
         $this->parameter['customer_no'] = $this->customer_no;
         $this->account = 'k'.$this->parameter['customer_no'];
         $this->parameter['account'] = $this->account;
+        $this->parameter['pid'] = $pid;
     }
 
     public function setValidateUpdate($uid,$validate = 0){
@@ -243,12 +244,13 @@ class tmpRegistParameter extends parameterManager
 {
     public $rand;
     
-    public function setAdd($uid,$customer_no,$account,$password){
+    public function setAdd($uid,$customer_no,$account,$password,$pid){
         parent::readyAddParameter();
         $this->setParameter($uid);
         $this->parameter['customer_no'] = $customer_no;
         $this->parameter['account'] = $account;
         $this->parameter['password'] = $password;
+        $this->parameter['pid'] = $pid;
     }
     
     public function setUpdate($trid,$uid){

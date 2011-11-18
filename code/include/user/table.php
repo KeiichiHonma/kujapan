@@ -31,7 +31,9 @@ class userTable extends tableManager
             array('column'=>'is_success',        'as'=>null,        'type'=>ALL,    'input'=>FALSE, 'group'=>null),
             array('column'=>'body',              'as'=>null,        'type'=>ALL,    'input'=>FALSE, 'group'=>null),
             array('column'=>'extra_common',      'as'=>null,        'type'=>ALL,    'input'=>FALSE, 'group'=>null),
-
+            
+            array('column'=>'pid',               'as'=>null,        'type'=>COMMON,    'input'=>FALSE, 'group'=>null),
+            
             array('column'=>'last_login',        'as'=>null,        'type'=>COMMON, 'input'=>FALSE, 'group'=>null),
             array('column'=>'validate_time',     'as'=>null,        'type'=>COMMON, 'input'=>FALSE, 'group'=>null),
             array('column'=>'validate',          'as'=>null,        'type'=>COMMON, 'input'=>FALSE, 'group'=>null)
@@ -94,6 +96,7 @@ class tmpRegistTable extends tableManager
             array('column'=>'account',    'as'=>null,           'type'=>COMMON, 'input'=>FALSE),
             array('column'=>'password',   'as'=>null,           'type'=>COMMON, 'input'=>FALSE),
             array('column'=>'customer_no','as'=>null,           'type'=>COMMON, 'input'=>TRUE),
+            array('column'=>'pid',        'as'=>null,           'type'=>COMMON, 'input'=>TRUE),
             array('column'=>'rand',       'as'=>null,           'type'=>COMMON, 'input'=>TRUE),
             array('column'=>'status',     'as'=>null,           'type'=>COMMON, 'input'=>TRUE)
         );

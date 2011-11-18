@@ -25,8 +25,8 @@ class userHandle extends handleManager
         return parent::updateRow(T_USER,$this->parameter);
     }
 
-    public function updateAccountRow($uid){
-        $this->parameter->setAccountUpdate($uid);
+    public function updateAccountRow($uid,$pid = 0,$isFree = FALSE){
+        $this->parameter->setAccountUpdate($uid,$pid,$isFree);
         //$this->setDebug();
         return parent::updateRow(T_USER,$this->parameter);
     }
@@ -121,8 +121,8 @@ class tmpRegistHandle extends handleManager
         $this->parameter = new tmpRegistParameter();
     }
     
-    public function addRow($uid,$customer_no,$account,$password){
-        $this->parameter->setAdd($uid,$customer_no,$account,$password);
+    public function addRow($uid,$customer_no,$account,$password,$pid = 0){
+        $this->parameter->setAdd($uid,$customer_no,$account,$password,$pid);
         return parent::addRow(T_REGIST,$this->parameter);
     }
 

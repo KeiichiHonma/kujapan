@@ -224,7 +224,20 @@ class tmpRegistLogic extends logicManager
         
         return $r ? $r[0]['col_rand'] : FALSE;
     }
+    
+    //パートナー用CSV抽出用
+    function getPartnerTmpRegist($pid,$number,$type = COMMON){
+        $this->addSelectColumn(tmpRegistTable::get($type));
+        $this->setCond('col_pid',$pid);
 
+        $order = array('column'=>'_id','desc_asc'=>DATABASE_DESC);
+        $this->addOrderColumn($order['column'],$order['desc_asc']);
+        $this->limit(0,$number);
+        //$this->setDebug();
+
+        return parent::getResult(T_REGIST);
+    }
+    
     private function setAlertCond($time){
         $from = mktime(0, 0, 0, date("m",$time),date("d",$time),date("Y",$time));
         $to = mktime(23, 59, 59, date("m",$time),date("d",$time),date("Y",$time));
