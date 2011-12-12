@@ -171,7 +171,7 @@
             <img alt="" height="5" src="/img/part/top_genre_box3_foot.gif" width="300" />
           </div>
         </div>
-<a href="{$smarty.const.KUJAPANURL}/campaign" target="_blank"><img src="/img/campaign/20111118/banner.jpg" /></a><br />
+<a href="{$smarty.const.KUJAPANURL}/campaign" target="_blank"><img src="/img/campaign/20111212/banner.jpg" /></a><br />
 {*全ページバナー*}
 {include file="include/common/all_banner.inc"}
 {if !$login_uid}

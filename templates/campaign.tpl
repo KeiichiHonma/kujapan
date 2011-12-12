@@ -33,8 +33,8 @@ a:focus { outline: none; }
 .white_top{width:650px; height:625px;}
 .daohang{ padding:5px 0; text-align:center;}
 .text{ line-height:25px; text-align:left; padding:5px 25px;}
-.dabeij{width:650px; height:155px; background:url(/img/campaign/20111118/11115.jpg); display:block;}
-.bejddd{width:650px; height:371px; background:url(/img/campaign/20111118/11_15.jpg); padding-top:10px;}
+.dabeij{width:650px; height:155px; background:url(/img/campaign/20111212/11115.jpg); display:block;}
+.bejddd{width:650px; height:371px; background:url(/img/campaign/20111212/11_15.jpg); padding-top:10px;}
 -->
 </style>
 {/literal}
@@ -58,16 +58,17 @@ a:focus { outline: none; }
         </div>
         <div id="s_main">
 
+{*ここから*}
 <div class="white">
-	<div class="white_top"><a href="http://weibo.com/kujapan" target="_blank"><img src="/img/campaign/20111118/11_03.jpg" /></a></div>
-    <div class="daohang"><img src="/img/campaign/20111118/11_06.jpg" /></div>
+	<div class="white_top"><a href="http://weibo.com/kujapan　"><img src="/img/campaign/20111212/11_03.jpg" /></a></div>
+    <div class="daohang"><img src="/img/campaign/20111212/11_06.jpg" /></div>
     <div class="text">情义千斤不敌脸蛋四两 日游酷棒还你美丽真相</div>
-    <div class="daohang"><img src="/img/campaign/20111118/11-03.jpg" /></div>
-    <div class="text">2011年11月21日——2011年11月25日</div>
-    <div class="daohang"><img src="/img/campaign/20111118/11-04.jpg" /></div>
+    <div class="daohang"><img src="/img/campaign/20111212/11-03.jpg" /></div>
+    <div class="text">2011年12月12日——2011年12月16日 </div>
+    <div class="daohang"><img src="/img/campaign/20111212/11-04.jpg" /></div>
     <div class="text">情义之战，从改变容貌开始！最近，玄米（即糙米）越来越多的被提起，在化妆品中添加玄
 米成分已成为美容的新趋势。日游酷棒将在本次活动中送出尚未进入中国市场的，富含五种玄米成分的精美化妆品——KouZen系列化妆品两套。</div>
-    <div class="daohang"><img src="/img/campaign/20111118/11-05.jpg" /></div>
+    <div class="daohang"><img src="/img/campaign/20111212/11-05.jpg" /></div>
         	<div class="text">1.关注@日游酷棒，成为粉丝<br/>
         2.@3位好友，我们将从中抽取2名幸运网友，送出KouZen系列化妆品两套(含天然酵母洁肤乳液、天然酵母润肤乳和天然酵母保湿霜)<br/>
         3.我们会在活动截止后2日 内将获奖名单公布于本微博
@@ -86,10 +87,10 @@ a:focus { outline: none; }
 			7、欢迎中奖者晒出我们的精美礼品，并且继续支持我们的活动。<br/>
 			8、关于奖品：KouZen是日本puinpul株式会社旗下产品。<br/>(本产品为第三方商品，日游酷棒在保证其为正品质量的前提下，不承担任何使用造成的后果。)
         </div>
-        <div style="width:570px; line-height:30px; font-weight:bold; border-top:1px dashed #756f71; text-align:right;">活动发起：<a href="http://weibo.com/kujapan" target="_blank"><font style=" color:#e84353; text-decoration:underline;">@日游酷棒</font></a></div>
+        <div style="width:570px; line-height:30px; font-weight:bold; border-top:1px dashed #756f71; text-align:right;">活动发起：<a href="http://weibo.com/kujapan　"><font style=" color:#e84353; text-decoration:underline;">@日游酷棒</font></a></div>
         </div>
 </div>
-
+{*ここまで*}
         </div>
 
 
