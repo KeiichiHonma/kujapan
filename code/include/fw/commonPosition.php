@@ -51,9 +51,9 @@ class commonPosition extends positionManager
     ),
     'campaign'=>array
     (
-        'name_ja'=>'情义千斤不敌脸蛋四两',
-        'name_cn'=>'情义千斤不敌脸蛋四两',
-        'name_tw'=>'情义千斤不敌脸蛋四两',
+        'name_ja'=>'关注日游酷棒微博',
+        'name_cn'=>'关注日游酷棒微博',
+        'name_tw'=>'关注日游酷棒微博',
         'func'=>null,'ssl'=>FALSE,'gnavi'=>'about','snavi'=>null
     ),
     'shop'=>array

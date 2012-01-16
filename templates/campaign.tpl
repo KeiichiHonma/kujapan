@@ -30,11 +30,12 @@ a:active, a:hover { text-decoration: underline; }
 a:focus { outline: none; }
 /*内容样式*/
 .white{width:650px;}
-.white_top{width:650px; height:625px;}
+.white_top{width:650px; height:600px;}
 .daohang{ padding:5px 0; text-align:center;}
-.text{ line-height:25px; text-align:left; padding:5px 25px;}
-.dabeij{width:650px; height:155px; background:url(/img/campaign/20111212/11115.jpg); display:block;}
-.bejddd{width:650px; height:371px; background:url(/img/campaign/20111212/11_15.jpg); padding-top:10px;}
+.text{ line-height:25px; text-align:left; padding:5px 10px;}
+.dabeij{  height:109px; background:url(/img/campaign/20120116/2012-01-13_07.jpg) no-repeat; display:block;}
+.bejddd{width:650px; height:451px; background:url(/img/campaign/20120116/2012-01-13_20.jpg) no-repeat; padding-top:10px;}
+.baohan{ background:url(/img/campaign/20120116/2012-01-13_06.jpg) repeat-y; width:582px; padding:0 34px;}
 -->
 </style>
 {/literal}
@@ -60,34 +61,36 @@ a:focus { outline: none; }
 
 {*ここから*}
 <div class="white">
-	<div class="white_top"><a href="http://weibo.com/kujapan　"><img src="/img/campaign/20111212/11_03.jpg" /></a></div>
-    <div class="daohang"><img src="/img/campaign/20111212/11_06.jpg" /></div>
-    <div class="text">情义千斤不敌脸蛋四两 日游酷棒还你美丽真相</div>
-    <div class="daohang"><img src="/img/campaign/20111212/11-03.jpg" /></div>
-    <div class="text">2011年12月12日——2011年12月16日 </div>
-    <div class="daohang"><img src="/img/campaign/20111212/11-04.jpg" /></div>
-    <div class="text">情义之战，从改变容貌开始！最近，玄米（即糙米）越来越多的被提起，在化妆品中添加玄
-米成分已成为美容的新趋势。日游酷棒将在本次活动中送出尚未进入中国市场的，富含五种玄米成分的精美化妆品——KouZen系列化妆品两套。</div>
-    <div class="daohang"><img src="/img/campaign/20111212/11-05.jpg" /></div>
-        	<div class="text">1.关注@日游酷棒，成为粉丝<br/>
-        2.@3位好友，我们将从中抽取2名幸运网友，送出KouZen系列化妆品两套(含天然酵母洁肤乳液、天然酵母润肤乳和天然酵母保湿霜)<br/>
-        3.我们会在活动截止后2日 内将获奖名单公布于本微博
-        </div>
-    <div class="dabeij" style="padding-top:35px;">
-    	<div class="text" >KouZen系列化妆品两套/价值7350日元<br/>(约合人民币600元)<br/>【中国未有专售商品】
+	<div class="white_top"><a href="http://weibo.com/kujapan"><img src="/img/campaign/20120116/2012-01-13_03.jpg" /></a></div>
+    <div class="baohan">
+        <div class="daohang"><img src="/img/campaign/20120116/2012-01-13_10.jpg" /></div>
+        <div class="text">保湿媚人迎新春 日游酷棒礼相随</div>
+        <div class="daohang"><img src="/img/campaign/20120116/2012-01-13_04.jpg" /></div>
+        <div class="text">2012年01月16日——2012年01月19日日 </div>
+        <div class="daohang"><img src="/img/campaign/20120116/2012-01-13_04.jpg" /></div>
+        <div class="text">不做干物女！冬季保湿是每个美眉最大的心愿。而如何保湿又是每个美眉最大的困扰。日游酷棒将在本次活动中送出尚未进入中国市场的RMK 保湿液一支。调节肌肤之水油平衡，有效紧锁滋润成份，让你拥有水嫩肌肤。</div>
+        <div class="daohang"><img src="/img/campaign/20120116/2012-01-13_05.jpg" /></div>
+                <div class="text">1.关注@日游酷棒，成为粉丝<br/>
+            2.@3位好友，我们将从中抽取1名幸运网友，送出精美RMK 保湿液一支<br/>
+            3.我们会在活动截止后2日 内将获奖名单公布于本微博
+            </div>
+        <div class="dabeij" style="padding-top:35px;">
+            <div class="text" >精美RMK 保湿液一支/价值3200日元
+<br/>(约合人民币260元)<br/>【中国未有专售商品】
+            </div>
         </div>
     </div>
     <div class="bejddd">
-            	<div class="text" style="line-height:28px; width:570px;">1、我们会在活动结束后2日内在官方微博公布中奖人名单，并且私信中奖人；<br/>
+            	<div class="text" style="line-height:26px; width:570px; padding-top:90px;">1、我们会在活动结束后2日内在官方微博公布中奖人名单，并且私信中奖人；<br/>
 			2、请中奖人接到我们的私信后，务必在2日内告知邮寄地址；<br/>
 			3、禁止任何不正当手段（以获奖为目的，恶意注册多个账号）及舞弊行为参与本活动，一经发现，活动发起人有权取消该用户的获奖资格；<br/>
 			4、如中奖用户删除了参与本活动的转发微博，活动发起人有权取消其获奖资格；<br/>
 			5、本次活动解释权归活动发起人@日游酷棒所有；<br/>
 			6、我们会在公布获奖名单后的一周内将奖品寄出；<br/>
 			7、欢迎中奖者晒出我们的精美礼品，并且继续支持我们的活动。<br/>
-			8、关于奖品：KouZen是日本puinpul株式会社旗下产品。<br/>(本产品为第三方商品，日游酷棒在保证其为正品质量的前提下，不承担任何使用造成的后果。)
+			8、关于奖品：RMK，日本新生代美容品牌，由国际知名的日籍化妆师宏濑留美子创立。（本产品为第三方商品，日游酷棒在保证其为正品质量的前提下，不承担任何使用造成的后果。图片仅供参考，请以实物为准）。
         </div>
-        <div style="width:570px; line-height:30px; font-weight:bold; border-top:1px dashed #756f71; text-align:right;">活动发起：<a href="http://weibo.com/kujapan　"><font style=" color:#e84353; text-decoration:underline;">@日游酷棒</font></a></div>
+        <div style="width:570px; line-height:25px; font-weight:bold;  text-align:right;">活动发起：<a href="http://weibo.com/kujapan"><font style=" color:#ef8a8b; text-decoration:underline;">@日游酷棒</font></a></div>
         </div>
 </div>
 {*ここまで*}
