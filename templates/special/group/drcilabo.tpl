@@ -184,11 +184,6 @@
                               </div>
 
                           <!-- /photo_area -->
-                          {if !$login_uid}
-                          <p class="btn_area">
-                            <a class="bt_buy" href="{$smarty.const.KUJAPANURL}/payment/bridge">{$locale.buy_bt}</a>
-                          </p>
-                          {/if}
                         </div>
                         <!-- /img_area -->
                         <div class="text_area">

@@ -29,9 +29,7 @@
             {if !$buy_btn_display}
             
             {elseif !$login_uid}
-            <li id="shopping_bt">
-              <a href="{$smarty.const.KUJAPANURL}/payment/bridge" title="{$locale.buy_bt}" target="_blank">{$locale.buy_bt}</a>
-            </li>
+
             {else}
             <li id="shopping_bt">
                 <img alt="" src="/locale/{$smarty.const.LOCALE}/img/button/top_buy_bt_done.gif" width="216" height="55" />

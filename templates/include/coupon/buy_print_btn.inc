@@ -3,8 +3,7 @@
                     {if $login_uid}
                     <img class="detail_buy" alt="" src="/locale/{$smarty.const.LOCALE}/img/button/detail_buy_bt_done.gif" width="211" height="53" />
                     {else}
-                    <a class="detail_buy" href="{$smarty.const.KUJAPANURL}/payment/bridge" target="_blank">{$locale.buy_bt}</a>
-                    {$locale.buy_bt_text}
+
                     {/if}
                 </li>
                 <li>
