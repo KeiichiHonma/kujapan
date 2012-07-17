@@ -8,7 +8,7 @@ $gr_logic = new groupLogic(TRUE);
 $con->t->assign('shop_group',$gr_logic->getShopGroup($shop[0]['_id']));//groupの全て
 
 //position 店舗及びADMINで見るページが違います
-systemPosition::makeShopPosition($shop[0]['col_name_ja']);
+systemPosition::makeShopPosition($shop[0]['col_name']);
 
 $con->append();
 ?>

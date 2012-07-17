@@ -36,7 +36,7 @@
         <a href="{$smarty.const.KUJAPANURLSSL}/system/shop/coupon/view/cid/{$value.coupon_id}/sid/{$value.shop_id}">詳細</a>&nbsp;|&nbsp;<a href="{$smarty.const.KUJAPANURLSSL}/system/shop/coupon/edit/input/cid/{$value.coupon_id}/sid/{$value.shop_id}">変更</a>&nbsp;|&nbsp;<a href="{$smarty.const.KUJAPANURLSSL}/system/shop/coupon/edit/drop/cid/{$value.coupon_id}/sid/{$value.shop_id}">削除</a>&nbsp;|&nbsp;<a href="{$smarty.const.KUJAPANURLSSL}/system/shop/coupon/reuse/input/cid/{$value.coupon_id}/sid/{$value.shop_id}">再利用</a>
         
         </td>
-        <td>{$value.col_discount_value}{$value.col_name_ja}</td>
+        <td>{$value.col_discount_value}{$value.col_name}</td>
         <td>{$value.col_title_ja|make_strim:80}</td>
         </tr>
 {/foreach}

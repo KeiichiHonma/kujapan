@@ -17,7 +17,7 @@
     {include file="include/system/shop_navi.inc"}
     <div id="infomation">
     <ul>
-    <li><a href="{$smarty.const.KUJAPANURLSSL}/system/shop/gallery/entry/input">ギャラリー追加</a></li>
+    <li><a href="{$smarty.const.KUJAPANURLSSL}/system/shop/gallery/entry/input/sid/{$sid}">ギャラリー追加</a></li>
     </ul>
     </div>
     <h2 class="h_title">ギャラリー管理</h2>
@@ -25,26 +25,17 @@
 {foreach from=$shop_item key="key" item="value" name="shop_item"}
     <table class="shop_system">
         <tr>
-        <td rowspan="3">
+        <td>
         {if isset($value.file_id)}
         <img src="{$value.file_id|getFilePath:$value.col_extension}" width="{$value.col_width}" height="{$value.col_height}" alt="{$value.col_alt}" />
         {else}
         ありません。
         {/if}
         </td>
-        <th class="title">詳細（日本語）</th><td class="data">{$value.col_detail_ja}</td>
-        </tr>
-
-        <tr>
-        <th class="title">詳細（簡体字）</th><td class="data">{$value.col_detail_cn}</td>
-        </tr>
-        
-        <tr>
-        <th class="title">詳細（繁体字）</th><td class="data">{$value.col_detail_tw}</td>
         </tr>
         <tr>
         <td colspan="3" class="btn">
-        <a href="{$smarty.const.KUJAPANURLSSL}/system/shop/gallery/edit/input/siid/{$value.shop_item_id}"><img src="/img/system/b_henkou.gif" alt="変更" width="130" height="30" class="btn" /></a><a href="{$smarty.const.KUJAPANURLSSL}/system/shop/gallery/drop/input/siid/{$value.shop_item_id}"><img src="/img/system/b_sakujyo.gif" alt="削除" width="130" height="30" class="btn" /></a></td>
+        <a href="{$smarty.const.KUJAPANURLSSL}/system/shop/gallery/edit/input/sid/{$sid}/siid/{$value.shop_item_id}"><img src="/img/system/b_henkou.gif" alt="変更" width="130" height="30" class="btn" /></a><a href="{$smarty.const.KUJAPANURLSSL}/system/shop/gallery/drop/input/sid/{$sid}/siid/{$value.shop_item_id}"><img src="/img/system/b_sakujyo.gif" alt="削除" width="130" height="30" class="btn" /></a></td>
         </tr>
     </table>
 {/foreach}

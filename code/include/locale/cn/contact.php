@@ -13,7 +13,7 @@ $page_locale = array(
     'contact_opening_time'=>'周一至周五09:00-17:30
     ',//平日午前9時から17時30分
     'contact_column_detail'=>'说明',//営業時間
-    'contact_detail'=>'仅支付市话费且支持手机拨打，香港、澳门及台湾地区除外<br />『日游酷棒』客服时间调整公告<br />我们会在以下时间暂停客服电话和电子邮件的服务。<br />元旦：2010年12月29日～1月4日<br />春节：2011年2月2日～2月8日',//営業時間
+    'contact_detail'=>'『日游酷棒』客服时间调整公告<br />我们会在以下时间暂停客服电话和电子邮件的服务。',//営業時間
 );
 $locale = array_merge($common_locale,$page_locale);
 ?>

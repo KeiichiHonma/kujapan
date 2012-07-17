@@ -28,7 +28,7 @@ utilManager::setLocalePostPram('condition',$coupon[0]);
 $_POST['validate_time'] = $coupon[0]['col_validate_time'];
 
 //position 店舗及びADMINで見るページが違います
-systemPosition::makeShopPosition($shop[0]['col_name_ja']);
+systemPosition::makeShopPosition($shop[0]['col_name']);
 
 $con->append();
 ?>

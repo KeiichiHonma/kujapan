@@ -6,11 +6,9 @@ require_once('file/table.php');
 class shopLogic extends logicManager
 {
     public $isSystem = FALSE;
-    public $isLocale = FALSE;
     
     function __construct($isSystem = FALSE){
         $this->isSystem = $isSystem;
-        if(!$this->isSystem) $this->isLocale = TRUE;//TRUEの場合LOCALEの変数が必須
     }
 
     protected function getResult($table,$alias = null){
@@ -29,7 +27,7 @@ class shopLogic extends logicManager
     //core
     protected function getCoreShop($from = 0,$to = FIRSTSP,$order = null){
         $this->setIndexColumn('shop_id');//index入れ替え
-        $this->addSelectColumn($this->isLocale ? shopTable::getLocaleAlias() : shopTable::getAlias());
+        $this->addSelectColumn(shopTable::getAlias());
         $this->setShopCondition();
         if(!is_null($order)){
             $this->addOrderColumn(A_SHOP.'.'.$order['column'],$order['desc_asc']);
@@ -38,11 +36,12 @@ class shopLogic extends logicManager
         }
         $this->setFound();
         if(!is_null($from) && !is_null($to)) $this->limit($from,$to);
+        //return parent::getDebug(T_SHOP,A_SHOP);
         return parent::getResult(T_SHOP,A_SHOP);
     }
 
     public function getOneShopForMID($mid,$type = COMMON){
-        $this->addSelectColumn($this->isLocale ? shopTable::getLocale($type) : shopTable::get($type));
+        $this->addSelectColumn(shopTable::get($type));
         $this->setCond('col_mid',$mid);
         $this->validateConditionForShop();
         //return parent::getDebug(T_SHOP);
@@ -50,10 +49,9 @@ class shopLogic extends logicManager
     }
 
     //sid,midの両方に合致した学校のみ
-    public function getOneShopForSystem($sid,$mid,$type = COMMON){
-        $this->addSelectColumn($this->isLocale ? shopTable::getLocale($type) : shopTable::get($type));
+    public function getOneShopForSystem($sid,$type = COMMON){
+        $this->addSelectColumn(shopTable::get($type));
         $this->setCond('_id',$sid);
-        $this->setCond('col_mid',$mid);
         $this->validateConditionForShop();
         //return parent::getDebug(T_SHOP);
         return parent::getResult(T_SHOP);
@@ -77,7 +75,7 @@ class shopLogic extends logicManager
     }
 
     public function getOneShop($sid,$type = COMMON){
-        $this->addSelectColumn($this->isLocale ? shopTable::getLocaleAlias($type) : shopTable::getAlias($type));
+        $this->addSelectColumn(shopTable::getAlias($type));
         $this->setCondAlias('_id',$sid,A_SHOP);
         $this->validateConditionForShop(A_SHOP);
         $this->makeFileJoin('SHOP','col_face');
@@ -97,17 +95,15 @@ class shopLogic extends logicManager
 class shopItemLogic extends logicManager
 {
     public $isSystem = FALSE;
-    public $isLocale = FALSE;
     
     function __construct($isSystem = FALSE){
         $this->isSystem = $isSystem;
-        if(!$this->isSystem) $this->isLocale = TRUE;//TRUEの場合LOCALEの変数が必須
     }
 
     //自由アイテム系
     //fileも一緒に
     public function getOneShopItem($siid,$method = SHOP_TYPE_PRODUCT,$type = COMMON){
-        $this->addSelectColumn($this->isLocale ? shopItemTable::getLocaleAlias($type) : shopItemTable::getAlias($type));
+        $this->addSelectColumn(shopItemTable::getAlias($type));
         //$this->setCondAlias('_id',$siid,A_SHOP_ITEM);
         $this->setCondAlias('_id',$siid,A_SHOP_ITEM);
         $this->setCondAlias('col_type',$method,A_SHOP_ITEM);
@@ -128,7 +124,7 @@ class shopItemLogic extends logicManager
     
     //core
     protected function getCoreShopItem($from = 0,$to = FIRSTSP,$order = null){
-        $this->addSelectColumn($this->isLocale ? shopItemTable::getLocaleAlias() : shopItemTable::getAlias());
+        $this->addSelectColumn(shopItemTable::getAlias());
         $this->makeFileJoin('SHOP_ITEM');
         if(!is_null($order)){
             $this->addOrderColumn($order['column'],$order['desc_asc']);
@@ -153,7 +149,7 @@ class shopItemLogic extends logicManager
 
         require_once('shop/table.php');
         $this->addJoin( T_SHOP, A_SHOP.'._id = '.A_SHOP_ITEM.'.col_sid',A_SHOP,DATABASE_INNER_JOIN);
-        $this->addSelectColumn($this->isLocale ? shopTable::getLocaleAlias(COMMON) : shopTable::getAlias(COMMON));
+        $this->addSelectColumn(shopTable::getAlias(COMMON));
         if(!$this->isSystem) $this->validateCondition(A_SHOP);
 
         //return parent::getDebug(T_SHOP_ITEM);

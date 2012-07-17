@@ -13,9 +13,7 @@ class filesTable extends tableManager
             array('column'=>'extension',     'as'=>null,          'type'=>COMMON, 'input'=>FALSE),
             array('column'=>'width',         'as'=>null,          'type'=>COMMON, 'input'=>FALSE),
             array('column'=>'height',        'as'=>null,          'type'=>COMMON, 'input'=>FALSE),
-            array('column'=>'alt_ja',        'as'=>null,          'type'=>COMMON, 'input'=>FALSE),
-            array('column'=>'alt_cn',        'as'=>null,          'type'=>COMMON, 'input'=>FALSE),
-            array('column'=>'alt_tw',        'as'=>null,          'type'=>COMMON, 'input'=>FALSE)
+            array('column'=>'alt',        'as'=>null,          'type'=>COMMON, 'input'=>FALSE)
         );
     
     static public function get($type = COMMON){

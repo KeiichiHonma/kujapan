@@ -12,27 +12,21 @@ class mailTemplate
     }
 
     //ユーザー登録
-    public function makeRegistUserMail($mail,$time,$customer_no,$account,$password){
-        $this->message .= '非常感谢您本次购买“日游酷棒”优惠券任您选。'."\n\n";
+    public function makeRegistUserMail($mail,$uid){
+        $this->message .= '「日游酷棒」をご利用いただきまして、誠にありがとうございます。'."\n\n";
         
-        $this->message .= '■客户编号:'.$customer_no."\n";
-        $this->message .= '■购买日期:'.date("Y/n/d G:i",$time)."\n";
-        $this->message .= '■登录账户:'.$account."\n";
-        $this->message .= '■登录密码:'.$password."\n\n";
+        $this->message .= '【以下のURLからクーポン券の購入処理を進めてください】'."\n";
+        $this->message .= KUJAPANURLSSL.'/payment/bridge/uid/'.$uid."\n";
         
-        $this->message .= '［＊注意事项＊］'."\n";
-        $this->message .= '通过本邮件中的客户编号以及登录信息来证明您已经购买了优惠券，'."\n";
-        $this->message .= '请注意保管好这些信息。'."\n\n";
+        $this->message .= '今後とも日游酷棒をご愛顧賜りますようお願い申し上げます。'."\n\n";
         
-        $this->message .= '希望您今后能继续使用日游酷棒。 '."\n\n";
-        
-        $this->message .= '请不要直接回复本邮件，'."\n";
-        $this->message .= '如有任何问题请咨询“日游酷棒热线中心”。'."\n";
+        $this->message .= 'このメールにご返信いただいてもご返答いたしかねます。'."\n";
+        $this->message .= 'お手数ですが、以下の「お客様コンタクトセンター」よりお問い合わせください。'."\n";
         
         $this->message .= "\n\n*****************************************************************\n\n";
-        $this->message .= '日游酷棒:'.KUJAPANURL.'/'."\n";
-        $this->message .= '日游酷棒热线中心:4000-161716'."\n";
-        $this->message .= '公司名称:北京九五太维资讯有限公司';
+        $this->message .= '日游酷棒:'.KUJAPANURLSSL.'/'."\n";
+        $this->message .= 'お客様コンタクトセンター: 4000-161716'."\n";
+        $this->message .= '発信元:北京九五太维资讯有限公司';
         $this->message .= "\n\n*****************************************************************\n\n";
     }
 }

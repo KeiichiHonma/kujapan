@@ -17,7 +17,7 @@
     {include file="include/system/shop_navi.inc"}
     <h2 class="h_title">ギャラリー管理</h2>
     <p class="m_b10">以下の項目を入力して[確認画面へ]ボタンをクリックしてください。<span class="attention">＊</span>の項目は必須となります。</p>
-    <form id="couponForm" name="couponForm" action= "{$smarty.const.KUJAPANURLSSL}/system/shop/gallery/drop/input/siid/{$siid}" method="post" enctype="multipart/form-data">
+    <form id="couponForm" name="couponForm" action= "{$smarty.const.KUJAPANURLSSL}/system/shop/gallery/drop/input/sid/{$sid}/siid/{$siid}" method="post" enctype="multipart/form-data">
 
     <table id="suggest">
     <tr>
@@ -39,21 +39,11 @@
     </tr>
     </table>
 
-    {foreach from=$form key="group_name" item="form_data" name="form_data"}
-    <table id="suggest">
-    <tr>
-    <th colspan="2">{$group_name}</th>
-    </tr>
-    {foreach from=$form_data key="form_name" item="form_setting" name="form_setting"}
-    {$form_name|make_form:$form_setting:$error:$smarty.const.SMARTY_BOOL_OFF:$smarty.const.SMARTY_BOOL_ON}
-    {/foreach}
-    </table>
-    {/foreach}
-
 <div>
 </div>
     <div id="form_btn">
     <input type="hidden" name="csrf_ticket" value="{$csrf_ticket}" />
+    <input type="hidden" name="sid" value="{$sid}" />
     <input type="hidden" name="siid" value="{$siid}" />
     <input type="hidden" name="delete_section" value="delete_section" />
     <input type="hidden" name="delete_file" value="on" />

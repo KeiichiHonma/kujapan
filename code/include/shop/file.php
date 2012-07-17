@@ -16,10 +16,6 @@ class shopFile extends inputManager
     function __construct($type){
         $this->type = $type;
         switch ($type){
-/*            case SHOP_TYPE_LOGO:
-                $check_function = 'checkLogoError';
-                $this->model_name = 'shopLogo';//親クラスにセット
-            break;*/
             case SHOP_TYPE_FACE:
                 $check_function = 'checkFaceError';
                 $this->model_name = 'shopFace';//親クラスにセット
@@ -46,16 +42,8 @@ class shopFile extends inputManager
     //shop item model//////////////
     
     //updateのみ
-    public function shopLogoUpdateModel(){
-        $this->handle->updateLogoRow($this->fid);
-    }
-
-    public function shopLogoUpdateFileIdModel(){
-        $this->handle->updateLogoRow(0);//0に戻す
-    }
-
     public function shopFaceUpdateModel(){
-        $this->handle->updateFaceRow($this->fid);
+        $this->handle->updateFaceRow($_POST['sid'],$this->fid);
     }
 
     public function shopFaceUpdateFileIdModel(){
@@ -73,51 +61,12 @@ class shopItemFile extends inputManager
     function __construct($type){
         $this->type = $type;
         switch ($type){
-            case SHOP_TYPE_LOGO:
-                $check_function = 'checkLogoError';
-                $_POST['detail_ja'] = null;
-                $_POST['detail_cn'] = null;
-                $_POST['detail_tw'] = null;
-            break;
-            
-            case SHOP_TYPE_VISUAL:
-                $check_function = 'checkVisualError';
-                $_POST['detail_ja'] = null;
-                $_POST['detail_cn'] = null;
-                $_POST['detail_tw'] = null;
-            break;
-            
             case SHOP_TYPE_PRODUCT:
                 $check_function = 'checkProductError';
             break;
             
             case SHOP_TYPE_GALLERY:
                 $check_function = 'checkGalleryError';
-            break;
-            
-            case SHOP_TYPE_MAP_JA:
-                $check_function = 'checkMapError';
-                $_POST['detail_ja'] = null;
-                $_POST['detail_cn'] = null;
-                $_POST['detail_tw'] = null;
-            break;
-            case SHOP_TYPE_MAP_CN:
-                $check_function = 'checkMapError';
-                $_POST['detail_ja'] = null;
-                $_POST['detail_cn'] = null;
-                $_POST['detail_tw'] = null;
-            break;
-            case SHOP_TYPE_MAP_TW:
-                $check_function = 'checkMapError';
-                $_POST['detail_ja'] = null;
-                $_POST['detail_cn'] = null;
-                $_POST['detail_tw'] = null;
-            break;
-            case SHOP_TYPE_BARCODE:
-                $check_function = 'checkBarcodeError';
-                $_POST['detail_ja'] = null;
-                $_POST['detail_cn'] = null;
-                $_POST['detail_tw'] = null;
             break;
 
             default:
@@ -147,11 +96,11 @@ class shopItemFile extends inputManager
 
     //shop item model//////////////
     public function shopItemAddModel(){
-        $this->handle->addRow($this->type,$this->fid);
+        $this->handle->addRow($_POST['sid'],$this->type,$this->fid);
     }
 
     public function shopItemUpdateModel(){
-        $this->handle->updateRow($_POST[$this->any_key],$this->type,$this->fid);
+        $this->handle->updateRow($_POST['sid'],$_POST[$this->any_key],$this->type,$this->fid);
     }
 
     public function shopItemUpdateFileIdModel(){

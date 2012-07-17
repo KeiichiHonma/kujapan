@@ -6,7 +6,7 @@ require_once('fw/formManager.php');
 class shopForm extends formManager
 {
     function __construct(){
-        //エリア
+/*        //エリア
         require_once('area/logic.php');
         $area_logic = new areaLogic(TRUE);
         $areatmp = $area_logic->area_info;
@@ -30,7 +30,7 @@ class shopForm extends formManager
         $featuretmp = $feature_logic->feature_info;
         foreach($featuretmp as $id => $array){
             $this->feature[$id] = $array['col_name_ja'];
-        }
+        }*/
     }
     
     private $mail_remarks = '';
@@ -39,28 +39,24 @@ class shopForm extends formManager
     (
         '店舗情報'=>array
         (
-            'エリア'=>array(           'name'=>'aid',             'type'=>'select',  'func'=>'getArea',         'class'=>'',                   'maxlength'=>null,'must'=>TRUE,'front'=>'','back'=>'','remarks'=>null),
-            'ジャンル'=>array(         'name'=>'gid',             'type'=>'select',  'func'=>'getGenre',         'class'=>'',                   'maxlength'=>null,'must'=>TRUE,'front'=>'','back'=>'','remarks'=>null),
-            '店舗名（日本語）'=>array( 'name'=>'name_ja',        'type'=>'text',    'func'=>null,      'class'=>'form_text_common',null,'must'=>TRUE, 'front'=>'','back'=>'','remarks'=>''),
-            '店舗名（簡体字）'=>array( 'name'=>'name_cn',        'type'=>'text',    'func'=>null,      'class'=>'form_text_common',null,'must'=>TRUE, 'front'=>'','back'=>'','remarks'=>''),
-            '店舗名（繁体字）'=>array( 'name'=>'name_tw',        'type'=>'text',    'func'=>null,      'class'=>'form_text_common',null,'must'=>TRUE, 'front'=>'','back'=>'','remarks'=>''),
-
-            '詳細（日本語）'=>array(    'name'=>'detail_ja',               'type'=>'textarea','func'=>null,                 'class'=>'form_textarea_little','maxlength'=>null,'must'=>TRUE, 'front'=>'','back'=>'', 'remarks'=>null),
-            '詳細（簡体字）'=>array(    'name'=>'detail_cn',               'type'=>'textarea','func'=>null,                 'class'=>'form_textarea_little','maxlength'=>null,'must'=>TRUE, 'front'=>'','back'=>'', 'remarks'=>null),
-            '詳細（繁体字）'=>array(    'name'=>'detail_tw',               'type'=>'textarea','func'=>null,                 'class'=>'form_textarea_little','maxlength'=>null,'must'=>TRUE, 'front'=>'','back'=>'', 'remarks'=>null),
-
-            '住所（日本語）'=>array(    'name'=>'address_ja',               'type'=>'textarea','func'=>null,                 'class'=>'form_textarea_little_height','maxlength'=>null,'must'=>TRUE, 'front'=>'','back'=>'', 'remarks'=>null),
-            '住所（簡体字）'=>array(    'name'=>'address_cn',               'type'=>'textarea','func'=>null,                 'class'=>'form_textarea_little_height','maxlength'=>null,'must'=>TRUE, 'front'=>'','back'=>'', 'remarks'=>null),
-            '住所（繁体字）'=>array(    'name'=>'address_tw',               'type'=>'textarea','func'=>null,                 'class'=>'form_textarea_little_height','maxlength'=>null,'must'=>TRUE, 'front'=>'','back'=>'', 'remarks'=>null),
-
-            '営業時間（日本語）'=>array('name'=>'open_hour_ja',               'type'=>'textarea','func'=>null,                 'class'=>'form_textarea_little_height','maxlength'=>null,'must'=>TRUE, 'front'=>'','back'=>'', 'remarks'=>null),
-            '営業時間（簡体字）'=>array('name'=>'open_hour_cn',               'type'=>'textarea','func'=>null,                 'class'=>'form_textarea_little_height','maxlength'=>null,'must'=>TRUE, 'front'=>'','back'=>'', 'remarks'=>null),
-            '営業時間（繁体字）'=>array('name'=>'open_hour_tw',               'type'=>'textarea','func'=>null,                 'class'=>'form_textarea_little_height','maxlength'=>null,'must'=>TRUE, 'front'=>'','back'=>'', 'remarks'=>null),
-
-            '定休日（日本語）'=>array(  'name'=>'holiday_ja',               'type'=>'textarea','func'=>null,                 'class'=>'form_textarea_little_height','maxlength'=>null,'must'=>TRUE, 'front'=>'','back'=>'', 'remarks'=>null),
-            '定休日（簡体字）'=>array(  'name'=>'holiday_cn',               'type'=>'textarea','func'=>null,                 'class'=>'form_textarea_little_height','maxlength'=>null,'must'=>TRUE, 'front'=>'','back'=>'', 'remarks'=>null),
-            '定休日（繁体字）'=>array(  'name'=>'holiday_tw',               'type'=>'textarea','func'=>null,                 'class'=>'form_textarea_little_height','maxlength'=>null,'must'=>TRUE, 'front'=>'','back'=>'', 'remarks'=>null),
-            'ホームページ'=>array(      'name'=>'url',         'type'=>'text',    'func'=>null,      'class'=>'form_text_common','maxlength'=>null,'must'=>FALSE, 'front'=>'','back'=>'','remarks'=>'')
+            '店舗名'=>array( 'name'=>'name',        'type'=>'text',    'func'=>null,      'class'=>'form_text_common',null,'must'=>TRUE, 'front'=>'','back'=>'','remarks'=>''),
+            '店舗詳細'=>array(    'name'=>'detail',               'type'=>'textarea','func'=>null,                 'class'=>'form_textarea_little','maxlength'=>null,'must'=>TRUE, 'front'=>'','back'=>'', 'remarks'=>null),
+            '住所'=>array(    'name'=>'address',               'type'=>'textarea','func'=>null,                 'class'=>'form_textarea_little_height','maxlength'=>null,'must'=>TRUE, 'front'=>'','back'=>'', 'remarks'=>null),
+            'マップ用'=>array(    'name'=>'map',               'type'=>'textarea','func'=>null,                 'class'=>'form_textarea_little_height','maxlength'=>null,'must'=>TRUE, 'front'=>'','back'=>'', 'remarks'=>null),
+            '営業時間'=>array('name'=>'open_hour',               'type'=>'textarea','func'=>null,                 'class'=>'form_textarea_little_height','maxlength'=>null,'must'=>TRUE, 'front'=>'','back'=>'', 'remarks'=>null),
+            '定休日'=>array(  'name'=>'holiday',               'type'=>'textarea','func'=>null,                 'class'=>'form_textarea_little_height','maxlength'=>null,'must'=>TRUE, 'front'=>'','back'=>'', 'remarks'=>null),
+            '備考'=>array(  'name'=>'remarks',               'type'=>'textarea','func'=>null,                 'class'=>'form_textarea_little_height','maxlength'=>null,'must'=>TRUE, 'front'=>'','back'=>'', 'remarks'=>null),
+            'ホームページ'=>array(      'name'=>'url',         'type'=>'text',    'func'=>null,      'class'=>'form_text_common','maxlength'=>null,'must'=>FALSE, 'front'=>'','back'=>'','remarks'=>''),
+            
+            //ここからクーポン
+            'クーポンタイトル'=>array( 'name'=>'c_title',        'type'=>'text',    'func'=>null,      'class'=>'form_text_common',null,'must'=>TRUE, 'front'=>'','back'=>'','remarks'=>''),
+            'クーポンヘッダー'=>array( 'name'=>'c_header',        'type'=>'textarea',    'func'=>null,      'class'=>'form_textarea_little_height',null,'must'=>TRUE, 'front'=>'','back'=>'','remarks'=>''),
+            'クーポン詳細'=>array( 'name'=>'c_detail',        'type'=>'textarea',    'func'=>null,      'class'=>'form_textarea_little_height',null,'must'=>TRUE, 'front'=>'','back'=>'','remarks'=>''),
+            'クーポン価格'=>array( 'name'=>'c_price',        'type'=>'text',    'func'=>null,      'class'=>'form_text_common',null,'must'=>TRUE, 'front'=>'','back'=>'','remarks'=>''),
+            'クーポン通常価格'=>array( 'name'=>'c_usual_price',        'type'=>'text',    'func'=>null,      'class'=>'form_text_common',null,'must'=>TRUE, 'front'=>'','back'=>'','remarks'=>''),
+            'クーポン割引率'=>array( 'name'=>'c_discount_rate',        'type'=>'text',    'func'=>null,      'class'=>'form_text_common',null,'must'=>TRUE, 'front'=>'','back'=>'','remarks'=>''),
+            'クーポン割引額'=>array( 'name'=>'c_discount_value',        'type'=>'text',    'func'=>null,      'class'=>'form_text_common',null,'must'=>TRUE, 'front'=>'','back'=>'','remarks'=>''),
+            'クーポン利用条件'=>array( 'name'=>'c_condition',        'type'=>'textarea',    'func'=>null,      'class'=>'form_textarea_little_height',null,'must'=>TRUE, 'front'=>'','back'=>'','remarks'=>''),
         )
     );
 

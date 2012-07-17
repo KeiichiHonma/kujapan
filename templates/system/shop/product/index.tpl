@@ -32,7 +32,7 @@
         ありません。
         {/if}
         </td>
-        <th class="title">詳細（日本語）</th><td class="data">{$value.col_detail_ja}</td>
+        <th class="title">詳細（日本語）</th><td class="data">{$value.col_detail}</td>
         </tr>
         
         <tr>

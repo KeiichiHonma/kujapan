@@ -31,7 +31,7 @@
         <a href="{$smarty.const.KUJAPANURLSSL}/system/shop/product/edit/input/siid/{$value.shop_item_id}/sid/{$value.col_sid}">変更</a>&nbsp;|&nbsp;<a href="{$smarty.const.KUJAPANURLSSL}/system/shop/product/edit/drop/siid/{$value.shop_item_id}/sid/{$value.col_sid}">削除</a>&nbsp;|&nbsp;<a href="{$smarty.const.KUJAPANURLSSL}/system/shop/product/reuse/input/siid/{$value.shop_item_id}/sid/{$value.col_sid}">再利用</a>
         
         </td>
-        <td>{$value.col_name_ja}</td>
+        <td>{$value.col_name}</td>
         <td>{$value.col_detail_ja|make_strim:80}</td>
         </tr>
 {/foreach}

@@ -32,7 +32,7 @@
 {foreach from=$group key="key" item="value" name="group"}
         <tr>
         <td width="120" class="title"><a href="{$smarty.const.KUJAPANURLSSL}/system/group/view/grid/{$value.group_id}">詳細</a></td>
-        <td>{$value.col_name_ja}</td>
+        <td>{$value.col_name}</td>
         </tr>
 {/foreach}
 {else}

@@ -2,11 +2,11 @@
 /* SUB */
 /* SUB FOR TOP PAGE */
 #sub{
-width:300px;
-float:left;
-padding-left:20px;
-margin-bottom:50px;
-padding-right:10px;
+    width:300px;
+    float:left;
+    padding-left:20px;
+    margin-bottom:50px;
+    padding-right:10px;
 }
 
 #sub img{

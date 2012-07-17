@@ -66,7 +66,7 @@ if ( $con->isPost ){
 }
 
 //position 店舗及びADMINで見るページが違います
-systemPosition::makeShopPosition($shop[0]['col_name_ja']);
+systemPosition::makeShopPosition($shop[0]['col_name']);
 
 //共通処理////////////////////////
 

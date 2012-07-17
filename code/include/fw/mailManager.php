@@ -190,29 +190,112 @@ class mailManager
 
     //基本処理///////////////////////////////////////////////////////////////////////////////////////
     //登録
-    public function sendRegistUser($mail,$time,$customer_no,$account,$password){
+    public function sendRegistUser($mail,$uid){
         $this->callTemplate();//言語チェック
         $this->setRegistTo($mail);
         
-        $this->mail->subject($this->mail_template->makeRegistSubject());
+        $this->mail->subject('[日游酷棒]感谢您的购买');
+
+        $message .= '「日游酷棒」をご利用いただきまして、誠にありがとうございます。'."\n\n";
         
-        $this->mail_template->makeRegistUserMail($mail,$time,$customer_no,$account,$password);
+        $message .= '【以下のURLからクーポン券の購入処理を進めてください】'."\n";
+        $message .= KUJAPANURLSSL.'/payment/bridge/uid/'.$uid."\n";
         
-        $this->mail->text($this->mail_template->message);
+        $message .= '今後とも日游酷棒をご愛顧賜りますようお願い申し上げます。'."\n\n";
+        
+        $message .= 'このメールにご返信いただいてもご返答いたしかねます。'."\n";
+        $message .= 'お手数ですが、以下の「お客様コンタクトセンター」よりお問い合わせください。'."\n";
+        
+        $message .= "\n\n*****************************************************************\n\n";
+        $message .= '日游酷棒:'.KUJAPANURLSSL.'/'."\n";
+        $message .= 'お客様コンタクトセンター: 4000-161716'."\n";
+        $message .= '発信元:北京九五太维资讯有限公司';
+        $message .= "\n\n*****************************************************************\n\n";
+
+        $this->mail->text($message);
+
+        $this->setFrom();
+        $this->mail->send();
+        $this->append();
+    }
+
+    public function sendRegistAdmin($mail,$uid){
+        $this->callTemplate();//言語チェック
+        $this->setAdminTo();
+        
+        $this->mail->subject('kujapan.com:メールアドレス登録連絡');
+
+        $message .= "関係者各位\n\n";
+        $message .= 'メールアドレスの登録が行われました。'."\n\n";
+
+        $message .= '●登録日時'."\n";
+        $message .= date("Y/n/d G:i",time())."\n\n";
+
+        $message .= '●メールアドレス'."\n";
+        $message .= $mail."\n\n";
+
+        $message .= '●ユーザーID'."\n";
+        $message .= $uid."\n\n";
+
+        $this->mail->text($message);
         
         $this->setFrom();
         $this->mail->send();
         $this->append();
     }
 
-    public function sendRegistAdmin($alipay_param,$time,$customer_no,$account){
+    public function sendCouponUser($user,$shop){
+        $this->callTemplate();//言語チェック
+        $this->setRegistTo($user[0]['col_mail']);
+        
+        $this->mail->subject('[日游酷棒]感谢您的购买');
+        
+        $message .= '「日游酷棒」をご利用いただきまして、誠にありがとうございます。'."\n\n";
+        
+        $message .= "\n\n*****************************************************************\n\n";
+
+        $address = urlencode($shop[0]['col_address']);
+        $map = 'http://maps.google.co.jp/maps?hl=en&ie=UTF8&z=15&q='.$address;
+
+        $message .= '【'. $shop[0]['col_name'].':クーポン券】'."\n";
+        $message .= $shop[0]['col_c_title']."\n";
+        $message .= $shop[0]['col_c_detail']."\n";
+        $message .= $shop[0]['col_c_usual_price']."\n";
+        $message .= $shop[0]['col_c_discount_rate']."\n";
+        $message .= $shop[0]['col_c_discount_value']."\n";
+        $message .= $shop[0]['col_c_condition']."\n\n";
+        
+        $message .= 'map'."\n";
+        $message .= $map."\n\n";
+        
+        $message .= "\n\n*****************************************************************\n\n";
+        
+        $message .= '今後とも日游酷棒をご愛顧賜りますようお願い申し上げます。'."\n\n";
+        
+        $message .= 'このメールにご返信いただいてもご返答いたしかねます。'."\n";
+        $message .= 'お手数ですが、以下の「お客様コンタクトセンター」よりお問い合わせください。'."\n";
+        
+        
+        $message .= '日游酷棒:'.KUJAPANURL.'/'."\n";
+        $message .= 'お客様コンタクトセンター: 4000-161716'."\n";
+        $message .= '発信元:北京九五太维资讯有限公司';
+        
+
+        $this->mail->text($message);
+        
+        $this->setFrom();
+        $this->mail->send();
+        $this->append();
+    }
+
+    public function sendCouponAdmin($user,$shop,$alipay_param){
         $this->callTemplate();//言語チェック
         $this->setAdminTo();
         
         $this->mail->subject($this->mail_template->makeRegistAdminSubject());
 
         $message .= "関係者各位\n\n";
-        $message .= '決済がありました。'."\n\n";
+        $message .= 'クーポン発行(決済)がありました。'."\n\n";
 
         $message .= "決済情報----------------------------------------------------\n";
         $message .= '●決済日時'."\n";
@@ -221,14 +304,18 @@ class mailManager
         $message .= '●アリペイ取引番号'."\n";
         $message .= $alipay_param['trade_no']['param']."\n\n";
 
-        $message .= '●お客様メールアドレス'."\n";
-        $message .= $alipay_param['buyer_email']['param']."\n\n";
+        $message .= '●ユーザーメールアドレス'."\n";
+        $message .= $user[0]['col_mail']."\n\n";
 
-        $message .= '●お客様番号'."\n\n";
-        $message .= $customer_no."\n";
+        $message .= '●ユーザーID'."\n";
+        $message .= $user[0]['_id']."\n\n";
 
-        $message .= '●ログインアカウント'."\n\n";
-        $message .= $account;
+        $message .= '●店舗名'."\n";
+        $message .= $shop[0]['col_name']."\n\n";
+
+        $message .= '●クーポン名'."\n";
+        $message .= $shop[0]['col_c_title']."\n\n";
+
 
         $this->mail->text($message);
         

@@ -28,7 +28,7 @@
             {if $smarty.const.LOCALE == "tw"}
             {mailto address="info@kujapan.net" encode="hex" text="info@kujapan.net"}
             {else}
-            {$locale.telephone}
+            021-34230207
             {/if}
             </td><td>{$locale.contact_opening_time}</td><td>{$locale.contact_detail}</td>
             </tr>

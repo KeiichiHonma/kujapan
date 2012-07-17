@@ -19,47 +19,11 @@
     <div id="wrapper">
       <div id="container">
 {*ロゴ、グローバルナビ*}
-{include file="include/header/header.inc"}
+{include file="include/header/header2.inc"}
 <div id="payment">
     <div id="payment2">
         <img src="/locale/{$smarty.const.LOCALE}/img/payment/thanks_title.gif" alt="" height="26" width="620">
-        <br />{$locale.finish_message}
-        <table class="attention">
-        <tbody>
-        <tr>
-            <td colspan="3" bgcolor="#e60101"><img src="/img/payment/shim.gif" height="1" width="2"></td>
-        </tr>
-        <tr>
-            <td bgcolor="#e60101" width="1"><img src="/img/payment/shim.gif" height="2" width="1"></td>
-            <td align="center" bgcolor="#ffe6e6" height="58" width="408">
-                <table border="0" cellpadding="0" cellspacing="0" id="attention">
-                <tbody>
-                <tr>
-                    <td align="right">{$locale.customer_no}&nbsp;:&nbsp;</td>
-                    <td align="left"><b>{$customer_no}</b></td>
-                </tr>
-                <tr>
-                    <td align="right">{$locale.buy_time}&nbsp;:&nbsp;</td>
-                    <td align="left">{$buy_time|make_date:"Y/n/d G:i"}</td>
-                </tr>
-                <tr>
-                    <td align="right">{$locale.login_account}&nbsp;:&nbsp;</td>
-                    <td align="left"><b>{$login_account}</b></td>
-                </tr>
-                <tr>
-                    <td align="right" class="last">{$locale.login_password}&nbsp;:&nbsp;</td>
-                    <td align="left" class="last"><b>{$login_password}</b></td>
-                </tr>
-                </tbody>
-                </table>
-            </td>
-            <td bgcolor="#e60101" width="1"><img src="/img/payment/shim.gif" height="2" width="1"></td>
-        </tr>
-        <tr>
-            <td colspan="3" bgcolor="#e60101"><img src="/img/payment/shim.gif" height="1" width="2"></td>
-        </tr>
-        </tbody>
-        </table>
+        <br />発行したクーポンメールをご登録いただいたメールアドレス宛てにお送りしました。
 
         <div id="payment_confirm">
             <div id="payment_confirm2">
@@ -76,23 +40,7 @@
                 <img src="/locale/{$smarty.const.LOCALE}/img/payment/confirm.jpg" height="170" width="620">
             </div>
 {if !$maintenance}
-        <table class="btn">
-        <tbody>
-        <tr>
-            <td align="center">
-                    <form action="{$smarty.const.KUJAPANURLSSL}{$smarty.server.REQUEST_URI}" method="post">
-                      <p class="mt_15">
-                        <input type="hidden" name="csrf_ticket" value="{$csrf_ticket}" />
-                        <input type="hidden" name="auth" value="login" />
-                        <input type="hidden" name="account" value="{$login_account}" />
-                        <input type="hidden" name="password" value="{$login_password}" />
-                        <input type="image" src="/locale/{$smarty.const.LOCALE}/img/button/top_login_bt.gif"  class="btn" value="submit" />
-                      </p>
-                    </form>
-            </td>
-        </tr>
-        </tbody>
-        </table>
+
 {else}
         <table class="maintenance">
         <tbody>

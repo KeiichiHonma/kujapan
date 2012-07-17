@@ -13,9 +13,7 @@ class filesParameter extends parameterManager
     public $file_height  = 0;
     public $dir_file;
     public $ext = '';
-    public $alt_ja = '';
-    public $alt_cn = '';
-    public $alt_tw = '';
+    public $alt = '';
     
     function __construct($upload_file,$loop_number){
         $this->initFiles();//初期化
@@ -44,16 +42,10 @@ class filesParameter extends parameterManager
             //ファイルの立幅
             $this->file_height = $ary_image_size['1'];
             //alt.3言語あることに注意
-            //$this->alt = is_null($alt) ? $fname : $alt;
-            if(isset($_POST['alt_'.LOCALE_JA])) $this->alt_ja = $_POST['alt_'.LOCALE_JA];
-            if(isset($_POST['alt_'.LOCALE_CN])) $this->alt_cn = $_POST['alt_'.LOCALE_CN];
-            if(isset($_POST['alt_'.LOCALE_TW])) $this->alt_tw = $_POST['alt_'.LOCALE_TW];
+            if(isset($_POST['alt'])) $this->alt = $_POST['alt'];
         }else{
             //alt
-            //$this->alt = $alt;
-            if(isset($_POST['alt_'.LOCALE_JA])) $this->alt_ja = $_POST['alt_'.LOCALE_JA];
-            if(isset($_POST['alt_'.LOCALE_CN])) $this->alt_cn = $_POST['alt_'.LOCALE_CN];
-            if(isset($_POST['alt_'.LOCALE_TW])) $this->alt_tw = $_POST['alt_'.LOCALE_TW];
+            if(isset($_POST['alt'])) $this->alt = $_POST['alt'];
         }
 
     }
@@ -95,9 +87,7 @@ class filesParameter extends parameterManager
             $this->parameter['width'] = $this->file_width;
             $this->parameter['height'] = $this->file_height;
         }
-        $this->parameter['alt_ja'] = $this->alt_ja;
-        $this->parameter['alt_cn'] = $this->alt_cn;
-        $this->parameter['alt_tw'] = $this->alt_tw;
+        $this->parameter['alt'] = $this->alt;
     }
 }
 ?>

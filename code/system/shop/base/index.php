@@ -2,19 +2,6 @@
 //--[ 前処理 ]--------------------------------------------------------------
 require_once('shop/prepend.php');
 
-
-//logoの存在チェック
-$logo_m = file_exists($_SERVER['DOCUMENT_ROOT'].LOGO_PATH.$shop[0]['_id'].'m.gif');//ミドルサイズ
-
-if($logo_m){
-    $con->t->assign('logo_m',$logo_m);
-}
-
-$logo_s = file_exists($_SERVER['DOCUMENT_ROOT'].LOGO_PATH.$shop[0]['_id'].'s.gif');//リトルサイズ
-if($logo_s){
-    $con->t->assign('logo_s',$logo_s);
-}
-
 //face画像
 require_once('file/logic.php');
 $file_logic = new filesLogic();
@@ -37,33 +24,26 @@ $form->assignProfileForm();
 
 $_POST['aid'] = $shop[0]['col_aid'];
 $_POST['gid'] = $shop[0]['col_gid'];
-utilManager::setLocalePostPram('name',$shop[0]);
-utilManager::setLocalePostPram('detail',$shop[0]);
-utilManager::setLocalePostPram('address',$shop[0]);
-$_POST['google_map'] = $shop[0]['col_google_map'];
-utilManager::setLocalePostPram('open_hour',$shop[0]);
-utilManager::setLocalePostPram('holiday',$shop[0]);
-utilManager::setLocalePostPram('comment',$shop[0]);
+$_POST['name'] = $shop[0]['col_name'];
+$_POST['detail'] = $shop[0]['col_detail'];
+$_POST['address'] = $shop[0]['col_address'];
+$_POST['map'] = $shop[0]['col_map'];
+$_POST['open_hour'] = $shop[0]['col_open_hour'];
+$_POST['holiday'] = $shop[0]['col_holiday'];
 $_POST['url'] = $shop[0]['col_url'];
-utilManager::setLocalePostPram('remark',$shop[0]);
-//feature
-require_once('feature/logic.php');
-$feature_logic = new featureLogic(TRUE);
+$_POST['remarks'] = $shop[0]['col_remarks'];
 
-$unserialize = unserialize($shop[0]['col_setting']);
+$_POST['c_title'] = $shop[0]['col_c_title'];
+$_POST['c_header'] = $shop[0]['col_c_header'];
+$_POST['c_detail'] = $shop[0]['col_c_detail'];
+$_POST['c_price'] = $shop[0]['col_c_price'];
+$_POST['c_usual_price'] = $shop[0]['col_c_usual_price'];
+$_POST['c_discount_rate'] = $shop[0]['col_c_discount_rate'];
+$_POST['c_discount_value'] = $shop[0]['col_c_discount_value'];
+$_POST['c_condition'] = $shop[0]['col_c_condition'];
 
-if($feature = $unserialize['feature']){
-    foreach ($feature_logic->feature_info as $feid => $value){
-        if(in_array($feid,$feature)){
-            $feature_name[] = $value['col_name_ja'];
-        }
-    }
-    $con->t->assign('feature_name',implode(',',$feature_name));
-}
-
-//学校及びADMINで見るページが違います
 //position
-systemPosition::makeShopPosition($shop[0]['col_name_ja']);
+systemPosition::makeShopPosition($shop[0]['col_name']);
 
 
 $con->append();

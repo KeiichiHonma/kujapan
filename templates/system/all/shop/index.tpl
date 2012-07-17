@@ -18,14 +18,14 @@
         <h2 class="h_title">店舗管理</h2>
         <div id="infomation">
         <ul>
-        <li>※店舗追加はマネージャの追加から</li>
+        <li><a href="{$smarty.const.KUJAPANURLSSL}/system/shop/base/entry/input">基本情報の変更</a></li>
         </ul>
         </div>
 <h2 class="h_title">店舗一覧</h2>
 {if $shop}
         <table border="0" cellpadding="0" cellspacing="0" id="qatable_l">
         <tr>
-        <th width="250" class="p_l10">操作</th>
+        <th class="p_l10">操作</th>
         <th width="80">有効/無効</th>
         <th>id</th>
         <th>店舗名</th>
@@ -33,8 +33,8 @@
 {include file="include/system/sp.inc"}
 {foreach from=$shop key="key" item="value" name="shop"}
         <tr>
-        <td width="300" class="title">
-        <a href="{$smarty.const.KUJAPANURLSSL}/system/shop/base/index/sid/{$value.shop_id}">基本情報</a>&nbsp;|&nbsp;<a href="{$smarty.const.KUJAPANURLSSL}/system/shop/group/index/sid/{$value.shop_id}">グループ</a>&nbsp;|&nbsp;<a href="{$smarty.const.KUJAPANURLSSL}/system/shop/gallery/index/sid/{$value.shop_id}">ギャラリー</a>&nbsp;|&nbsp;<a href="{$smarty.const.KUJAPANURLSSL}/system/shop/product/index/sid/{$value.shop_id}">商品</a>&nbsp;|&nbsp;<a href="{$smarty.const.KUJAPANURLSSL}/system/shop/coupon/index/sid/{$value.shop_id}">クーポン</a>&nbsp;|&nbsp;<a href="{$smarty.const.KUJAPANURLSSL}/system/shop/map/index/sid/{$value.shop_id}">地図</a>
+        <td class="title">
+        <a href="{$smarty.const.KUJAPANURLSSL}/system/shop/base/index/sid/{$value.shop_id}">詳細</a>&nbsp;|&nbsp;<a href="{$smarty.const.KUJAPANURLSSL}/system/shop/gallery/index/sid/{$value.shop_id}">ギャラリー</a>
         </td>
          <td width="80">
 {if strcasecmp($value.shop_validate,$smarty.const.VALIDATE_ALLOW) == 0}
@@ -44,7 +44,7 @@
 {/if}
         </td>
         <td>{$value.shop_id}</td>
-        <td>{$value.col_name_ja}</td>
+        <td>{$value.col_name}</td>
         </tr>
 {/foreach}
         </table>

@@ -196,7 +196,7 @@ class commonPosition extends positionManager
                 'func'=>null,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>null
             ),
         ),
-    'initialize'=>array
+    'mail'=>array
         (
             'input'=>array
             (

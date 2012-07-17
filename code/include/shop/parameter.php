@@ -8,6 +8,11 @@ class shopParameter extends parameterManager
         $this->setParameter($mid);
     }
 
+    public function setProfileAdd($sid){
+        parent::readyUpdateParameter($sid);
+        $this->setProfileParameter();
+    }
+
     //ユーザー登録時の情報。空及び無効状態で
     public function setAddForManager($mid,$name){
         parent::readyAddParameter();
@@ -30,9 +35,8 @@ class shopParameter extends parameterManager
         $this->setParameter($mid);
     }
 
-    public function setProfileUpdate(){
-        global $manager_auth;
-        parent::readyUpdateParameter($manager_auth->sid);
+    public function setProfileUpdate($sid){
+        parent::readyUpdateParameter($sid);
         $this->setProfileParameter();
     }
 
@@ -53,9 +57,8 @@ class shopParameter extends parameterManager
         $this->setLogoParameter($fid);
     }*/
 
-    public function setFaceUpdate($fid){
-        global $manager_auth;
-        parent::readyUpdateParameter($manager_auth->sid);
+    public function setFaceUpdate($sid,$fid){
+        parent::readyUpdateParameter($sid);
         $this->setFaceParameter($fid);
     }
 
@@ -105,14 +108,14 @@ class shopParameter extends parameterManager
 
 class shopItemParameter extends parameterManager
 {
-    public function setAdd($type,$fid){
+    public function setAdd($sid,$type,$fid){
         parent::readyAddParameter();
-        $this->setParameter($type,$fid);
+        $this->setParameter($sid,$type,$fid);
     }
 
-    public function setUpdate($siid,$type,$fid){
+    public function setUpdate($sid,$siid,$type,$fid){
         parent::readyUpdateParameter($siid);
-        $this->setParameter($type,$fid);
+        $this->setParameter($sid,$type,$fid);
     }
 
     public function setFileIdUpdate($siid,$fid){
@@ -125,13 +128,12 @@ class shopItemParameter extends parameterManager
     }
 
     //checkが済んでいる前提なのでNOチェック
-    public function setParameter($type,$fid){
-        global $manager_auth;
+    public function setParameter($sid,$type,$fid){
         $columns = shopItemTable::getInput();//特殊な形できます
         foreach($columns as $column){
             $this->parameter[$column] = $_POST[$column];
         }
-        $this->parameter['sid'] = $manager_auth->sid;
+        $this->parameter['sid'] = $sid;
         if(!is_null($fid)) $this->parameter['fid'] = $fid;//テキストのみの更新
         $this->parameter['type'] = $type;
     }

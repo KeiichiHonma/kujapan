@@ -9,8 +9,14 @@ class userParameter extends parameterManager
     public $password;
     public $buy_time;
     public $auth;
-    
-    public function setAdd($alipay_param){
+
+    public function setAdd($mail,$sid){
+        parent::readyAddParameter();
+        $this->parameter['mail'] = $mail;
+        $this->parameter['sid'] = $sid;
+    }
+
+/*    public function setAdd($alipay_param){
         $this->buy_time = time();
         parent::readyAddParameter(TRUE,$this->buy_time);
         $this->parameter['customer_no'] = '';
@@ -30,6 +36,14 @@ class userParameter extends parameterManager
         }
         $this->parameter['last_login'] = 0;//後で更新
         $this->parameter['validate_time'] = 0;//開始はまだ
+        $this->parameter['validate'] = VALIDATE_ALLOW;
+    }*/
+
+    public function setUpdateAlipay($uid,$alipay_param){
+        parent::readyUpdateParameter($uid);
+        foreach ($alipay_param as $name => $value){
+            $this->parameter[$name] = $value['param'];
+        }
         $this->parameter['validate'] = VALIDATE_ALLOW;
     }
 

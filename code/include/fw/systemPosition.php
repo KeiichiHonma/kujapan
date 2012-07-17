@@ -15,28 +15,6 @@ class systemPosition extends positionManager
             'index'=>array('name'=>'アリペイデバッグ','func'=>null,'access'=>TYPE_M_ADMIN,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'index'),
             'alipayto'=>array('name'=>'アリペイデバッグ','func'=>null,'access'=>TYPE_M_ADMIN,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'index')
             ),
-        'manager'=>array
-            (
-            'index'=>array('name'=>'マネージャー管理','func'=>null,'access'=>TYPE_M_ADMIN,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'manager'),
-            'view'=>array('name'=>'マネージャー詳細','func'=>null,'access'=>TYPE_M_ADMIN,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'manager'),
-            'change'=>array('name'=>'店舗にログイン','func'=>null,'access'=>TYPE_M_ADMIN,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'manager'),
-            'entry'=>array
-                (
-                'input'=>array('name'=>'マネージャー追加','func'=>null,'access'=>TYPE_M_ADMIN,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'manager')
-                ),
-            'edit'=>array
-                (
-                'input'=>array('name'=>'マネージャー変更','func'=>null,'access'=>TYPE_M_ADMIN,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'manager'),
-                'password'=>array
-                    (
-                    'input'=>array('name'=>'パスワード変更','func'=>null,'access'=>TYPE_M_ADMIN,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'manager')
-                    )
-                ),
-            'drop'=>array
-                (
-                'input'=>array('name'=>'マネージャー削除','func'=>null,'access'=>TYPE_M_ADMIN,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'manager')
-                )
-            ),
         'user'=>array
             (
             'index'=>array('name'=>'ユーザー管理','func'=>null,'access'=>TYPE_M_SUPPORT,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'user'),
@@ -64,12 +42,6 @@ class systemPosition extends positionManager
                     ),
                 )
             ),
-        'coupon'=>array
-            (
-            'index'=>array('name'=>'クーポン管理','func'=>null,'access'=>TYPE_M_SUPPORT,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'coupon'),
-            'view'=>array('name'=>'クーポン詳細','func'=>null,'access'=>TYPE_M_SUPPORT,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'coupon'),
-            'search'=>array('name'=>'クーポン検索','func'=>null,'access'=>TYPE_M_SUPPORT,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'coupon')
-            ),
         'all'=>array
             (
             'shop'=>array
@@ -95,7 +67,8 @@ class systemPosition extends positionManager
             ),
         'shop'=>array
             (
-            'index'=>array('name'=>'店舗トップ','func'=>null,'access'=>TYPE_M_ADMIN,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'shop'),
+            'index'=>array('name'=>'店舗一覧','func'=>null,'access'=>TYPE_M_ADMIN,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'shop'),
+            'view'=>array('name'=>'店舗詳細','func'=>null,'access'=>TYPE_M_ADMIN,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'shop'),
             'logout'=>array('name'=>'管理画面ログアウト','func'=>null,'access'=>TYPE_M_MANAGER,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>null),
             'validate'=>array('name'=>'店舗テータス変更','func'=>null,'access'=>TYPE_M_ADMIN,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'shop'),
             'login'=>array
@@ -113,33 +86,21 @@ class systemPosition extends positionManager
             'base'=>array
                 (
                 'index'=>array('name'=>'店舗基本情報','func'=>null,'access'=>TYPE_M_ADMIN,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'shop_base'),
-                'logo_s'=>array
-                    (
-                    'input'=>array('name'=>'ロゴ(小)画像変更','func'=>null,'access'=>TYPE_M_ADMIN,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'shop_base')
-                    ),
-                'logo_m'=>array
-                    (
-                    'input'=>array('name'=>'ロゴ(中)画像変更','func'=>null,'access'=>TYPE_M_ADMIN,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'shop_base')
-                    ),
                 'face'=>array
                     (
                     'input'=>array('name'=>'外観(小)画像変更','func'=>null,'access'=>TYPE_M_ADMIN,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'shop_base')
                     ),
-                'visual'=>array
-                    (
-                    'input'=>array('name'=>'外観(大)画像変更','func'=>null,'access'=>TYPE_M_ADMIN,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'shop_base')
-                    ),
-                'barcode'=>array
-                    (
-                    'input'=>array('name'=>'バーコード画像変更','func'=>null,'access'=>TYPE_M_ADMIN,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'shop_base')
-                    ),
-                'feature'=>array
-                    (
-                    'input'=>array('name'=>'特徴変更','func'=>null,'access'=>TYPE_M_ADMIN,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'shop_base')
-                    ),
                 'profile'=>array
                     (
                     'input'=>array('name'=>'情報変更','func'=>null,'access'=>TYPE_M_ADMIN,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'shop_base')
+                    ),
+                'entry'=>array
+                    (
+                    'input'=>array('name'=>'店舗追加','func'=>null,'access'=>TYPE_M_ADMIN,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'shop_base')
+                    ),
+                'edit'=>array
+                    (
+                    'input'=>array('name'=>'店舗変更','func'=>null,'access'=>TYPE_M_ADMIN,'ssl'=>TRUE,'gnavi'=>null,'snavi'=>'shop_base')
                     )
                 ),
             'group'=>array

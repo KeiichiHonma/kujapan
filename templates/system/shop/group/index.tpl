@@ -26,7 +26,7 @@
         {if $shop_group}
         {foreach from=$shop_group key="key" item="value" name="shop_group"}
         <tr>
-        <td>{$value.col_name_ja}</td>
+        <td>{$value.col_name}</td>
         </tr>
         {/foreach}
         {else}

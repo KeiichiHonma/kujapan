@@ -1,23 +1,19 @@
 <?php
 //--[ 前処理 ]--------------------------------------------------------------
 require_once('shop/prepend.php');
-
-//form情報アサイン
-require_once('shop/form.php');
-$form = new shopItemForm(SHOP_TYPE_GALLERY);
-$form->assignForm();
+$sid = $con->base->getPath('sid',TRUE);//リダイレクトあり
 
 $page = 'input';
 if ( $con->isPost ){
     require_once('shop/file.php');
     $shop_file = new shopItemFile(SHOP_TYPE_GALLERY);
-    if($shop_file->is_result) $con->safeExitRedirect('/system/shop/gallery/',TRUE);
+    if($shop_file->is_result) $con->safeExitRedirect('/system/shop/gallery/index/sid/'.$sid,TRUE);
 }else{
 
 }
 
 //position 店舗及びADMINで見るページが違います
-systemPosition::makeShopPosition($shop[0]['col_name_ja']);
+systemPosition::makeShopPosition($shop[0]['col_name']);
 
 //共通処理////////////////////////
 

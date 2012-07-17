@@ -52,7 +52,7 @@
                 <select style="width:200px;height:200px;" name="new_grid[]" id="new_grid" multiple>
                 {if $compamny_group}
                 {foreach from=$compamny_group key="key" item="value" name="compamny_group"}
-                <option value="{$value.col_grid}">{$value.col_name_ja}</option>
+                <option value="{$value.col_grid}">{$value.col_name}</option>
                 {/foreach}
                 {/if}
                 </select>
@@ -65,7 +65,7 @@
                 <select style="width:200px;height:200px;" name="state_list" multiple>
                 {foreach from=$group key="key" item="value" name="group"}
                 {if !array_search($value._id,$compamny_group)}
-                <option value="{$value._id}">{$value.col_name_ja}</option>
+                <option value="{$value._id}">{$value.col_name}</option>
                 {/if}
                 {/foreach}
                 </select>

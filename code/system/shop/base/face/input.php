@@ -1,21 +1,14 @@
 <?php
 //--[ 前処理 ]--------------------------------------------------------------
 require_once('shop/prepend.php');
-//$siid = $con->base->getPath('siid',TRUE);//リダイレクトあり
 
 $page = 'input';
 if ( $con->isPost ){
-    $_POST['alt_'.LOCALE_JA] = $shop[0]['col_name_'.LOCALE_JA].'の外観画像';
-    $_POST['alt_'.LOCALE_CN] = $shop[0]['col_name_'.LOCALE_CN].'の外観画像';
-    $_POST['alt_'.LOCALE_TW] = $shop[0]['col_name_'.LOCALE_TW].'の外観画像';
+    $_POST['alt'] = $shop[0]['col_name'];
 
     require_once('shop/file.php');
     $shop_file = new shopFile(SHOP_TYPE_FACE);
-    if($shop_file->is_result) $con->safeExitRedirect('/system/shop/base/',TRUE);
-
-/*    require_once('shop/file.php');
-    $shop_file = new shopItemFile(SHOP_TYPE_FACE);
-    if($shop_file->is_result) $con->safeExitRedirect('/system/shop/base/',TRUE);*/
+    if($shop_file->is_result) $con->safeExitRedirect('/system/shop/base/index/sid/'.$shop[0]['_id'],TRUE);
 }else{
     require_once('file/logic.php');//area
     $file_logic = new filesLogic();
@@ -29,9 +22,8 @@ if ( $con->isPost ){
 }
 
 //position 店舗及びADMINで見るページが違います
-systemPosition::makeShopPosition($shop[0]['col_name_ja']);
+systemPosition::makeShopPosition($shop[0]['col_name']);
 
 //共通処理////////////////////////
-
 $con->append('system/shop/base/face/'.$page);
 ?>

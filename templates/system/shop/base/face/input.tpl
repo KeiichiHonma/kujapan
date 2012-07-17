@@ -17,7 +17,7 @@
     {include file="include/system/shop_navi.inc"}
     <h2 class="h_title">外観画像管理</h2>
     <p class="m_b10">以下の項目を入力して[確認画面へ]ボタンをクリックしてください。<span class="attention">＊</span>の項目は必須となります。</p>
-    <form id="couponForm" name="couponForm" action= "{$smarty.const.KUJAPANURLSSL}/system/shop/base/face/input" method="post" enctype="multipart/form-data">
+    <form id="couponForm" name="couponForm" action= "{$smarty.const.KUJAPANURLSSL}/system/shop/base/face/input/sid/{$sid}" method="post" enctype="multipart/form-data">
 
     <table id="suggest">
     <tr>

@@ -77,7 +77,7 @@
                 </tr>
                 <tr>
                     <th lang="ja" class="japan">
-                    {if isset($alert_list.$cid.title_ja)}<span class="error_alert">{/if}{$value.col_title_ja}{if isset($alert_list.$cid.title_ja)}</span>{/if}
+                    {if isset($alert_list.$cid.title_ja)}<span class="error_alert">{/if}{$value.col_title}{if isset($alert_list.$cid.title_ja)}</span>{/if}
                     </th>
                     <td lang="ja" class="japan">{$locale.col_validate_time}&nbsp;
                     {if isset($alert_list.$cid.validate_time)}<span class="error_alert">{/if}{$value.col_validate_time|make_date}{if isset($alert_list.$cid.validate_time)}</span>{/if}
@@ -116,7 +116,7 @@
                 </tr>
                 <tr>
                     <th lang="ja" class="japan">
-                    {if isset($alert_list.$cid.title_ja)}<span class="error_alert">{/if}{$value.col_title_ja}{if isset($alert_list.$cid.title_ja)}</span>{/if}
+                    {if isset($alert_list.$cid.title_ja)}<span class="error_alert">{/if}{$value.col_title}{if isset($alert_list.$cid.title_ja)}</span>{/if}
                     </th>
                     <td lang="ja" class="japan">{$locale.col_validate_time}&nbsp;
                     {if isset($alert_list.$cid.validate_time)}<span class="error_alert">{/if}{$value.col_validate_time|make_date}{if isset($alert_list.$cid.validate_time)}</span>{/if}

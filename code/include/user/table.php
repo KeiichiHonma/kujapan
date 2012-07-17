@@ -7,14 +7,17 @@ class userTable extends tableManager
             array('column'=>'_id',               'as'=>'user_id',   'type'=>MINIMUM,  'input'=>FALSE, 'group'=>null),
             array('column'=>'ctime',             'as'=>null,        'type'=>COMMON,    'input'=>FALSE, 'group'=>null),
             array('column'=>'mtime',             'as'=>null,        'type'=>COMMON,    'input'=>FALSE, 'group'=>null),
-            array('column'=>'account',           'as'=>null,        'type'=>COMMON, 'input'=>FALSE, 'group'=>null),
+            
+            array('column'=>'mail',           'as'=>null,        'type'=>COMMON, 'input'=>FALSE, 'group'=>null),
+            array('column'=>'sid',            'as'=>null,        'type'=>COMMON, 'input'=>FALSE, 'group'=>null),
+/*            array('column'=>'account',           'as'=>null,        'type'=>COMMON, 'input'=>FALSE, 'group'=>null),
             array('column'=>'password',          'as'=>null,        'type'=>COMMON, 'input'=>FALSE, 'group'=>null),
             array('column'=>'salt',              'as'=>null,        'type'=>ALL,    'input'=>FALSE, 'group'=>null),
             array('column'=>'given_name',        'as'=>null,        'type'=>COMMON, 'input'=>TRUE,  'group'=>'customer'),
             array('column'=>'customer_no',       'as'=>null,        'type'=>COMMON, 'input'=>TRUE,  'group'=>null),
 
             array('column'=>'coupon',            'as'=>null,        'type'=>COMMON, 'input'=>FALSE, 'group'=>null),
-            array('column'=>'status',            'as'=>null,        'type'=>COMMON, 'input'=>FALSE, 'group'=>null),
+            array('column'=>'status',            'as'=>null,        'type'=>COMMON, 'input'=>FALSE, 'group'=>null),*/
 
             array('column'=>'trade_no',          'as'=>null,        'type'=>COMMON, 'input'=>FALSE, 'group'=>null),
             array('column'=>'out_trade_no',      'as'=>null,        'type'=>ALL,    'input'=>FALSE, 'group'=>null),
@@ -32,10 +35,10 @@ class userTable extends tableManager
             array('column'=>'body',              'as'=>null,        'type'=>ALL,    'input'=>FALSE, 'group'=>null),
             array('column'=>'extra_common',      'as'=>null,        'type'=>ALL,    'input'=>FALSE, 'group'=>null),
             
-            array('column'=>'pid',               'as'=>null,        'type'=>COMMON,    'input'=>FALSE, 'group'=>null),
-            
+/*            array('column'=>'pid',               'as'=>null,        'type'=>COMMON,    'input'=>FALSE, 'group'=>null),
             array('column'=>'last_login',        'as'=>null,        'type'=>COMMON, 'input'=>FALSE, 'group'=>null),
-            array('column'=>'validate_time',     'as'=>null,        'type'=>COMMON, 'input'=>FALSE, 'group'=>null),
+            array('column'=>'validate_time',     'as'=>null,        'type'=>COMMON, 'input'=>FALSE, 'group'=>null),*/
+            
             array('column'=>'validate',          'as'=>null,        'type'=>COMMON, 'input'=>FALSE, 'group'=>null)
         );
     

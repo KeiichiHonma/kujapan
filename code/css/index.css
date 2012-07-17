@@ -1,0 +1,118 @@
+#coupon{
+    width:650px;
+    float:left;
+    padding-left:20px;
+    margin-bottom:50px;
+    padding-right:10px;
+}
+
+div#weibo {
+    width:300px;
+    float:left;
+    margin:0 auto;
+    margin-bottom:20px;
+}
+
+.deal-list-2 { *margin: 0 0 20px 0 }
+ 
+    .deal-list-2 a { color: #111 }
+ 
+    .deal-list-2 .item {
+        position: relative;
+        background: url(/img/index/deal-list-item-bg.gif) bottom repeat-x;
+        float: left;
+        /*width: 458px;*/
+        width: 650px;
+        /*border: solid 1px #ddd;*/
+        border: solid 1px #e2db9f;
+        margin: 0 0px 20px 0px;
+        border-radius: 2px }
+ 
+        .deal-list-2 .item:hover { background:url(/img/index/deal-list-item-hover-bg.gif) bottom repeat-x;cursor: pointer }
+ 
+        .deal-list-2 .item .info { margin:0;padding: 5px 4px 2px 4px }
+ 
+            .deal-list-2 .item .info span {
+                float: right;
+                font-size: 11px;
+                min-width: 60px;
+                text-align: center;
+                background: url(/img/deal-list-info-bg.gif) left repeat-x;
+                border: solid 1px #e9e9e9;
+                padding: 0 3px;
+                margin: -1px 0 0 0;
+                border-radius: 3px }
+ 
+        .deal-list-2 .item .img {
+            float:right;
+            /*position: relative;*/
+            border-bottom: solid 1px #ddd;
+            padding: 4px }
+ 
+            /*.deal-list-2 .item .img img { width: 100% }*/
+ 
+        .deal-list-2 .item .text { border-top:solid 1px #fff;padding: 4px 4px 2px 4px;clear:both; }
+ 
+            .deal-list-2 .item .text b { display: block }
+ 
+            .deal-list-2 .item .text .text-r { height:50pt;overflow: hidden }
+
+     .deal-list-2 .item .price {
+        position: absolute;
+        font-weight: bold;
+        font-style: italic;
+        font-size: 14px;
+        z-index: 99;
+        top: 30px;
+        left: -20px;
+        background: url(/img/index/price-tag-l.png) right no-repeat;
+        height: 95px;
+        width: 170px;
+        padding: 0px 25px 0 0;
+        margin: 0;
+        color: #fff;
+        text-align: center;
+        line-height:70px;
+        }
+ 
+        .deal-list-2 .item .price.off { background: url(/img/index/price-tag-off-l.png) right no-repeat }
+
+            .deal-list-2 .item .price strong {
+                font-size: 26px;
+                letter-spacing: -1px;
+                padding-right: 2px }
+
+        .deal-list-2 .item .price img {
+            display: block;
+            float: right;
+            width: 110px;
+            height: 34px;
+            margin: 18px 0 0 0 
+        }
+
+table.price-info {
+    width:140px;
+    /*float:left;*/
+    position: absolute;
+    top: 130px;
+    left: 10px;
+    border-collapse: collapse;
+    margin: 5px 0 0 0
+    }
+ 
+    table.price-info tr { border-bottom: dashed 1px #ccc }
+ 
+    table.price-info th {
+        text-align: left;
+        font-weight: normal;
+        padding: 5px 0 }
+ 
+    table.price-info td {
+        text-align: right;
+        font-weight: bold;
+        color: #e10005 }
+ 
+        table.price-info td.special {
+            text-align: center;
+            font-size: 18px;
+            padding: 0 0 10px 0 }

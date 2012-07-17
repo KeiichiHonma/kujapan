@@ -17,7 +17,7 @@
     <div id="wrapper">
       <div id="container">
 {*ロゴ、グローバルナビ*}
-{include file="include/header/header.inc"}
+{include file="include/header/header2.inc"}
 {*ポジション*}
 {include file="include/common/position.inc"}
         <div class="clear" id="s_sub">

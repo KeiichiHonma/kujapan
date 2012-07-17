@@ -8,13 +8,26 @@ class userHandle extends handleManager
     function __construct(){
         $this->parameter = new userParameter();
     }
-    
-    public function addRow($alipay_param){
-        $this->parameter->setAdd($alipay_param);
+
+    public function addRow($mail,$sid){
+        $this->parameter->setAdd($mail,$sid);
         //return parent::addDebug(T_USER,$this->parameter);
         return parent::addRow(T_USER,$this->parameter);
     }
 
+
+/*    public function addRow($alipay_param){
+        $this->parameter->setAdd($alipay_param);
+        //return parent::addDebug(T_USER,$this->parameter);
+        return parent::addRow(T_USER,$this->parameter);
+    }
+*/
+
+    public function updateAlipayRow($uid,$alipay_param){
+        $this->parameter->setUpdateAlipay($uid,$alipay_param);
+        return parent::updateRow(T_USER,$this->parameter);
+    }
+    
     public function updateRow($uid){
         $this->parameter->setUpdate($uid);
         return parent::updateRow(T_USER,$this->parameter);

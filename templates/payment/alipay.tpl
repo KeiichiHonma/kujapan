@@ -7,6 +7,6 @@
 <script type="text/javascript" defer="defer" src="/js/alphafilter.js?{$tail_number}"></script>
 </head>
 <body>
-<a href="{$smarty.const.KUJAPANURLSSL}/payment/return_url_test?{$test_alipay_param}">TEST決済完了</a>
+<a href="{$smarty.const.KUJAPANURLSSL}/payment/return_url_test?{$test_alipay_param}&uid={$user.0._id}">TEST決済完了</a>
 </body>
 </html>

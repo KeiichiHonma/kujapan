@@ -33,7 +33,7 @@
         <tr>
         <td width="120" class="title"><a href="{$smarty.const.KUJAPANURLSSL}/system/shop/coupon/view/cid/{$value._id}">詳細</a>&nbsp;|&nbsp;<a href="{$smarty.const.KUJAPANURLSSL}/system/shop/coupon/reuse/input/cid/{$value._id}/sid/{$value.col_sid}">再利用</a></td>
         <td width="130">{$value.col_validate_time|make_date}</td>
-        <td>{$value.col_title_ja}</td>
+        <td>{$value.col_title}</td>
         </tr>
 {/foreach}
 {else}

@@ -17,7 +17,7 @@
     {include file="include/system/shop_navi.inc"}
     <h2 class="h_title">ギャラリー管理</h2>
     <p class="m_b10">以下の項目を入力して[確認画面へ]ボタンをクリックしてください。<span class="attention">＊</span>の項目は必須となります。</p>
-    <form id="couponForm" name="couponForm" action= "{$smarty.const.KUJAPANURLSSL}/system/shop/gallery/entry/input" method="post" enctype="multipart/form-data">
+    <form id="couponForm" name="couponForm" action= "{$smarty.const.KUJAPANURLSSL}/system/shop/gallery/entry/input/sid/{$sid}" method="post" enctype="multipart/form-data">
 
     <table id="suggest">
     <tr>
@@ -42,32 +42,12 @@
     </td>
     </tr>
     </table>
-
-    {foreach from=$form key="group_name" item="form_data" name="form_data"}
-    <table id="suggest">
-    <tr>
-    <th colspan="2">{$group_name}</th>
-    </tr>
-    {foreach from=$form_data key="form_name" item="form_setting" name="form_setting"}
-    {$form_name|make_form:$form_setting:$error:$smarty.const.SMARTY_BOOL_OFF:$smarty.const.SMARTY_BOOL_OFF}
-    {/foreach}
-    </table>
-    {/foreach}
 <div>
 </div>
     <div id="form_btn">
     <input type="hidden" name="csrf_ticket" value="{$csrf_ticket}" />
     <input type="hidden" name="operation" value="regist" />
-{literal}
-<script type="text/javascript">
-<!-- 
-var setting = new Array(3);
-setting[0] = Array('detail_ja','詳細（日本語）は必須です。');
-setting[1] = Array('detail_cn','詳細（簡体字）は必須です。');
-setting[2] = Array('detail_tw','詳細（繁体字）は必須です。');
-// -->
-</script>
-{/literal}
+    <input type="hidden" name="sid" value="{$sid}" />
     <a href="javascript:history.back();"><img src="/img/system/b_modoru.gif" width="156" height="36" alt="戻る" /></a>
     <input type="image" src="/img/system/b_touroku.gif" value="submit" class="btn" onClick="return form_file_regist(setting)" />
     </div>

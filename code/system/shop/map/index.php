@@ -9,7 +9,7 @@ $shop_item = $item_logic->getShopItem($shop[0]['_id'],array(SHOP_TYPE_MAP_JA,SHO
 
 if($shop_item) $con->t->assign('shop_item',utilManager::getShopItemArray($shop_item));
 //position 店舗及びADMINで見るページが違います
-systemPosition::makeShopPosition($shop[0]['col_name_ja']);
+systemPosition::makeShopPosition($shop[0]['col_name']);
 
 
 $con->append();

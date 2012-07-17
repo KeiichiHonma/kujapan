@@ -85,7 +85,7 @@ class inputManager
         if($this->file_upload && isset($_POST[$this->fid_key]) && is_numeric($_POST[$this->fid_key])) $this->file_update = TRUE;
         
         //alt更新可否
-        if(!$this->file_upload && isset($_POST[$this->alt_key.'_'.LOCALE_JA]) && isset($_POST[$this->alt_key.'_'.LOCALE_CN]) && isset($_POST[$this->alt_key.'_'.LOCALE_TW]) && isset($_POST[$this->fid_key]) && is_numeric($_POST[$this->fid_key])) $this->alt_update = TRUE;
+        if(!$this->file_upload && isset($_POST[$this->alt_key]) && isset($_POST[$this->fid_key]) && is_numeric($_POST[$this->fid_key])) $this->alt_update = TRUE;
         
         //any追加可否
         if(!isset($_POST[$this->any_key])) $this->any_add = TRUE;

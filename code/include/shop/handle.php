@@ -15,6 +15,12 @@ class shopHandle extends handleManager
         return parent::addRow(T_SHOP,$this->parameter);
     }
 
+    public function addProfileRow($sid){
+        $this->parameter->setProfileAdd($sid);
+        //$this->setDebug();
+        return parent::addRow(T_SHOP,$this->parameter);
+    }
+
     public function addRowForManager($mid,$name){
         $this->parameter->setAddForManager($mid,$name);
         //$this->setDebug();
@@ -25,8 +31,8 @@ class shopHandle extends handleManager
         return parent::updateRow(T_SHOP,$parameter);
     }
 
-    public function updateProfileRow(){
-        $this->parameter->setProfileUpdate();
+    public function updateProfileRow($sid){
+        $this->parameter->setProfileUpdate($sid);
         //$this->setDebug();
         return parent::updateRow(T_SHOP,$this->parameter);
     }
@@ -42,8 +48,8 @@ class shopHandle extends handleManager
         return parent::updateRow(T_SHOP,$this->parameter);
     }*/
 
-    public function updateFaceRow($fid){
-        $this->parameter->setFaceUpdate($fid);
+    public function updateFaceRow($sid,$fid){
+        $this->parameter->setFaceUpdate($sid,$fid);
         //$this->setDebug();
         return parent::updateRow(T_SHOP,$this->parameter);
     }
@@ -72,15 +78,15 @@ class shopItemHandle extends handleManager
         $this->parameter = new shopItemParameter();
     }
     
-    public function addRow($type,$fid = null){
-        $this->parameter->setAdd($type,$fid);
+    public function addRow($sid,$type,$fid = null){
+        $this->parameter->setAdd($sid,$type,$fid);
         //parent::addDebug(T_SHOP_ITEM,$this->parameter);
         return parent::addRow(T_SHOP_ITEM,$this->parameter);
     }
     
     //以下adminだけの権限
-    public function updateRow($siid,$type,$fid = null){
-        $this->parameter->setUpdate($siid,$type,$fid);
+    public function updateRow($sid,$siid,$type,$fid = null){
+        $this->parameter->setUpdate($sid,$siid,$type,$fid);
         //parent::updateDebug(T_SHOP_ITEM,$this->parameter);
         return parent::updateRow(T_SHOP_ITEM,$this->parameter);
     }

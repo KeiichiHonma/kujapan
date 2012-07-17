@@ -17,7 +17,7 @@
     {include file="include/system/shop_navi.inc"}
     <h2 class="h_title">店舗プロフィール情報変更</h2>
     <p class="m_b10">以下の項目を入力して[確認画面へ]ボタンをクリックしてください。<span class="attention">＊</span>の項目は必須となります。</p>
-    <form id="couponForm" name="couponForm" action= "{$smarty.const.KUJAPANURLSSL}/system/shop/base/profile/input" method="post">
+    <form id="couponForm" name="couponForm" action= "{$smarty.const.KUJAPANURLSSL}/system/shop/base/profile/input/sid/{$sid}" method="post">
     
     {foreach from=$form key="group_name" item="form_data" name="form_data"}
     <table id="suggest">
@@ -32,7 +32,7 @@
 
     <div id="form_btn">
     <input type="hidden" name="csrf_ticket" value="{$csrf_ticket}" />
-    {if $siid}<input type="hidden" name="siid" value="{$siid}" />{/if}
+    <input type="hidden" name="sid" value="{$sid}" />
     <input type="hidden" name="operation" value="check" />
     <input type="image" src="/img/system/b_kakunin.gif" value="submit" class="btn" onClick="return form_confirm(this)" />
     </div>

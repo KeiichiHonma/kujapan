@@ -29,8 +29,8 @@
         <tr>
         <td>
         {assign var=type_map_ja value=$smarty.const.SHOP_TYPE_MAP_JA}
-        {if $shop_item.$type_map_ja}
-        <img src="{$shop_item.$type_map_ja.file_id|getFilePath:$shop_item.$type_map_ja.col_extension}" width="{$shop_item.$type_map_ja.col_width}" height="{$shop_item.$type_map_ja.col_height}" alt="{$shop_item.$type_map_ja.col_alt_ja}" />
+        {if $shop_item.$type_map}
+        <img src="{$shop_item.$type_map_ja.file_id|getFilePath:$shop_item.$type_map_ja.col_extension}" width="{$shop_item.$type_map_ja.col_width}" height="{$shop_item.$type_map_ja.col_height}" alt="{$shop_item.$type_map_ja.col_alt}" />
         {else}
         設定されていません。
         {/if}
@@ -49,7 +49,7 @@
         <td>
         {assign var=type_map_cn value=$smarty.const.SHOP_TYPE_MAP_CN}
         {if $shop_item.$type_map_cn}
-        <img src="{$shop_item.$type_map_cn.file_id|getFilePath:$shop_item.$type_map_cn.col_extension}" width="{$shop_item.$type_map_cn.col_width}" height="{$shop_item.$type_map_cn.col_height}" alt="{$shop_item.$type_map_cn.col_alt_ja}" />
+        <img src="{$shop_item.$type_map_cn.file_id|getFilePath:$shop_item.$type_map_cn.col_extension}" width="{$shop_item.$type_map_cn.col_width}" height="{$shop_item.$type_map_cn.col_height}" alt="{$shop_item.$type_map_cn.col_alt}" />
         {else}
         設定されていません。
         {/if}
@@ -68,7 +68,7 @@
         <td>
         {assign var=type_map_tw value=$smarty.const.SHOP_TYPE_MAP_TW}
         {if $shop_item.$type_map_tw}
-        <img src="{$shop_item.$type_map_tw.file_id|getFilePath:$shop_item.$type_map_tw.col_extension}" width="{$shop_item.$type_map_tw.col_width}" height="{$shop_item.$type_map_tw.col_height}" alt="{$shop_item.$type_map_tw.col_alt_ja}" />
+        <img src="{$shop_item.$type_map_tw.file_id|getFilePath:$shop_item.$type_map_tw.col_extension}" width="{$shop_item.$type_map_tw.col_width}" height="{$shop_item.$type_map_tw.col_height}" alt="{$shop_item.$type_map_tw.col_alt}" />
         {else}
         設定されていません。
         {/if}

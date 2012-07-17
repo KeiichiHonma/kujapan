@@ -3,8 +3,6 @@ require_once('fw/define.php');
 require_once('fw/database.php');//db
 require_once('fw/template.php');//template
 require_once('fw/base.php');//template
-require_once('area/logic.php');//area
-require_once('genre/logic.php');//genre
 require_once('fw/sessionManager.php');
 //require_once('fw/positionManager.php');
 class container
@@ -16,8 +14,6 @@ class container
     public $locale;//ファイル別翻訳ファイル
     
     //public $user = null;
-    public $area = null;
-    public $genre = null;
     public $isPost = FALSE;
     public $ini;
     public $isDebug = FALSE;
@@ -78,13 +74,7 @@ class container
             
             $this->db = new database();
 
-            $this->base = new base();
-            $this->area = new areaLogic();
-            $this->genre = new genreLogic();
-
-            $this->t->assign('area',$this->area->area_info);
-            $this->t->assign('genre',$this->genre->genre_info);
-            
+            $this->base = new base();            
             $this->tail_number = time();
             $this->t->assign('tail_number',$this->tail_number);//末尾の数字
         }

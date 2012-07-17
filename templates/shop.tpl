@@ -2,230 +2,248 @@
 <html lang="{$locale.lang}" xml:lang="{$locale.lang}" xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 {*seo*}
 {include file="include/header/seo.inc"}
     <link href="/css/0-import.css" rel="stylesheet" type="text/css" />
-    <link href="/css/shop.css" rel="stylesheet" type="text/css" />
     <link href="/locale/{$smarty.const.LOCALE}/css/background.css" rel="stylesheet" type="text/css" />
     <meta content="text/javascript" http-equiv="Content-Script-Type" />
-    <script src="/js/smartRollover.js" type="text/javascript"></script>
+
+{literal}
+    <script src="http://www.google.com/jsapi"></script>
+    <script>
+    google.load("jquery", "1.4");
+    </script>
+
+    <script type="text/javascript" src="/js/jquery.tools.min.js"></script>
+    <script type="text/javascript" src="/js/common.js"></script>
+
+    <script type="text/javascript" src="/js/highslide/highslide.js"></script>
+    <link rel="stylesheet" type="text/css" href="/js/highslide/highslide.css" />
+    <script type="text/javascript">    
+        hs.graphicsDir = '/js/highslide/graphics/';
+        hs.outlineType = 'rounded-white';
+    </script>
+
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&language=en"></script>
+
+<script>
+var my_google_map;
+var my_google_geo;
+
+function googlemap_init( id_name, addr_name ) {
+    var latlng = new google.maps.LatLng(41, 133);
+    var opts = {
+        zoom: 15,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        center: latlng
+    };
+    my_google_map = new google.maps.Map(document.getElementById(id_name), opts);
+
+    my_google_geo = new google.maps.Geocoder();
+    var req = {
+        address: addr_name ,
+    };
+    my_google_geo.geocode(req, geoResultCallback);
+}
+
+
+function geoResultCallback(result, status) {
+    if (status != google.maps.GeocoderStatus.OK) {
+        alert(status);
+    return;
+    }
+    var latlng = result[0].geometry.location;
+    my_google_map.setCenter(latlng);
+    var marker = new google.maps.Marker({position:latlng, map:my_google_map, title:latlng.toString(), draggable:true});
+    google.maps.event.addListener(marker, 'dragend', function(event){
+        marker.setTitle(event.latLng.toString());
+    });
+}
+</script>
+{/literal}
+
+<script>
+$(document).ready(function(){ldelim}
+    googlemap_init('canvas', "{$shop.0.col_map}");
+{rdelim});
+</script>
+
+    <link href="/css/shop.css" rel="stylesheet" type="text/css" />
+    
   </head>
-  <body id="coupon">
-    <div id="wrapper">
-      <div id="container">
-{*ロゴ、グローバルナビ*}
-{include file="include/header/header.inc"}
-{*ポジション*}
-{include file="include/common/position.inc"}
-        <div class="clear" id="s_sub">
-{*ログインボックス*}
-{include file="include/common/login_box.inc"}
-{*エリアボックス*}
-{include file="include/common/area_box.inc"}
-{*ジャンルボックス*}
-{include file="include/common/genre_box.inc"}
-{*全ページバナー*}
-{include file="include/common/all_banner.inc"}
+  <body>
+  <div id="wrapper">
+    <div id="container">
+        {*ロゴ、グローバルナビ*}
+        {include file="include/header/header.inc"}
+        <div>
+            <div class="detail_box">
+                {*<img alt="" src="/img/shop/detail_box_head.gif" width="655" height="80" />*}
+                <h2 class="shop_title">{$shop.0.col_name}<br /><span>{$shop.0.col_c_title}</span></h2>
+                <div class="detail_box_inner">
+                        <div class="shop-view heightfix clearfix">
+                            <div class="item" style="height: 270px;">
+                                    <p class="price clearfix">
+                                        <strong>{$shop.0.col_c_price}元</strong>
+                                    </p>
+
+                                    <table class="price-info">
+                                        <tr>
+                                            <th>通常価格</th><td>{$shop.0.col_c_usual_price}元</span></td>
+                                        </tr>
+                                        <tr>
+                                            <th>割引率</th><td>{$shop.0.col_c_discount_rate}折</span></td>
+                                        </tr>
+                                        <tr>
+                                            <th>割引額</th><td>{$shop.0.col_c_discount_value}元</span></td>
+                                        </tr>
+                                    </table>
+                                    
+                                    <div class="shopping_bt">
+                                        <a href="/mail/input/sid/{$shop.0.shop_id}" title="购买 优惠券任您选" target="_blank">购买 优惠券任您选</a>
+                                    </div>
+
+                            </div>
+                            
+                            <div id="shop_right">
+                                <div id="articleGalleryArea">
+                                    <ul id="GalleryLargePh" >
+                                        <li><div class="slide-box"><img src="{$shop.0.col_face|getFilePath:$shop.0.col_extension}" {$shop.0.col_width|getWidthHeight:$shop.0.col_height:480:320:0} alt="{$shop.0.col_alt}" /></div></li>
+                                    {if $slide_item}
+                                        {foreach from=$slide_item key="key" item="value" name="slide_item"}
+                                            <li><div class="slide-box"><img src="{$value.file_id|getFilePath:$value.col_extension}" {$value.col_width|getWidthHeight:$value.col_height:480:320:0} alt="{$value.col_alt}" /></div></li>
+                                        {/foreach}
+                                    {/if}
+
+                                    </ul>
+                                    <div id="GalleryThumbsPh">
+                                        <div>
+                                            <ul class="items">
+                                                <li><img src="{$shop.0.col_face|getFilePath:$shop.0.col_extension}" width="72" height="68" alt="{$shop.0.col_alt}" /></li>
+                                            {if $slide_item}
+                                                {foreach from=$slide_item key="key" item="value" name="slide_item2"}
+                                                    <li><img src="{$value.file_id|getFilePath:$value.col_extension}" width="72" height="68" alt="{$value.col_alt}" /></li>
+                                                {/foreach}
+                                            {/if}
+                                            </ul>
+                                        </div>
+                    
+                                        <p class="prevPage"><img src="/img/common/arrow_l.gif" width="10" height="70" alt="前へ" /></p>
+                                        <p class="nextPage"><img src="/img/common/arrow_r.gif" width="10" height="70" alt="次へ" /></p>
+                                    </div>
+                                </div>
+
+                                <h3 class="title">【优惠券简介】</h3>
+                                <div class="ml_10 mb_10">
+                                    {$shop.0.col_c_detail|nl2br}
+                                </div>
+
+                                <h3 class="title">【利用条件】</h3>
+                                <div class="ml_10 mb_10">
+                                    {$shop.0.col_c_condition|nl2br}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shopping_wide_bt">
+                            <a href="/mail/input/sid/{$shop.0.shop_id}" title="购买 优惠券任您选" target="_blank">购买 优惠券任您选</a>
+                        </div>
+                    <p><img alt="" height="5" src="/img/shop/detail_box_foot.gif" width="655" /></p>
+                </div>
+                
+            <div class="detail_box_2">
+                <img alt="" src="/img/shop/detail_box_head_2.jpg" width="655" height="6" />
+                <div class="detail_box_inner">
+                    <h3 class="title">店铺介绍</h3>
+                    <div class="ml_10 mb_10">
+                        {$shop.0.col_detail|nl2br}
+                    </div>
+                    
+                    <h3 class="title">店铺地图</h3>
+                    <div class="ml_10 mb_10">
+                        <div id="canvas">googlemap</div>
+                    </div>
+                    <div class="shop_info">
+                    <img alt="" height="5" src="/img/shop/shop_info_head.gif" width="635" /><div class="shop_info_inner">
+                      <dl>
+                        <dt>店名</dt>
+                        <dd>{$shop.0.col_name}</dd>
+                      </dl>
+                    </div>
+                    <!-- shop_info_inner -->
+                    <p class="clear mb_5"><img alt="" height="5" src="/img/shop/shop_info_foot.gif" width="635" /></p>
+
+                    <img alt="" height="5" src="/img/shop/shop_info_head.gif" width="635" /><div class="shop_info_inner">
+                      <dl>
+                        <dt>地址</dt>
+                        <dd>{$shop.0.col_address}</dd>
+                      </dl>
+                    </div>
+                    <p class="clear mb_5"><img alt="" height="5" src="/img/shop/shop_info_foot.gif" width="635" /></p>
+
+                    <img alt="" height="5" src="/img/shop/shop_info_head.gif" width="635" /><div class="shop_info_inner">
+                      <dl>
+                        <dt>营业时间</dt>
+                        <dd>{$shop.0.col_open_hour}</dd>
+                      </dl>
+                    </div>
+                    <p class="clear mb_5"><img alt="" height="5" src="/img/shop/shop_info_foot.gif" width="635" /></p>
+
+                    <img alt="" height="5" src="/img/shop/shop_info_head.gif" width="635" /><div class="shop_info_inner">
+                      <dl>
+                        <dt>定休日</dt>
+                        <dd>{$shop.0.col_holiday}</dd>
+                      </dl>
+                    </div>
+                    <p class="clear mb_5"><img alt="" height="5" src="/img/shop/shop_info_foot.gif" width="635" /></p>
+
+                    <img alt="" height="5" src="/img/shop/shop_info_head.gif" width="635" /><div class="shop_info_inner">
+                      <dl>
+                        <dt>ホームページ</dt>
+                        <dd>{$shop.0.col_url}</dd>
+                      </dl>
+                    </div>
+                    <p class="clear mb_5"><img alt="" height="5" src="/img/shop/shop_info_foot.gif" width="635" /></p>
+
+                    <img alt="" height="5" src="/img/shop/shop_info_head.gif" width="635" /><div class="shop_info_inner">
+                      <dl>
+                        <dt>備考</dt>
+                        <dd>{$shop.0.col_remarks}</dd>
+                      </dl>
+                    </div>
+                    <p><img alt="" height="5" src="/img/shop/shop_info_foot.gif" width="635" /></p>
+
+                    </div>
+                    <!-- /shop_info -->
+
+
+
+
+
+
+
+
+
+
+
+
+                    <p><img alt="" height="5" src="/img/shop/detail_box_foot.gif" width="655" /></p>
+                </div>
+            </div>
+            
+            </div>
+
+            
+
+        </div>
+        <div id="weibo">
+            {*weibo*}
+            {include file="include/common/weibo.inc"}
         </div>
         
-        <div id="s_main">
-          <div class="detail_header">
-                <img alt="" src="/img/logo/{$shop.0.shop_id}m.gif" width="165" height="65" /><h2 class="detail">{$shop.0.shop_name}</h2>
-          </div>
-          
-            {*クーポン情報*}
-            {foreach from=$coupon key="key" item="value" name="coupon"}
-              <div class="detail_box9">
-                <div class="detail_box9_inner">
-                    <div class="coupon">
-                        <div class="first">
-                            <span class="price1">{$locale.coupon}</span>
-                            <span class="price2">{$value.coupon_discount}</span>
-                        </div>
-                        <div class="second">
-                        {$value.coupon_title}
-                        </div>
-                        <div class="third">
-                        <p class="{$value.col_validate_time|check_coupon_validate_time}">{$locale.coupon_validate_time}&nbsp;{$value.col_validate_time|make_date}</p>
-                        {$value.coupon_condition|nl2br}
-                        </div>
-                    </div>
-                </div>
-                <!-- /detail_box9_inner -->
-                <p><img alt="" height="5" src="/img/coupon/detail_box1_foot.gif" width="725" /></p>
-              </div>
-            {/foreach}
-          <div class="detail_box10">
-            <img alt="" height="5" src="/img/part/detail_box2_head.gif" width="725" /><div class="detail_box10_inner">
-                {*ボタンボックス*}
-                {include file="include/coupon/buy_print_btn.inc"}
-                <p><img alt="" height="5" src="/img/part/detail_box2_foot.gif" width="725" /></p>
-            </div>
-          </div>
-          <!-- /detail_box10 -->
-
-          <div class="detail_box11">
-            <img alt="" height="6" src="/img/part/detail_box3_head.gif" width="725" /><div class="detail_box11_inner">
-              <div class="detail_box5 clear">
-                <img alt="" height="5" src="/img/part/detail_box5_head.gif" width="705" /><div class="detail_box5_inner">
-
-
-                        <h3>{$locale.shop_detail}</h3>
-                        <div class="symmetry symmetry_photo clearfix">
-                            <div class="item1">
-                                <p class="photo">
-                                    {*外観大*}
-                                    {if $shop_item_visual}
-                                    <img src="{$shop_item_visual.file_id|getFilePath:$shop_item_visual.col_extension}" width="{$shop_item_visual.col_width}" height="{$shop_item_visual.col_height}" alt="{$shop_item_visual.col_alt}" />
-                                    {/if}
-                                </p>
-                            </div>
-                            
-                            
-                            <div class="last_shop_info">
-                                <div class="iconset02">
-                                    <ul>
-                                        <li><img alt="{$area.$aid.col_name}" height="38" src="/locale/{$smarty.const.LOCALE}/img/coupon/area0{$aid}.gif" width="58" /></li>
-                                        <li><img alt="{$genre.$gid.col_name}" height="38" src="/locale/{$smarty.const.LOCALE}/img/coupon/genre0{$gid}.gif" width="58" /></li>
-                                        <li>
-                                    </ul>
-
-                                    <ul>
-                                        {*特徴*}
-                                        {$shop.0.col_setting|unserialize_feature}
-                                    </ul>
-                                </div>
-                                {$shop.0.shop_detail|nl2br}
-                            </div>
-                        </div>
-
-                {*ギャラリー*}
-                {assign var=type_gallery value=$smarty.const.SHOP_TYPE_GALLERY}
-                {if $shop_item_gallery_photo && $shop_item_gallery_text}
-                    <h3>{$locale.shop_introduction}</h3>
-                    {section name="shop_item_gallery_text" loop=$shop_item_gallery_text}
-                        {assign var=loop_no value=$smarty.section.shop_item_gallery_text.index}
-                        {*写真*}
-                        <div class="symmetry symmetry_photo clearfix">
-                            {foreach from=$shop_item_gallery_photo.$loop_no key="key" item="value" name="shop_item_gallery_photo"}
-                            <div class="{cycle values="item1,last1"}">
-                                <p class="photo"><img src="{$value.file_id|getFilePath:$value.col_extension}" width="{$value.col_width}" height="{$value.col_height}" alt="{$value.col_alt}" /></p>
-                            </div>
-                            {/foreach}
-                        </div>
-
-                        {*テキスト*}
-                        <div class="symmetry {if count($shop_item_gallery_text.$loop_no) == 2}symmetry_double{else}symmetry_single{/if} clearfix">
-                            {foreach from=$shop_item_gallery_text.$loop_no key="key2" item="value2" name="shop_item_gallery_text2"}
-                            
-                                <div class="{cycle values="item2,last2"}">
-                                    <p class="text">{$value2.shop_item_detail|nl2br}</p>
-                                </div>
-                            {/foreach}
-                        </div>
-                    {/section}
-                {/if}
-                {*商品*}
-                {if $shop_item_product_photo && $shop_item_product_text}
-                    <h3 class="clear mt_10">{$locale.shop_product}</h3>
-                    {section name="shop_item_product_text" loop=$shop_item_product_text}
-                        {assign var=loop_no value=$smarty.section.shop_item_product_text.index}
-                        {*写真*}
-                        <div class="symmetry symmetry_photo clearfix">
-                            {foreach from=$shop_item_product_photo.$loop_no key="key" item="value" name="shop_item_product_photo"}
-                            <div class="{cycle values="item1,last1"}">
-                                <p class="photo"><img src="{$value.file_id|getFilePath:$value.col_extension}" width="{$value.col_width}" height="{$value.col_height}" alt="{$value.col_alt}" /></p>
-                            </div>
-                            {/foreach}
-                        </div>
-
-                        {*テキスト*}
-                        <div class="symmetry {if count($shop_item_product_text.$loop_no) == 2}symmetry_double{else}symmetry_single{/if} clearfix">
-                            {foreach from=$shop_item_product_text.$loop_no key="key2" item="value2" name="shop_item_product_text2"}
-                            
-                                <div class="{cycle values="item2,last2"}">
-                                    <p class="text">{$value2.shop_item_detail|nl2br}</p>
-                                </div>
-                            {/foreach}
-                        </div>
-                    {/section}
-                {/if}
-                {if $shop_item.$type_gallery || $shop_item.$type_product}
-                  <div class="detail_box6 clear">
-                    <img alt="" height="5" src="/img/part/detail_box6_head.gif" width="685" /><div class="detail_box6_inner">
-                        {*ボタンボックス*}
-                        {include file="include/coupon/buy_print_btn.inc"}
-                    </div>
-                    <!-- /detail_box6_inner -->
-                    <p><img alt="" height="5" src="/img/part/detail_box6_foot.gif" width="685" /></p>
-                  </div>
-                {/if}
-                  <!-- /detail_box6 clear -->
-                  <h3>{$locale.shop_map}</h3>
-                  <div class="ml_10 mb_10">
-                    {*地図*}
-                    {if $shop_item_map}
-                    <img src="{$shop_item_map.file_id|getFilePath:$shop_item_map.col_extension}" width="{$shop_item_map.col_width}" height="{$shop_item_map.col_height}" alt="{$shop_item_map.col_alt}" />
-                    {/if}
-                  </div>
-                  <div class="detail_box7">
-                    <img alt="" height="5" src="/img/part/detail_box7_head.gif" width="685" /><div class="detail_box7_inner">
-                      <dl>
-                        <dt>{$locale.shop_address}</dt>
-                        <dd>{$shop.0.shop_address}</dd>
-                      </dl>
-                    </div>
-                    <!-- detail_box7_inner -->
-                    <p class="clear mb_5"><img alt="" height="5" src="/img/part/detail_box7_foot.gif" width="685" /></p>
-                    
-                    <img alt="" height="5" src="/img/part/detail_box7_head.gif" width="685" /><div class="detail_box7_inner">
-                      <dl>
-                        <dt>{$locale.shop_open_hour}</dt>
-                        <dd>{$shop.0.shop_open_hour}</dd>
-                      </dl>
-                    </div>
-                    <!-- /detail_box7_inner -->
-                    <p class="clear mb_5"><img alt="" height="5" src="/img/part/detail_box7_foot.gif" width="685" /></p>
-                    
-                    <img alt="" height="5" src="/img/part/detail_box7_head.gif" width="685" /><div class="detail_box7_inner">
-                      <dl>
-                        <dt>{$locale.shop_holiday}</dt>
-                        <dd>{$shop.0.shop_holiday}</dd>
-                      </dl>
-                    </div>
-                    <p><img alt="" height="5" src="/img/part/detail_box7_foot.gif" width="685" /></p>
-                  </div>
-                  <!-- /detail_box7 -->
-                </div>
-                <!-- /detail_box5_inner -->
-                <p><img alt="" height="5" src="/img/part/detail_box5_foot.gif" width="705" /></p>
-              </div>
-              <!-- /detail_box5 clear -->
-            </div>
-            <!-- /detail_box11_inner -->
-            <p><img alt="" height="5" src="/img/part/detail_box3_foot.gif" width="725" /></p>
-          </div>
-          <!-- /detail_box11 -->
-          <div class="detail_box8">
-            <div class="detail_box8_inner">
-                <table class="text_confirm">
-                <tbody>
-                <tr><td class="indent"><img src="/img/common/indent.gif" width="16" height="17"></td><td>{$locale.alert1}</td></tr>
-                <tr><td class="indent"><img src="/img/common/indent.gif" width="16" height="17"></td><td>{$locale.alert2}</td></tr>
-                <tr><td class="indent"><img src="/img/common/indent.gif" width="16" height="17"></td><td>{$locale.alert3}</td></tr>
-                <tr><td class="indent"><img src="/img/common/indent.gif" width="16" height="17"></td><td>{$locale.alert4}</td></tr>
-                <tr><td class="indent"><img src="/img/common/indent.gif" width="16" height="17"></td><td>{$locale.alert5}</td></tr>
-                <tr><td class="indent"><img src="/img/common/indent.gif" width="16" height="17"></td><td>{$locale.alert6}</td></tr>
-                </tbody>
-                </table>
-            </div>
-            <img alt="{$locale.alert_title}" src="/locale/{$smarty.const.LOCALE}/img/coupon/confirm.jpg" height="200" width="725">
-          </div>
-        </div>
-        <!-- /s_main -->
-{*フッター*}
-{include file="include/header/footer.inc"}
-      </div>
+        {*フッター*}
+        {include file="include/header/footer.inc"}
     </div>
-  </body>
+  </div>
+</body>
 </html>

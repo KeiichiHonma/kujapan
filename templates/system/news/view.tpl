@@ -46,7 +46,7 @@
         </tr>
         <tr>
         <th width="100" valign="top">タイトル（日本語）</th>
-        <td>{$news.0.col_title_ja}</td>
+        <td>{$news.0.col_title}</td>
         </tr>
         <tr>
         <th width="100" valign="top">タイトル（簡体字）</th>

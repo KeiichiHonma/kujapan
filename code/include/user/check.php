@@ -33,17 +33,11 @@ class checkEntry extends checkManager
 {
     static private $check_list = array
     (
-        'given_name'=>array
-        (
-            array('type'=>'must','func'=>'checkMust','arg'=>null),
-            array('type'=>'eigo','func'=>'checkEigo','arg'=>null),
-            array('type'=>null,'func'=>'replaceInput','arg'=>'given_name')
-        ),
-/*        'mail'=>array
+        'mail'=>array
         (
             array('type'=>'must','func'=>'checkMust','arg'=>null),
             array('type'=>'validate','func'=>'checkMail','arg'=>null)
-        )*/
+        )
     );
             
     static public function checkError(){

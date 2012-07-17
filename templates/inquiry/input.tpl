@@ -22,12 +22,8 @@
 {*ポジション*}
 {include file="include/common/position.inc"}
         <div class="clear" id="s_sub">
-{*ログインボックス*}
-{include file="include/common/login_box.inc"}
-{*エリアボックス*}
-{include file="include/common/area_box.inc"}
-{*ジャンルボックス*}
-{include file="include/common/genre_box.inc"}
+            {*weibo*}
+            {include file="include/common/weibo.inc"}
         </div>
         <div id="s_main">
           <h2 lang="ja" class="list">掲載をご検討の企業様</h2>
