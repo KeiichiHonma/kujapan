@@ -131,7 +131,8 @@ class checkShopFile extends checkManager
             array('message'=>'！画像は必須です。','func'=>'checkFileMust','arg'=>'fid','is_file'=>TRUE),
             array('message'=>null,'func'=>'checkFileBase','arg'=>'file','is_file'=>TRUE),//baseのチェック
             array('message'=>'！アップロード可能なファイルサイズは5Mバイトまでです。','func'=>'checkFileSize','arg'=>5000000,'is_file'=>TRUE),
-            array('message'=>'！アップロード可能なファイルは横480px,縦320px以内です。','func'=>'checkFileImageSize','arg'=>array('type'=>WIDTH_HEIGHT_WITHIN,'width'=>480,'height'=>320),'is_file'=>TRUE),
+            //array('message'=>'！アップロード可能なファイルは横480px,縦320px以内です。','func'=>'checkFileImageSize','arg'=>array('type'=>WIDTH_HEIGHT_WITHIN,'width'=>480,'height'=>320),'is_file'=>TRUE),
+            array('message'=>'！アップロード可能なファイルは横480px,縦480px以内です。','func'=>'checkFileImageSize','arg'=>array('type'=>WIDTH_HEIGHT_WITHIN,'width'=>480,'height'=>480),'is_file'=>TRUE),
             array('message'=>'！アップロード可能なファイルの種類はgif,jpg,pngのみです。','func'=>'checkFileType','arg'=>array('gif','jpg','png'),'is_file'=>TRUE)
         )
     );
@@ -156,7 +157,8 @@ class checkShopItem extends checkManager
             array('message'=>'！写真は必須です。','func'=>'checkFileMust','arg'=>'fid','is_file'=>TRUE),
             array('message'=>null,'func'=>'checkFileBase','arg'=>'file','is_file'=>TRUE),//baseのチェック
             array('message'=>'！アップロード可能なファイルサイズは5Mバイトまでです。','func'=>'checkFileSize','arg'=>5000000,'is_file'=>TRUE),
-            array('message'=>'！アップロード可能なファイルは横330px以内,縦500px以内です。','func'=>'checkFileImageSize','arg'=>array('type'=>WIDTH_HEIGHT_WITHIN,'width'=>330,'height'=>500),'is_file'=>TRUE),
+            //array('message'=>'！アップロード可能なファイルは横330px以内,縦500px以内です。','func'=>'checkFileImageSize','arg'=>array('type'=>WIDTH_HEIGHT_WITHIN,'width'=>330,'height'=>500),'is_file'=>TRUE),
+            array('message'=>'！アップロード可能なファイルは横500px以内,縦500px以内です。','func'=>'checkFileImageSize','arg'=>array('type'=>WIDTH_HEIGHT_WITHIN,'width'=>500,'height'=>500),'is_file'=>TRUE),
             array('message'=>'！アップロード可能なファイルの種類はgif,jpg,pngのみです。','func'=>'checkFileType','arg'=>array('gif','jpg','png'),'is_file'=>TRUE)
         )
     );

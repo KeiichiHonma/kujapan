@@ -16,7 +16,7 @@
               <a href="{$smarty.const.KUJAPANURL}/" title="{$locale.site_name}"><img alt="{$locale.logo}" height="50" src="/img/visual/logo.gif" width="260" /></a>
             </li>
             <li id="main_copy">
-              <img alt="{$locale.main_copy}" height="73" src="/locale/{$smarty.const.LOCALE}/img/visual/main_copy.gif" width="445" />
+              <img alt="{$locale.main_copy}" src="/locale/{$smarty.const.LOCALE}/img/visual/main_copy.gif" width="550" height="73" />
             </li>
             {/if}
             </ul><span class="clear"></span>

@@ -25,7 +25,7 @@
         hs.outlineType = 'rounded-white';
     </script>
 
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&language=en"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&language=ja"></script>
 
 <script>
 var my_google_map;
@@ -90,13 +90,13 @@ $(document).ready(function(){ldelim}
 
                                     <table class="price-info">
                                         <tr>
-                                            <th>通常価格</th><td>{$shop.0.col_c_usual_price}元</span></td>
+                                            <th>通常价格</th><td>{$shop.0.col_c_usual_price}元</span></td>
                                         </tr>
                                         <tr>
-                                            <th>割引率</th><td>{$shop.0.col_c_discount_rate}折</span></td>
+                                            <th>优惠率</th><td>{$shop.0.col_c_discount_rate}折</span></td>
                                         </tr>
                                         <tr>
-                                            <th>割引額</th><td>{$shop.0.col_c_discount_value}元</span></td>
+                                            <th>优惠额</th><td>{$shop.0.col_c_discount_value}元</span></td>
                                         </tr>
                                     </table>
                                     
@@ -109,13 +109,12 @@ $(document).ready(function(){ldelim}
                             <div id="shop_right">
                                 <div id="articleGalleryArea">
                                     <ul id="GalleryLargePh" >
-                                        <li><div class="slide-box"><img src="{$shop.0.col_face|getFilePath:$shop.0.col_extension}" {$shop.0.col_width|getWidthHeight:$shop.0.col_height:480:320:0} alt="{$shop.0.col_alt}" /></div></li>
+                                        <li><div class="slide-box"><img src="{$shop.0.col_face|getFilePath:$shop.0.col_extension}" {$shop.0.col_width|getWidthHeight:$shop.0.col_height:470:320:0} alt="{$shop.0.col_alt}" /></div></li>
                                     {if $slide_item}
                                         {foreach from=$slide_item key="key" item="value" name="slide_item"}
-                                            <li><div class="slide-box"><img src="{$value.file_id|getFilePath:$value.col_extension}" {$value.col_width|getWidthHeight:$value.col_height:480:320:0} alt="{$value.col_alt}" /></div></li>
+                                            <li><div class="slide-box"><img src="{$value.file_id|getFilePath:$value.col_extension}" {$value.col_width|getWidthHeight:$value.col_height:470:320:0} alt="{$value.col_alt}" /></div></li>
                                         {/foreach}
                                     {/if}
-
                                     </ul>
                                     <div id="GalleryThumbsPh">
                                         <div>
@@ -139,7 +138,7 @@ $(document).ready(function(){ldelim}
                                     {$shop.0.col_c_detail|nl2br}
                                 </div>
 
-                                <h3 class="title">【利用条件】</h3>
+                                <h3 class="title">【使用条件】</h3>
                                 <div class="ml_10 mb_10">
                                     {$shop.0.col_c_condition|nl2br}
                                 </div>
@@ -172,6 +171,16 @@ $(document).ready(function(){ldelim}
                     </div>
                     <!-- shop_info_inner -->
                     <p class="clear mb_5"><img alt="" height="5" src="/img/shop/shop_info_foot.gif" width="635" /></p>
+                    
+                    {if strlen($shop.0.col_tel) > 0}
+                    <img alt="" height="5" src="/img/shop/shop_info_head.gif" width="635" /><div class="shop_info_inner">
+                      <dl>
+                        <dt>TEL</dt>
+                        <dd>{$shop.0.col_tel}</dd>
+                      </dl>
+                    </div>
+                    <p class="clear mb_5"><img alt="" height="5" src="/img/shop/shop_info_foot.gif" width="635" /></p>
+                    {/if}
 
                     <img alt="" height="5" src="/img/shop/shop_info_head.gif" width="635" /><div class="shop_info_inner">
                       <dl>
@@ -180,7 +189,17 @@ $(document).ready(function(){ldelim}
                       </dl>
                     </div>
                     <p class="clear mb_5"><img alt="" height="5" src="/img/shop/shop_info_foot.gif" width="635" /></p>
-
+                    
+                    {if strlen($shop.0.col_access) > 0}
+                    <img alt="" height="5" src="/img/shop/shop_info_head.gif" width="635" /><div class="shop_info_inner">
+                      <dl>
+                        <dt>交通</dt>
+                        <dd>{$shop.0.col_access}</dd>
+                      </dl>
+                    </div>
+                    <p class="clear mb_5"><img alt="" height="5" src="/img/shop/shop_info_foot.gif" width="635" /></p>
+                    {/if}
+                    
                     <img alt="" height="5" src="/img/shop/shop_info_head.gif" width="635" /><div class="shop_info_inner">
                       <dl>
                         <dt>营业时间</dt>
@@ -199,15 +218,7 @@ $(document).ready(function(){ldelim}
 
                     <img alt="" height="5" src="/img/shop/shop_info_head.gif" width="635" /><div class="shop_info_inner">
                       <dl>
-                        <dt>ホームページ</dt>
-                        <dd>{$shop.0.col_url}</dd>
-                      </dl>
-                    </div>
-                    <p class="clear mb_5"><img alt="" height="5" src="/img/shop/shop_info_foot.gif" width="635" /></p>
-
-                    <img alt="" height="5" src="/img/shop/shop_info_head.gif" width="635" /><div class="shop_info_inner">
-                      <dl>
-                        <dt>備考</dt>
+                        <dt>备注</dt>
                         <dd>{$shop.0.col_remarks}</dd>
                       </dl>
                     </div>
@@ -215,11 +226,7 @@ $(document).ready(function(){ldelim}
 
                     </div>
                     <!-- /shop_info -->
-
-
-
-
-
+                    
 
 
 

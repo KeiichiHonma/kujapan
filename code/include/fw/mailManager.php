@@ -250,36 +250,39 @@ class mailManager
         
         $this->mail->subject('[日游酷棒]感谢您的购买');
         
-        $message .= '「日游酷棒」をご利用いただきまして、誠にありがとうございます。'."\n\n";
+        $message .= '感谢您使用《日游酷棒》的服务。'."\n\n";
         
         $message .= "\n\n*****************************************************************\n\n";
 
         $address = urlencode($shop[0]['col_address']);
-        $map = 'http://maps.google.co.jp/maps?hl=en&ie=UTF8&z=15&q='.$address;
+        $map = 'http://maps.google.co.jp/maps?hl=ja&ie=UTF8&z=15&q='.$address;
 
-        $message .= '【'. $shop[0]['col_name'].':クーポン券】'."\n";
-        $message .= $shop[0]['col_c_title']."\n";
+        $message .= $shop[0]['col_name']."\n";
+        $message .= $shop[0]['col_c_title']."\n\n";
+        
+        $message .= '【优惠券简介】'."\n";
         $message .= $shop[0]['col_c_detail']."\n";
-        $message .= $shop[0]['col_c_usual_price']."\n";
-        $message .= $shop[0]['col_c_discount_rate']."\n";
-        $message .= $shop[0]['col_c_discount_value']."\n";
+        $message .= '【通常价格】'."\n";
+        $message .= $shop[0]['col_c_usual_price']."元\n";
+        $message .= '【优惠率】'."\n";
+        $message .= $shop[0]['col_c_discount_rate']."折\n";
+        $message .= '【优惠额】'."\n";
+        $message .= $shop[0]['col_c_discount_value']."元\n";
+        $message .= '【使用条件】'."\n";
         $message .= $shop[0]['col_c_condition']."\n\n";
         
-        $message .= 'map'."\n";
+        $message .= '店铺地图'."\n";
         $message .= $map."\n\n";
         
         $message .= "\n\n*****************************************************************\n\n";
         
-        $message .= '今後とも日游酷棒をご愛顧賜りますようお願い申し上げます。'."\n\n";
+        $message .= '请今后也多多关照《日游酷棒》。   '."\n\n";
         
-        $message .= 'このメールにご返信いただいてもご返答いたしかねます。'."\n";
-        $message .= 'お手数ですが、以下の「お客様コンタクトセンター」よりお問い合わせください。'."\n";
-        
+        $message .= '如有疑问，请不要以此邮件的邮址回信。    '."\n";
+        $message .= '请询问下方的“日游酷棒热线中心”。'."\n";
         
         $message .= '日游酷棒:'.KUJAPANURL.'/'."\n";
-        $message .= 'お客様コンタクトセンター: 4000-161716'."\n";
-        $message .= '発信元:北京九五太维资讯有限公司';
-        
+        $message .= '日游酷棒热线中心:021-34230207'."\n";
 
         $this->mail->text($message);
         

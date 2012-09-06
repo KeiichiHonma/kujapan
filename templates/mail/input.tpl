@@ -23,20 +23,21 @@
 <div id="initialize">
     <div id="initialize2">
     <img src="/locale/{$smarty.const.LOCALE}/img/initialize/initialize_title.gif" alt="" height="26" width="665">
-    <br />メールアドレス入力
+    <br />为了能将优惠券发送至您的邮箱，请输入邮件地址。
 
     <form id="couponForm" name="couponForm" action= "{$smarty.const.KUJAPANURLSSL}/mail/input/sid/{$shop.0.shop_id}" method="post">
     <table class="initialize">
         <tr>
-            <th class="title">メールアドレス<span class="attention">必须</span></th>
+            <th class="title">邮件地址<span class="attention">必须</span></th>
             <td class="form">
             {$error.mail|error_message}
             <p><input type="text" name="mail" value="{if $smarty.post.mail}{$smarty.post.mail|escape}{/if}" class="form_text_common" /></p></td>
         </tr>
         <tr>
             <td colspan="2">
-                メールアドレス宛に購入処理にすすむURLが記載されています。URLをクリックして購入処理を進めてください。<br />
-                購入後、ご登録いただいた、メールアドレス宛てに発行されたクーポン券が送信されます。
+会将办理购买手续的网址发送到您所登录的邮箱。请点击收到的网址，办理购买手续。<br />
+购买成功后，会将优惠券送至您所登录的邮箱。<br />
+邮件有可能会被自动放入“垃圾邮件箱”，请注意。
             </td>
         </tr>
     </table>

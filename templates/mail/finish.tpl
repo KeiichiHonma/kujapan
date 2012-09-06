@@ -23,17 +23,13 @@
 <div id="payment">
     <div id="payment2">
         <img src="/locale/{$smarty.const.LOCALE}/img/initialize/ready_title.gif" alt="" height="26" width="620">
-        <br />送信しました。
         <div id="payment_confirm">
             <div id="payment_confirm2">
                 <div id="payment_confirm3">
                     <table class="text_confirm">
                     <tbody>
-                    <tr><td><img src="/img/common/indent.gif" width="16" height="17"></td><td>送信したのでURLから購入処理を進めてください。</td></tr>
-                    <tr><td><img src="/img/common/indent.gif" width="16" height="17"></td><td>{$locale.alert3}</td></tr>
-                    <tr><td><img src="/img/common/indent.gif" width="16" height="17"></td><td>{$locale.alert4}</td></tr>
-                    <tr><td><img src="/img/common/indent.gif" width="16" height="17"></td><td>{$locale.alert5}</td></tr>
-                    <tr><td><img src="/img/common/indent.gif" width="16" height="17"></td><td>{$locale.alert6}</td></tr>
+                    <tr><td class="icon"><img src="/img/common/indent.gif" width="16" height="17"></td><td>请点击收件箱内所收到的网址。</td></tr>
+                    <tr><td class="icon"><img src="/img/common/indent.gif" width="16" height="17"></td><td>邮件有可能会被自动放入“垃圾邮件箱”，请注意。</td></tr>
                     </tbody>
                     </table>
                 </div>

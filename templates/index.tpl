@@ -31,13 +31,13 @@
 
                         <table class="price-info">
                             <tr>
-                                <th>通常価格</th><td>{$value.col_c_usual_price}元</span></td>
+                                <th>通常价格</th><td>{$value.col_c_usual_price}元</span></td>
                             </tr>
                             <tr>
-                                <th>割引率</th><td>{$value.col_c_discount_rate}折</span></td>
+                                <th>优惠率</th><td>{$value.col_c_discount_rate}折</span></td>
                             </tr>
                             <tr>
-                                <th>割引額</th><td>{$value.col_c_discount_value}元</span></td>
+                                <th>优惠额</th><td>{$value.col_c_discount_value}元</span></td>
                             </tr>
                         </table>
 
@@ -48,7 +48,7 @@
                     
                     <div class="text clearfix">
                         <div class="text-r" style="line-height:16px;height:48pt;margin-bottom:2px;">
-                            <b>{$value.col_name}</b><span class="text-link">{$value.col_detail}</span>
+                            <b>{$value.col_name}</b><span class="text-link">{$value.col_c_detail}</span>
                         </div>
                     </div>
                 </div></a>

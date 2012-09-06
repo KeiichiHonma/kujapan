@@ -104,7 +104,11 @@ div#payment2 table.text_confirm{
 }
 
 div#payment2 table.text_confirm td{
-    padding:2px 5px 2px 5px;
+    padding:2px 0px 2px 5px;
+}
+
+div#payment2 table.text_confirm td.icon{
+    width:16px;
 }
 
 div#payment2 table.btn{

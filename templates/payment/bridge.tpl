@@ -23,14 +23,6 @@
 <div id="payment">
 
           <h2 class="list">{$locale.bridge_title}</h2>
-            <p id="divide_format_title">{$locale.bridge_confirm}</p>
-            <div id="divide_format_message">
-            <ul class="indentbox">
-                <li>クーポン券の使用前に予約が必要なので連絡して</li>
-                <li>クーポン券を見せてね</li>
-            </ul>
-            </div>
-
             <p id="divide_format_title">{$locale.footer_rule}</p>
             <div id="divide_format_message">
                 <textarea rows="15" cols="40" class="rule_regulation" readonly>{$locale.rule_title}

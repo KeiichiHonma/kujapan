@@ -73,7 +73,8 @@ if($con->isDebug){
     $_POST['alimoney'] = 0.1;
 }else{
     //$_POST['alimoney'] = 99;
-    $_POST['alimoney'] = $shop[0]['col_c_price'];
+    //$_POST['alimoney'] = $shop[0]['col_c_price'];
+    $_POST['alimoney'] = 0.1;
 }
 
 require_once("alipay/alipay_config.php");

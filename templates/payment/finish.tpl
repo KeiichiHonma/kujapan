@@ -23,17 +23,18 @@
 <div id="payment">
     <div id="payment2">
         <img src="/locale/{$smarty.const.LOCALE}/img/payment/thanks_title.gif" alt="" height="26" width="620">
-        <br />発行したクーポンメールをご登録いただいたメールアドレス宛てにお送りしました。
 
         <div id="payment_confirm">
             <div id="payment_confirm2">
                 <div id="payment_confirm3">
                     <table class="text_confirm">
                     <tbody>
-                    <tr><td><img src="/img/common/indent.gif" width="16" height="17"></td><td>{$locale.payment_alert1}</td></tr>
-                    <tr><td><img src="/img/common/indent.gif" width="16" height="17"></td><td>{$locale.payment_alert2}</td></tr>
-                    <tr><td><img src="/img/common/indent.gif" width="16" height="17"></td><td>{$locale.payment_alert3}</td></tr>
-                    <tr><td><img src="/img/common/indent.gif" width="16" height="17"></td><td>{$locale.payment_alert4}</td></tr>
+                    <tr><td class="icon"><img src="/img/common/indent.gif" width="16" height="17"></td><td>优惠券将会发送至您登录的邮箱。</td></tr>
+                    <tr><td class="icon"><img src="/img/common/indent.gif" width="16" height="17"></td>
+                    <td>
+                    如有不明之处，请联系我们。<br />
+                    日游酷棒热线中心[021-34230207]
+                    </td></tr>
                     </tbody>
                     </table>
                 </div>

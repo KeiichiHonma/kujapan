@@ -30,7 +30,8 @@ function build_mysign($sort_array,$key,$sign_type = "MD5") {
 function create_linkstring($array) {
     $arg  = "";
     while (list ($key, $val) = each ($array)) {
-        $arg.=$key."=".$val."&";
+        //20120718改修 パラメータにuidを付与する必要があったため、uidは除外させる。signの値とmysi
+        if($key != 'uid') $arg.=$key."=".$val."&";
     }
     $arg = substr($arg,0,count($arg)-2);             //去掉最后一个&字符
     return $arg;
