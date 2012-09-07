@@ -101,7 +101,7 @@ $(document).ready(function(){ldelim}
                                     </table>
                                     
                                     <div class="shopping_bt">
-                                        <a href="/mail/input/sid/{$shop.0.shop_id}" title="购买 优惠券任您选" target="_blank">购买 优惠券任您选</a>
+                                        <a href="{$smarty.const.KUJAPANURLSSL}/mail/input/sid/{$shop.0.shop_id}" title="购买 优惠券任您选" target="_blank">购买 优惠券任您选</a>
                                     </div>
 
                             </div>
@@ -145,7 +145,7 @@ $(document).ready(function(){ldelim}
                             </div>
                         </div>
                         <div class="shopping_wide_bt">
-                            <a href="/mail/input/sid/{$shop.0.shop_id}" title="购买 优惠券任您选" target="_blank">购买 优惠券任您选</a>
+                            <a href="{$smarty.const.KUJAPANURLSSL}/mail/input/sid/{$shop.0.shop_id}" title="购买 优惠券任您选" target="_blank">购买 优惠券任您选</a>
                         </div>
                     <p><img alt="" height="5" src="/img/shop/detail_box_foot.gif" width="655" /></p>
                 </div>

@@ -46,17 +46,9 @@ div#weibo {
         .deal-list-2 .item .img {
             float:right;
             /*position: relative;*/
-            border-bottom: solid 1px #ddd;
+            /*border-bottom: solid 1px #ddd;*/
             padding: 4px }
- 
-            /*.deal-list-2 .item .img img { width: 100% }*/
- 
-        .deal-list-2 .item .text { border-top:solid 1px #fff;padding: 4px 4px 2px 4px;clear:both; }
- 
-            .deal-list-2 .item .text b { display: block }
- 
-            .deal-list-2 .item .text .text-r { height:50pt;overflow: hidden }
-
+            
      .deal-list-2 .item .price {
         position: absolute;
         font-weight: bold;
@@ -89,6 +81,33 @@ div#weibo {
             height: 34px;
             margin: 18px 0 0 0 
         }
+
+.deal-list-2 .item .shop_title{
+    border-top: solid 1px #ddd;
+    font-weight:bold;
+    display:block;
+    background:url(/img/index/shop_head.gif) no-repeat left top;
+    clear:both;
+    padding-left:80px;
+    
+/*    width:600px;
+    height:80px;*/
+    
+/*    display: table-cell;
+    vertical-align: middle;
+    padding-left:70px;*/
+}
+
+.deal-list-2 .item .shop_title p{
+    font-size:130%;
+    padding-top:5px;
+    margin-bottom:5px;
+}
+
+.deal-list-2 .item .shop_title span{
+    color:#D31C00;
+    font-size:120%;
+}
 
 table.price-info {
     width:140px;

@@ -24,7 +24,7 @@
         <div id="coupon">
             <div class="deal-list-2 heightfix clearfix">
                 <a href="{$smarty.const.KUJAPANURL}/shop/sid/{$value.shop_id}">
-                <div class="item" style="height: 405px;">
+                <div class="item" style="height: 455px;">
                         <p class="price clearfix">
                             <strong>{$value.col_c_price}元</strong>
                         </p>
@@ -44,12 +44,11 @@
                     <div class="img">
                         <span class="ribbon-timesale-s"></span>
                         <img src="{$value.col_face|getFilePath:$value.col_extension}" width="{$value.col_width}" height="{$value.col_height}" alt="{$value.col_alt}" />
+                        {*<img src="{$value.col_face|getFilePath:$value.col_extension}" {$value.col_width|getWidthHeight:$value.col_height:480:320:0} alt="{$value.col_alt}" />*}
                     </div>
                     
-                    <div class="text clearfix">
-                        <div class="text-r" style="line-height:16px;height:48pt;margin-bottom:2px;">
-                            <b>{$value.col_name}</b><span class="text-link">{$value.col_c_detail}</span>
-                        </div>
+                    <div class="shop_title clearfix">
+                        <p>{$value.col_name}</p><span>{$value.col_c_detail}</span>
                     </div>
                 </div></a>
             </div>
