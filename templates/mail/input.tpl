@@ -23,7 +23,6 @@
 <div id="initialize">
     <div id="initialize2">
     <img src="/locale/{$smarty.const.LOCALE}/img/initialize/initialize_title.gif" alt="" height="26" width="665">
-    <br />为了能将优惠券发送至您的邮箱，请输入邮件地址。
 
     <form id="couponForm" name="couponForm" action= "{$smarty.const.KUJAPANURLSSL}/mail/input/sid/{$shop.0.shop_id}" method="post">
     <table class="initialize">
