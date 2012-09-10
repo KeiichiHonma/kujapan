@@ -54,7 +54,7 @@
             </div>
             <div id="form_btn">
             {if $is_alipay || !$debug}
-                <form id="couponForm" name="couponForm" action= "{$smarty.const.KUJAPANURL}/payment/alipayto/uid/{$user.0._id}" method="post" target="_blank">
+                <form id="couponForm" name="couponForm" action= "{$smarty.const.KUJAPANURLSSL}/payment/alipayto/uid/{$user.0._id}" method="post" target="_blank">
                     <input type="hidden" name="csrf_ticket" value="{$csrf_ticket}" />
                        <input type="image" src="/locale/{$smarty.const.LOCALE}/img/button/alipay_btn.jpg" value="submit" class="btn"/>
                 </form>
