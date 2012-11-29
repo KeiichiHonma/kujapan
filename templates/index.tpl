@@ -19,9 +19,9 @@
     <div id="container">
         {*ロゴ、グローバルナビ*}
         {include file="include/header/header.inc"}
-        
-        {foreach from=$shop key="key" item="value" name="shop"}
         <div id="coupon">
+        {foreach from=$shop key="key" item="value" name="shop"}
+        
             <div class="deal-list-2 heightfix clearfix">
                 <a href="{$smarty.const.KUJAPANURL}/shop/sid/{$value.shop_id}">
                 <div class="item" style="height: 455px;">
@@ -52,9 +52,9 @@
                     </div>
                 </div></a>
             </div>
-        </div>
-        {/foreach}
         
+        {/foreach}
+        </div>
         <div id="weibo">
             {*weibo*}
             {include file="include/common/weibo.inc"}
