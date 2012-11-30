@@ -85,18 +85,18 @@ $(document).ready(function(){ldelim}
                         <div class="shop-view heightfix clearfix">
                             <div class="item" style="height: 270px;">
                                     <p class="price clearfix">
-                                        <strong>{$shop.0.col_c_price}元</strong>
+                                        <strong>{$shop.0.col_c_price}{if $shop.0.shop_id == 2}0日{/if}元</strong>
                                     </p>
 
                                     <table class="price-info">
                                         <tr>
-                                            <th>通常价格</th><td>{$shop.0.col_c_usual_price}元</span></td>
+                                            <th>通常价格</th><td>{$shop.0.col_c_usual_price}{if $shop.0.shop_id == 2}0日{/if}元</span></td>
                                         </tr>
                                         <tr>
                                             <th>优惠率</th><td>{$shop.0.col_c_discount_rate}折</span></td>
                                         </tr>
                                         <tr>
-                                            <th>优惠额</th><td>{$shop.0.col_c_discount_value}元</span></td>
+                                            <th>优惠额</th><td>{$shop.0.col_c_discount_value}{if $shop.0.shop_id == 2}0日{/if}元</span></td>
                                         </tr>
                                     </table>
                                     
