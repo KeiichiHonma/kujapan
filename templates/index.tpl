@@ -31,7 +31,7 @@
 
                         <table class="price-info">
                             <tr>
-                                <th>通常价格</th><td>{$value.col_c_usual_price}{if $value.shop_id >= 2}0日{/if}元</span></td>
+                                <th>通常价格</th><td>{$value.col_c_usual_price}{if $value.shop_id == 5}日{elseif $value.shop_id >= 2}0日{/if}元</span></td>
                             </tr>
                             <tr>
                                 <th>优惠率</th><td>{$value.col_c_discount_rate}折</span></td>
