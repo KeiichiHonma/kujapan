@@ -19,14 +19,6 @@
 {include file="include/header/header.inc"}
 {*ポジション*}
 {include file="include/common/position.inc"}
-        <div class="clear" id="s_sub">
-{*ログインボックス*}
-{include file="include/common/login_box.inc"}
-{*エリアボックス*}
-{include file="include/common/area_box.inc"}
-{*ジャンルボックス*}
-{include file="include/common/genre_box.inc"}
-        </div>
         <div id="s_main">
           <h2 lang="ja" class="list">掲載をご検討の企業様</h2>
             <p lang="ja" id="divide_format_title">「日遊酷棒」への店舗掲載のお問い合わせ</p>

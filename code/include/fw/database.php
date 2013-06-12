@@ -460,21 +460,6 @@ class database
         if($this->found) $query .= 'SQL_CALC_FOUND_ROWS ';
         $toPutComma = FALSE;
 
-/*        foreach( $this->_select_columns as $table_alias => $columns )
-        {
-            foreach( $columns as $column )
-            {
-                if ( $toPutComma ) {
-                    $query .= ', ';
-                } else {
-                    $toPutComma = TRUE;
-                }
-                $column = ereg("^_id", $column) == TRUE ? $column : DATABASE_COLUMN_PREFIX.$column;
-
-                if($table_alias != '') $column = $table_alias.'.'.$column;
-                $query .= $column;
-            }
-        }*/
         //aliasはtableManagerで
         foreach( $this->_select_columns as $columns )
         {
@@ -485,8 +470,6 @@ class database
                 } else {
                     $toPutComma = TRUE;
                 }
-                //$column = ereg("^_id", $column) == TRUE ? $column : DATABASE_COLUMN_PREFIX.$column;
-
                 //if($table_alias != '') $column = $table_alias.'.'.$column;
                 $query .= $column;
             }
@@ -592,7 +575,6 @@ class database
                 //}
                 
                 $query .= $ob[0];
-                //$query .= ereg("^_id", $ob[0]) == TRUE ? $ob[0] : DATABASE_COLUMN_PREFIX.$ob[0];
                 if ( $ob[1] )//デフォルトはFALSE
                 {
                     $query .= ' DESC';//大きい順
@@ -651,7 +633,7 @@ class database
             } else {
                 $toPutComma = TRUE;
             }
-            $left .= ereg("^_id", $key) == TRUE ? $key : DATABASE_COLUMN_PREFIX.$key;
+            $left .= preg_match("/^_id/", $key) == 1 ? $key : DATABASE_COLUMN_PREFIX.$key;
             $right .= $this->checkValueType($val);//escape or null
         }
         $query .= '(';
@@ -681,7 +663,8 @@ class database
                 $toPutComma = TRUE;
             }
             //$query .= ' '.ereg("^_id", $key) == TRUE ? $key : DATABASE_COLUMN_PREFIX.$key.' = \''.$val.'\'';
-            $query .= ereg("^_id", $key) == TRUE ? $key : DATABASE_COLUMN_PREFIX.$key.' = '.$this->checkValueType($val);
+            //$query .= ereg("^_id", $key) == TRUE ? $key : DATABASE_COLUMN_PREFIX.$key.' = '.$this->checkValueType($val);
+            $query .= preg_match("/^_id/", $key) == 1 ? $key : DATABASE_COLUMN_PREFIX.$key.' = '.$this->checkValueType($val);
         }
         if ( count( $this->_conditions ) > 0 )
         {

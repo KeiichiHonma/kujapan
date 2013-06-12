@@ -50,7 +50,8 @@ class container
         $this->t->readyTemplate($this->isDebug);
         
         //is system ?
-        $this->isSystem = ereg("^system", $matches[1]);
+        //$this->isSystem = ereg("^system", $matches[1]);
+        $this->isSystem = preg_match("/^system/", $matches[1]) == 1 ? TRUE : FALSE;
         
         //locale
         $this->checkLocale();

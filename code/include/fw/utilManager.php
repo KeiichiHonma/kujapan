@@ -2,7 +2,8 @@
 class utilManager
 {
     static public function checkPrefix($column,$as = null,$alias = null){
-        if(ereg("^_id", $column) == TRUE){
+        //if(ereg("^_id", $column) == TRUE){
+        if(preg_match("/^_id/", $column) == 1){
             if(!is_null($alias)){
                 return is_null($as) ? $alias.'.'.$column : $alias.'.'.$column.' AS '.$as;
             }else{
